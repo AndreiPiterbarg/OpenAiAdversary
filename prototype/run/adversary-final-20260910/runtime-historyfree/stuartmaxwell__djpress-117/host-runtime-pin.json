@@ -1,0 +1,12 @@
+{
+  "task_key": "stuartmaxwell__djpress-117",
+  "commit": "62898afc246da3e96a0b8f753cf5e9853d75b40e",
+  "repository": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-historyfree-v1/repository",
+  "repository_sha256": "bf3c8ad1af5dbace5b92b1be5cd80637cbba7a36b6d29716a91a2840ba49a7f3",
+  "venv": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-v2/venv",
+  "venv_sha256": "d096ed5cb5fd007cfe0e6b065d76fa5fb6641afc7450060ae899b643ef82ad27",
+  "system_python": "/usr/bin/python3.12",
+  "kind": "interactive_host_runtime_v1",
+  "prepared_frozen_tests": true,
+  "original_container_equivalence": false
+}

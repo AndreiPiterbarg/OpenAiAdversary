@@ -1,0 +1,14 @@
+{
+  "attempt": 2,
+  "status": "rejected",
+  "critique": {
+    "accepted": false,
+    "objections": [
+      {
+        "reason": "malformed",
+        "detail": "generator: syntax error: invalid syntax (line 11)"
+      }
+    ],
+    "critic": "static"
+  }
+}

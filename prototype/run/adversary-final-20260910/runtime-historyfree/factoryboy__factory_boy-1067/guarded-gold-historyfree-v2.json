@@ -1,0 +1,53 @@
+{
+  "exit": 0,
+  "stdout": "============================= test session starts ==============================\ncollected 2 items\n\ntests/test_regression.py ..                                              [100%]\n\n==================================== PASSES ====================================\n=========================== short test summary info ============================\nPASSED tests/test_regression.py::FakerRegressionTests::test_evaluated_without_locale\nPASSED tests/test_regression.py::FakerRegressionTests::test_locale_issue\n============================== 2 passed in 0.08s ===============================\n",
+  "stderr": "",
+  "attestation": {
+    "guard_sha256": "a4077009c538a799eb6467b4b22e3859cb5f69c460e238ae34f3bbdbb84bac44",
+    "python_executable": "/usr/bin/python3.12",
+    "checks": {
+      "/proc/1/mem": true,
+      "/proc/self/status": true,
+      "network": true,
+      "signal": true,
+      "system_write": true
+    },
+    "scope": "all target tool commands use inherited kernel guard",
+    "runtime_kind": "host_python_guarded",
+    "host_nproc": 1268,
+    "address_space_bytes_per_process": 268435456,
+    "conservative_address_space_bound": 340376158208,
+    "host_runtime": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+    "observed_uid_threads": 1204,
+    "observed_mem_available": 1284267896832
+  },
+  "containment": {
+    "old_pin": {
+      "exit": 1,
+      "stdout": "",
+      "stderr": "cat: /tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/original-pin.json: Permission denied\n"
+    },
+    "controller": {
+      "exit": 1,
+      "stdout": "",
+      "stderr": "cat: /tmp/prun-adversary-final-20260910/final-v3/registration.json: Permission denied\n"
+    },
+    "future_commit": {
+      "exit": 128,
+      "stdout": "",
+      "stderr": "fatal: ambiguous argument 'fae2ab1': unknown revision or path not in the working tree.\nUse '--' to separate paths from revisions, like this:\n'git <command> [<revision>...] -- [<file>...]'\n"
+    },
+    "unreachable": {
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "commit_count": {
+      "exit": 0,
+      "stdout": "1\n",
+      "stderr": ""
+    }
+  },
+  "kind": "actual_host_guard_compatibility",
+  "venv_digest_stable_after_raw_transport_and_tests": true
+}

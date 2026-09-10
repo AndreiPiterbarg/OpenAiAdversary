@@ -1,0 +1,16 @@
+{
+  "attempt": 2,
+  "status": "rejected",
+  "static": {
+    "accepted": false,
+    "objections": [
+      {
+        "reason": "malformed",
+        "detail": "program worker exited without a reply"
+      }
+    ],
+    "critic": "static"
+  },
+  "error_type": "AssertionError",
+  "reason": ""
+}

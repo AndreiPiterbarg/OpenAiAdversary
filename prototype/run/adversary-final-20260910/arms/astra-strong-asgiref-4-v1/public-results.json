@@ -1,0 +1,1795 @@
+{
+  "kind": "registered_interactive_public_results_v1",
+  "arm_kind": "generated_four_cell_pilot",
+  "never_pool_with_other_arms": true,
+  "registration_kind": "astra_twenty_episode_discovery_batch",
+  "summary": {
+    "planned": 20,
+    "diagnostic_measured": 15,
+    "diagnostic_passes": 15,
+    "diagnostic_unknown": 5,
+    "attributable_known": 15,
+    "unknown": 5,
+    "budget_exhausted": 0,
+    "visible_changed": 14,
+    "realized": 19,
+    "groups": [
+      {
+        "task": "django__asgiref-523",
+        "cell_index": 0,
+        "executions": 5,
+        "diagnostic_measured": 4,
+        "known": 4,
+        "unknown": 1,
+        "passes": 4,
+        "complete": false,
+        "task_failure": null,
+        "severity": null
+      },
+      {
+        "task": "django__asgiref-523",
+        "cell_index": 1,
+        "executions": 5,
+        "diagnostic_measured": 4,
+        "known": 4,
+        "unknown": 1,
+        "passes": 4,
+        "complete": false,
+        "task_failure": null,
+        "severity": null
+      },
+      {
+        "task": "django__asgiref-523",
+        "cell_index": 2,
+        "executions": 5,
+        "diagnostic_measured": 3,
+        "known": 3,
+        "unknown": 2,
+        "passes": 3,
+        "complete": false,
+        "task_failure": null,
+        "severity": null
+      },
+      {
+        "task": "django__asgiref-523",
+        "cell_index": 3,
+        "executions": 5,
+        "diagnostic_measured": 4,
+        "known": 4,
+        "unknown": 1,
+        "passes": 4,
+        "complete": false,
+        "task_failure": null,
+        "severity": null
+      }
+    ],
+    "contrasts": [
+      {
+        "task": "django__asgiref-523",
+        "complete": false,
+        "delta_a": null,
+        "delta_b": null,
+        "delta_all_on": null,
+        "additive_prediction": null,
+        "additive_excess": null,
+        "raw_interaction_contrast": null,
+        "scale": "five-execution failure fraction",
+        "descriptive_only": true,
+        "confidence_interval": null
+      }
+    ],
+    "protected": false,
+    "confirmed": false,
+    "trained": false,
+    "inference": "descriptive task-specific contrasts; no population or confidence claim"
+  },
+  "terminal_receipts": 20,
+  "rows": [
+    {
+      "id": "task-0-cell-0-rep-0",
+      "task": {
+        "key": "django__asgiref-523",
+        "corpus": "adaptive_cross_repository_transfer",
+        "host_repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a",
+        "host_venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+        "original_pin_sha256": "ed37e140b5d904d6165eb9c55310d65298dd8431cdc6c5fe76fce9f0efd4e271"
+      },
+      "cell": {
+        "legacy_dispatch_cue": "off",
+        "legacy_argument_cue": "off"
+      },
+      "cell_index": 0,
+      "repetition": 0,
+      "seed": 9400,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "observation_limit": 16000,
+      "episode_id": "task-0-cell-0-rep-0",
+      "task_key": "django__asgiref-523",
+      "host_runtime": {
+        "task_key": "django__asgiref-523",
+        "commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+        "repository": "/tmp/prun-host-prep-20260910/django__asgiref-523-historyfree-v1/repository",
+        "repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a",
+        "venv": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/venv",
+        "venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+      "endpoint": "local_credential_bridge",
+      "budget_profile": "explicit_model_override",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": "provider_default",
+        "seed": null,
+        "reasoning_effort": "low"
+      },
+      "target_model": {
+        "id": "gpt-6-astra",
+        "version": "",
+        "license": "restricted",
+        "backend": "openai"
+      },
+      "prompt_profile": "environment_guidance_v1",
+      "prompt_sha256": "56c7da96c3b35def67b6aac6bde48ced8996c22a9d272021559b6ce035598945",
+      "prompt_sha256_scope": "task_guidance_user_message",
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 5,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 20163,
+        "output_tokens": 1211,
+        "wall_seconds": 41.338912540115416
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 43.596528973430395,
+      "visible_changed": false,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {},
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-1-rep-0",
+      "task": {
+        "key": "django__asgiref-523",
+        "corpus": "adaptive_cross_repository_transfer",
+        "host_repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a",
+        "host_venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+        "original_pin_sha256": "ed37e140b5d904d6165eb9c55310d65298dd8431cdc6c5fe76fce9f0efd4e271"
+      },
+      "cell": {
+        "legacy_dispatch_cue": "on",
+        "legacy_argument_cue": "off"
+      },
+      "cell_index": 1,
+      "repetition": 0,
+      "seed": 9400,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "observation_limit": 16000,
+      "episode_id": "task-0-cell-1-rep-0",
+      "task_key": "django__asgiref-523",
+      "host_runtime": {
+        "task_key": "django__asgiref-523",
+        "commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+        "repository": "/tmp/prun-host-prep-20260910/django__asgiref-523-historyfree-v1/repository",
+        "repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a",
+        "venv": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/venv",
+        "venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+      "endpoint": "local_credential_bridge",
+      "budget_profile": "explicit_model_override",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": "provider_default",
+        "seed": null,
+        "reasoning_effort": "low"
+      },
+      "target_model": {
+        "id": "gpt-6-astra",
+        "version": "",
+        "license": "restricted",
+        "backend": "openai"
+      },
+      "prompt_profile": "environment_guidance_v1",
+      "prompt_sha256": "56c7da96c3b35def67b6aac6bde48ced8996c22a9d272021559b6ce035598945",
+      "prompt_sha256_scope": "task_guidance_user_message",
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 4,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 15470,
+        "output_tokens": 1287,
+        "wall_seconds": 41.66710114572197
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 43.84729951713234,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "legacy_dispatch_cue": {
+          "exposed": true,
+          "observation_indices": [
+            0,
+            1
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-2-rep-0",
+      "task": {
+        "key": "django__asgiref-523",
+        "corpus": "adaptive_cross_repository_transfer",
+        "host_repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a",
+        "host_venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+        "original_pin_sha256": "ed37e140b5d904d6165eb9c55310d65298dd8431cdc6c5fe76fce9f0efd4e271"
+      },
+      "cell": {
+        "legacy_dispatch_cue": "off",
+        "legacy_argument_cue": "on"
+      },
+      "cell_index": 2,
+      "repetition": 0,
+      "seed": 9400,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "observation_limit": 16000,
+      "episode_id": "task-0-cell-2-rep-0",
+      "task_key": "django__asgiref-523",
+      "host_runtime": {
+        "task_key": "django__asgiref-523",
+        "commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+        "repository": "/tmp/prun-host-prep-20260910/django__asgiref-523-historyfree-v1/repository",
+        "repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a",
+        "venv": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/venv",
+        "venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+      "endpoint": "local_credential_bridge",
+      "budget_profile": "explicit_model_override",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": "provider_default",
+        "seed": null,
+        "reasoning_effort": "low"
+      },
+      "target_model": {
+        "id": "gpt-6-astra",
+        "version": "",
+        "license": "restricted",
+        "backend": "openai"
+      },
+      "prompt_profile": "environment_guidance_v1",
+      "prompt_sha256": "56c7da96c3b35def67b6aac6bde48ced8996c22a9d272021559b6ce035598945",
+      "prompt_sha256_scope": "task_guidance_user_message",
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 9,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 44125,
+        "output_tokens": 2396,
+        "wall_seconds": 69.58570674154907
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 71.79522606916726,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "legacy_argument_cue": {
+          "exposed": true,
+          "observation_indices": [
+            0,
+            3,
+            5,
+            7
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-3-rep-0",
+      "task": {
+        "key": "django__asgiref-523",
+        "corpus": "adaptive_cross_repository_transfer",
+        "host_repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a",
+        "host_venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+        "original_pin_sha256": "ed37e140b5d904d6165eb9c55310d65298dd8431cdc6c5fe76fce9f0efd4e271"
+      },
+      "cell": {
+        "legacy_dispatch_cue": "on",
+        "legacy_argument_cue": "on"
+      },
+      "cell_index": 3,
+      "repetition": 0,
+      "seed": 9400,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "observation_limit": 16000,
+      "episode_id": "task-0-cell-3-rep-0",
+      "task_key": "django__asgiref-523",
+      "host_runtime": {
+        "task_key": "django__asgiref-523",
+        "commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+        "repository": "/tmp/prun-host-prep-20260910/django__asgiref-523-historyfree-v1/repository",
+        "repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a",
+        "venv": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/venv",
+        "venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+      "endpoint": "local_credential_bridge",
+      "budget_profile": "explicit_model_override",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": "provider_default",
+        "seed": null,
+        "reasoning_effort": "low"
+      },
+      "target_model": {
+        "id": "gpt-6-astra",
+        "version": "",
+        "license": "restricted",
+        "backend": "openai"
+      },
+      "prompt_profile": "environment_guidance_v1",
+      "prompt_sha256": "56c7da96c3b35def67b6aac6bde48ced8996c22a9d272021559b6ce035598945",
+      "prompt_sha256_scope": "task_guidance_user_message",
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 4,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 14183,
+        "output_tokens": 1228,
+        "wall_seconds": 31.413572144694626
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 33.47413908876479,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "legacy_dispatch_cue": {
+          "exposed": true,
+          "observation_indices": [
+            0,
+            1
+          ]
+        },
+        "legacy_argument_cue": {
+          "exposed": true,
+          "observation_indices": [
+            0,
+            1
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-0-rep-1",
+      "task": {
+        "key": "django__asgiref-523",
+        "corpus": "adaptive_cross_repository_transfer",
+        "host_repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a",
+        "host_venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+        "original_pin_sha256": "ed37e140b5d904d6165eb9c55310d65298dd8431cdc6c5fe76fce9f0efd4e271"
+      },
+      "cell": {
+        "legacy_dispatch_cue": "off",
+        "legacy_argument_cue": "off"
+      },
+      "cell_index": 0,
+      "repetition": 1,
+      "seed": 9401,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "observation_limit": 16000,
+      "episode_id": "task-0-cell-0-rep-1",
+      "task_key": "django__asgiref-523",
+      "host_runtime": {
+        "task_key": "django__asgiref-523",
+        "commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+        "repository": "/tmp/prun-host-prep-20260910/django__asgiref-523-historyfree-v1/repository",
+        "repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a",
+        "venv": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/venv",
+        "venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+      "endpoint": "local_credential_bridge",
+      "budget_profile": "explicit_model_override",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": "provider_default",
+        "seed": null,
+        "reasoning_effort": "low"
+      },
+      "target_model": {
+        "id": "gpt-6-astra",
+        "version": "",
+        "license": "restricted",
+        "backend": "openai"
+      },
+      "prompt_profile": "environment_guidance_v1",
+      "prompt_sha256": "56c7da96c3b35def67b6aac6bde48ced8996c22a9d272021559b6ce035598945",
+      "prompt_sha256_scope": "task_guidance_user_message",
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 5,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 19660,
+        "output_tokens": 1229,
+        "wall_seconds": 41.677688639611006
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 43.617819850333035,
+      "visible_changed": false,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {},
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-1-rep-1",
+      "task": {
+        "key": "django__asgiref-523",
+        "corpus": "adaptive_cross_repository_transfer",
+        "host_repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a",
+        "host_venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+        "original_pin_sha256": "ed37e140b5d904d6165eb9c55310d65298dd8431cdc6c5fe76fce9f0efd4e271"
+      },
+      "cell": {
+        "legacy_dispatch_cue": "on",
+        "legacy_argument_cue": "off"
+      },
+      "cell_index": 1,
+      "repetition": 1,
+      "seed": 9401,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "observation_limit": 16000,
+      "episode_id": "task-0-cell-1-rep-1",
+      "task_key": "django__asgiref-523",
+      "host_runtime": {
+        "task_key": "django__asgiref-523",
+        "commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+        "repository": "/tmp/prun-host-prep-20260910/django__asgiref-523-historyfree-v1/repository",
+        "repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a",
+        "venv": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/venv",
+        "venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+      "endpoint": "local_credential_bridge",
+      "budget_profile": "explicit_model_override",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": "provider_default",
+        "seed": null,
+        "reasoning_effort": "low"
+      },
+      "target_model": {
+        "id": "gpt-6-astra",
+        "version": "",
+        "license": "restricted",
+        "backend": "openai"
+      },
+      "prompt_profile": "environment_guidance_v1",
+      "prompt_sha256": "56c7da96c3b35def67b6aac6bde48ced8996c22a9d272021559b6ce035598945",
+      "prompt_sha256_scope": "task_guidance_user_message",
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 4,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 14035,
+        "output_tokens": 1132,
+        "wall_seconds": 40.271538557484746
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 42.28842469770461,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "legacy_dispatch_cue": {
+          "exposed": true,
+          "observation_indices": [
+            0,
+            1
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-2-rep-1",
+      "task": {
+        "key": "django__asgiref-523",
+        "corpus": "adaptive_cross_repository_transfer",
+        "host_repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a",
+        "host_venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+        "original_pin_sha256": "ed37e140b5d904d6165eb9c55310d65298dd8431cdc6c5fe76fce9f0efd4e271"
+      },
+      "cell": {
+        "legacy_dispatch_cue": "off",
+        "legacy_argument_cue": "on"
+      },
+      "cell_index": 2,
+      "repetition": 1,
+      "seed": 9401,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "observation_limit": 16000,
+      "episode_id": "task-0-cell-2-rep-1",
+      "task_key": "django__asgiref-523",
+      "host_runtime": {
+        "task_key": "django__asgiref-523",
+        "commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+        "repository": "/tmp/prun-host-prep-20260910/django__asgiref-523-historyfree-v1/repository",
+        "repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a",
+        "venv": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/venv",
+        "venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+      "endpoint": "local_credential_bridge",
+      "budget_profile": "explicit_model_override",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": "provider_default",
+        "seed": null,
+        "reasoning_effort": "low"
+      },
+      "target_model": {
+        "id": "gpt-6-astra",
+        "version": "",
+        "license": "restricted",
+        "backend": "openai"
+      },
+      "prompt_profile": "environment_guidance_v1",
+      "prompt_sha256": "56c7da96c3b35def67b6aac6bde48ced8996c22a9d272021559b6ce035598945",
+      "prompt_sha256_scope": "task_guidance_user_message",
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 5,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 20942,
+        "output_tokens": 1333,
+        "wall_seconds": 46.29180349968374
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 48.26985341962427,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "legacy_argument_cue": {
+          "exposed": true,
+          "observation_indices": [
+            0,
+            1
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-3-rep-1",
+      "task": {
+        "key": "django__asgiref-523",
+        "corpus": "adaptive_cross_repository_transfer",
+        "host_repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a",
+        "host_venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+        "original_pin_sha256": "ed37e140b5d904d6165eb9c55310d65298dd8431cdc6c5fe76fce9f0efd4e271"
+      },
+      "cell": {
+        "legacy_dispatch_cue": "on",
+        "legacy_argument_cue": "on"
+      },
+      "cell_index": 3,
+      "repetition": 1,
+      "seed": 9401,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "observation_limit": 16000,
+      "episode_id": "task-0-cell-3-rep-1",
+      "task_key": "django__asgiref-523",
+      "host_runtime": {
+        "task_key": "django__asgiref-523",
+        "commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+        "repository": "/tmp/prun-host-prep-20260910/django__asgiref-523-historyfree-v1/repository",
+        "repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a",
+        "venv": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/venv",
+        "venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+      "endpoint": "local_credential_bridge",
+      "budget_profile": "explicit_model_override",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": "provider_default",
+        "seed": null,
+        "reasoning_effort": "low"
+      },
+      "target_model": {
+        "id": "gpt-6-astra",
+        "version": "",
+        "license": "restricted",
+        "backend": "openai"
+      },
+      "prompt_profile": "environment_guidance_v1",
+      "prompt_sha256": "56c7da96c3b35def67b6aac6bde48ced8996c22a9d272021559b6ce035598945",
+      "prompt_sha256_scope": "task_guidance_user_message",
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 5,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 21260,
+        "output_tokens": 1372,
+        "wall_seconds": 45.11029249429703
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 47.04445903003216,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "legacy_dispatch_cue": {
+          "exposed": true,
+          "observation_indices": [
+            0,
+            1,
+            3
+          ]
+        },
+        "legacy_argument_cue": {
+          "exposed": true,
+          "observation_indices": [
+            0,
+            1,
+            3
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-0-rep-2",
+      "task": {
+        "key": "django__asgiref-523",
+        "corpus": "adaptive_cross_repository_transfer",
+        "host_repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a",
+        "host_venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+        "original_pin_sha256": "ed37e140b5d904d6165eb9c55310d65298dd8431cdc6c5fe76fce9f0efd4e271"
+      },
+      "cell": {
+        "legacy_dispatch_cue": "off",
+        "legacy_argument_cue": "off"
+      },
+      "cell_index": 0,
+      "repetition": 2,
+      "seed": 9402,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "observation_limit": 16000,
+      "episode_id": "task-0-cell-0-rep-2",
+      "task_key": "django__asgiref-523",
+      "host_runtime": {
+        "task_key": "django__asgiref-523",
+        "commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+        "repository": "/tmp/prun-host-prep-20260910/django__asgiref-523-historyfree-v1/repository",
+        "repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a",
+        "venv": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/venv",
+        "venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+      "endpoint": "local_credential_bridge",
+      "budget_profile": "explicit_model_override",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": "provider_default",
+        "seed": null,
+        "reasoning_effort": "low"
+      },
+      "target_model": {
+        "id": "gpt-6-astra",
+        "version": "",
+        "license": "restricted",
+        "backend": "openai"
+      },
+      "prompt_profile": "environment_guidance_v1",
+      "prompt_sha256": "56c7da96c3b35def67b6aac6bde48ced8996c22a9d272021559b6ce035598945",
+      "prompt_sha256_scope": "task_guidance_user_message",
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 6,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 24905,
+        "output_tokens": 1387,
+        "wall_seconds": 48.0589205250144
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 50.11403365060687,
+      "visible_changed": false,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {},
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-1-rep-2",
+      "task": {
+        "key": "django__asgiref-523",
+        "corpus": "adaptive_cross_repository_transfer",
+        "host_repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a",
+        "host_venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+        "original_pin_sha256": "ed37e140b5d904d6165eb9c55310d65298dd8431cdc6c5fe76fce9f0efd4e271"
+      },
+      "cell": {
+        "legacy_dispatch_cue": "on",
+        "legacy_argument_cue": "off"
+      },
+      "cell_index": 1,
+      "repetition": 2,
+      "seed": 9402,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "observation_limit": 16000,
+      "episode_id": "task-0-cell-1-rep-2",
+      "task_key": "django__asgiref-523",
+      "host_runtime": {
+        "task_key": "django__asgiref-523",
+        "commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+        "repository": "/tmp/prun-host-prep-20260910/django__asgiref-523-historyfree-v1/repository",
+        "repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a",
+        "venv": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/venv",
+        "venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+      "endpoint": "local_credential_bridge",
+      "budget_profile": "explicit_model_override",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": "provider_default",
+        "seed": null,
+        "reasoning_effort": "low"
+      },
+      "target_model": {
+        "id": "gpt-6-astra",
+        "version": "",
+        "license": "restricted",
+        "backend": "openai"
+      },
+      "prompt_profile": "environment_guidance_v1",
+      "prompt_sha256": "56c7da96c3b35def67b6aac6bde48ced8996c22a9d272021559b6ce035598945",
+      "prompt_sha256_scope": "task_guidance_user_message",
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 5,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 18842,
+        "output_tokens": 1228,
+        "wall_seconds": 42.38512205705047
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 44.42753943800926,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "legacy_dispatch_cue": {
+          "exposed": true,
+          "observation_indices": [
+            0,
+            1
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-2-rep-2",
+      "task": {
+        "key": "django__asgiref-523",
+        "corpus": "adaptive_cross_repository_transfer",
+        "host_repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a",
+        "host_venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+        "original_pin_sha256": "ed37e140b5d904d6165eb9c55310d65298dd8431cdc6c5fe76fce9f0efd4e271"
+      },
+      "cell": {
+        "legacy_dispatch_cue": "off",
+        "legacy_argument_cue": "on"
+      },
+      "cell_index": 2,
+      "repetition": 2,
+      "seed": 9402,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "observation_limit": 16000,
+      "episode_id": "task-0-cell-2-rep-2",
+      "task_key": "django__asgiref-523",
+      "host_runtime": {
+        "task_key": "django__asgiref-523",
+        "commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+        "repository": "/tmp/prun-host-prep-20260910/django__asgiref-523-historyfree-v1/repository",
+        "repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a",
+        "venv": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/venv",
+        "venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+      "endpoint": "local_credential_bridge",
+      "budget_profile": "explicit_model_override",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": "provider_default",
+        "seed": null,
+        "reasoning_effort": "low"
+      },
+      "target_model": {
+        "id": "gpt-6-astra",
+        "version": "",
+        "license": "restricted",
+        "backend": "openai"
+      },
+      "prompt_profile": "environment_guidance_v1",
+      "prompt_sha256": "56c7da96c3b35def67b6aac6bde48ced8996c22a9d272021559b6ce035598945",
+      "prompt_sha256_scope": "task_guidance_user_message",
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 6,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 23972,
+        "output_tokens": 1313,
+        "wall_seconds": 45.969379084184766
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 48.02952956967056,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "legacy_argument_cue": {
+          "exposed": true,
+          "observation_indices": [
+            0,
+            1,
+            4
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-3-rep-2",
+      "task": {
+        "key": "django__asgiref-523",
+        "corpus": "adaptive_cross_repository_transfer",
+        "host_repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a",
+        "host_venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+        "original_pin_sha256": "ed37e140b5d904d6165eb9c55310d65298dd8431cdc6c5fe76fce9f0efd4e271"
+      },
+      "cell": {
+        "legacy_dispatch_cue": "on",
+        "legacy_argument_cue": "on"
+      },
+      "cell_index": 3,
+      "repetition": 2,
+      "seed": 9402,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "observation_limit": 16000,
+      "episode_id": "task-0-cell-3-rep-2",
+      "task_key": "django__asgiref-523",
+      "host_runtime": {
+        "task_key": "django__asgiref-523",
+        "commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+        "repository": "/tmp/prun-host-prep-20260910/django__asgiref-523-historyfree-v1/repository",
+        "repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a",
+        "venv": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/venv",
+        "venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+      "endpoint": "local_credential_bridge",
+      "budget_profile": "explicit_model_override",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": "provider_default",
+        "seed": null,
+        "reasoning_effort": "low"
+      },
+      "target_model": {
+        "id": "gpt-6-astra",
+        "version": "",
+        "license": "restricted",
+        "backend": "openai"
+      },
+      "prompt_profile": "environment_guidance_v1",
+      "prompt_sha256": "56c7da96c3b35def67b6aac6bde48ced8996c22a9d272021559b6ce035598945",
+      "prompt_sha256_scope": "task_guidance_user_message",
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 6,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 25773,
+        "output_tokens": 1332,
+        "wall_seconds": 45.786175867542624
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 47.85304164979607,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "legacy_dispatch_cue": {
+          "exposed": true,
+          "observation_indices": [
+            0,
+            1,
+            4
+          ]
+        },
+        "legacy_argument_cue": {
+          "exposed": true,
+          "observation_indices": [
+            0,
+            1,
+            4
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-0-rep-3",
+      "task": {
+        "key": "django__asgiref-523",
+        "corpus": "adaptive_cross_repository_transfer",
+        "host_repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a",
+        "host_venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+        "original_pin_sha256": "ed37e140b5d904d6165eb9c55310d65298dd8431cdc6c5fe76fce9f0efd4e271"
+      },
+      "cell": {
+        "legacy_dispatch_cue": "off",
+        "legacy_argument_cue": "off"
+      },
+      "cell_index": 0,
+      "repetition": 3,
+      "seed": 9403,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "observation_limit": 16000,
+      "episode_id": "task-0-cell-0-rep-3",
+      "task_key": "django__asgiref-523",
+      "host_runtime": {
+        "task_key": "django__asgiref-523",
+        "commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+        "repository": "/tmp/prun-host-prep-20260910/django__asgiref-523-historyfree-v1/repository",
+        "repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a",
+        "venv": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/venv",
+        "venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+      "endpoint": "local_credential_bridge",
+      "budget_profile": "explicit_model_override",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": "provider_default",
+        "seed": null,
+        "reasoning_effort": "low"
+      },
+      "target_model": {
+        "id": "gpt-6-astra",
+        "version": "",
+        "license": "restricted",
+        "backend": "openai"
+      },
+      "prompt_profile": "environment_guidance_v1",
+      "prompt_sha256": "56c7da96c3b35def67b6aac6bde48ced8996c22a9d272021559b6ce035598945",
+      "prompt_sha256_scope": "task_guidance_user_message",
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 6,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 23727,
+        "output_tokens": 1337,
+        "wall_seconds": 52.397433802485466
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 54.39516295865178,
+      "visible_changed": false,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {},
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-1-rep-3",
+      "task": {
+        "key": "django__asgiref-523",
+        "corpus": "adaptive_cross_repository_transfer",
+        "host_repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a",
+        "host_venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+        "original_pin_sha256": "ed37e140b5d904d6165eb9c55310d65298dd8431cdc6c5fe76fce9f0efd4e271"
+      },
+      "cell": {
+        "legacy_dispatch_cue": "on",
+        "legacy_argument_cue": "off"
+      },
+      "cell_index": 1,
+      "repetition": 3,
+      "seed": 9403,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "observation_limit": 16000,
+      "episode_id": "task-0-cell-1-rep-3",
+      "task_key": "django__asgiref-523",
+      "host_runtime": {
+        "task_key": "django__asgiref-523",
+        "commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+        "repository": "/tmp/prun-host-prep-20260910/django__asgiref-523-historyfree-v1/repository",
+        "repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a",
+        "venv": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/venv",
+        "venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+      "endpoint": "local_credential_bridge",
+      "budget_profile": "explicit_model_override",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": "provider_default",
+        "seed": null,
+        "reasoning_effort": "low"
+      },
+      "target_model": {
+        "id": "gpt-6-astra",
+        "version": "",
+        "license": "restricted",
+        "backend": "openai"
+      },
+      "prompt_profile": "environment_guidance_v1",
+      "prompt_sha256": "56c7da96c3b35def67b6aac6bde48ced8996c22a9d272021559b6ce035598945",
+      "prompt_sha256_scope": "task_guidance_user_message",
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 4,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 14820,
+        "output_tokens": 1233,
+        "wall_seconds": 46.56699303910136
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 48.53252917993814,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "legacy_dispatch_cue": {
+          "exposed": true,
+          "observation_indices": [
+            0,
+            1
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-2-rep-3",
+      "task": {
+        "key": "django__asgiref-523",
+        "corpus": "adaptive_cross_repository_transfer",
+        "host_repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a",
+        "host_venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+        "original_pin_sha256": "ed37e140b5d904d6165eb9c55310d65298dd8431cdc6c5fe76fce9f0efd4e271"
+      },
+      "cell": {
+        "legacy_dispatch_cue": "off",
+        "legacy_argument_cue": "on"
+      },
+      "cell_index": 2,
+      "repetition": 3,
+      "seed": 9403,
+      "diagnostic_passed": null,
+      "status": "unknown",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "observation_limit": 16000,
+      "episode_id": "task-0-cell-2-rep-3",
+      "task_key": "django__asgiref-523",
+      "host_runtime": {
+        "task_key": "django__asgiref-523",
+        "commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+        "repository": "/tmp/prun-host-prep-20260910/django__asgiref-523-historyfree-v1/repository",
+        "repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a",
+        "venv": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/venv",
+        "venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+      "endpoint": "local_credential_bridge",
+      "budget_profile": "explicit_model_override",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": "provider_default",
+        "seed": null,
+        "reasoning_effort": "low"
+      },
+      "target_model": {
+        "id": "gpt-6-astra",
+        "version": "",
+        "license": "restricted",
+        "backend": "openai"
+      },
+      "prompt_profile": "environment_guidance_v1",
+      "prompt_sha256": "56c7da96c3b35def67b6aac6bde48ced8996c22a9d272021559b6ce035598945",
+      "prompt_sha256_scope": "task_guidance_user_message",
+      "stage": "target_interaction_and_fresh_replay",
+      "error_type": "RuntimeUnavailable",
+      "reason": "host worst-case address space exceeds half available memory",
+      "wall_seconds": 48.68304129317403,
+      "model_calls": 6,
+      "usage_unknown": false,
+      "usage": {
+        "input_tokens": 25978,
+        "output_tokens": 1393,
+        "wall_seconds": 33.1474617900094
+      },
+      "visible_changed": true,
+      "realized": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "legacy_argument_cue": {
+          "exposed": true,
+          "observation_indices": [
+            0,
+            1,
+            4
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-3-rep-3",
+      "task": {
+        "key": "django__asgiref-523",
+        "corpus": "adaptive_cross_repository_transfer",
+        "host_repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a",
+        "host_venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+        "original_pin_sha256": "ed37e140b5d904d6165eb9c55310d65298dd8431cdc6c5fe76fce9f0efd4e271"
+      },
+      "cell": {
+        "legacy_dispatch_cue": "on",
+        "legacy_argument_cue": "on"
+      },
+      "cell_index": 3,
+      "repetition": 3,
+      "seed": 9403,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "observation_limit": 16000,
+      "episode_id": "task-0-cell-3-rep-3",
+      "task_key": "django__asgiref-523",
+      "host_runtime": {
+        "task_key": "django__asgiref-523",
+        "commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+        "repository": "/tmp/prun-host-prep-20260910/django__asgiref-523-historyfree-v1/repository",
+        "repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a",
+        "venv": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/venv",
+        "venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+      "endpoint": "local_credential_bridge",
+      "budget_profile": "explicit_model_override",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": "provider_default",
+        "seed": null,
+        "reasoning_effort": "low"
+      },
+      "target_model": {
+        "id": "gpt-6-astra",
+        "version": "",
+        "license": "restricted",
+        "backend": "openai"
+      },
+      "prompt_profile": "environment_guidance_v1",
+      "prompt_sha256": "56c7da96c3b35def67b6aac6bde48ced8996c22a9d272021559b6ce035598945",
+      "prompt_sha256_scope": "task_guidance_user_message",
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 6,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 24268,
+        "output_tokens": 1276,
+        "wall_seconds": 47.862442346289754
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 49.928485167212784,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "legacy_dispatch_cue": {
+          "exposed": true,
+          "observation_indices": [
+            0,
+            1,
+            4
+          ]
+        },
+        "legacy_argument_cue": {
+          "exposed": true,
+          "observation_indices": [
+            0,
+            1,
+            4
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-0-rep-4",
+      "task": {
+        "key": "django__asgiref-523",
+        "corpus": "adaptive_cross_repository_transfer",
+        "host_repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a",
+        "host_venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+        "original_pin_sha256": "ed37e140b5d904d6165eb9c55310d65298dd8431cdc6c5fe76fce9f0efd4e271"
+      },
+      "cell": {
+        "legacy_dispatch_cue": "off",
+        "legacy_argument_cue": "off"
+      },
+      "cell_index": 0,
+      "repetition": 4,
+      "seed": 9404,
+      "diagnostic_passed": null,
+      "status": "unknown",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "observation_limit": 16000,
+      "episode_id": "task-0-cell-0-rep-4",
+      "task_key": "django__asgiref-523",
+      "host_runtime": {
+        "task_key": "django__asgiref-523",
+        "commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+        "repository": "/tmp/prun-host-prep-20260910/django__asgiref-523-historyfree-v1/repository",
+        "repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a",
+        "venv": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/venv",
+        "venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+      "endpoint": "local_credential_bridge",
+      "budget_profile": "explicit_model_override",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": "provider_default",
+        "seed": null,
+        "reasoning_effort": "low"
+      },
+      "target_model": {
+        "id": "gpt-6-astra",
+        "version": "",
+        "license": "restricted",
+        "backend": "openai"
+      },
+      "prompt_profile": "environment_guidance_v1",
+      "prompt_sha256": "56c7da96c3b35def67b6aac6bde48ced8996c22a9d272021559b6ce035598945",
+      "prompt_sha256_scope": "task_guidance_user_message",
+      "stage": "target_interaction_and_fresh_replay",
+      "error_type": "RuntimeUnavailable",
+      "reason": "host worst-case address space exceeds half available memory",
+      "wall_seconds": 29.464761102572083,
+      "model_calls": 4,
+      "usage_unknown": false,
+      "usage": {
+        "input_tokens": 13565,
+        "output_tokens": 1229,
+        "wall_seconds": 23.341187166864984
+      },
+      "visible_changed": false,
+      "realized": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {},
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-1-rep-4",
+      "task": {
+        "key": "django__asgiref-523",
+        "corpus": "adaptive_cross_repository_transfer",
+        "host_repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a",
+        "host_venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+        "original_pin_sha256": "ed37e140b5d904d6165eb9c55310d65298dd8431cdc6c5fe76fce9f0efd4e271"
+      },
+      "cell": {
+        "legacy_dispatch_cue": "on",
+        "legacy_argument_cue": "off"
+      },
+      "cell_index": 1,
+      "repetition": 4,
+      "seed": 9404,
+      "diagnostic_passed": null,
+      "status": "unknown",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "observation_limit": 16000,
+      "episode_id": "task-0-cell-1-rep-4",
+      "task_key": "django__asgiref-523",
+      "host_runtime": {
+        "task_key": "django__asgiref-523",
+        "commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+        "repository": "/tmp/prun-host-prep-20260910/django__asgiref-523-historyfree-v1/repository",
+        "repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a",
+        "venv": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/venv",
+        "venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+      "endpoint": "local_credential_bridge",
+      "budget_profile": "explicit_model_override",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": "provider_default",
+        "seed": null,
+        "reasoning_effort": "low"
+      },
+      "target_model": {
+        "id": "gpt-6-astra",
+        "version": "",
+        "license": "restricted",
+        "backend": "openai"
+      },
+      "prompt_profile": "environment_guidance_v1",
+      "prompt_sha256": "56c7da96c3b35def67b6aac6bde48ced8996c22a9d272021559b6ce035598945",
+      "prompt_sha256_scope": "task_guidance_user_message",
+      "stage": "target_interaction_and_fresh_replay",
+      "error_type": "RuntimeUnavailable",
+      "reason": "host worst-case address space exceeds half available memory",
+      "wall_seconds": 49.78036069218069,
+      "model_calls": 5,
+      "usage_unknown": false,
+      "usage": {
+        "input_tokens": 19895,
+        "output_tokens": 1308,
+        "wall_seconds": 34.842888665851206
+      },
+      "visible_changed": true,
+      "realized": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "legacy_dispatch_cue": {
+          "exposed": true,
+          "observation_indices": [
+            0,
+            1
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-2-rep-4",
+      "task": {
+        "key": "django__asgiref-523",
+        "corpus": "adaptive_cross_repository_transfer",
+        "host_repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a",
+        "host_venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+        "original_pin_sha256": "ed37e140b5d904d6165eb9c55310d65298dd8431cdc6c5fe76fce9f0efd4e271"
+      },
+      "cell": {
+        "legacy_dispatch_cue": "off",
+        "legacy_argument_cue": "on"
+      },
+      "cell_index": 2,
+      "repetition": 4,
+      "seed": 9404,
+      "diagnostic_passed": null,
+      "status": "unknown",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "observation_limit": 16000,
+      "episode_id": "task-0-cell-2-rep-4",
+      "task_key": "django__asgiref-523",
+      "host_runtime": {
+        "task_key": "django__asgiref-523",
+        "commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+        "repository": "/tmp/prun-host-prep-20260910/django__asgiref-523-historyfree-v1/repository",
+        "repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a",
+        "venv": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/venv",
+        "venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+      "endpoint": "local_credential_bridge",
+      "budget_profile": "explicit_model_override",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": "provider_default",
+        "seed": null,
+        "reasoning_effort": "low"
+      },
+      "target_model": {
+        "id": "gpt-6-astra",
+        "version": "",
+        "license": "restricted",
+        "backend": "openai"
+      },
+      "prompt_profile": "environment_guidance_v1",
+      "prompt_sha256": "56c7da96c3b35def67b6aac6bde48ced8996c22a9d272021559b6ce035598945",
+      "prompt_sha256_scope": "task_guidance_user_message",
+      "stage": "host_runtime_setup",
+      "error_type": "RuntimeUnavailable",
+      "reason": "host worst-case address space exceeds half available memory",
+      "wall_seconds": 0.21322426293045282,
+      "model_calls": 0,
+      "usage_unknown": false,
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "wall_seconds": 0.0
+      },
+      "visible_changed": false,
+      "realized": false,
+      "clause_exposure_status": "unknown",
+      "clause_visible_contribution": {},
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-3-rep-4",
+      "task": {
+        "key": "django__asgiref-523",
+        "corpus": "adaptive_cross_repository_transfer",
+        "host_repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a",
+        "host_venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+        "original_pin_sha256": "ed37e140b5d904d6165eb9c55310d65298dd8431cdc6c5fe76fce9f0efd4e271"
+      },
+      "cell": {
+        "legacy_dispatch_cue": "on",
+        "legacy_argument_cue": "on"
+      },
+      "cell_index": 3,
+      "repetition": 4,
+      "seed": 9404,
+      "diagnostic_passed": null,
+      "status": "unknown",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "observation_limit": 16000,
+      "episode_id": "task-0-cell-3-rep-4",
+      "task_key": "django__asgiref-523",
+      "host_runtime": {
+        "task_key": "django__asgiref-523",
+        "commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+        "repository": "/tmp/prun-host-prep-20260910/django__asgiref-523-historyfree-v1/repository",
+        "repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a",
+        "venv": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/venv",
+        "venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+      "endpoint": "local_credential_bridge",
+      "budget_profile": "explicit_model_override",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": "provider_default",
+        "seed": null,
+        "reasoning_effort": "low"
+      },
+      "target_model": {
+        "id": "gpt-6-astra",
+        "version": "",
+        "license": "restricted",
+        "backend": "openai"
+      },
+      "prompt_profile": "environment_guidance_v1",
+      "prompt_sha256": "56c7da96c3b35def67b6aac6bde48ced8996c22a9d272021559b6ce035598945",
+      "prompt_sha256_scope": "task_guidance_user_message",
+      "stage": "target_interaction_and_fresh_replay",
+      "error_type": "RuntimeUnavailable",
+      "reason": "host worst-case address space exceeds half available memory",
+      "wall_seconds": 53.703851506114006,
+      "model_calls": 6,
+      "usage_unknown": false,
+      "usage": {
+        "input_tokens": 24147,
+        "output_tokens": 1205,
+        "wall_seconds": 29.647330376086757
+      },
+      "visible_changed": true,
+      "realized": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "legacy_dispatch_cue": {
+          "exposed": true,
+          "observation_indices": [
+            0,
+            1
+          ]
+        },
+        "legacy_argument_cue": {
+          "exposed": true,
+          "observation_indices": [
+            0,
+            1
+          ]
+        }
+      },
+      "control_identity_violation": false
+    }
+  ],
+  "terminal_outcome_counts": {
+    "diagnostic_measured": 15,
+    "infrastructure_or_verifier_unknown": 5,
+    "pending_or_missing": 0
+  },
+  "exporter_sha256": "11117787c5afc239def0c3b4dd3e1d11dca87db9b9f729c75a3bd19f910b205f",
+  "pending_or_missing": 0,
+  "pending_run_ids": [],
+  "unknown_by_stage": [
+    {
+      "stage": "host_runtime_setup",
+      "error_type": "RuntimeUnavailable",
+      "executions": 1
+    },
+    {
+      "stage": "target_interaction_and_fresh_replay",
+      "error_type": "RuntimeUnavailable",
+      "executions": 4
+    }
+  ],
+  "evidence_sha256": {
+    "registration.json": "0957ad0aa569fcbaf76f7161667d761bc28aee8b3dbe8568b19e2f825f0784e3",
+    "shards/task-0-cell-0/registration.json": "02881dfb964d34c3e80091333c555fbdfcce7b1565b8bc91998a3afb316e86b9",
+    "shards/task-0-cell-1/registration.json": "add848c5c8429757b587bb8ad7271e99b4efbb1599b0d3269579e1674e82f1ae",
+    "shards/task-0-cell-2/registration.json": "7a42eb639c04124886fbf41efd54095e60ff09c02a18793d69c7770c9145e340",
+    "shards/task-0-cell-3/registration.json": "0f0053ba466df4d61963a885e69a46e0a12f0f7dd6fd5d83cb24e0f877d5b995",
+    "shards/task-0-cell-0/task-0-cell-0-rep-0/result.json": "0ee1ce4cecf4171f4d0eb118c2d1c5db644617f17564ad05731fbc144a3319bb",
+    "shards/task-0-cell-1/task-0-cell-1-rep-0/result.json": "b5000bdd3ce3deb1420b2216ddf64a2bc504d54a806f32cfee927dc4f52b511a",
+    "shards/task-0-cell-2/task-0-cell-2-rep-0/result.json": "d04a3328f4072b37e58d541cecf00cacee1c0b11405479ac9999774ae3ceebde",
+    "shards/task-0-cell-3/task-0-cell-3-rep-0/result.json": "3903ed2f6ab922b9864d0050dbac021451c0afed071302fe488a5b3539194e14",
+    "shards/task-0-cell-0/task-0-cell-0-rep-1/result.json": "9a9b6f691a5ec7e05c1a39cc470a64ac89a2394bc111862ea9d0a1135e8ea57d",
+    "shards/task-0-cell-1/task-0-cell-1-rep-1/result.json": "3f1d2a194ba7c8e193fb4ab2a42880e05c41c623e2e1cae998e1b71b6fc4b7a1",
+    "shards/task-0-cell-2/task-0-cell-2-rep-1/result.json": "6e76cdc08259e061d0a00d09145ee1d38591bca3fec3c1048f4e629693b6525c",
+    "shards/task-0-cell-3/task-0-cell-3-rep-1/result.json": "ed4b4c1e4eceaa1367404104df30c66783840f518f71a3fe34dfac37d913a69a",
+    "shards/task-0-cell-0/task-0-cell-0-rep-2/result.json": "c1cabaa0aa854f76cf81a5dbce58cdebc6c0a5edf84e870a8c46c439dd7d1f50",
+    "shards/task-0-cell-1/task-0-cell-1-rep-2/result.json": "3b1d1499ea5a98aa1e542f9f9366741d73789780e910e6632fb31a3ddc12bf37",
+    "shards/task-0-cell-2/task-0-cell-2-rep-2/result.json": "d72c98446b1be978b9d26883dc90985d389a4c3f02fb903515e3dad7793b272f",
+    "shards/task-0-cell-3/task-0-cell-3-rep-2/result.json": "1b8ab14136b44bddc1b32feefaa064dfcafef81c3141a473bf045eb3052731d5",
+    "shards/task-0-cell-0/task-0-cell-0-rep-3/result.json": "df4ad9063c2bd37f2883ace56b50192b0ffe542767f586407c272a64d5cf6846",
+    "shards/task-0-cell-1/task-0-cell-1-rep-3/result.json": "3942b4ca968d3c4c222e16cbeddf3601ae46683c3729c192317cb900ade05aad",
+    "shards/task-0-cell-2/task-0-cell-2-rep-3/result.json": "590f3856913bd343bceeab84d0645122a2c8df79cd253598e06b922d87f8ea41",
+    "shards/task-0-cell-3/task-0-cell-3-rep-3/result.json": "c9e890b10ce2b175dd146bcf57998efdfdd6c6e42366d405e8525eec5faa98ff",
+    "shards/task-0-cell-0/task-0-cell-0-rep-4/result.json": "0479b663ceee7a7ccd2d10210c179d25b5f0bf3d9e12666481cd3806de186215",
+    "shards/task-0-cell-1/task-0-cell-1-rep-4/result.json": "5d9dedc122cf1483110af4b84cd0bab3e7f08976cd5d517756708ceb66487201",
+    "shards/task-0-cell-2/task-0-cell-2-rep-4/result.json": "88c8127d183cbc66c605e6110a9b4a7ea63da9963b5492a38d536403ee7ee5bc",
+    "shards/task-0-cell-3/task-0-cell-3-rep-4/result.json": "44d784a47d36ccb0affc90b55c00aa509dbde6437910bd41ad6570d9e74f45ca"
+  },
+  "limitations": [
+    "Host runtime differs from the original container runtime.",
+    "Same-process pytest outputs are diagnostic, not protected semantic evidence.",
+    "Unrealized active conditions and censored runs remain attributable unknowns.",
+    "Five repeated executions per task do not establish population generalization.",
+    "No trained, protected, confirmed, or confidence-interval claim."
+  ]
+}

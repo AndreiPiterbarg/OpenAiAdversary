@@ -1,0 +1,18 @@
+{
+  "attempt": 4,
+  "status": "rejected",
+  "critique": {
+    "accepted": false,
+    "objections": [
+      {
+        "reason": "malformed",
+        "detail": "verifier: syntax error: unterminated string literal (detected at line 7) (line 7)"
+      },
+      {
+        "reason": "malformed",
+        "detail": "perturbation: syntax error: unterminated string literal (detected at line 11) (line 11)"
+      }
+    ],
+    "critic": "static"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "diagnostic_passed": true,
+  "test_results": {
+    "exit": 0,
+    "stdout": "============================= test session starts ==============================\ncollected 15 items\n\ntests/test_local.py ...............                                      [100%]\n\n==================================== PASSES ====================================\n=========================== short test summary info ============================\nPASSED tests/test_local.py::test_local_task\nPASSED tests/test_local.py::test_local_thread\nPASSED tests/test_local.py::test_local_thread_nested\nPASSED tests/test_local.py::test_local_cycle\nPASSED tests/test_local.py::test_local_task_to_sync\nPASSED tests/test_local.py::test_local_thread_to_async\nPASSED tests/test_local.py::test_local_task_to_sync_to_task\nPASSED tests/test_local.py::test_local_many_layers\nPASSED tests/test_local.py::test_local_critical_no_task_to_thread\nPASSED tests/test_local.py::test_local_critical_no_thread_to_task\nPASSED tests/test_local.py::test_local_threads_and_tasks\nPASSED tests/test_local.py::test_thread_critical_local_not_context_dependent_in_sync_thread\nPASSED tests/test_local.py::test_visibility_thread_asgiref\nPASSED tests/test_local.py::test_visibility_task\nPASSED tests/test_local.py::test_deletion\n============================== 15 passed in 0.06s ==============================\n",
+    "stderr": ""
+  },
+  "diagnostic_replay": {
+    "kind": "diagnostic_host_test_replay",
+    "protected_status": "unknown",
+    "task_key": "django__asgiref-523",
+    "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+    "candidate_sha256": "bdfd25253a0da9bf78fcd1dedd9632096c0c8300d0b2c9e7a2bae051dd48dcd3",
+    "changed_files": [
+      "asgiref/local.py"
+    ],
+    "untracked_artifact": {
+      "kind": "bounded_code_artifact_v1",
+      "phase": "artifact_export",
+      "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+      "tracked_patch": "diff --git a/asgiref/local.py b/asgiref/local.py\nindex 19b395f..00aca04 100644\n--- a/asgiref/local.py\n+++ b/asgiref/local.py\n@@ -9,33 +9,33 @@ class _CVar:\n     \"\"\"Storage utility for Local.\"\"\"\n \n     def __init__(self) -> None:\n-        self._data: dict[str, contextvars.ContextVar[Any]] = {}\n+        self._data: contextvars.ContextVar[dict[str, Any]] = contextvars.ContextVar(\n+            \"asgiref.local\"\n+        )\n \n     def __getattr__(self, key: str) -> Any:\n         try:\n-            var = self._data[key]\n+            return self._data.get({})[key]\n         except KeyError:\n             raise AttributeError(f\"{self!r} object has no attribute {key!r}\")\n \n-        try:\n-            return var.get()\n-        except LookupError:\n-            raise AttributeError(f\"{self!r} object has no attribute {key!r}\")\n-\n     def __setattr__(self, key: str, value: Any) -> None:\n         if key == \"_data\":\n             return super().__setattr__(key, value)\n \n-        var = self._data.get(key)\n-        if var is None:\n-            self._data[key] = var = contextvars.ContextVar(key)\n-        var.set(value)\n+        # Contexts inherit values by reference, so never mutate the dictionary\n+        # in place: changes must remain local to the current context.\n+        storage = self._data.get({}).copy()\n+        storage[key] = value\n+        self._data.set(storage)\n \n     def __delattr__(self, key: str) -> None:\n-        if key in self._data:\n-            del self._data[key]\n-        else:\n+        storage = self._data.get({}).copy()\n+        try:\n+            del storage[key]\n+        except KeyError:\n             raise AttributeError(f\"{self!r} object has no attribute {key!r}\")\n+        self._data.set(storage)\n \n \n class Local:\n",
+      "patch": "diff --git a/asgiref/local.py b/asgiref/local.py\nindex 19b395f..00aca04 100644\n--- a/asgiref/local.py\n+++ b/asgiref/local.py\n@@ -9,33 +9,33 @@ class _CVar:\n     \"\"\"Storage utility for Local.\"\"\"\n \n     def __init__(self) -> None:\n-        self._data: dict[str, contextvars.ContextVar[Any]] = {}\n+        self._data: contextvars.ContextVar[dict[str, Any]] = contextvars.ContextVar(\n+            \"asgiref.local\"\n+        )\n \n     def __getattr__(self, key: str) -> Any:\n         try:\n-            var = self._data[key]\n+            return self._data.get({})[key]\n         except KeyError:\n             raise AttributeError(f\"{self!r} object has no attribute {key!r}\")\n \n-        try:\n-            return var.get()\n-        except LookupError:\n-            raise AttributeError(f\"{self!r} object has no attribute {key!r}\")\n-\n     def __setattr__(self, key: str, value: Any) -> None:\n         if key == \"_data\":\n             return super().__setattr__(key, value)\n \n-        var = self._data.get(key)\n-        if var is None:\n-            self._data[key] = var = contextvars.ContextVar(key)\n-        var.set(value)\n+        # Contexts inherit values by reference, so never mutate the dictionary\n+        # in place: changes must remain local to the current context.\n+        storage = self._data.get({}).copy()\n+        storage[key] = value\n+        self._data.set(storage)\n \n     def __delattr__(self, key: str) -> None:\n-        if key in self._data:\n-            del self._data[key]\n-        else:\n+        storage = self._data.get({}).copy()\n+        try:\n+            del storage[key]\n+        except KeyError:\n             raise AttributeError(f\"{self!r} object has no attribute {key!r}\")\n+        self._data.set(storage)\n \n \n class Local:\n",
+      "baseline_untracked": {},
+      "generated_report_paths": [],
+      "untracked_deltas": [
+        {
+          "path": "tests/test_local_context_deletion.py",
+          "before": null,
+          "after": {
+            "mode": 436,
+            "sha256": "840d2c8fdd332717006f64e800f2551eaea552d641fa8dc57fc3f210a70c527e",
+            "size": 1629
+          },
+          "omission": "new_candidate_test_excluded_from_frozen_code_only_replay"
+        }
+      ],
+      "current_untracked": {
+        "tests/test_local_context_deletion.py": {
+          "mode": 436,
+          "sha256": "840d2c8fdd332717006f64e800f2551eaea552d641fa8dc57fc3f210a70c527e",
+          "size": 1629
+        }
+      },
+      "omitted_generated_reports": {
+        "tests/test_local_context_deletion.py": {
+          "before": null,
+          "after": {
+            "mode": 436,
+            "sha256": "840d2c8fdd332717006f64e800f2551eaea552d641fa8dc57fc3f210a70c527e",
+            "size": 1629
+          },
+          "reason": "new_candidate_test_excluded_from_frozen_code_only_replay"
+        }
+      },
+      "artifact_sha256": "7ea2454ece798f4b721c6fa09efb2ea81cf233fa00ac572414a906b290053dc3"
+    },
+    "artifact_scope": "tracked and untracked code deltas; omissions explicit",
+    "statuses": {
+      "tests/test_local.py::test_deletion": "PASSED",
+      "tests/test_local.py::test_local_task": "PASSED",
+      "tests/test_local.py::test_local_thread": "PASSED",
+      "tests/test_local.py::test_local_thread_nested": "PASSED",
+      "tests/test_local.py::test_local_cycle": "PASSED",
+      "tests/test_local.py::test_local_task_to_sync": "PASSED",
+      "tests/test_local.py::test_local_thread_to_async": "PASSED",
+      "tests/test_local.py::test_local_task_to_sync_to_task": "PASSED",
+      "tests/test_local.py::test_local_many_layers": "PASSED",
+      "tests/test_local.py::test_local_critical_no_task_to_thread": "PASSED",
+      "tests/test_local.py::test_local_critical_no_thread_to_task": "PASSED",
+      "tests/test_local.py::test_local_threads_and_tasks": "PASSED",
+      "tests/test_local.py::test_thread_critical_local_not_context_dependent_in_sync_thread": "PASSED",
+      "tests/test_local.py::test_visibility_thread_asgiref": "PASSED",
+      "tests/test_local.py::test_visibility_task": "PASSED"
+    },
+    "runtime_kind": "interactive_host_runtime_v1",
+    "repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a",
+    "venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+    "guard_attestation": {
+      "guard_sha256": "a4077009c538a799eb6467b4b22e3859cb5f69c460e238ae34f3bbdbb84bac44",
+      "python_executable": "/usr/bin/python3.12",
+      "checks": {
+        "/proc/1/mem": true,
+        "/proc/self/status": true,
+        "network": true,
+        "signal": true,
+        "system_write": true
+      },
+      "scope": "all target tool commands use inherited kernel guard",
+      "runtime_kind": "host_python_guarded",
+      "host_nproc": 1792,
+      "address_space_bytes_per_process": 268435456,
+      "conservative_address_space_bound": 481036337152,
+      "host_runtime": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/venv",
+      "observed_uid_threads": 1332,
+      "observed_mem_available": 992665022464
+    },
+    "limitations": [
+      "candidate can tamper with same-process pytest evidence",
+      "target environment/package changes are not replayed",
+      "host Python runtime is separately pinned; not the original container"
+    ]
+  },
+  "perturbations_fired": {
+    "1:call_8cMNUmsi6ZtICbudwtSIGxMk": 1,
+    "2:call_GtF4rFNUTDDxXZyybNTmWYdG": 2
+  },
+  "interaction_outcome": {
+    "stop_reason": "submitted",
+    "budget_exhausted": false,
+    "interaction_seconds": 38.787625706754625,
+    "max_steps": 100,
+    "max_seconds": 600.0
+  }
+}

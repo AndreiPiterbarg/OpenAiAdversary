@@ -249,3 +249,51 @@ def test_guarded_session_passes_only_trusted_effective_cpu_budget(bound, request
     session.exec('pytest --version', requested)
     assert raw.command[raw.command.index('--cpu-seconds') + 1] == str(expected)
     assert raw.timeout == expected
+
+
+@LINUX
+def test_host_policy_exact_runtime_and_memory_bound(tmp_path):
+    if os.getuid() == 0:
+        pytest.skip('host policy refuses root where NPROC is ineffective')
+    repo, scratch, runtime = (tmp_path / p for p in ('repo', 'scratch', 'runtime'))
+    for path in (repo, scratch, runtime):
+        path.mkdir()
+    (runtime / 'marker').write_text('trusted')
+    outside = tmp_path / 'host-secret'
+    outside.write_text('not-readable')
+    code = f'''
+from pathlib import Path
+import os
+assert Path({str(runtime / 'marker')!r}).read_text() == 'trusted'
+for path,mode in [({str(outside)!r},'r'),('/etc/hostname','r'),
+                  ({str(runtime / 'marker')!r},'w'),('/proc/self/environ','r')]:
+ try: open(path,mode)
+ except PermissionError: pass
+ else: raise AssertionError((path,mode))
+assert 'HOST_SECRET' not in os.environ
+try: bytearray(600 * 1024**2)
+except MemoryError: pass
+else: raise AssertionError('address space cap missing')
+print('host-boundary-ok')
+'''
+    result = subprocess.run(
+        [sys.executable, '-I', str(GUARD), '--repo', str(repo.resolve()),
+         '--scratch', str(scratch.resolve()), '--host-runtime', str(runtime.resolve()),
+         '--host-nproc', '512', '--', sys.executable, '-I', '-c', code],
+        capture_output=True, text=True, timeout=15,
+        env={**os.environ, 'HOST_SECRET': 'must-not-inherit'},
+    )
+    assert result.returncode == 0, result.stderr
+    assert result.stdout.strip() == 'host-boundary-ok'
+
+
+@pytest.mark.parametrize('limit', [0, 4097, True])
+def test_host_process_limit_invalid_fails_before_exec(tmp_path, monkeypatch, limit):
+    repo, scratch, runtime = (tmp_path / p for p in ('repo', 'scratch', 'runtime'))
+    for path in (repo, scratch, runtime):
+        path.mkdir()
+    monkeypatch.setattr(target_guard.os, 'getuid', lambda: 1031)
+    with pytest.raises(target_guard.GuardUnavailable, match='process cap'):
+        target_guard.guarded_exec(str(repo.resolve()), str(scratch.resolve()),
+                                 ['/bin/true'], host_runtime=str(runtime.resolve()),
+                                 host_nproc=limit)

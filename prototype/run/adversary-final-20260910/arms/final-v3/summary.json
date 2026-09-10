@@ -1,0 +1,4691 @@
+{
+  "planned": 60,
+  "diagnostic_measured": 52,
+  "diagnostic_passes": 10,
+  "diagnostic_unknown": 8,
+  "attributable_known": 45,
+  "unknown": 15,
+  "budget_exhausted": 4,
+  "visible_changed": 39,
+  "realized": 54,
+  "groups": [
+    {
+      "task": "factoryboy__factory_boy-1067",
+      "cell_index": 0,
+      "executions": 5,
+      "diagnostic_measured": 5,
+      "known": 5,
+      "unknown": 0,
+      "passes": 0,
+      "complete": true,
+      "task_failure": true,
+      "severity": 1.0
+    },
+    {
+      "task": "factoryboy__factory_boy-1067",
+      "cell_index": 1,
+      "executions": 5,
+      "diagnostic_measured": 5,
+      "known": 5,
+      "unknown": 0,
+      "passes": 0,
+      "complete": true,
+      "task_failure": true,
+      "severity": 1.0
+    },
+    {
+      "task": "factoryboy__factory_boy-1067",
+      "cell_index": 2,
+      "executions": 5,
+      "diagnostic_measured": 5,
+      "known": 5,
+      "unknown": 0,
+      "passes": 1,
+      "complete": true,
+      "task_failure": true,
+      "severity": 0.8
+    },
+    {
+      "task": "factoryboy__factory_boy-1067",
+      "cell_index": 3,
+      "executions": 5,
+      "diagnostic_measured": 5,
+      "known": 5,
+      "unknown": 0,
+      "passes": 0,
+      "complete": true,
+      "task_failure": true,
+      "severity": 1.0
+    },
+    {
+      "task": "django__asgiref-523",
+      "cell_index": 0,
+      "executions": 5,
+      "diagnostic_measured": 4,
+      "known": 2,
+      "unknown": 3,
+      "passes": 0,
+      "complete": false,
+      "task_failure": null,
+      "severity": null
+    },
+    {
+      "task": "django__asgiref-523",
+      "cell_index": 1,
+      "executions": 5,
+      "diagnostic_measured": 3,
+      "known": 3,
+      "unknown": 2,
+      "passes": 1,
+      "complete": false,
+      "task_failure": null,
+      "severity": null
+    },
+    {
+      "task": "django__asgiref-523",
+      "cell_index": 2,
+      "executions": 5,
+      "diagnostic_measured": 4,
+      "known": 4,
+      "unknown": 1,
+      "passes": 1,
+      "complete": false,
+      "task_failure": null,
+      "severity": null
+    },
+    {
+      "task": "django__asgiref-523",
+      "cell_index": 3,
+      "executions": 5,
+      "diagnostic_measured": 4,
+      "known": 4,
+      "unknown": 1,
+      "passes": 1,
+      "complete": false,
+      "task_failure": null,
+      "severity": null
+    },
+    {
+      "task": "stuartmaxwell__djpress-117",
+      "cell_index": 0,
+      "executions": 5,
+      "diagnostic_measured": 4,
+      "known": 4,
+      "unknown": 1,
+      "passes": 2,
+      "complete": false,
+      "task_failure": null,
+      "severity": null
+    },
+    {
+      "task": "stuartmaxwell__djpress-117",
+      "cell_index": 1,
+      "executions": 5,
+      "diagnostic_measured": 3,
+      "known": 2,
+      "unknown": 3,
+      "passes": 2,
+      "complete": false,
+      "task_failure": null,
+      "severity": null
+    },
+    {
+      "task": "stuartmaxwell__djpress-117",
+      "cell_index": 2,
+      "executions": 5,
+      "diagnostic_measured": 5,
+      "known": 3,
+      "unknown": 2,
+      "passes": 1,
+      "complete": false,
+      "task_failure": null,
+      "severity": null
+    },
+    {
+      "task": "stuartmaxwell__djpress-117",
+      "cell_index": 3,
+      "executions": 5,
+      "diagnostic_measured": 5,
+      "known": 3,
+      "unknown": 2,
+      "passes": 0,
+      "complete": false,
+      "task_failure": null,
+      "severity": null
+    }
+  ],
+  "contrasts": [
+    {
+      "task": "django__asgiref-523",
+      "complete": false,
+      "delta_a": null,
+      "delta_b": null,
+      "delta_all_on": null,
+      "additive_prediction": null,
+      "additive_excess": null,
+      "raw_interaction_contrast": null,
+      "scale": "five-execution failure fraction",
+      "descriptive_only": true,
+      "confidence_interval": null
+    },
+    {
+      "task": "factoryboy__factory_boy-1067",
+      "complete": true,
+      "delta_a": 0.0,
+      "delta_b": -0.19999999999999996,
+      "delta_all_on": 0.0,
+      "additive_prediction": 0.8,
+      "additive_excess": 0.19999999999999996,
+      "raw_interaction_contrast": 0.19999999999999996,
+      "scale": "five-execution failure fraction",
+      "descriptive_only": true,
+      "confidence_interval": null
+    },
+    {
+      "task": "stuartmaxwell__djpress-117",
+      "complete": false,
+      "delta_a": null,
+      "delta_b": null,
+      "delta_all_on": null,
+      "additive_prediction": null,
+      "additive_excess": null,
+      "raw_interaction_contrast": null,
+      "scale": "five-execution failure fraction",
+      "descriptive_only": true,
+      "confidence_interval": null
+    }
+  ],
+  "protected": false,
+  "confirmed": false,
+  "trained": false,
+  "inference": "descriptive task-specific contrasts; no population or confidence claim",
+  "elapsed_seconds": 674.9197473209351,
+  "rows": [
+    {
+      "id": "task-0-cell-0-rep-0",
+      "task": {
+        "key": "factoryboy__factory_boy-1067",
+        "corpus": "discovery",
+        "host_repository_sha256": "29c43d92e4f808d5358f7436e7bf167c4fb0e6b0f2f9763f01c9b6c9cdfcfb50",
+        "host_venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "prepared_ref": "6659398c3aed729e6a447855a1da517edb9a9cb5"
+      },
+      "cell": {
+        "locale_missing": "off",
+        "locale_provided": "off"
+      },
+      "cell_index": 0,
+      "repetition": 0,
+      "seed": 2000,
+      "diagnostic_passed": false,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-0-cell-0-rep-0",
+      "task_key": "factoryboy__factory_boy-1067",
+      "host_runtime": {
+        "task_key": "factoryboy__factory_boy-1067",
+        "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+        "repository": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/pristine",
+        "repository_sha256": "29c43d92e4f808d5358f7436e7bf167c4fb0e6b0f2f9763f01c9b6c9cdfcfb50",
+        "venv": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+        "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "6659398c3aed729e6a447855a1da517edb9a9cb5",
+      "endpoint": "http://127.0.0.1:18102/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2000,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "passed",
+      "steps": 46,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 440001,
+        "output_tokens": 5953,
+        "wall_seconds": 151.09389940369874
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 215.8261529682204,
+      "visible_changed": false,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {},
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-1-rep-0",
+      "task": {
+        "key": "factoryboy__factory_boy-1067",
+        "corpus": "discovery",
+        "host_repository_sha256": "29c43d92e4f808d5358f7436e7bf167c4fb0e6b0f2f9763f01c9b6c9cdfcfb50",
+        "host_venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "prepared_ref": "6659398c3aed729e6a447855a1da517edb9a9cb5"
+      },
+      "cell": {
+        "locale_missing": "on",
+        "locale_provided": "off"
+      },
+      "cell_index": 1,
+      "repetition": 0,
+      "seed": 2000,
+      "diagnostic_passed": false,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-0-cell-1-rep-0",
+      "task_key": "factoryboy__factory_boy-1067",
+      "host_runtime": {
+        "task_key": "factoryboy__factory_boy-1067",
+        "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+        "repository": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/pristine",
+        "repository_sha256": "29c43d92e4f808d5358f7436e7bf167c4fb0e6b0f2f9763f01c9b6c9cdfcfb50",
+        "venv": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+        "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "6659398c3aed729e6a447855a1da517edb9a9cb5",
+      "endpoint": "http://127.0.0.1:18103/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2000,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "passed",
+      "steps": 67,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 746723,
+        "output_tokens": 8169,
+        "wall_seconds": 244.30600504856557
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 306.77403836511075,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_missing": {
+          "exposed": true,
+          "observation_indices": [
+            35,
+            41,
+            43,
+            44,
+            54,
+            55,
+            56,
+            59,
+            60,
+            61,
+            62
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-2-rep-0",
+      "task": {
+        "key": "factoryboy__factory_boy-1067",
+        "corpus": "discovery",
+        "host_repository_sha256": "29c43d92e4f808d5358f7436e7bf167c4fb0e6b0f2f9763f01c9b6c9cdfcfb50",
+        "host_venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "prepared_ref": "6659398c3aed729e6a447855a1da517edb9a9cb5"
+      },
+      "cell": {
+        "locale_missing": "off",
+        "locale_provided": "on"
+      },
+      "cell_index": 2,
+      "repetition": 0,
+      "seed": 2000,
+      "diagnostic_passed": false,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-0-cell-2-rep-0",
+      "task_key": "factoryboy__factory_boy-1067",
+      "host_runtime": {
+        "task_key": "factoryboy__factory_boy-1067",
+        "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+        "repository": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/pristine",
+        "repository_sha256": "29c43d92e4f808d5358f7436e7bf167c4fb0e6b0f2f9763f01c9b6c9cdfcfb50",
+        "venv": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+        "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "6659398c3aed729e6a447855a1da517edb9a9cb5",
+      "endpoint": "http://127.0.0.1:18104/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2000,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "passed",
+      "steps": 53,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 570005,
+        "output_tokens": 10245,
+        "wall_seconds": 256.36371016688645
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 318.1104254471138,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_provided": {
+          "exposed": true,
+          "observation_indices": [
+            26,
+            28,
+            29,
+            42,
+            48,
+            49
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-3-rep-0",
+      "task": {
+        "key": "factoryboy__factory_boy-1067",
+        "corpus": "discovery",
+        "host_repository_sha256": "29c43d92e4f808d5358f7436e7bf167c4fb0e6b0f2f9763f01c9b6c9cdfcfb50",
+        "host_venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "prepared_ref": "6659398c3aed729e6a447855a1da517edb9a9cb5"
+      },
+      "cell": {
+        "locale_missing": "on",
+        "locale_provided": "on"
+      },
+      "cell_index": 3,
+      "repetition": 0,
+      "seed": 2000,
+      "diagnostic_passed": false,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-0-cell-3-rep-0",
+      "task_key": "factoryboy__factory_boy-1067",
+      "host_runtime": {
+        "task_key": "factoryboy__factory_boy-1067",
+        "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+        "repository": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/pristine",
+        "repository_sha256": "29c43d92e4f808d5358f7436e7bf167c4fb0e6b0f2f9763f01c9b6c9cdfcfb50",
+        "venv": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+        "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "6659398c3aed729e6a447855a1da517edb9a9cb5",
+      "endpoint": "http://127.0.0.1:18105/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2000,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "passed",
+      "steps": 52,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 548249,
+        "output_tokens": 6446,
+        "wall_seconds": 177.8461298784241
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 252.77942874934524,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_missing": {
+          "exposed": true,
+          "observation_indices": [
+            36,
+            38,
+            39,
+            44,
+            45,
+            46,
+            47
+          ]
+        },
+        "locale_provided": {
+          "exposed": true,
+          "observation_indices": [
+            36,
+            38,
+            39,
+            44,
+            45,
+            46,
+            47
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-1-cell-0-rep-0",
+      "task": {
+        "key": "django__asgiref-523",
+        "corpus": "confirm_A",
+        "host_repository_sha256": "a5b35a6687984709638b9f074d129388af6a996b21ac9059cf668bd27e270b91",
+        "host_venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "prepared_ref": "92d325fb7729184a7ad60fb68e308889a16f7497"
+      },
+      "cell": {
+        "locale_missing": "off",
+        "locale_provided": "off"
+      },
+      "cell_index": 0,
+      "repetition": 0,
+      "seed": 2000,
+      "diagnostic_passed": false,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-1-cell-0-rep-0",
+      "task_key": "django__asgiref-523",
+      "host_runtime": {
+        "task_key": "django__asgiref-523",
+        "commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+        "repository": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/pristine",
+        "repository_sha256": "a5b35a6687984709638b9f074d129388af6a996b21ac9059cf668bd27e270b91",
+        "venv": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/venv",
+        "venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "92d325fb7729184a7ad60fb68e308889a16f7497",
+      "endpoint": "http://127.0.0.1:18106/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2000,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "passed",
+      "steps": 64,
+      "stop_reason": "model_stopped",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 732652,
+        "output_tokens": 21351,
+        "wall_seconds": 334.32040946837515
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 351.30733629502356,
+      "visible_changed": false,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {},
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-1-cell-1-rep-0",
+      "task": {
+        "key": "django__asgiref-523",
+        "corpus": "confirm_A",
+        "host_repository_sha256": "a5b35a6687984709638b9f074d129388af6a996b21ac9059cf668bd27e270b91",
+        "host_venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "prepared_ref": "92d325fb7729184a7ad60fb68e308889a16f7497"
+      },
+      "cell": {
+        "locale_missing": "on",
+        "locale_provided": "off"
+      },
+      "cell_index": 1,
+      "repetition": 0,
+      "seed": 2000,
+      "diagnostic_passed": false,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-1-cell-1-rep-0",
+      "task_key": "django__asgiref-523",
+      "host_runtime": {
+        "task_key": "django__asgiref-523",
+        "commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+        "repository": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/pristine",
+        "repository_sha256": "a5b35a6687984709638b9f074d129388af6a996b21ac9059cf668bd27e270b91",
+        "venv": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/venv",
+        "venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "92d325fb7729184a7ad60fb68e308889a16f7497",
+      "endpoint": "http://127.0.0.1:18107/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2000,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "passed",
+      "steps": 57,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 575084,
+        "output_tokens": 11547,
+        "wall_seconds": 217.76903158053756
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 241.63112679123878,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_missing": {
+          "exposed": true,
+          "observation_indices": [
+            16,
+            22,
+            31,
+            43,
+            46,
+            53
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-1-cell-2-rep-0",
+      "task": {
+        "key": "django__asgiref-523",
+        "corpus": "confirm_A",
+        "host_repository_sha256": "a5b35a6687984709638b9f074d129388af6a996b21ac9059cf668bd27e270b91",
+        "host_venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "prepared_ref": "92d325fb7729184a7ad60fb68e308889a16f7497"
+      },
+      "cell": {
+        "locale_missing": "off",
+        "locale_provided": "on"
+      },
+      "cell_index": 2,
+      "repetition": 0,
+      "seed": 2000,
+      "diagnostic_passed": false,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-1-cell-2-rep-0",
+      "task_key": "django__asgiref-523",
+      "host_runtime": {
+        "task_key": "django__asgiref-523",
+        "commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+        "repository": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/pristine",
+        "repository_sha256": "a5b35a6687984709638b9f074d129388af6a996b21ac9059cf668bd27e270b91",
+        "venv": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/venv",
+        "venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "92d325fb7729184a7ad60fb68e308889a16f7497",
+      "endpoint": "http://127.0.0.1:18200/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2000,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "passed",
+      "steps": 44,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 459004,
+        "output_tokens": 9898,
+        "wall_seconds": 181.23159131594002
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 202.0778036918491,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_provided": {
+          "exposed": true,
+          "observation_indices": [
+            7,
+            22,
+            29,
+            31,
+            33,
+            34,
+            38
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-1-cell-3-rep-0",
+      "task": {
+        "key": "django__asgiref-523",
+        "corpus": "confirm_A",
+        "host_repository_sha256": "a5b35a6687984709638b9f074d129388af6a996b21ac9059cf668bd27e270b91",
+        "host_venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "prepared_ref": "92d325fb7729184a7ad60fb68e308889a16f7497"
+      },
+      "cell": {
+        "locale_missing": "on",
+        "locale_provided": "on"
+      },
+      "cell_index": 3,
+      "repetition": 0,
+      "seed": 2000,
+      "diagnostic_passed": null,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-1-cell-3-rep-0",
+      "task_key": "django__asgiref-523",
+      "host_runtime": {
+        "task_key": "django__asgiref-523",
+        "commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+        "repository": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/pristine",
+        "repository_sha256": "a5b35a6687984709638b9f074d129388af6a996b21ac9059cf668bd27e270b91",
+        "venv": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/venv",
+        "venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "92d325fb7729184a7ad60fb68e308889a16f7497",
+      "endpoint": "http://127.0.0.1:18201/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2000,
+        "reasoning_effort": null
+      },
+      "admission_status": "rejected",
+      "guarded_gold_control": "not_needed",
+      "steps": 62,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 694602,
+        "output_tokens": 10599,
+        "wall_seconds": 203.22212086431682
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 209.49858997482806,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_missing": {
+          "exposed": true,
+          "observation_indices": [
+            18,
+            30,
+            32,
+            35,
+            49,
+            52,
+            55,
+            59
+          ]
+        },
+        "locale_provided": {
+          "exposed": true,
+          "observation_indices": [
+            18,
+            30,
+            32,
+            35,
+            49,
+            52,
+            55,
+            59
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-2-cell-0-rep-0",
+      "task": {
+        "key": "stuartmaxwell__djpress-117",
+        "corpus": "confirm_B",
+        "host_repository_sha256": "984289f38db59ffc17ba896c942ddba7e42a1b8cdae1be43379650368243d4e7",
+        "host_venv_sha256": "d096ed5cb5fd007cfe0e6b065d76fa5fb6641afc7450060ae899b643ef82ad27",
+        "prepared_ref": "8bfcfb6f0e7bf9afc6e8aed67e2e517ff927e797"
+      },
+      "cell": {
+        "locale_missing": "off",
+        "locale_provided": "off"
+      },
+      "cell_index": 0,
+      "repetition": 0,
+      "seed": 2000,
+      "diagnostic_passed": false,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-2-cell-0-rep-0",
+      "task_key": "stuartmaxwell__djpress-117",
+      "host_runtime": {
+        "task_key": "stuartmaxwell__djpress-117",
+        "commit": "62898afc246da3e96a0b8f753cf5e9853d75b40e",
+        "repository": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-v2/pristine",
+        "repository_sha256": "984289f38db59ffc17ba896c942ddba7e42a1b8cdae1be43379650368243d4e7",
+        "venv": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-v2/venv",
+        "venv_sha256": "d096ed5cb5fd007cfe0e6b065d76fa5fb6641afc7450060ae899b643ef82ad27",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "8bfcfb6f0e7bf9afc6e8aed67e2e517ff927e797",
+      "endpoint": "http://127.0.0.1:18202/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2000,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "passed",
+      "steps": 62,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 651450,
+        "output_tokens": 9831,
+        "wall_seconds": 327.7209673989564
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 491.05185087490827,
+      "visible_changed": false,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {},
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-2-cell-1-rep-0",
+      "task": {
+        "key": "stuartmaxwell__djpress-117",
+        "corpus": "confirm_B",
+        "host_repository_sha256": "984289f38db59ffc17ba896c942ddba7e42a1b8cdae1be43379650368243d4e7",
+        "host_venv_sha256": "d096ed5cb5fd007cfe0e6b065d76fa5fb6641afc7450060ae899b643ef82ad27",
+        "prepared_ref": "8bfcfb6f0e7bf9afc6e8aed67e2e517ff927e797"
+      },
+      "cell": {
+        "locale_missing": "on",
+        "locale_provided": "off"
+      },
+      "cell_index": 1,
+      "repetition": 0,
+      "seed": 2000,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-2-cell-1-rep-0",
+      "task_key": "stuartmaxwell__djpress-117",
+      "host_runtime": {
+        "task_key": "stuartmaxwell__djpress-117",
+        "commit": "62898afc246da3e96a0b8f753cf5e9853d75b40e",
+        "repository": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-v2/pristine",
+        "repository_sha256": "984289f38db59ffc17ba896c942ddba7e42a1b8cdae1be43379650368243d4e7",
+        "venv": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-v2/venv",
+        "venv_sha256": "d096ed5cb5fd007cfe0e6b065d76fa5fb6641afc7450060ae899b643ef82ad27",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "8bfcfb6f0e7bf9afc6e8aed67e2e517ff927e797",
+      "endpoint": "http://127.0.0.1:18203/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2000,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 79,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 953547,
+        "output_tokens": 8786,
+        "wall_seconds": 364.3954429840669
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 412.28841048665345,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_missing": {
+          "exposed": true,
+          "observation_indices": [
+            34,
+            43,
+            54,
+            55,
+            65,
+            66,
+            70,
+            71,
+            75,
+            76,
+            77
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-2-cell-2-rep-0",
+      "task": {
+        "key": "stuartmaxwell__djpress-117",
+        "corpus": "confirm_B",
+        "host_repository_sha256": "984289f38db59ffc17ba896c942ddba7e42a1b8cdae1be43379650368243d4e7",
+        "host_venv_sha256": "d096ed5cb5fd007cfe0e6b065d76fa5fb6641afc7450060ae899b643ef82ad27",
+        "prepared_ref": "8bfcfb6f0e7bf9afc6e8aed67e2e517ff927e797"
+      },
+      "cell": {
+        "locale_missing": "off",
+        "locale_provided": "on"
+      },
+      "cell_index": 2,
+      "repetition": 0,
+      "seed": 2000,
+      "diagnostic_passed": false,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-2-cell-2-rep-0",
+      "task_key": "stuartmaxwell__djpress-117",
+      "host_runtime": {
+        "task_key": "stuartmaxwell__djpress-117",
+        "commit": "62898afc246da3e96a0b8f753cf5e9853d75b40e",
+        "repository": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-v2/pristine",
+        "repository_sha256": "984289f38db59ffc17ba896c942ddba7e42a1b8cdae1be43379650368243d4e7",
+        "venv": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-v2/venv",
+        "venv_sha256": "d096ed5cb5fd007cfe0e6b065d76fa5fb6641afc7450060ae899b643ef82ad27",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "8bfcfb6f0e7bf9afc6e8aed67e2e517ff927e797",
+      "endpoint": "http://127.0.0.1:18204/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2000,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "passed",
+      "steps": 77,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 960925,
+        "output_tokens": 8390,
+        "wall_seconds": 366.03272358421236
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 524.2352074002847,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_provided": {
+          "exposed": true,
+          "observation_indices": [
+            51,
+            52,
+            54,
+            55,
+            59,
+            60,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-2-cell-3-rep-0",
+      "task": {
+        "key": "stuartmaxwell__djpress-117",
+        "corpus": "confirm_B",
+        "host_repository_sha256": "984289f38db59ffc17ba896c942ddba7e42a1b8cdae1be43379650368243d4e7",
+        "host_venv_sha256": "d096ed5cb5fd007cfe0e6b065d76fa5fb6641afc7450060ae899b643ef82ad27",
+        "prepared_ref": "8bfcfb6f0e7bf9afc6e8aed67e2e517ff927e797"
+      },
+      "cell": {
+        "locale_missing": "on",
+        "locale_provided": "on"
+      },
+      "cell_index": 3,
+      "repetition": 0,
+      "seed": 2000,
+      "diagnostic_passed": false,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-2-cell-3-rep-0",
+      "task_key": "stuartmaxwell__djpress-117",
+      "host_runtime": {
+        "task_key": "stuartmaxwell__djpress-117",
+        "commit": "62898afc246da3e96a0b8f753cf5e9853d75b40e",
+        "repository": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-v2/pristine",
+        "repository_sha256": "984289f38db59ffc17ba896c942ddba7e42a1b8cdae1be43379650368243d4e7",
+        "venv": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-v2/venv",
+        "venv_sha256": "d096ed5cb5fd007cfe0e6b065d76fa5fb6641afc7450060ae899b643ef82ad27",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "8bfcfb6f0e7bf9afc6e8aed67e2e517ff927e797",
+      "endpoint": "http://127.0.0.1:18205/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2000,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "passed",
+      "steps": 89,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 1117873,
+        "output_tokens": 12007,
+        "wall_seconds": 380.13409742712975
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 531.8623431632295,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_missing": {
+          "exposed": true,
+          "observation_indices": [
+            12,
+            13
+          ]
+        },
+        "locale_provided": {
+          "exposed": true,
+          "observation_indices": [
+            12,
+            13
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-0-rep-1",
+      "task": {
+        "key": "factoryboy__factory_boy-1067",
+        "corpus": "discovery",
+        "host_repository_sha256": "29c43d92e4f808d5358f7436e7bf167c4fb0e6b0f2f9763f01c9b6c9cdfcfb50",
+        "host_venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "prepared_ref": "6659398c3aed729e6a447855a1da517edb9a9cb5"
+      },
+      "cell": {
+        "locale_missing": "off",
+        "locale_provided": "off"
+      },
+      "cell_index": 0,
+      "repetition": 1,
+      "seed": 2001,
+      "diagnostic_passed": false,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-0-cell-0-rep-1",
+      "task_key": "factoryboy__factory_boy-1067",
+      "host_runtime": {
+        "task_key": "factoryboy__factory_boy-1067",
+        "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+        "repository": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/pristine",
+        "repository_sha256": "29c43d92e4f808d5358f7436e7bf167c4fb0e6b0f2f9763f01c9b6c9cdfcfb50",
+        "venv": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+        "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "6659398c3aed729e6a447855a1da517edb9a9cb5",
+      "endpoint": "http://127.0.0.1:18206/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2001,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "passed",
+      "steps": 46,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 415142,
+        "output_tokens": 6804,
+        "wall_seconds": 171.80754061602056
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 247.09868574887514,
+      "visible_changed": false,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {},
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-1-rep-1",
+      "task": {
+        "key": "factoryboy__factory_boy-1067",
+        "corpus": "discovery",
+        "host_repository_sha256": "29c43d92e4f808d5358f7436e7bf167c4fb0e6b0f2f9763f01c9b6c9cdfcfb50",
+        "host_venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "prepared_ref": "6659398c3aed729e6a447855a1da517edb9a9cb5"
+      },
+      "cell": {
+        "locale_missing": "on",
+        "locale_provided": "off"
+      },
+      "cell_index": 1,
+      "repetition": 1,
+      "seed": 2001,
+      "diagnostic_passed": false,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-0-cell-1-rep-1",
+      "task_key": "factoryboy__factory_boy-1067",
+      "host_runtime": {
+        "task_key": "factoryboy__factory_boy-1067",
+        "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+        "repository": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/pristine",
+        "repository_sha256": "29c43d92e4f808d5358f7436e7bf167c4fb0e6b0f2f9763f01c9b6c9cdfcfb50",
+        "venv": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+        "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "6659398c3aed729e6a447855a1da517edb9a9cb5",
+      "endpoint": "http://127.0.0.1:18207/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2001,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "passed",
+      "steps": 49,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 484522,
+        "output_tokens": 9334,
+        "wall_seconds": 226.1457182429731
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 291.8781081624329,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_missing": {
+          "exposed": true,
+          "observation_indices": [
+            19,
+            30,
+            32,
+            33,
+            42,
+            47
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-2-rep-1",
+      "task": {
+        "key": "factoryboy__factory_boy-1067",
+        "corpus": "discovery",
+        "host_repository_sha256": "29c43d92e4f808d5358f7436e7bf167c4fb0e6b0f2f9763f01c9b6c9cdfcfb50",
+        "host_venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "prepared_ref": "6659398c3aed729e6a447855a1da517edb9a9cb5"
+      },
+      "cell": {
+        "locale_missing": "off",
+        "locale_provided": "on"
+      },
+      "cell_index": 2,
+      "repetition": 1,
+      "seed": 2001,
+      "diagnostic_passed": false,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-0-cell-2-rep-1",
+      "task_key": "factoryboy__factory_boy-1067",
+      "host_runtime": {
+        "task_key": "factoryboy__factory_boy-1067",
+        "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+        "repository": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/pristine",
+        "repository_sha256": "29c43d92e4f808d5358f7436e7bf167c4fb0e6b0f2f9763f01c9b6c9cdfcfb50",
+        "venv": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+        "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "6659398c3aed729e6a447855a1da517edb9a9cb5",
+      "endpoint": "http://127.0.0.1:18102/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2001,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "passed",
+      "steps": 78,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 883752,
+        "output_tokens": 8638,
+        "wall_seconds": 247.10193002875894
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 308.1212127795443,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_provided": {
+          "exposed": true,
+          "observation_indices": [
+            36,
+            57,
+            58,
+            59,
+            60,
+            76
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-3-rep-1",
+      "task": {
+        "key": "factoryboy__factory_boy-1067",
+        "corpus": "discovery",
+        "host_repository_sha256": "29c43d92e4f808d5358f7436e7bf167c4fb0e6b0f2f9763f01c9b6c9cdfcfb50",
+        "host_venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "prepared_ref": "6659398c3aed729e6a447855a1da517edb9a9cb5"
+      },
+      "cell": {
+        "locale_missing": "on",
+        "locale_provided": "on"
+      },
+      "cell_index": 3,
+      "repetition": 1,
+      "seed": 2001,
+      "diagnostic_passed": false,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-0-cell-3-rep-1",
+      "task_key": "factoryboy__factory_boy-1067",
+      "host_runtime": {
+        "task_key": "factoryboy__factory_boy-1067",
+        "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+        "repository": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/pristine",
+        "repository_sha256": "29c43d92e4f808d5358f7436e7bf167c4fb0e6b0f2f9763f01c9b6c9cdfcfb50",
+        "venv": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+        "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "6659398c3aed729e6a447855a1da517edb9a9cb5",
+      "endpoint": "http://127.0.0.1:18103/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2001,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "passed",
+      "steps": 50,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 529436,
+        "output_tokens": 7194,
+        "wall_seconds": 216.05571695696563
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 285.58825109899044,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_missing": {
+          "exposed": true,
+          "observation_indices": [
+            30,
+            31,
+            32,
+            39,
+            40,
+            44,
+            45
+          ]
+        },
+        "locale_provided": {
+          "exposed": true,
+          "observation_indices": [
+            30,
+            31,
+            32,
+            39,
+            40,
+            44,
+            45
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-1-cell-0-rep-1",
+      "task": {
+        "key": "django__asgiref-523",
+        "corpus": "confirm_A",
+        "host_repository_sha256": "a5b35a6687984709638b9f074d129388af6a996b21ac9059cf668bd27e270b91",
+        "host_venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "prepared_ref": "92d325fb7729184a7ad60fb68e308889a16f7497"
+      },
+      "cell": {
+        "locale_missing": "off",
+        "locale_provided": "off"
+      },
+      "cell_index": 0,
+      "repetition": 1,
+      "seed": 2001,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-1-cell-0-rep-1",
+      "task_key": "django__asgiref-523",
+      "host_runtime": {
+        "task_key": "django__asgiref-523",
+        "commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+        "repository": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/pristine",
+        "repository_sha256": "a5b35a6687984709638b9f074d129388af6a996b21ac9059cf668bd27e270b91",
+        "venv": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/venv",
+        "venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "92d325fb7729184a7ad60fb68e308889a16f7497",
+      "endpoint": "http://127.0.0.1:18104/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2001,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 100,
+      "stop_reason": "step_budget",
+      "budget_exhausted": true,
+      "usage": {
+        "input_tokens": 1282000,
+        "output_tokens": 27426,
+        "wall_seconds": 464.18211349099874
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 470.5991823701188,
+      "visible_changed": false,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {},
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-1-cell-1-rep-1",
+      "task": {
+        "key": "django__asgiref-523",
+        "corpus": "confirm_A",
+        "host_repository_sha256": "a5b35a6687984709638b9f074d129388af6a996b21ac9059cf668bd27e270b91",
+        "host_venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "prepared_ref": "92d325fb7729184a7ad60fb68e308889a16f7497"
+      },
+      "cell": {
+        "locale_missing": "on",
+        "locale_provided": "off"
+      },
+      "cell_index": 1,
+      "repetition": 1,
+      "seed": 2001,
+      "diagnostic_passed": null,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-1-cell-1-rep-1",
+      "task_key": "django__asgiref-523",
+      "host_runtime": {
+        "task_key": "django__asgiref-523",
+        "commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+        "repository": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/pristine",
+        "repository_sha256": "a5b35a6687984709638b9f074d129388af6a996b21ac9059cf668bd27e270b91",
+        "venv": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/venv",
+        "venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "92d325fb7729184a7ad60fb68e308889a16f7497",
+      "endpoint": "http://127.0.0.1:18105/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2001,
+        "reasoning_effort": null
+      },
+      "admission_status": "rejected",
+      "guarded_gold_control": "not_needed",
+      "steps": 56,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 588400,
+        "output_tokens": 7753,
+        "wall_seconds": 174.55303952284157
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 180.87469933647662,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_missing": {
+          "exposed": true,
+          "observation_indices": [
+            15,
+            25,
+            41,
+            45,
+            47
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-1-cell-2-rep-1",
+      "task": {
+        "key": "django__asgiref-523",
+        "corpus": "confirm_A",
+        "host_repository_sha256": "a5b35a6687984709638b9f074d129388af6a996b21ac9059cf668bd27e270b91",
+        "host_venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "prepared_ref": "92d325fb7729184a7ad60fb68e308889a16f7497"
+      },
+      "cell": {
+        "locale_missing": "off",
+        "locale_provided": "on"
+      },
+      "cell_index": 2,
+      "repetition": 1,
+      "seed": 2001,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-1-cell-2-rep-1",
+      "task_key": "django__asgiref-523",
+      "host_runtime": {
+        "task_key": "django__asgiref-523",
+        "commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+        "repository": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/pristine",
+        "repository_sha256": "a5b35a6687984709638b9f074d129388af6a996b21ac9059cf668bd27e270b91",
+        "venv": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/venv",
+        "venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "92d325fb7729184a7ad60fb68e308889a16f7497",
+      "endpoint": "http://127.0.0.1:18106/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2001,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 58,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 610937,
+        "output_tokens": 10357,
+        "wall_seconds": 209.02481751702726
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 215.48512353282422,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_provided": {
+          "exposed": true,
+          "observation_indices": [
+            9,
+            28,
+            45,
+            47
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-1-cell-3-rep-1",
+      "task": {
+        "key": "django__asgiref-523",
+        "corpus": "confirm_A",
+        "host_repository_sha256": "a5b35a6687984709638b9f074d129388af6a996b21ac9059cf668bd27e270b91",
+        "host_venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "prepared_ref": "92d325fb7729184a7ad60fb68e308889a16f7497"
+      },
+      "cell": {
+        "locale_missing": "on",
+        "locale_provided": "on"
+      },
+      "cell_index": 3,
+      "repetition": 1,
+      "seed": 2001,
+      "diagnostic_passed": false,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-1-cell-3-rep-1",
+      "task_key": "django__asgiref-523",
+      "host_runtime": {
+        "task_key": "django__asgiref-523",
+        "commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+        "repository": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/pristine",
+        "repository_sha256": "a5b35a6687984709638b9f074d129388af6a996b21ac9059cf668bd27e270b91",
+        "venv": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/venv",
+        "venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "92d325fb7729184a7ad60fb68e308889a16f7497",
+      "endpoint": "http://127.0.0.1:18107/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2001,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "passed",
+      "steps": 49,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 480840,
+        "output_tokens": 8454,
+        "wall_seconds": 185.14276968408376
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 206.431912522763,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_missing": {
+          "exposed": true,
+          "observation_indices": [
+            18,
+            27,
+            29,
+            32,
+            37,
+            41,
+            42,
+            45,
+            46
+          ]
+        },
+        "locale_provided": {
+          "exposed": true,
+          "observation_indices": [
+            18,
+            27,
+            29,
+            32,
+            37,
+            41,
+            42,
+            45,
+            46
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-2-cell-0-rep-1",
+      "task": {
+        "key": "stuartmaxwell__djpress-117",
+        "corpus": "confirm_B",
+        "host_repository_sha256": "984289f38db59ffc17ba896c942ddba7e42a1b8cdae1be43379650368243d4e7",
+        "host_venv_sha256": "d096ed5cb5fd007cfe0e6b065d76fa5fb6641afc7450060ae899b643ef82ad27",
+        "prepared_ref": "8bfcfb6f0e7bf9afc6e8aed67e2e517ff927e797"
+      },
+      "cell": {
+        "locale_missing": "off",
+        "locale_provided": "off"
+      },
+      "cell_index": 0,
+      "repetition": 1,
+      "seed": 2001,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-2-cell-0-rep-1",
+      "task_key": "stuartmaxwell__djpress-117",
+      "host_runtime": {
+        "task_key": "stuartmaxwell__djpress-117",
+        "commit": "62898afc246da3e96a0b8f753cf5e9853d75b40e",
+        "repository": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-v2/pristine",
+        "repository_sha256": "984289f38db59ffc17ba896c942ddba7e42a1b8cdae1be43379650368243d4e7",
+        "venv": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-v2/venv",
+        "venv_sha256": "d096ed5cb5fd007cfe0e6b065d76fa5fb6641afc7450060ae899b643ef82ad27",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "8bfcfb6f0e7bf9afc6e8aed67e2e517ff927e797",
+      "endpoint": "http://127.0.0.1:18200/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2001,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 93,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 1167269,
+        "output_tokens": 13947,
+        "wall_seconds": 475.14683946594596
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 522.9373871022835,
+      "visible_changed": false,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {},
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-2-cell-1-rep-1",
+      "task": {
+        "key": "stuartmaxwell__djpress-117",
+        "corpus": "confirm_B",
+        "host_repository_sha256": "984289f38db59ffc17ba896c942ddba7e42a1b8cdae1be43379650368243d4e7",
+        "host_venv_sha256": "d096ed5cb5fd007cfe0e6b065d76fa5fb6641afc7450060ae899b643ef82ad27",
+        "prepared_ref": "8bfcfb6f0e7bf9afc6e8aed67e2e517ff927e797"
+      },
+      "cell": {
+        "locale_missing": "on",
+        "locale_provided": "off"
+      },
+      "cell_index": 1,
+      "repetition": 1,
+      "seed": 2001,
+      "diagnostic_passed": null,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-2-cell-1-rep-1",
+      "task_key": "stuartmaxwell__djpress-117",
+      "host_runtime": {
+        "task_key": "stuartmaxwell__djpress-117",
+        "commit": "62898afc246da3e96a0b8f753cf5e9853d75b40e",
+        "repository": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-v2/pristine",
+        "repository_sha256": "984289f38db59ffc17ba896c942ddba7e42a1b8cdae1be43379650368243d4e7",
+        "venv": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-v2/venv",
+        "venv_sha256": "d096ed5cb5fd007cfe0e6b065d76fa5fb6641afc7450060ae899b643ef82ad27",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "8bfcfb6f0e7bf9afc6e8aed67e2e517ff927e797",
+      "endpoint": "http://127.0.0.1:18201/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2001,
+        "reasoning_effort": null
+      },
+      "admission_status": "rejected",
+      "guarded_gold_control": "not_needed",
+      "steps": 90,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 1125401,
+        "output_tokens": 10974,
+        "wall_seconds": 380.5327370148152
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 428.3602858548984,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_missing": {
+          "exposed": true,
+          "observation_indices": [
+            41,
+            42,
+            47,
+            55,
+            57,
+            62,
+            71,
+            72,
+            73,
+            75,
+            76,
+            77,
+            78
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-2-cell-2-rep-1",
+      "task": {
+        "key": "stuartmaxwell__djpress-117",
+        "corpus": "confirm_B",
+        "host_repository_sha256": "984289f38db59ffc17ba896c942ddba7e42a1b8cdae1be43379650368243d4e7",
+        "host_venv_sha256": "d096ed5cb5fd007cfe0e6b065d76fa5fb6641afc7450060ae899b643ef82ad27",
+        "prepared_ref": "8bfcfb6f0e7bf9afc6e8aed67e2e517ff927e797"
+      },
+      "cell": {
+        "locale_missing": "off",
+        "locale_provided": "on"
+      },
+      "cell_index": 2,
+      "repetition": 1,
+      "seed": 2001,
+      "diagnostic_passed": false,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-2-cell-2-rep-1",
+      "task_key": "stuartmaxwell__djpress-117",
+      "host_runtime": {
+        "task_key": "stuartmaxwell__djpress-117",
+        "commit": "62898afc246da3e96a0b8f753cf5e9853d75b40e",
+        "repository": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-v2/pristine",
+        "repository_sha256": "984289f38db59ffc17ba896c942ddba7e42a1b8cdae1be43379650368243d4e7",
+        "venv": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-v2/venv",
+        "venv_sha256": "d096ed5cb5fd007cfe0e6b065d76fa5fb6641afc7450060ae899b643ef82ad27",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "8bfcfb6f0e7bf9afc6e8aed67e2e517ff927e797",
+      "endpoint": "http://127.0.0.1:18202/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2001,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "passed",
+      "steps": 58,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 671354,
+        "output_tokens": 6575,
+        "wall_seconds": 311.33451822027564
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 477.4175437828526,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_provided": {
+          "exposed": true,
+          "observation_indices": [
+            16,
+            17
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-2-cell-3-rep-1",
+      "task": {
+        "key": "stuartmaxwell__djpress-117",
+        "corpus": "confirm_B",
+        "host_repository_sha256": "984289f38db59ffc17ba896c942ddba7e42a1b8cdae1be43379650368243d4e7",
+        "host_venv_sha256": "d096ed5cb5fd007cfe0e6b065d76fa5fb6641afc7450060ae899b643ef82ad27",
+        "prepared_ref": "8bfcfb6f0e7bf9afc6e8aed67e2e517ff927e797"
+      },
+      "cell": {
+        "locale_missing": "on",
+        "locale_provided": "on"
+      },
+      "cell_index": 3,
+      "repetition": 1,
+      "seed": 2001,
+      "diagnostic_passed": false,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-2-cell-3-rep-1",
+      "task_key": "stuartmaxwell__djpress-117",
+      "host_runtime": {
+        "task_key": "stuartmaxwell__djpress-117",
+        "commit": "62898afc246da3e96a0b8f753cf5e9853d75b40e",
+        "repository": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-v2/pristine",
+        "repository_sha256": "984289f38db59ffc17ba896c942ddba7e42a1b8cdae1be43379650368243d4e7",
+        "venv": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-v2/venv",
+        "venv_sha256": "d096ed5cb5fd007cfe0e6b065d76fa5fb6641afc7450060ae899b643ef82ad27",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "8bfcfb6f0e7bf9afc6e8aed67e2e517ff927e797",
+      "endpoint": "http://127.0.0.1:18203/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2001,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "passed",
+      "steps": 70,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 804988,
+        "output_tokens": 10891,
+        "wall_seconds": 403.16055913083255
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 541.2356600500643,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_missing": {
+          "exposed": true,
+          "observation_indices": [
+            48,
+            51,
+            52,
+            55,
+            61,
+            62,
+            64
+          ]
+        },
+        "locale_provided": {
+          "exposed": true,
+          "observation_indices": [
+            48,
+            51,
+            52,
+            55,
+            61,
+            62,
+            64
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-0-rep-2",
+      "task": {
+        "key": "factoryboy__factory_boy-1067",
+        "corpus": "discovery",
+        "host_repository_sha256": "29c43d92e4f808d5358f7436e7bf167c4fb0e6b0f2f9763f01c9b6c9cdfcfb50",
+        "host_venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "prepared_ref": "6659398c3aed729e6a447855a1da517edb9a9cb5"
+      },
+      "cell": {
+        "locale_missing": "off",
+        "locale_provided": "off"
+      },
+      "cell_index": 0,
+      "repetition": 2,
+      "seed": 2002,
+      "diagnostic_passed": false,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-0-cell-0-rep-2",
+      "task_key": "factoryboy__factory_boy-1067",
+      "host_runtime": {
+        "task_key": "factoryboy__factory_boy-1067",
+        "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+        "repository": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/pristine",
+        "repository_sha256": "29c43d92e4f808d5358f7436e7bf167c4fb0e6b0f2f9763f01c9b6c9cdfcfb50",
+        "venv": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+        "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "6659398c3aed729e6a447855a1da517edb9a9cb5",
+      "endpoint": "http://127.0.0.1:18204/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2002,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "passed",
+      "steps": 37,
+      "stop_reason": "model_stopped",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 289821,
+        "output_tokens": 5122,
+        "wall_seconds": 116.36091249715537
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 167.83224866725504,
+      "visible_changed": false,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {},
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-1-rep-2",
+      "task": {
+        "key": "factoryboy__factory_boy-1067",
+        "corpus": "discovery",
+        "host_repository_sha256": "29c43d92e4f808d5358f7436e7bf167c4fb0e6b0f2f9763f01c9b6c9cdfcfb50",
+        "host_venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "prepared_ref": "6659398c3aed729e6a447855a1da517edb9a9cb5"
+      },
+      "cell": {
+        "locale_missing": "on",
+        "locale_provided": "off"
+      },
+      "cell_index": 1,
+      "repetition": 2,
+      "seed": 2002,
+      "diagnostic_passed": false,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-0-cell-1-rep-2",
+      "task_key": "factoryboy__factory_boy-1067",
+      "host_runtime": {
+        "task_key": "factoryboy__factory_boy-1067",
+        "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+        "repository": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/pristine",
+        "repository_sha256": "29c43d92e4f808d5358f7436e7bf167c4fb0e6b0f2f9763f01c9b6c9cdfcfb50",
+        "venv": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+        "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "6659398c3aed729e6a447855a1da517edb9a9cb5",
+      "endpoint": "http://127.0.0.1:18205/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2002,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "passed",
+      "steps": 67,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 748462,
+        "output_tokens": 10248,
+        "wall_seconds": 268.8253884892911
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 326.12855797912925,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_missing": {
+          "exposed": true,
+          "observation_indices": [
+            27,
+            28,
+            30,
+            32,
+            35,
+            36,
+            37,
+            44,
+            53,
+            54,
+            55,
+            61,
+            65
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-2-rep-2",
+      "task": {
+        "key": "factoryboy__factory_boy-1067",
+        "corpus": "discovery",
+        "host_repository_sha256": "29c43d92e4f808d5358f7436e7bf167c4fb0e6b0f2f9763f01c9b6c9cdfcfb50",
+        "host_venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "prepared_ref": "6659398c3aed729e6a447855a1da517edb9a9cb5"
+      },
+      "cell": {
+        "locale_missing": "off",
+        "locale_provided": "on"
+      },
+      "cell_index": 2,
+      "repetition": 2,
+      "seed": 2002,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-0-cell-2-rep-2",
+      "task_key": "factoryboy__factory_boy-1067",
+      "host_runtime": {
+        "task_key": "factoryboy__factory_boy-1067",
+        "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+        "repository": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/pristine",
+        "repository_sha256": "29c43d92e4f808d5358f7436e7bf167c4fb0e6b0f2f9763f01c9b6c9cdfcfb50",
+        "venv": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+        "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "6659398c3aed729e6a447855a1da517edb9a9cb5",
+      "endpoint": "http://127.0.0.1:18206/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2002,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 61,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 650435,
+        "output_tokens": 8254,
+        "wall_seconds": 220.84930606838316
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 237.26654473971575,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_provided": {
+          "exposed": true,
+          "observation_indices": [
+            44,
+            48,
+            49,
+            53,
+            54,
+            59
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-3-rep-2",
+      "task": {
+        "key": "factoryboy__factory_boy-1067",
+        "corpus": "discovery",
+        "host_repository_sha256": "29c43d92e4f808d5358f7436e7bf167c4fb0e6b0f2f9763f01c9b6c9cdfcfb50",
+        "host_venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "prepared_ref": "6659398c3aed729e6a447855a1da517edb9a9cb5"
+      },
+      "cell": {
+        "locale_missing": "on",
+        "locale_provided": "on"
+      },
+      "cell_index": 3,
+      "repetition": 2,
+      "seed": 2002,
+      "diagnostic_passed": false,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-0-cell-3-rep-2",
+      "task_key": "factoryboy__factory_boy-1067",
+      "host_runtime": {
+        "task_key": "factoryboy__factory_boy-1067",
+        "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+        "repository": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/pristine",
+        "repository_sha256": "29c43d92e4f808d5358f7436e7bf167c4fb0e6b0f2f9763f01c9b6c9cdfcfb50",
+        "venv": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+        "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "6659398c3aed729e6a447855a1da517edb9a9cb5",
+      "endpoint": "http://127.0.0.1:18207/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2002,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "passed",
+      "steps": 42,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 433637,
+        "output_tokens": 7104,
+        "wall_seconds": 177.5873093754053
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 253.1171543104574,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_missing": {
+          "exposed": true,
+          "observation_indices": [
+            27,
+            29,
+            30,
+            31,
+            37
+          ]
+        },
+        "locale_provided": {
+          "exposed": true,
+          "observation_indices": [
+            27,
+            29,
+            30,
+            31,
+            37
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-1-cell-0-rep-2",
+      "task": {
+        "key": "django__asgiref-523",
+        "corpus": "confirm_A",
+        "host_repository_sha256": "a5b35a6687984709638b9f074d129388af6a996b21ac9059cf668bd27e270b91",
+        "host_venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "prepared_ref": "92d325fb7729184a7ad60fb68e308889a16f7497"
+      },
+      "cell": {
+        "locale_missing": "off",
+        "locale_provided": "off"
+      },
+      "cell_index": 0,
+      "repetition": 2,
+      "seed": 2002,
+      "diagnostic_passed": false,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-1-cell-0-rep-2",
+      "task_key": "django__asgiref-523",
+      "host_runtime": {
+        "task_key": "django__asgiref-523",
+        "commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+        "repository": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/pristine",
+        "repository_sha256": "a5b35a6687984709638b9f074d129388af6a996b21ac9059cf668bd27e270b91",
+        "venv": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/venv",
+        "venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "92d325fb7729184a7ad60fb68e308889a16f7497",
+      "endpoint": "http://127.0.0.1:18102/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2002,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "passed",
+      "steps": 69,
+      "stop_reason": "time_budget",
+      "budget_exhausted": true,
+      "usage": {
+        "input_tokens": 828789,
+        "output_tokens": 45199,
+        "wall_seconds": 602.2138465438038
+      },
+      "usage_unknown": true,
+      "realized": true,
+      "wall_seconds": 611.9467001082376,
+      "visible_changed": false,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {},
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-1-cell-1-rep-2",
+      "task": {
+        "key": "django__asgiref-523",
+        "corpus": "confirm_A",
+        "host_repository_sha256": "a5b35a6687984709638b9f074d129388af6a996b21ac9059cf668bd27e270b91",
+        "host_venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "prepared_ref": "92d325fb7729184a7ad60fb68e308889a16f7497"
+      },
+      "cell": {
+        "locale_missing": "on",
+        "locale_provided": "off"
+      },
+      "cell_index": 1,
+      "repetition": 2,
+      "seed": 2002,
+      "diagnostic_passed": null,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-1-cell-1-rep-2",
+      "task_key": "django__asgiref-523",
+      "host_runtime": {
+        "task_key": "django__asgiref-523",
+        "commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+        "repository": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/pristine",
+        "repository_sha256": "a5b35a6687984709638b9f074d129388af6a996b21ac9059cf668bd27e270b91",
+        "venv": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/venv",
+        "venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "92d325fb7729184a7ad60fb68e308889a16f7497",
+      "endpoint": "http://127.0.0.1:18103/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2002,
+        "reasoning_effort": null
+      },
+      "admission_status": "rejected",
+      "guarded_gold_control": "not_needed",
+      "steps": 47,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 453954,
+        "output_tokens": 8068,
+        "wall_seconds": 168.3558676224202
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 174.92791894357651,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_missing": {
+          "exposed": true,
+          "observation_indices": [
+            20,
+            29,
+            30,
+            31,
+            33,
+            39,
+            41,
+            43
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-1-cell-2-rep-2",
+      "task": {
+        "key": "django__asgiref-523",
+        "corpus": "confirm_A",
+        "host_repository_sha256": "a5b35a6687984709638b9f074d129388af6a996b21ac9059cf668bd27e270b91",
+        "host_venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "prepared_ref": "92d325fb7729184a7ad60fb68e308889a16f7497"
+      },
+      "cell": {
+        "locale_missing": "off",
+        "locale_provided": "on"
+      },
+      "cell_index": 2,
+      "repetition": 2,
+      "seed": 2002,
+      "diagnostic_passed": null,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-1-cell-2-rep-2",
+      "task_key": "django__asgiref-523",
+      "host_runtime": {
+        "task_key": "django__asgiref-523",
+        "commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+        "repository": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/pristine",
+        "repository_sha256": "a5b35a6687984709638b9f074d129388af6a996b21ac9059cf668bd27e270b91",
+        "venv": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/venv",
+        "venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "92d325fb7729184a7ad60fb68e308889a16f7497",
+      "endpoint": "http://127.0.0.1:18104/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2002,
+        "reasoning_effort": null
+      },
+      "admission_status": "rejected",
+      "guarded_gold_control": "not_needed",
+      "steps": 48,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 470415,
+        "output_tokens": 9968,
+        "wall_seconds": 178.90793594997376
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 185.4751623319462,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_provided": {
+          "exposed": true,
+          "observation_indices": [
+            14,
+            36,
+            37,
+            39,
+            40,
+            41,
+            43,
+            44
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-1-cell-3-rep-2",
+      "task": {
+        "key": "django__asgiref-523",
+        "corpus": "confirm_A",
+        "host_repository_sha256": "a5b35a6687984709638b9f074d129388af6a996b21ac9059cf668bd27e270b91",
+        "host_venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "prepared_ref": "92d325fb7729184a7ad60fb68e308889a16f7497"
+      },
+      "cell": {
+        "locale_missing": "on",
+        "locale_provided": "on"
+      },
+      "cell_index": 3,
+      "repetition": 2,
+      "seed": 2002,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-1-cell-3-rep-2",
+      "task_key": "django__asgiref-523",
+      "host_runtime": {
+        "task_key": "django__asgiref-523",
+        "commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+        "repository": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/pristine",
+        "repository_sha256": "a5b35a6687984709638b9f074d129388af6a996b21ac9059cf668bd27e270b91",
+        "venv": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/venv",
+        "venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "92d325fb7729184a7ad60fb68e308889a16f7497",
+      "endpoint": "http://127.0.0.1:18105/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2002,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 76,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 872549,
+        "output_tokens": 19240,
+        "wall_seconds": 352.10685080476105
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 358.60969130322337,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_missing": {
+          "exposed": true,
+          "observation_indices": [
+            23,
+            33,
+            41,
+            43,
+            58,
+            61,
+            62,
+            65,
+            70
+          ]
+        },
+        "locale_provided": {
+          "exposed": true,
+          "observation_indices": [
+            23,
+            33,
+            41,
+            43,
+            58,
+            61,
+            62,
+            65,
+            70
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-2-cell-0-rep-2",
+      "task": {
+        "key": "stuartmaxwell__djpress-117",
+        "corpus": "confirm_B",
+        "host_repository_sha256": "984289f38db59ffc17ba896c942ddba7e42a1b8cdae1be43379650368243d4e7",
+        "host_venv_sha256": "d096ed5cb5fd007cfe0e6b065d76fa5fb6641afc7450060ae899b643ef82ad27",
+        "prepared_ref": "8bfcfb6f0e7bf9afc6e8aed67e2e517ff927e797"
+      },
+      "cell": {
+        "locale_missing": "off",
+        "locale_provided": "off"
+      },
+      "cell_index": 0,
+      "repetition": 2,
+      "seed": 2002,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-2-cell-0-rep-2",
+      "task_key": "stuartmaxwell__djpress-117",
+      "host_runtime": {
+        "task_key": "stuartmaxwell__djpress-117",
+        "commit": "62898afc246da3e96a0b8f753cf5e9853d75b40e",
+        "repository": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-v2/pristine",
+        "repository_sha256": "984289f38db59ffc17ba896c942ddba7e42a1b8cdae1be43379650368243d4e7",
+        "venv": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-v2/venv",
+        "venv_sha256": "d096ed5cb5fd007cfe0e6b065d76fa5fb6641afc7450060ae899b643ef82ad27",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "8bfcfb6f0e7bf9afc6e8aed67e2e517ff927e797",
+      "endpoint": "http://127.0.0.1:18106/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2002,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 95,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 1167992,
+        "output_tokens": 14736,
+        "wall_seconds": 473.27183470502496
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 520.9975831648335,
+      "visible_changed": false,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {},
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-2-cell-1-rep-2",
+      "task": {
+        "key": "stuartmaxwell__djpress-117",
+        "corpus": "confirm_B",
+        "host_repository_sha256": "984289f38db59ffc17ba896c942ddba7e42a1b8cdae1be43379650368243d4e7",
+        "host_venv_sha256": "d096ed5cb5fd007cfe0e6b065d76fa5fb6641afc7450060ae899b643ef82ad27",
+        "prepared_ref": "8bfcfb6f0e7bf9afc6e8aed67e2e517ff927e797"
+      },
+      "cell": {
+        "locale_missing": "on",
+        "locale_provided": "off"
+      },
+      "cell_index": 1,
+      "repetition": 2,
+      "seed": 2002,
+      "diagnostic_passed": null,
+      "status": "unknown",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-2-cell-1-rep-2",
+      "task_key": "stuartmaxwell__djpress-117",
+      "host_runtime": {
+        "task_key": "stuartmaxwell__djpress-117",
+        "commit": "62898afc246da3e96a0b8f753cf5e9853d75b40e",
+        "repository": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-v2/pristine",
+        "repository_sha256": "984289f38db59ffc17ba896c942ddba7e42a1b8cdae1be43379650368243d4e7",
+        "venv": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-v2/venv",
+        "venv_sha256": "d096ed5cb5fd007cfe0e6b065d76fa5fb6641afc7450060ae899b643ef82ad27",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "8bfcfb6f0e7bf9afc6e8aed67e2e517ff927e797",
+      "endpoint": "http://127.0.0.1:18107/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2002,
+        "reasoning_effort": null
+      },
+      "stage": "target_interaction_and_fresh_replay",
+      "error_type": "TestEvidenceError",
+      "reason": "missing=['tests/test_models_category.py::test_category_has_posts', 'tests/test_models_category.py::test_category_last_modified', 'tests/test_models_category.py::test_category_model', 'tests/test_models_category.py::test_category_posts', 'tests/test_models_category.py::test_category_save_invalid_name', 'tests/test_models_category.py::test_category_save_slug_generation', 'tests/test_models_category.py::test_category_save_slug_uniqueness', 'tests/test_models_category.py::test_category_slug_auto_generation', 'tests/test_models_category.py::test_get_categories_cache_disabled', 'tests/test_models_category.py::test_get_categories_cache_enabled', 'tests/test_models_category.py::test_get_category_by_slug_cache_disabled', 'tests/test_models_category.py::test_get_category_by_slug_cache_enabled', 'tests/test_models_category.py::test_get_category_by_slug_not_exists', 'tests/test_models_category.py::test_get_category_published', 'tests/test_models_tag.py::test_get_cached_tags', 'tests/test_models_tag.py::test_get_category_by_slug_cache_disabled', 'tests/test_models_tag.py::test_get_tag_by_slug_cache_enabled', 'tests/test_models_tag.py::test_get_tag_by_slug_not_exists', 'tests/test_models_tag.py::test_get_tag_published', 'tests/test_models_tag.py::test_get_tags_cache_disabled', 'tests/test_models_tag.py::test_get_tags_cache_enabled', 'tests/test_models_tag.py::test_tag_has_posts', 'tests/test_models_tag.py::test_tag_last_modified', 'tests/test_models_tag.py::test_tag_model', 'tests/test_models_tag.py::test_tag_posts', 'tests/test_models_tag.py::test_tag_save_invalid_name', 'tests/test_models_tag.py::test_tag_save_slug_generation', 'tests/test_models_tag.py::test_tag_save_slug_uniqueness', 'tests/test_models_tag.py::test_tag_slug_auto_generation', 'tests/test_models_tag.py::test_tag_url', 'tests/test_url_utils.py::test_archives_empty_prefix', 'tests/test_url_utils.py::test_archives_with_prefix', 'tests/test_url_utils.py::test_archives_year_only', 'tests/test_url_utils.py::test_author_empty_prefix', 'tests/test_url_utils.py::test_author_with_prefix', 'tests/test_url_utils.py::test_bad_prefix_no_closing_brackets', 'tests/test_url_utils.py::test_basic_year_month_day', 'tests/test_url_utils.py::test_basic_year_month_day_mixed_spaces', 'tests/test_url_utils.py::test_basic_year_month_day_no_spaces', 'tests/test_url_utils.py::test_category_with_prefix', 'tests/test_url_utils.py::test_empty_placeholder', 'tests/test_url_utils.py::test_empty_prefix', 'tests/test_url_utils.py::test_get_archives_url_year', 'tests/test_url_utils.py::test_get_archives_url_year_month', 'tests/test_url_utils.py::test_get_archives_url_year_month_day', 'tests/test_url_utils.py::test_get_author_url', 'tests/test_url_utils.py::test_get_category_url', 'tests/test_url_utils.py::test_get_category_url_blank', 'tests/test_url_utils.py::test_get_page_url', 'tests/test_url_utils.py::test_get_page_url_parent', 'tests/test_url_utils.py::test_get_path_regex_archives', 'tests/test_url_utils.py::test_get_path_regex_author', 'tests/test_url_utils.py::test_get_path_regex_category', 'tests/test_url_utils.py::test_get_path_regex_page', 'tests/test_url_utils.py::test_get_path_regex_post', 'tests/test_url_utils.py::test_get_post_url', 'tests/test_url_utils.py::test_get_rss_url', 'tests/test_url_utils.py::test_get_tag_url', 'tests/test_url_utils.py::test_get_tag_url_blank', 'tests/test_url_utils.py::test_mixed_order', 'tests/test_url_utils.py::test_nested_curly_braces', 'tests/test_url_utils.py::test_no_slashes', 'tests/test_url_utils.py::test_static_only', 'tests/test_url_utils.py::test_unknown_placeholder', 'tests/test_url_utils.py::test_weird_order', 'tests/test_url_utils.py::test_with_regex_special_chars', 'tests/test_url_utils.py::test_with_static_prefix', 'tests/test_url_utils.py::test_year_only'] conflicting=[]",
+      "wall_seconds": 331.4204873004928,
+      "model_calls": 44,
+      "usage_unknown": false,
+      "usage": {
+        "input_tokens": 430155,
+        "output_tokens": 8503,
+        "wall_seconds": 120.69482540898025
+      },
+      "visible_changed": false,
+      "realized": false,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_missing": {
+          "exposed": false,
+          "observation_indices": []
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-2-cell-2-rep-2",
+      "task": {
+        "key": "stuartmaxwell__djpress-117",
+        "corpus": "confirm_B",
+        "host_repository_sha256": "984289f38db59ffc17ba896c942ddba7e42a1b8cdae1be43379650368243d4e7",
+        "host_venv_sha256": "d096ed5cb5fd007cfe0e6b065d76fa5fb6641afc7450060ae899b643ef82ad27",
+        "prepared_ref": "8bfcfb6f0e7bf9afc6e8aed67e2e517ff927e797"
+      },
+      "cell": {
+        "locale_missing": "off",
+        "locale_provided": "on"
+      },
+      "cell_index": 2,
+      "repetition": 2,
+      "seed": 2002,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-2-cell-2-rep-2",
+      "task_key": "stuartmaxwell__djpress-117",
+      "host_runtime": {
+        "task_key": "stuartmaxwell__djpress-117",
+        "commit": "62898afc246da3e96a0b8f753cf5e9853d75b40e",
+        "repository": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-v2/pristine",
+        "repository_sha256": "984289f38db59ffc17ba896c942ddba7e42a1b8cdae1be43379650368243d4e7",
+        "venv": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-v2/venv",
+        "venv_sha256": "d096ed5cb5fd007cfe0e6b065d76fa5fb6641afc7450060ae899b643ef82ad27",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "8bfcfb6f0e7bf9afc6e8aed67e2e517ff927e797",
+      "endpoint": "http://127.0.0.1:18200/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2002,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 94,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 1138841,
+        "output_tokens": 10512,
+        "wall_seconds": 389.03624032158405
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 436.3233295623213,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_provided": {
+          "exposed": true,
+          "observation_indices": [
+            46,
+            47,
+            61,
+            65,
+            66,
+            67,
+            85,
+            89,
+            90
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-2-cell-3-rep-2",
+      "task": {
+        "key": "stuartmaxwell__djpress-117",
+        "corpus": "confirm_B",
+        "host_repository_sha256": "984289f38db59ffc17ba896c942ddba7e42a1b8cdae1be43379650368243d4e7",
+        "host_venv_sha256": "d096ed5cb5fd007cfe0e6b065d76fa5fb6641afc7450060ae899b643ef82ad27",
+        "prepared_ref": "8bfcfb6f0e7bf9afc6e8aed67e2e517ff927e797"
+      },
+      "cell": {
+        "locale_missing": "on",
+        "locale_provided": "on"
+      },
+      "cell_index": 3,
+      "repetition": 2,
+      "seed": 2002,
+      "diagnostic_passed": false,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-2-cell-3-rep-2",
+      "task_key": "stuartmaxwell__djpress-117",
+      "host_runtime": {
+        "task_key": "stuartmaxwell__djpress-117",
+        "commit": "62898afc246da3e96a0b8f753cf5e9853d75b40e",
+        "repository": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-v2/pristine",
+        "repository_sha256": "984289f38db59ffc17ba896c942ddba7e42a1b8cdae1be43379650368243d4e7",
+        "venv": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-v2/venv",
+        "venv_sha256": "d096ed5cb5fd007cfe0e6b065d76fa5fb6641afc7450060ae899b643ef82ad27",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "8bfcfb6f0e7bf9afc6e8aed67e2e517ff927e797",
+      "endpoint": "http://127.0.0.1:18201/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2002,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "passed",
+      "steps": 89,
+      "stop_reason": "time_budget",
+      "budget_exhausted": true,
+      "usage": {
+        "input_tokens": 1109379,
+        "output_tokens": 40375,
+        "wall_seconds": 613.7666999371722
+      },
+      "usage_unknown": true,
+      "realized": false,
+      "wall_seconds": 673.0107453884557,
+      "visible_changed": false,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_missing": {
+          "exposed": false,
+          "observation_indices": []
+        },
+        "locale_provided": {
+          "exposed": false,
+          "observation_indices": []
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-0-rep-3",
+      "task": {
+        "key": "factoryboy__factory_boy-1067",
+        "corpus": "discovery",
+        "host_repository_sha256": "29c43d92e4f808d5358f7436e7bf167c4fb0e6b0f2f9763f01c9b6c9cdfcfb50",
+        "host_venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "prepared_ref": "6659398c3aed729e6a447855a1da517edb9a9cb5"
+      },
+      "cell": {
+        "locale_missing": "off",
+        "locale_provided": "off"
+      },
+      "cell_index": 0,
+      "repetition": 3,
+      "seed": 2003,
+      "diagnostic_passed": false,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-0-cell-0-rep-3",
+      "task_key": "factoryboy__factory_boy-1067",
+      "host_runtime": {
+        "task_key": "factoryboy__factory_boy-1067",
+        "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+        "repository": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/pristine",
+        "repository_sha256": "29c43d92e4f808d5358f7436e7bf167c4fb0e6b0f2f9763f01c9b6c9cdfcfb50",
+        "venv": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+        "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "6659398c3aed729e6a447855a1da517edb9a9cb5",
+      "endpoint": "http://127.0.0.1:18202/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2003,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "passed",
+      "steps": 60,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 638127,
+        "output_tokens": 8686,
+        "wall_seconds": 235.62248847074807
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 298.2503632809967,
+      "visible_changed": false,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {},
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-1-rep-3",
+      "task": {
+        "key": "factoryboy__factory_boy-1067",
+        "corpus": "discovery",
+        "host_repository_sha256": "29c43d92e4f808d5358f7436e7bf167c4fb0e6b0f2f9763f01c9b6c9cdfcfb50",
+        "host_venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "prepared_ref": "6659398c3aed729e6a447855a1da517edb9a9cb5"
+      },
+      "cell": {
+        "locale_missing": "on",
+        "locale_provided": "off"
+      },
+      "cell_index": 1,
+      "repetition": 3,
+      "seed": 2003,
+      "diagnostic_passed": false,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-0-cell-1-rep-3",
+      "task_key": "factoryboy__factory_boy-1067",
+      "host_runtime": {
+        "task_key": "factoryboy__factory_boy-1067",
+        "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+        "repository": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/pristine",
+        "repository_sha256": "29c43d92e4f808d5358f7436e7bf167c4fb0e6b0f2f9763f01c9b6c9cdfcfb50",
+        "venv": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+        "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "6659398c3aed729e6a447855a1da517edb9a9cb5",
+      "endpoint": "http://127.0.0.1:18203/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2003,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "passed",
+      "steps": 45,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 404932,
+        "output_tokens": 5817,
+        "wall_seconds": 132.33585536293685
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 187.57773225475103,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_missing": {
+          "exposed": true,
+          "observation_indices": [
+            25,
+            27,
+            28,
+            35,
+            36,
+            37
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-2-rep-3",
+      "task": {
+        "key": "factoryboy__factory_boy-1067",
+        "corpus": "discovery",
+        "host_repository_sha256": "29c43d92e4f808d5358f7436e7bf167c4fb0e6b0f2f9763f01c9b6c9cdfcfb50",
+        "host_venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "prepared_ref": "6659398c3aed729e6a447855a1da517edb9a9cb5"
+      },
+      "cell": {
+        "locale_missing": "off",
+        "locale_provided": "on"
+      },
+      "cell_index": 2,
+      "repetition": 3,
+      "seed": 2003,
+      "diagnostic_passed": false,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-0-cell-2-rep-3",
+      "task_key": "factoryboy__factory_boy-1067",
+      "host_runtime": {
+        "task_key": "factoryboy__factory_boy-1067",
+        "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+        "repository": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/pristine",
+        "repository_sha256": "29c43d92e4f808d5358f7436e7bf167c4fb0e6b0f2f9763f01c9b6c9cdfcfb50",
+        "venv": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+        "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "6659398c3aed729e6a447855a1da517edb9a9cb5",
+      "endpoint": "http://127.0.0.1:18204/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2003,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "passed",
+      "steps": 52,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 535178,
+        "output_tokens": 5757,
+        "wall_seconds": 158.56962537486106
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 228.66175353061408,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_provided": {
+          "exposed": true,
+          "observation_indices": [
+            27,
+            29,
+            35,
+            37,
+            47,
+            50
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-3-rep-3",
+      "task": {
+        "key": "factoryboy__factory_boy-1067",
+        "corpus": "discovery",
+        "host_repository_sha256": "29c43d92e4f808d5358f7436e7bf167c4fb0e6b0f2f9763f01c9b6c9cdfcfb50",
+        "host_venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "prepared_ref": "6659398c3aed729e6a447855a1da517edb9a9cb5"
+      },
+      "cell": {
+        "locale_missing": "on",
+        "locale_provided": "on"
+      },
+      "cell_index": 3,
+      "repetition": 3,
+      "seed": 2003,
+      "diagnostic_passed": false,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-0-cell-3-rep-3",
+      "task_key": "factoryboy__factory_boy-1067",
+      "host_runtime": {
+        "task_key": "factoryboy__factory_boy-1067",
+        "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+        "repository": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/pristine",
+        "repository_sha256": "29c43d92e4f808d5358f7436e7bf167c4fb0e6b0f2f9763f01c9b6c9cdfcfb50",
+        "venv": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+        "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "6659398c3aed729e6a447855a1da517edb9a9cb5",
+      "endpoint": "http://127.0.0.1:18205/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2003,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "passed",
+      "steps": 44,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 435900,
+        "output_tokens": 5328,
+        "wall_seconds": 151.0987699655816
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 213.72051964793354,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_missing": {
+          "exposed": true,
+          "observation_indices": [
+            25,
+            26,
+            27,
+            31,
+            32,
+            33,
+            34,
+            39,
+            40
+          ]
+        },
+        "locale_provided": {
+          "exposed": true,
+          "observation_indices": [
+            25,
+            26,
+            27,
+            31,
+            32,
+            33,
+            34,
+            39,
+            40
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-1-cell-0-rep-3",
+      "task": {
+        "key": "django__asgiref-523",
+        "corpus": "confirm_A",
+        "host_repository_sha256": "a5b35a6687984709638b9f074d129388af6a996b21ac9059cf668bd27e270b91",
+        "host_venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "prepared_ref": "92d325fb7729184a7ad60fb68e308889a16f7497"
+      },
+      "cell": {
+        "locale_missing": "off",
+        "locale_provided": "off"
+      },
+      "cell_index": 0,
+      "repetition": 3,
+      "seed": 2003,
+      "diagnostic_passed": false,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-1-cell-0-rep-3",
+      "task_key": "django__asgiref-523",
+      "host_runtime": {
+        "task_key": "django__asgiref-523",
+        "commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+        "repository": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/pristine",
+        "repository_sha256": "a5b35a6687984709638b9f074d129388af6a996b21ac9059cf668bd27e270b91",
+        "venv": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/venv",
+        "venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "92d325fb7729184a7ad60fb68e308889a16f7497",
+      "endpoint": "http://127.0.0.1:18206/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2003,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "passed",
+      "steps": 39,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 345116,
+        "output_tokens": 9959,
+        "wall_seconds": 190.0363415563479
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 212.96014156378806,
+      "visible_changed": false,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {},
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-1-cell-1-rep-3",
+      "task": {
+        "key": "django__asgiref-523",
+        "corpus": "confirm_A",
+        "host_repository_sha256": "a5b35a6687984709638b9f074d129388af6a996b21ac9059cf668bd27e270b91",
+        "host_venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "prepared_ref": "92d325fb7729184a7ad60fb68e308889a16f7497"
+      },
+      "cell": {
+        "locale_missing": "on",
+        "locale_provided": "off"
+      },
+      "cell_index": 1,
+      "repetition": 3,
+      "seed": 2003,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-1-cell-1-rep-3",
+      "task_key": "django__asgiref-523",
+      "host_runtime": {
+        "task_key": "django__asgiref-523",
+        "commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+        "repository": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/pristine",
+        "repository_sha256": "a5b35a6687984709638b9f074d129388af6a996b21ac9059cf668bd27e270b91",
+        "venv": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/venv",
+        "venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "92d325fb7729184a7ad60fb68e308889a16f7497",
+      "endpoint": "http://127.0.0.1:18207/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2003,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 30,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 260002,
+        "output_tokens": 6453,
+        "wall_seconds": 132.5787260355428
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 139.09821981936693,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_missing": {
+          "exposed": true,
+          "observation_indices": [
+            6,
+            20,
+            22
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-1-cell-2-rep-3",
+      "task": {
+        "key": "django__asgiref-523",
+        "corpus": "confirm_A",
+        "host_repository_sha256": "a5b35a6687984709638b9f074d129388af6a996b21ac9059cf668bd27e270b91",
+        "host_venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "prepared_ref": "92d325fb7729184a7ad60fb68e308889a16f7497"
+      },
+      "cell": {
+        "locale_missing": "off",
+        "locale_provided": "on"
+      },
+      "cell_index": 2,
+      "repetition": 3,
+      "seed": 2003,
+      "diagnostic_passed": false,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-1-cell-2-rep-3",
+      "task_key": "django__asgiref-523",
+      "host_runtime": {
+        "task_key": "django__asgiref-523",
+        "commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+        "repository": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/pristine",
+        "repository_sha256": "a5b35a6687984709638b9f074d129388af6a996b21ac9059cf668bd27e270b91",
+        "venv": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/venv",
+        "venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "92d325fb7729184a7ad60fb68e308889a16f7497",
+      "endpoint": "http://127.0.0.1:18102/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2003,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "passed",
+      "steps": 62,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 720844,
+        "output_tokens": 8749,
+        "wall_seconds": 194.63598678819835
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 210.35273843444884,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_provided": {
+          "exposed": true,
+          "observation_indices": [
+            6,
+            17,
+            20,
+            30,
+            43,
+            46,
+            54
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-1-cell-3-rep-3",
+      "task": {
+        "key": "django__asgiref-523",
+        "corpus": "confirm_A",
+        "host_repository_sha256": "a5b35a6687984709638b9f074d129388af6a996b21ac9059cf668bd27e270b91",
+        "host_venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "prepared_ref": "92d325fb7729184a7ad60fb68e308889a16f7497"
+      },
+      "cell": {
+        "locale_missing": "on",
+        "locale_provided": "on"
+      },
+      "cell_index": 3,
+      "repetition": 3,
+      "seed": 2003,
+      "diagnostic_passed": false,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-1-cell-3-rep-3",
+      "task_key": "django__asgiref-523",
+      "host_runtime": {
+        "task_key": "django__asgiref-523",
+        "commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+        "repository": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/pristine",
+        "repository_sha256": "a5b35a6687984709638b9f074d129388af6a996b21ac9059cf668bd27e270b91",
+        "venv": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/venv",
+        "venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "92d325fb7729184a7ad60fb68e308889a16f7497",
+      "endpoint": "http://127.0.0.1:18103/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2003,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "passed",
+      "steps": 57,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 595895,
+        "output_tokens": 9217,
+        "wall_seconds": 184.1934601869434
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 198.23300193063915,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_missing": {
+          "exposed": true,
+          "observation_indices": [
+            16,
+            36,
+            40,
+            43,
+            52
+          ]
+        },
+        "locale_provided": {
+          "exposed": true,
+          "observation_indices": [
+            16,
+            36,
+            40,
+            43
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-2-cell-0-rep-3",
+      "task": {
+        "key": "stuartmaxwell__djpress-117",
+        "corpus": "confirm_B",
+        "host_repository_sha256": "984289f38db59ffc17ba896c942ddba7e42a1b8cdae1be43379650368243d4e7",
+        "host_venv_sha256": "d096ed5cb5fd007cfe0e6b065d76fa5fb6641afc7450060ae899b643ef82ad27",
+        "prepared_ref": "8bfcfb6f0e7bf9afc6e8aed67e2e517ff927e797"
+      },
+      "cell": {
+        "locale_missing": "off",
+        "locale_provided": "off"
+      },
+      "cell_index": 0,
+      "repetition": 3,
+      "seed": 2003,
+      "diagnostic_passed": false,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-2-cell-0-rep-3",
+      "task_key": "stuartmaxwell__djpress-117",
+      "host_runtime": {
+        "task_key": "stuartmaxwell__djpress-117",
+        "commit": "62898afc246da3e96a0b8f753cf5e9853d75b40e",
+        "repository": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-v2/pristine",
+        "repository_sha256": "984289f38db59ffc17ba896c942ddba7e42a1b8cdae1be43379650368243d4e7",
+        "venv": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-v2/venv",
+        "venv_sha256": "d096ed5cb5fd007cfe0e6b065d76fa5fb6641afc7450060ae899b643ef82ad27",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "8bfcfb6f0e7bf9afc6e8aed67e2e517ff927e797",
+      "endpoint": "http://127.0.0.1:18104/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2003,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "passed",
+      "steps": 44,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 419431,
+        "output_tokens": 4800,
+        "wall_seconds": 237.61729208473116
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 369.72615775000304,
+      "visible_changed": false,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {},
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-2-cell-1-rep-3",
+      "task": {
+        "key": "stuartmaxwell__djpress-117",
+        "corpus": "confirm_B",
+        "host_repository_sha256": "984289f38db59ffc17ba896c942ddba7e42a1b8cdae1be43379650368243d4e7",
+        "host_venv_sha256": "d096ed5cb5fd007cfe0e6b065d76fa5fb6641afc7450060ae899b643ef82ad27",
+        "prepared_ref": "8bfcfb6f0e7bf9afc6e8aed67e2e517ff927e797"
+      },
+      "cell": {
+        "locale_missing": "on",
+        "locale_provided": "off"
+      },
+      "cell_index": 1,
+      "repetition": 3,
+      "seed": 2003,
+      "diagnostic_passed": false,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-2-cell-1-rep-3",
+      "task_key": "stuartmaxwell__djpress-117",
+      "host_runtime": {
+        "task_key": "stuartmaxwell__djpress-117",
+        "commit": "62898afc246da3e96a0b8f753cf5e9853d75b40e",
+        "repository": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-v2/pristine",
+        "repository_sha256": "984289f38db59ffc17ba896c942ddba7e42a1b8cdae1be43379650368243d4e7",
+        "venv": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-v2/venv",
+        "venv_sha256": "d096ed5cb5fd007cfe0e6b065d76fa5fb6641afc7450060ae899b643ef82ad27",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "8bfcfb6f0e7bf9afc6e8aed67e2e517ff927e797",
+      "endpoint": "http://127.0.0.1:18105/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2003,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "passed",
+      "steps": 61,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 681020,
+        "output_tokens": 6723,
+        "wall_seconds": 257.1452971249819
+      },
+      "usage_unknown": false,
+      "realized": false,
+      "wall_seconds": 375.9217428313568,
+      "visible_changed": false,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_missing": {
+          "exposed": false,
+          "observation_indices": []
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-2-cell-2-rep-3",
+      "task": {
+        "key": "stuartmaxwell__djpress-117",
+        "corpus": "confirm_B",
+        "host_repository_sha256": "984289f38db59ffc17ba896c942ddba7e42a1b8cdae1be43379650368243d4e7",
+        "host_venv_sha256": "d096ed5cb5fd007cfe0e6b065d76fa5fb6641afc7450060ae899b643ef82ad27",
+        "prepared_ref": "8bfcfb6f0e7bf9afc6e8aed67e2e517ff927e797"
+      },
+      "cell": {
+        "locale_missing": "off",
+        "locale_provided": "on"
+      },
+      "cell_index": 2,
+      "repetition": 3,
+      "seed": 2003,
+      "diagnostic_passed": false,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-2-cell-2-rep-3",
+      "task_key": "stuartmaxwell__djpress-117",
+      "host_runtime": {
+        "task_key": "stuartmaxwell__djpress-117",
+        "commit": "62898afc246da3e96a0b8f753cf5e9853d75b40e",
+        "repository": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-v2/pristine",
+        "repository_sha256": "984289f38db59ffc17ba896c942ddba7e42a1b8cdae1be43379650368243d4e7",
+        "venv": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-v2/venv",
+        "venv_sha256": "d096ed5cb5fd007cfe0e6b065d76fa5fb6641afc7450060ae899b643ef82ad27",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "8bfcfb6f0e7bf9afc6e8aed67e2e517ff927e797",
+      "endpoint": "http://127.0.0.1:18106/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2003,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "passed",
+      "steps": 67,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 746022,
+        "output_tokens": 7869,
+        "wall_seconds": 284.198151467368
+      },
+      "usage_unknown": false,
+      "realized": false,
+      "wall_seconds": 376.22282461542636,
+      "visible_changed": false,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_provided": {
+          "exposed": false,
+          "observation_indices": []
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-2-cell-3-rep-3",
+      "task": {
+        "key": "stuartmaxwell__djpress-117",
+        "corpus": "confirm_B",
+        "host_repository_sha256": "984289f38db59ffc17ba896c942ddba7e42a1b8cdae1be43379650368243d4e7",
+        "host_venv_sha256": "d096ed5cb5fd007cfe0e6b065d76fa5fb6641afc7450060ae899b643ef82ad27",
+        "prepared_ref": "8bfcfb6f0e7bf9afc6e8aed67e2e517ff927e797"
+      },
+      "cell": {
+        "locale_missing": "on",
+        "locale_provided": "on"
+      },
+      "cell_index": 3,
+      "repetition": 3,
+      "seed": 2003,
+      "diagnostic_passed": false,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-2-cell-3-rep-3",
+      "task_key": "stuartmaxwell__djpress-117",
+      "host_runtime": {
+        "task_key": "stuartmaxwell__djpress-117",
+        "commit": "62898afc246da3e96a0b8f753cf5e9853d75b40e",
+        "repository": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-v2/pristine",
+        "repository_sha256": "984289f38db59ffc17ba896c942ddba7e42a1b8cdae1be43379650368243d4e7",
+        "venv": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-v2/venv",
+        "venv_sha256": "d096ed5cb5fd007cfe0e6b065d76fa5fb6641afc7450060ae899b643ef82ad27",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "8bfcfb6f0e7bf9afc6e8aed67e2e517ff927e797",
+      "endpoint": "http://127.0.0.1:18107/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2003,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "passed",
+      "steps": 59,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 634862,
+        "output_tokens": 8775,
+        "wall_seconds": 286.01930962875485
+      },
+      "usage_unknown": false,
+      "realized": false,
+      "wall_seconds": 375.27188430260867,
+      "visible_changed": false,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_missing": {
+          "exposed": false,
+          "observation_indices": []
+        },
+        "locale_provided": {
+          "exposed": false,
+          "observation_indices": []
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-0-rep-4",
+      "task": {
+        "key": "factoryboy__factory_boy-1067",
+        "corpus": "discovery",
+        "host_repository_sha256": "29c43d92e4f808d5358f7436e7bf167c4fb0e6b0f2f9763f01c9b6c9cdfcfb50",
+        "host_venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "prepared_ref": "6659398c3aed729e6a447855a1da517edb9a9cb5"
+      },
+      "cell": {
+        "locale_missing": "off",
+        "locale_provided": "off"
+      },
+      "cell_index": 0,
+      "repetition": 4,
+      "seed": 2004,
+      "diagnostic_passed": false,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-0-cell-0-rep-4",
+      "task_key": "factoryboy__factory_boy-1067",
+      "host_runtime": {
+        "task_key": "factoryboy__factory_boy-1067",
+        "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+        "repository": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/pristine",
+        "repository_sha256": "29c43d92e4f808d5358f7436e7bf167c4fb0e6b0f2f9763f01c9b6c9cdfcfb50",
+        "venv": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+        "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "6659398c3aed729e6a447855a1da517edb9a9cb5",
+      "endpoint": "http://127.0.0.1:18200/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2004,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "passed",
+      "steps": 46,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 444598,
+        "output_tokens": 7709,
+        "wall_seconds": 186.54652715101838
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 239.12285008095205,
+      "visible_changed": false,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {},
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-1-rep-4",
+      "task": {
+        "key": "factoryboy__factory_boy-1067",
+        "corpus": "discovery",
+        "host_repository_sha256": "29c43d92e4f808d5358f7436e7bf167c4fb0e6b0f2f9763f01c9b6c9cdfcfb50",
+        "host_venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "prepared_ref": "6659398c3aed729e6a447855a1da517edb9a9cb5"
+      },
+      "cell": {
+        "locale_missing": "on",
+        "locale_provided": "off"
+      },
+      "cell_index": 1,
+      "repetition": 4,
+      "seed": 2004,
+      "diagnostic_passed": false,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-0-cell-1-rep-4",
+      "task_key": "factoryboy__factory_boy-1067",
+      "host_runtime": {
+        "task_key": "factoryboy__factory_boy-1067",
+        "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+        "repository": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/pristine",
+        "repository_sha256": "29c43d92e4f808d5358f7436e7bf167c4fb0e6b0f2f9763f01c9b6c9cdfcfb50",
+        "venv": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+        "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "6659398c3aed729e6a447855a1da517edb9a9cb5",
+      "endpoint": "http://127.0.0.1:18201/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2004,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "passed",
+      "steps": 68,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 771468,
+        "output_tokens": 8444,
+        "wall_seconds": 223.90688467491418
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 273.58019597735256,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_missing": {
+          "exposed": true,
+          "observation_indices": [
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            31,
+            32,
+            40,
+            41,
+            42,
+            44,
+            45,
+            46,
+            47,
+            48,
+            57,
+            59,
+            60,
+            66
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-2-rep-4",
+      "task": {
+        "key": "factoryboy__factory_boy-1067",
+        "corpus": "discovery",
+        "host_repository_sha256": "29c43d92e4f808d5358f7436e7bf167c4fb0e6b0f2f9763f01c9b6c9cdfcfb50",
+        "host_venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "prepared_ref": "6659398c3aed729e6a447855a1da517edb9a9cb5"
+      },
+      "cell": {
+        "locale_missing": "off",
+        "locale_provided": "on"
+      },
+      "cell_index": 2,
+      "repetition": 4,
+      "seed": 2004,
+      "diagnostic_passed": false,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-0-cell-2-rep-4",
+      "task_key": "factoryboy__factory_boy-1067",
+      "host_runtime": {
+        "task_key": "factoryboy__factory_boy-1067",
+        "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+        "repository": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/pristine",
+        "repository_sha256": "29c43d92e4f808d5358f7436e7bf167c4fb0e6b0f2f9763f01c9b6c9cdfcfb50",
+        "venv": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+        "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "6659398c3aed729e6a447855a1da517edb9a9cb5",
+      "endpoint": "http://127.0.0.1:18202/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2004,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "passed",
+      "steps": 57,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 600981,
+        "output_tokens": 11563,
+        "wall_seconds": 216.91625293530524
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 268.32065935246646,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_provided": {
+          "exposed": true,
+          "observation_indices": [
+            27,
+            29,
+            30,
+            46,
+            48,
+            54
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-3-rep-4",
+      "task": {
+        "key": "factoryboy__factory_boy-1067",
+        "corpus": "discovery",
+        "host_repository_sha256": "29c43d92e4f808d5358f7436e7bf167c4fb0e6b0f2f9763f01c9b6c9cdfcfb50",
+        "host_venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "prepared_ref": "6659398c3aed729e6a447855a1da517edb9a9cb5"
+      },
+      "cell": {
+        "locale_missing": "on",
+        "locale_provided": "on"
+      },
+      "cell_index": 3,
+      "repetition": 4,
+      "seed": 2004,
+      "diagnostic_passed": false,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-0-cell-3-rep-4",
+      "task_key": "factoryboy__factory_boy-1067",
+      "host_runtime": {
+        "task_key": "factoryboy__factory_boy-1067",
+        "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+        "repository": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/pristine",
+        "repository_sha256": "29c43d92e4f808d5358f7436e7bf167c4fb0e6b0f2f9763f01c9b6c9cdfcfb50",
+        "venv": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+        "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "6659398c3aed729e6a447855a1da517edb9a9cb5",
+      "endpoint": "http://127.0.0.1:18203/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2004,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "passed",
+      "steps": 74,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 863005,
+        "output_tokens": 14288,
+        "wall_seconds": 270.41598134394735
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 317.176300117746,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_missing": {
+          "exposed": true,
+          "observation_indices": [
+            28,
+            29,
+            30,
+            32,
+            50,
+            51,
+            52,
+            60,
+            61,
+            63,
+            72
+          ]
+        },
+        "locale_provided": {
+          "exposed": true,
+          "observation_indices": [
+            28,
+            29,
+            30,
+            32,
+            50,
+            51,
+            52,
+            60,
+            61,
+            63,
+            72
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-1-cell-0-rep-4",
+      "task": {
+        "key": "django__asgiref-523",
+        "corpus": "confirm_A",
+        "host_repository_sha256": "a5b35a6687984709638b9f074d129388af6a996b21ac9059cf668bd27e270b91",
+        "host_venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "prepared_ref": "92d325fb7729184a7ad60fb68e308889a16f7497"
+      },
+      "cell": {
+        "locale_missing": "off",
+        "locale_provided": "off"
+      },
+      "cell_index": 0,
+      "repetition": 4,
+      "seed": 2004,
+      "diagnostic_passed": null,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-1-cell-0-rep-4",
+      "task_key": "django__asgiref-523",
+      "host_runtime": {
+        "task_key": "django__asgiref-523",
+        "commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+        "repository": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/pristine",
+        "repository_sha256": "a5b35a6687984709638b9f074d129388af6a996b21ac9059cf668bd27e270b91",
+        "venv": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/venv",
+        "venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "92d325fb7729184a7ad60fb68e308889a16f7497",
+      "endpoint": "http://127.0.0.1:18204/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2004,
+        "reasoning_effort": null
+      },
+      "admission_status": "rejected",
+      "guarded_gold_control": "not_needed",
+      "steps": 58,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 547616,
+        "output_tokens": 8120,
+        "wall_seconds": 155.7016175473109
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 163.58809430338442,
+      "visible_changed": false,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {},
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-1-cell-1-rep-4",
+      "task": {
+        "key": "django__asgiref-523",
+        "corpus": "confirm_A",
+        "host_repository_sha256": "a5b35a6687984709638b9f074d129388af6a996b21ac9059cf668bd27e270b91",
+        "host_venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "prepared_ref": "92d325fb7729184a7ad60fb68e308889a16f7497"
+      },
+      "cell": {
+        "locale_missing": "on",
+        "locale_provided": "off"
+      },
+      "cell_index": 1,
+      "repetition": 4,
+      "seed": 2004,
+      "diagnostic_passed": false,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-1-cell-1-rep-4",
+      "task_key": "django__asgiref-523",
+      "host_runtime": {
+        "task_key": "django__asgiref-523",
+        "commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+        "repository": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/pristine",
+        "repository_sha256": "a5b35a6687984709638b9f074d129388af6a996b21ac9059cf668bd27e270b91",
+        "venv": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/venv",
+        "venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "92d325fb7729184a7ad60fb68e308889a16f7497",
+      "endpoint": "http://127.0.0.1:18205/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2004,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "passed",
+      "steps": 47,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 489965,
+        "output_tokens": 8351,
+        "wall_seconds": 169.89543694257736
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 188.26809988357127,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_missing": {
+          "exposed": true,
+          "observation_indices": [
+            24,
+            26,
+            34,
+            36,
+            39,
+            42
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-1-cell-2-rep-4",
+      "task": {
+        "key": "django__asgiref-523",
+        "corpus": "confirm_A",
+        "host_repository_sha256": "a5b35a6687984709638b9f074d129388af6a996b21ac9059cf668bd27e270b91",
+        "host_venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "prepared_ref": "92d325fb7729184a7ad60fb68e308889a16f7497"
+      },
+      "cell": {
+        "locale_missing": "off",
+        "locale_provided": "on"
+      },
+      "cell_index": 2,
+      "repetition": 4,
+      "seed": 2004,
+      "diagnostic_passed": false,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-1-cell-2-rep-4",
+      "task_key": "django__asgiref-523",
+      "host_runtime": {
+        "task_key": "django__asgiref-523",
+        "commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+        "repository": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/pristine",
+        "repository_sha256": "a5b35a6687984709638b9f074d129388af6a996b21ac9059cf668bd27e270b91",
+        "venv": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/venv",
+        "venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "92d325fb7729184a7ad60fb68e308889a16f7497",
+      "endpoint": "http://127.0.0.1:18206/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2004,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "passed",
+      "steps": 29,
+      "stop_reason": "model_stopped",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 183414,
+        "output_tokens": 6855,
+        "wall_seconds": 95.51891524810344
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 113.90207497868687,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_provided": {
+          "exposed": true,
+          "observation_indices": [
+            20,
+            24
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-1-cell-3-rep-4",
+      "task": {
+        "key": "django__asgiref-523",
+        "corpus": "confirm_A",
+        "host_repository_sha256": "a5b35a6687984709638b9f074d129388af6a996b21ac9059cf668bd27e270b91",
+        "host_venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "prepared_ref": "92d325fb7729184a7ad60fb68e308889a16f7497"
+      },
+      "cell": {
+        "locale_missing": "on",
+        "locale_provided": "on"
+      },
+      "cell_index": 3,
+      "repetition": 4,
+      "seed": 2004,
+      "diagnostic_passed": false,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-1-cell-3-rep-4",
+      "task_key": "django__asgiref-523",
+      "host_runtime": {
+        "task_key": "django__asgiref-523",
+        "commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+        "repository": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/pristine",
+        "repository_sha256": "a5b35a6687984709638b9f074d129388af6a996b21ac9059cf668bd27e270b91",
+        "venv": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/venv",
+        "venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "92d325fb7729184a7ad60fb68e308889a16f7497",
+      "endpoint": "http://127.0.0.1:18207/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2004,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "passed",
+      "steps": 49,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 486728,
+        "output_tokens": 7311,
+        "wall_seconds": 135.6321648908779
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 153.5029786368832,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_missing": {
+          "exposed": true,
+          "observation_indices": [
+            17,
+            19,
+            41,
+            43
+          ]
+        },
+        "locale_provided": {
+          "exposed": true,
+          "observation_indices": [
+            17,
+            19,
+            41
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-2-cell-0-rep-4",
+      "task": {
+        "key": "stuartmaxwell__djpress-117",
+        "corpus": "confirm_B",
+        "host_repository_sha256": "984289f38db59ffc17ba896c942ddba7e42a1b8cdae1be43379650368243d4e7",
+        "host_venv_sha256": "d096ed5cb5fd007cfe0e6b065d76fa5fb6641afc7450060ae899b643ef82ad27",
+        "prepared_ref": "8bfcfb6f0e7bf9afc6e8aed67e2e517ff927e797"
+      },
+      "cell": {
+        "locale_missing": "off",
+        "locale_provided": "off"
+      },
+      "cell_index": 0,
+      "repetition": 4,
+      "seed": 2004,
+      "diagnostic_passed": null,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-2-cell-0-rep-4",
+      "task_key": "stuartmaxwell__djpress-117",
+      "host_runtime": {
+        "task_key": "stuartmaxwell__djpress-117",
+        "commit": "62898afc246da3e96a0b8f753cf5e9853d75b40e",
+        "repository": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-v2/pristine",
+        "repository_sha256": "984289f38db59ffc17ba896c942ddba7e42a1b8cdae1be43379650368243d4e7",
+        "venv": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-v2/venv",
+        "venv_sha256": "d096ed5cb5fd007cfe0e6b065d76fa5fb6641afc7450060ae899b643ef82ad27",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "8bfcfb6f0e7bf9afc6e8aed67e2e517ff927e797",
+      "endpoint": "http://127.0.0.1:18102/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2004,
+        "reasoning_effort": null
+      },
+      "admission_status": "rejected",
+      "guarded_gold_control": "not_needed",
+      "steps": 100,
+      "stop_reason": "step_budget",
+      "budget_exhausted": true,
+      "usage": {
+        "input_tokens": 1280177,
+        "output_tokens": 11483,
+        "wall_seconds": 315.33052795473486
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 366.33575130905956,
+      "visible_changed": false,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {},
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-2-cell-1-rep-4",
+      "task": {
+        "key": "stuartmaxwell__djpress-117",
+        "corpus": "confirm_B",
+        "host_repository_sha256": "984289f38db59ffc17ba896c942ddba7e42a1b8cdae1be43379650368243d4e7",
+        "host_venv_sha256": "d096ed5cb5fd007cfe0e6b065d76fa5fb6641afc7450060ae899b643ef82ad27",
+        "prepared_ref": "8bfcfb6f0e7bf9afc6e8aed67e2e517ff927e797"
+      },
+      "cell": {
+        "locale_missing": "on",
+        "locale_provided": "off"
+      },
+      "cell_index": 1,
+      "repetition": 4,
+      "seed": 2004,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-2-cell-1-rep-4",
+      "task_key": "stuartmaxwell__djpress-117",
+      "host_runtime": {
+        "task_key": "stuartmaxwell__djpress-117",
+        "commit": "62898afc246da3e96a0b8f753cf5e9853d75b40e",
+        "repository": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-v2/pristine",
+        "repository_sha256": "984289f38db59ffc17ba896c942ddba7e42a1b8cdae1be43379650368243d4e7",
+        "venv": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-v2/venv",
+        "venv_sha256": "d096ed5cb5fd007cfe0e6b065d76fa5fb6641afc7450060ae899b643ef82ad27",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "8bfcfb6f0e7bf9afc6e8aed67e2e517ff927e797",
+      "endpoint": "http://127.0.0.1:18103/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2004,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 63,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 687882,
+        "output_tokens": 8460,
+        "wall_seconds": 265.0615371502936
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 315.5518232965842,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_missing": {
+          "exposed": true,
+          "observation_indices": [
+            21,
+            23,
+            41,
+            42,
+            48,
+            50,
+            51,
+            55,
+            56,
+            57,
+            58
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-2-cell-2-rep-4",
+      "task": {
+        "key": "stuartmaxwell__djpress-117",
+        "corpus": "confirm_B",
+        "host_repository_sha256": "984289f38db59ffc17ba896c942ddba7e42a1b8cdae1be43379650368243d4e7",
+        "host_venv_sha256": "d096ed5cb5fd007cfe0e6b065d76fa5fb6641afc7450060ae899b643ef82ad27",
+        "prepared_ref": "8bfcfb6f0e7bf9afc6e8aed67e2e517ff927e797"
+      },
+      "cell": {
+        "locale_missing": "off",
+        "locale_provided": "on"
+      },
+      "cell_index": 2,
+      "repetition": 4,
+      "seed": 2004,
+      "diagnostic_passed": false,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-2-cell-2-rep-4",
+      "task_key": "stuartmaxwell__djpress-117",
+      "host_runtime": {
+        "task_key": "stuartmaxwell__djpress-117",
+        "commit": "62898afc246da3e96a0b8f753cf5e9853d75b40e",
+        "repository": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-v2/pristine",
+        "repository_sha256": "984289f38db59ffc17ba896c942ddba7e42a1b8cdae1be43379650368243d4e7",
+        "venv": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-v2/venv",
+        "venv_sha256": "d096ed5cb5fd007cfe0e6b065d76fa5fb6641afc7450060ae899b643ef82ad27",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "8bfcfb6f0e7bf9afc6e8aed67e2e517ff927e797",
+      "endpoint": "http://127.0.0.1:18104/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2004,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "passed",
+      "steps": 44,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 357379,
+        "output_tokens": 5558,
+        "wall_seconds": 216.02469517011195
+      },
+      "usage_unknown": false,
+      "realized": false,
+      "wall_seconds": 312.67825409397483,
+      "visible_changed": false,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_provided": {
+          "exposed": false,
+          "observation_indices": []
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-2-cell-3-rep-4",
+      "task": {
+        "key": "stuartmaxwell__djpress-117",
+        "corpus": "confirm_B",
+        "host_repository_sha256": "984289f38db59ffc17ba896c942ddba7e42a1b8cdae1be43379650368243d4e7",
+        "host_venv_sha256": "d096ed5cb5fd007cfe0e6b065d76fa5fb6641afc7450060ae899b643ef82ad27",
+        "prepared_ref": "8bfcfb6f0e7bf9afc6e8aed67e2e517ff927e797"
+      },
+      "cell": {
+        "locale_missing": "on",
+        "locale_provided": "on"
+      },
+      "cell_index": 3,
+      "repetition": 4,
+      "seed": 2004,
+      "diagnostic_passed": false,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "episode_id": "task-2-cell-3-rep-4",
+      "task_key": "stuartmaxwell__djpress-117",
+      "host_runtime": {
+        "task_key": "stuartmaxwell__djpress-117",
+        "commit": "62898afc246da3e96a0b8f753cf5e9853d75b40e",
+        "repository": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-v2/pristine",
+        "repository_sha256": "984289f38db59ffc17ba896c942ddba7e42a1b8cdae1be43379650368243d4e7",
+        "venv": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-v2/venv",
+        "venv_sha256": "d096ed5cb5fd007cfe0e6b065d76fa5fb6641afc7450060ae899b643ef82ad27",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "8bfcfb6f0e7bf9afc6e8aed67e2e517ff927e797",
+      "endpoint": "http://127.0.0.1:18105/v1",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": 0.2,
+        "seed": 2004,
+        "reasoning_effort": null
+      },
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "passed",
+      "steps": 47,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 415697,
+        "output_tokens": 7524,
+        "wall_seconds": 239.32636253535748
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 310.78747083060443,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "locale_missing": {
+          "exposed": true,
+          "observation_indices": [
+            30,
+            31
+          ]
+        },
+        "locale_provided": {
+          "exposed": true,
+          "observation_indices": [
+            30,
+            31
+          ]
+        }
+      },
+      "control_identity_violation": false
+    }
+  ]
+}

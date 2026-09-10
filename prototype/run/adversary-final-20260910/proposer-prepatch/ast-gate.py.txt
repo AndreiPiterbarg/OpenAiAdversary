@@ -1,0 +1,5 @@
+def without_triggers(tree):
+ tree=copy.deepcopy(tree);method=next(n for n in tree.body[0].body if isinstance(n,ast.FunctionDef) and n.name=='observe');nodes=[n for n in ast.walk(method) if isinstance(n,ast.If) and 'tool' in ast.unparse(n.test)]
+ assert len(nodes)==2
+ for n in nodes:n.test=ast.Constant(value='MODEL_TRIGGER_SLOT')
+ return ast.dump(tree,include_attributes=False)

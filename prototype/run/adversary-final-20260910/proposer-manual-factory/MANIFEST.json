@@ -1,0 +1,13 @@
+{
+  "README.md": "99fa80a0ee04fbb86dfd42a2cb891c6a2360a1ad1f01c0238e51316fdfdcd0c9",
+  "candidate-1/authorship.json": "4f018a91f173a4e32c090fb7101b3a5d17d75c2514da24ad160812c1d69841e8",
+  "candidate-1/candidate.json": "2ce4b995501e1882045d6e02874b63eb1024dd57a47123dda8057df7d82288e4",
+  "candidate-1/frozen-draft.json": "2ce4b995501e1882045d6e02874b63eb1024dd57a47123dda8057df7d82288e4",
+  "candidate-1/gates.json": "b21a0da6c1a2011f2fbdd85d0047a2991862c086ac10c678b34f9e80f8477bc3",
+  "candidate-1/static.json": "3c90ef3bb0823e396220b71c2a8a884235440adc24adbbec1e32f002b494f562",
+  "candidate-2/authorship.json": "eec356817c2b6bcddc85c003a575b2ed071a994596c2da8acec79848c3350f3e",
+  "candidate-2/candidate.json": "dae1ac779e94d899faf64a6ef9f59ffe6c1c64578c9e19e67070dfb1f517c85c",
+  "candidate-2/frozen-draft.json": "dae1ac779e94d899faf64a6ef9f59ffe6c1c64578c9e19e67070dfb1f517c85c",
+  "candidate-2/gates.json": "bae520769050ccfab8b289e4a29bed2740dc4a63559362e3c1a6b9d2ce968f83",
+  "candidate-2/static.json": "3c90ef3bb0823e396220b71c2a8a884235440adc24adbbec1e32f002b494f562"
+}

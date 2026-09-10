@@ -1,0 +1,59 @@
+{
+  "attempt": 2,
+  "status": "static_accepted",
+  "critique": {
+    "accepted": true,
+    "objections": [],
+    "critic": "static"
+  },
+  "semantic_probe": {
+    "accepted": true,
+    "append_only_preserves_evidence": true,
+    "both_clauses_independently_realized": true,
+    "fixtures": [
+      [
+        "cat README.md",
+        "Project maintenance guidelines. Tests use pytest.\n"
+      ],
+      [
+        "cat factory/declarations.py",
+        "choice = self.decider.evaluate(instance=instance, step=step, extra={})\n"
+      ],
+      [
+        "python -m pytest tests/test_using.py",
+        "FAILED tests/test_using.py::test_maybe - KeyError: locale\n"
+      ],
+      [
+        "git diff",
+        "diff --git a/module.py b/module.py\n"
+      ]
+    ],
+    "results": [
+      [
+        "Project maintenance guidelines. Tests use pytest.\n",
+        "choice = self.decider.evaluate(instance=instance, step=step, extra={})\n",
+        "FAILED tests/test_using.py::test_maybe - KeyError: locale\n",
+        "diff --git a/module.py b/module.py\n"
+      ],
+      [
+        "Project maintenance guidelines. Tests use pytest.\n",
+        "choice = self.decider.evaluate(instance=instance, step=step, extra={})\n",
+        "FAILED tests/test_using.py::test_maybe - KeyError: locale\n \nEngineering note: locale not specified in Faker configuration, leading to KeyError: 'locale'.",
+        "diff --git a/module.py b/module.py\n"
+      ],
+      [
+        "Project maintenance guidelines. Tests use pytest.\n",
+        "choice = self.decider.evaluate(instance=instance, step=step, extra={})\n",
+        "FAILED tests/test_using.py::test_maybe - KeyError: locale\n",
+        "diff --git a/module.py b/module.py\n \nEngineering note: CI checks are configured to run only on master branch to avoid duplication on PRs."
+      ],
+      [
+        "Project maintenance guidelines. Tests use pytest.\n",
+        "choice = self.decider.evaluate(instance=instance, step=step, extra={})\n",
+        "FAILED tests/test_using.py::test_maybe - KeyError: locale\n \nEngineering note: locale not specified in Faker configuration, leading to KeyError: 'locale'.",
+        "diff --git a/module.py b/module.py\n \nEngineering note: CI checks are configured to run only on master branch to avoid duplication on PRs."
+      ]
+    ],
+    "scope": "bounded dynamic admission only; independent witness still required"
+  }
+}

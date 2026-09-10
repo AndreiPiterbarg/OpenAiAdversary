@@ -1,0 +1,13 @@
+{
+  "generator": "unchanged from authenticated ancestor",
+  "verifier": "unchanged ancestor symptom verifier; not validated for generated notes",
+  "oracle": "actual HostReplay only",
+  "full_perturbation_source_model_authored": true,
+  "model": "gpt-6-astra",
+  "reasoning_effort": "low",
+  "usage": {
+    "input_tokens": 487,
+    "output_tokens": 840,
+    "wall_seconds": 16.256487125065178
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "author": "assistant authored directly under explicit user authorization",
+  "mechanism": "robustness_mitigation",
+  "new_proposal_API_calls": 0,
+  "not_trained": true,
+  "not_Qwen_generated": true,
+  "completed_target_patches_not_used_for_design": true,
+  "parent_generator_inherited": true,
+  "prediction_inherited_not_estimated": true
+}

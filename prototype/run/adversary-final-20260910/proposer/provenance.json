@@ -1,0 +1,27 @@
+{
+  "model": {
+    "id": "qwen3-adversary",
+    "version": "b968826d9c46dd6066d109eabc6255188de91218",
+    "license": "permissive",
+    "backend": "served"
+  },
+  "base_checkpoint_not_trained_adapter": true,
+  "original_source_archive_sha256": "b5bbe31366f2a690b5d4f8702187305f0541e20ed1315c0fce6aedab4df0cf49",
+  "final_programs": {
+    "generator": {
+      "path": "generator.py",
+      "sha256": "5947373b194e498a12ac404be9c660cfe7bad9d6f66d1793469fcc136b110b27"
+    },
+    "perturbation": {
+      "path": "perturbation.py",
+      "sha256": "615a8b8300d1d16d16fd29b5c8ce1975cffd7e1a0a585f61f566d58034a708a8"
+    },
+    "verifier": {
+      "path": "verifier.py",
+      "sha256": "5b98d3f538af5b41d1253fce81b447644337ebf71e0ecb64166604edb74e641d"
+    }
+  },
+  "selection_before_heldout_outcome_feedback": true,
+  "final_assembly": "Only the model-authored verifier field replaced; generator and perturbation exactly match parent-v8-draft.json.",
+  "publication_status": "proposer artifact complete; target experiment results published separately when finalized"
+}

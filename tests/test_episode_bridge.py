@@ -134,3 +134,26 @@ def test_completion_is_saved_before_forwarding(fake, monkeypatch):
     monkeypatch.setattr(bridge, '_send', checked_send)
     bridge.run_bridge(controller([event()]), out)
     assert len(calls) == 1
+
+
+def test_explicit_astra_twenty_call_four_episode_bounds(fake):
+    out, calls = fake
+    events = [event(episode=f'cell-{cell}', call=call, max_tokens=1024)
+              for cell in range(4) for call in range(1, 21)]
+    result = bridge.run_bridge(controller(events), out, maxepisodes=4, call_limit=20,
+                               output_limit=20480, request_byte_limit=65536)
+    assert len(calls) == result['model_calls'] == 80
+    assert result['episodes'] == 4
+
+
+def test_explicit_hundred_call_budget_is_opt_in():
+    episodes = {}
+    for i in range(1, 101):
+        bridge._request(event(call=i, max_tokens=1024), episodes, 5,
+                        call_limit=100, output_limit=102400, request_byte_limit=262144)
+    assert episodes['one'] == (100, 102400)
+    with pytest.raises(bridge.BridgeError):
+        bridge._request(event(call=101), episodes, 5,
+                        call_limit=100, output_limit=102400, request_byte_limit=262144)
+    with pytest.raises(bridge.BridgeError):
+        bridge._request(event(call=9), {'one': (8, 4096)}, 1)

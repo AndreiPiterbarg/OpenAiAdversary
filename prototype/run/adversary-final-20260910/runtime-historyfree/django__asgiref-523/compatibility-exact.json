@@ -1,0 +1,58 @@
+{
+  "key": "django__asgiref-523",
+  "kind": "new_host_guarded_compatibility",
+  "expected_count": 15,
+  "results": {
+    "baseline": {
+      "exit": 1,
+      "statuses": {
+        "tests/test_local.py::test_deletion": "FAILED",
+        "tests/test_local.py::test_local_task": "PASSED",
+        "tests/test_local.py::test_local_thread": "PASSED",
+        "tests/test_local.py::test_local_thread_nested": "PASSED",
+        "tests/test_local.py::test_local_cycle": "PASSED",
+        "tests/test_local.py::test_local_task_to_sync": "PASSED",
+        "tests/test_local.py::test_local_thread_to_async": "PASSED",
+        "tests/test_local.py::test_local_task_to_sync_to_task": "PASSED",
+        "tests/test_local.py::test_local_many_layers": "PASSED",
+        "tests/test_local.py::test_local_critical_no_task_to_thread": "PASSED",
+        "tests/test_local.py::test_local_critical_no_thread_to_task": "PASSED",
+        "tests/test_local.py::test_local_threads_and_tasks": "PASSED",
+        "tests/test_local.py::test_thread_critical_local_not_context_dependent_in_sync_thread": "PASSED",
+        "tests/test_local.py::test_visibility_thread_asgiref": "PASSED",
+        "tests/test_local.py::test_visibility_task": "PASSED"
+      },
+      "receipt_path": "/tmp/prun-host-prep-20260910/django__asgiref-523-historyfree-v1/guarded-baseline-historyfree-v2.json",
+      "receipt_sha256": "fc1ca3b9131c1a3ba5f31771628b488e42983b63292211c694e76472541209af"
+    },
+    "gold": {
+      "exit": 0,
+      "statuses": {
+        "tests/test_local.py::test_deletion": "PASSED",
+        "tests/test_local.py::test_local_task": "PASSED",
+        "tests/test_local.py::test_local_thread": "PASSED",
+        "tests/test_local.py::test_local_thread_nested": "PASSED",
+        "tests/test_local.py::test_local_cycle": "PASSED",
+        "tests/test_local.py::test_local_task_to_sync": "PASSED",
+        "tests/test_local.py::test_local_thread_to_async": "PASSED",
+        "tests/test_local.py::test_local_task_to_sync_to_task": "PASSED",
+        "tests/test_local.py::test_local_many_layers": "PASSED",
+        "tests/test_local.py::test_local_critical_no_task_to_thread": "PASSED",
+        "tests/test_local.py::test_local_critical_no_thread_to_task": "PASSED",
+        "tests/test_local.py::test_local_threads_and_tasks": "PASSED",
+        "tests/test_local.py::test_thread_critical_local_not_context_dependent_in_sync_thread": "PASSED",
+        "tests/test_local.py::test_visibility_thread_asgiref": "PASSED",
+        "tests/test_local.py::test_visibility_task": "PASSED"
+      },
+      "receipt_path": "/tmp/prun-host-prep-20260910/django__asgiref-523-historyfree-v1/guarded-gold-historyfree-v2.json",
+      "receipt_sha256": "c3d70264dcf0898aeac7d8829d989f66df50e6c9dd67130f0501195e222b0b41"
+    }
+  },
+  "baseline_valid": true,
+  "gold_valid": true,
+  "host_pin_sha256": "828379932f738ac5afbe66cebd624ad8fd1aea7f8f7b479a8325da6436f8c51c",
+  "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+  "venv_digest_stable_after_raw_transport_and_tests": true,
+  "external_receipt_access_denied": true,
+  "single_commit_no_future_objects": true
+}

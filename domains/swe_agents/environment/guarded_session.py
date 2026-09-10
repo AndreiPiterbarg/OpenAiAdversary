@@ -10,6 +10,7 @@ from __future__ import annotations
 import hashlib
 import json
 import math
+import os
 import posixpath
 import shlex
 from pathlib import Path, PurePosixPath
@@ -42,8 +43,11 @@ class GuardedSession:
         command_timeout: float = 60,
         *,
         python_executable: str = "/usr/bin/python3",
+        host_runtime: str | None = None,
+        host_nproc: int = 128,
     ) -> None:
         self._raw, self.repo, self.scratch, self.guard = raw, repo, scratch, guard
+        self.host_runtime, self.host_nproc = host_runtime, host_nproc
         if not 0 < command_timeout <= 900:
             raise ValueError("guard timeout must be in (0, 900]")
         self.command_timeout = command_timeout
@@ -58,6 +62,7 @@ class GuardedSession:
         argv = [
             self.python_executable,
             "-I",
+            "-B",
             self.guard,
             "--repo",
             self.repo,
@@ -65,6 +70,11 @@ class GuardedSession:
             self.scratch,
             "--cpu-seconds",
             str(math.ceil(effective_timeout)),
+            *(
+                ["--host-runtime", self.host_runtime, "--host-nproc", str(self.host_nproc)]
+                if self.host_runtime is not None
+                else []
+            ),
             "--",
             "/bin/bash",
             "--noprofile",
@@ -100,7 +110,7 @@ os.unlink(p)
 print(json.dumps(checks,sort_keys=True))
 assert all(checks.values())
 """
-        code, out, err = self.exec("python -I -c " + shlex.quote(probe), 30)
+        code, out, err = self.exec("python -I -B -c " + shlex.quote(probe), 30)
         if code:
             raise RuntimeUnavailable("target guard preflight failed: " + err[-1000:])
         checks = json.loads(out)
@@ -128,7 +138,7 @@ def install_guard(raw: Session, repo: str, *, command_timeout: float = 60) -> Gu
         "import json,pathlib,sys; print(json.dumps({'executable':sys.executable,"
         "'resolved':str(pathlib.Path(sys.executable).resolve(strict=True))}))"
     )
-    code, output, error = raw.exec("python -I -c " + shlex.quote(probe), 30)
+    code, output, error = raw.exec("python -I -B -c " + shlex.quote(probe), 30)
     if code:
         raise RuntimeUnavailable("cannot bind pristine guard interpreter: " + error[-500:])
     try:
@@ -158,4 +168,54 @@ def install_guard(raw: Session, repo: str, *, command_timeout: float = 60) -> Gu
         python_executable=executable,
     )
     result.preflight()
+    return result
+
+
+def install_host_guard(raw: Session, pin: Any, *, host_nproc: int = 128) -> GuardedSession:
+    """Explicit host boundary; pin validation and resource admission belong to caller."""
+    uid_threads = 0
+    for process in Path("/proc").glob("[0-9]*"):
+        try:
+            if process.stat().st_uid == os.getuid():
+                uid_threads += len(list((process / "task").iterdir()))
+        except FileNotFoundError:
+            continue
+    memory = dict(line.split(":", 1) for line in Path("/proc/meminfo").read_text().splitlines())
+    available = int(memory["MemAvailable"].split()[0]) * 1024
+    if type(host_nproc) is not int or not uid_threads + 16 <= host_nproc <= 4096:
+        raise RuntimeUnavailable("host process cap lacks measured UID thread headroom")
+    if host_nproc * 256 * 1024**2 > available // 2:
+        raise RuntimeUnavailable("host worst-case address space exceeds half available memory")
+    root = Path(raw.root)
+    repo = Path(raw.repo)
+    runtime = Path(pin.venv)
+    if runtime.resolve() != runtime or not runtime.is_dir():
+        raise RuntimeUnavailable("host runtime must be canonical and present")
+    interpreter = _readonly_interpreter(str(pin.system_python))
+    _readonly_interpreter(str(Path(interpreter).resolve(strict=True)))
+    guard = root / "host-guard.py"
+    scratch = root / "scratch"
+    scratch.mkdir(exist_ok=False)
+    source = Path(__file__).with_name("target_guard.py").read_bytes()
+    raw.write_file(str(guard), source.decode())
+    result = GuardedSession(
+        raw,
+        str(repo),
+        str(scratch),
+        str(guard),
+        source,
+        python_executable=interpreter,
+        host_runtime=str(runtime),
+        host_nproc=host_nproc,
+    )
+    result.preflight()
+    result.attestation.update(
+        runtime_kind="host_python_guarded",
+        host_nproc=host_nproc,
+        address_space_bytes_per_process=256 * 1024**2,
+        conservative_address_space_bound=host_nproc * 256 * 1024**2,
+        host_runtime=str(runtime),
+        observed_uid_threads=uid_threads,
+        observed_mem_available=available,
+    )
     return result

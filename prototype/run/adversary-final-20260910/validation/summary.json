@@ -1,0 +1,9 @@
+{
+  "tests": 1000,
+  "passed": 947,
+  "skipped": 53,
+  "failures": 0,
+  "errors": 0,
+  "seconds": 18.903,
+  "scope": "Full repository suite; final pair-runner focused tests also checked separately"
+}

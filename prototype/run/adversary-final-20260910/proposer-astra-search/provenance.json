@@ -1,0 +1,30 @@
+{
+  "kind": "model_authored_adversarial_observation_candidates",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "low",
+  "calls": 3,
+  "usage": {
+    "input_tokens": 2243,
+    "output_tokens": 2582
+  },
+  "authorship": "Both complete perturbation programs and optional timing repairs were model-authored; no human source rewrite.",
+  "selected": "candidate-0/draft.json and candidate-1/draft.json; optional third-call timing repair not selected",
+  "gate_observation_limit": 16000,
+  "generated_verifier_authority": false,
+  "actual_outcome_oracle": "HostReplay diagnostic original tests plus fourteen supplementary Factory semantic checks",
+  "evidence_sha256": {
+    "parent.json": "02868828e27153d0ded2f10c082f51ec550610e97eae2cffa82db132183439b5",
+    "candidate-0/request.json": "5912c903e4fc3f0cb2fdc9c86446ee3cbe5dcfc97f408d06a33c57db9cf6edae",
+    "candidate-0/completion.json": "b9517559299c26853ddc88712b6c8bddf99b097404c26ec80f2fee116f82d8e6",
+    "candidate-0/draft.json": "adfde6ba5a794971da0717ef78bdbe7ec28074c121e7e53af2b86fde60613cd6",
+    "candidate-0/gate.json": "f90d62afedb3098d0a25ab4b090193595bcf2a2731a0cf2b63ea48017826a4a6",
+    "candidate-0/provenance.json": "16053f565f1af3c8a85eefc31d1682bffaa1f065cf374b0b9799edfc5c5fe819",
+    "candidate-1/request.json": "27b1b3e0e5338387ae32c2b1f1968a3a95ad378e6ba2f02714f28c4025132946",
+    "candidate-1/completion.json": "9c5acc9233e314d9d171a21d64445b3095ee129717b77ba5d8a2fcdcf8f1e7f1",
+    "candidate-1/draft.json": "484ec00f6adfcff19df3bd47299e8a1fb7089d2b1116abc4221b241a884a7c5c",
+    "candidate-1/gate.json": "eda7f3ce8f47eda94bb2a8358b0b1f59bd7e8c64f8943fa357bdeae8fda9ed65",
+    "candidate-1/provenance.json": "ef4239d4cc3e1ebd56efd2a6f15d28fffdebda3df1369ed8a07e76703586af42",
+    "repair/request.json": "604e7d5dfe3ca309e1a9ab87dd52e86a7b7dac488566ab95dc56b0f5f2fb65b2",
+    "repair/completion.json": "6b190ea41fde9a71ef848fc2596cd347534f35680c138ea43190ddb0ea1876fa"
+  }
+}

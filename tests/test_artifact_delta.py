@@ -160,3 +160,26 @@ def test_tracked_to_untracked_transition_refuses_without_dropping_evidence(tmp_p
         apply_untracked_deltas(LocalSession(fresh), artifact)
     assert "tracked_patch" in records[0]
     assert records[0]["untracked_deltas"][0]["data_b64"]
+
+
+def test_trusted_isolated_python_transport_never_writes_venv_startup_bytecode(
+    tmp_path, monkeypatch
+):
+    import subprocess
+    import sys
+
+    from domains.swe_agents.environment.artifact_delta import _run_payload_script
+
+    venv = tmp_path / "venv"
+    subprocess.run([sys.executable, "-m", "venv", "--without-pip", str(venv)], check=True)
+    site = next((venv / "lib").glob("python*/site-packages"))
+    (site / "startup_probe.py").write_text("value = 1\n")
+    (site / "startup_probe.pth").write_text("import startup_probe\n")
+    monkeypatch.setenv("PATH", str(venv / "bin") + os.pathsep + os.environ["PATH"])
+    monkeypatch.setenv("PYTHONDONTWRITEBYTECODE", "1")
+    code, out, err = _run_payload_script(
+        LocalSession(tmp_path), "import json; print(json.dumps({'ok': True}))", {}
+    )
+    assert code == 0, err
+    assert '"ok": true' in out
+    assert not (site / "__pycache__").exists()

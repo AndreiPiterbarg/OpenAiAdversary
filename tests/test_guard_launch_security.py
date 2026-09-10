@@ -20,7 +20,9 @@ class Raw:
 
     def exec(self, command, timeout):
         self.commands.append(command)
-        if command.startswith("python -I -c"):
+        argv = shlex.split(command)
+        if argv[0] == "python" and "-c" in argv:
+            assert argv[1 : argv.index("-c")] == ["-I", "-B"]
             return 0, json.dumps({"executable": self.executable, "resolved": self.resolved}), ""
         if command.startswith("mktemp"):
             return 0, "/tmp/prun-guard-abc\n", ""
@@ -47,7 +49,7 @@ def test_install_pins_pristine_venv_path_and_all_later_guard_launches_are_absolu
     guarded.exec("python candidate.py")
     argv = shlex.split(raw.commands[-1])
     assert argv[0] == "/opt/conda/envs/testbed/bin/python"
-    assert argv[1] == "-I"
+    assert argv[1:3] == ["-I", "-B"]
     assert guarded.attestation["python_executable"] == argv[0]
     assert argv[-1] == "python candidate.py"  # This command only runs after confinement.
 

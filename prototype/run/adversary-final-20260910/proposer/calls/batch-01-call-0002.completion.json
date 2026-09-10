@@ -1,0 +1,18 @@
+{
+  "kind": "permissive_model_generated_output",
+  "model": {
+    "id": "qwen3-adversary",
+    "version": "b968826d9c46dd6066d109eabc6255188de91218",
+    "license": "permissive",
+    "backend": "served"
+  },
+  "completion": "{\n  \"schema_version\": 2,\n  \"hypothesis\": \"The KeyError: 'locale' can be triggered by a misconfigured Faker factory that fails to receive the 'locale' parameter during factory creation.\",\n  \"seed\": {\n    \"instance_id\": \"factoryboy__factory_boy-1067\",\n    \"repo\": \"FactoryBoy/factory_boy\",\n    \"base_commit\": \"7ed1e5417e06c3d83e0495a67508b3868de53823\",\n    \"miner\": \"ci_drift\",\n    \"sha\": \"7ed1e5417e06c3d83e0495a67508b3868de53823\",\n    \"ts\": 1714035525,\n    \"subject\": \"Don't duplicate CI checks on PRs\"\n  },\n  \"channel\": \"observation\",\n  \"clauses\": [\"ci_check_branches\"],\n  \"pair\": {\n    \"control\": {\n      \"ci_check_branches\": \"off\"\n    },\n    \"treatment\": {\n      \"ci_check_branches\": \"on\"\n    }\n  },\n  \"prediction\": {\n    \"min_effect\": 0.7,\n    \"alpha\": 0.95,\n    \"statement\": \"The KeyError: 'locale' will be observed when Faker is used without the 'locale' parameter, which is expected to be provided during factory creation.\"\n  },\n  \"generator\": {\n    \"entrypoint\": \"Generator\",\n    \"source\": \"import random\\nimport json\\nimport re\\nfrom abc import ABC, abstractmethod\\n\\nclass Generator(ABC):\\n    version: str = \\\"0\\\"\\n    def __init__(self, cell, seed=None, **config):\\n        self.cell = cell\\n        self.config = config\\n        self.rng = random.Random(seed)\\n    def next_seed(self) -> int:\\n        return self.rng.randint(0, 2**32 - 1)\\n    @abstractmethod\\n    def __next__(self) -> str:\\n        pass\"\n  },\n  \"perturbation\": {\n    \"entrypoint\": \"ObservationPerturbation\",\n    \"source\": \"import random\\nimport json\\nfrom abc import ABC, abstractmethod\\n\\nclass ObservationPerturbation(ABC):\\n    channel: str = \\\"observation\\\"\\n    clauses: tuple[str, ...] = (\\\"ci_check_branches\\\",)\\n    def __init__(self, cell, seed=None, **config):\\n        self.cell = cell\\n        self.rng = random.Random(seed)\\n        self.config = config\\n        self.active = set()\\n    def prepare(self, session, spec) -> None:\\n        pass\\n    def observe(self, step: int, tool: str, args: dict, result: str) -> str:\\n        if \\\"ci_check_branches\\\" in self.active:\\n            if tool == \\\"pytest\\\" and \\\"locale\\\" not in args.get(\\\"extra\\\", {}):\\n                return result + '\\\\n\\\\nKeyError: locale\\\\n' + json.dumps(args)\\\\n        return result\"\n  },\n  \"verifier\": {\n    \"entrypoint\": \"ObservationVerifier\",\n    \"source\": \"import json\\nfrom abc import ABC, abstractmethod\\n\\nclass ObservationVerifier(ABC):\\n    version: str = \\\"0\\\"\\n    def verify(self, trajectory: str, oracle) -> dict:\\n        if 'KeyError: locale' in trajectory:\\n            return {'passed': True, 'channels': {'observation': True}, 'notes': 'KeyError: locale observed as expected'}\\n        return {'passed': False, 'channels': {'observation': False}, 'notes': 'KeyError: locale not observed'}\"\n  }\n}",
+  "usage": {
+    "input_tokens": 3019,
+    "output_tokens": 830,
+    "wall_seconds": 5.661664746701717
+  },
+  "finish_reason": "stop",
+  "source_completion_sha256": "c4bdc457619882efa82c38070acc2fd0a04e7f163c4b73f851de08a58da5aa7f",
+  "source_request_sha256": "5b203df93b5670e7f98981b515e0115442e3e197acaaf84fdbe49cf8f3e15da1"
+}

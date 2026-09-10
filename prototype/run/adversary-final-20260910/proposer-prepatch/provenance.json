@@ -1,0 +1,54 @@
+{
+  "kind": "adaptive_prepatch_timing_variant",
+  "parent": "../proposer/frozen-draft.json",
+  "parent_sha256": "02868828e27153d0ded2f10c082f51ec550610e97eae2cffa82db132183439b5",
+  "candidate": "frozen-draft.json",
+  "candidate_sha256": "59f5103ffdbeb0f81847d1b552d24c9fe2db67d807f612a73a4eb8492876c709",
+  "calls": [
+    {
+      "completion": "call-1-completion.json",
+      "usage": {
+        "input_tokens": 374,
+        "output_tokens": 254,
+        "wall_seconds": 1.756332302466035
+      },
+      "rejection": "call-1-rejection.json"
+    },
+    {
+      "completion": "call-2-completion.json",
+      "usage": {
+        "input_tokens": 390,
+        "output_tokens": 254,
+        "wall_seconds": 1.714235850609839
+      },
+      "rejection": "call-2-rejection.json"
+    },
+    {
+      "completion": "call-3-completion.json",
+      "usage": {
+        "input_tokens": 355,
+        "output_tokens": 246,
+        "wall_seconds": 1.6918207360431552
+      }
+    }
+  ],
+  "total_calls": 3,
+  "input_tokens": 1119,
+  "output_tokens": 754,
+  "ast_gate": "ast-gate.py.txt",
+  "actual_gate_caller_sha256": "e50c375d8232913e703cfe1c05b0f1d5b3cd9414837ab4c5219105ce2549d5c0",
+  "only_two_trigger_tests_changed": true,
+  "held_fields": [
+    "generator",
+    "verifier",
+    "hypothesis",
+    "clauses",
+    "pair",
+    "prediction"
+  ],
+  "preserved_notes_and_nontrigger_ast": true,
+  "initial_read_fixture_gate": "exposure-gate.json",
+  "human_guidance": "Requested moving timing from pytest command observations to source-read observations with literal tokens; Qwen authored returned full source.",
+  "trained": false,
+  "pooled_with_prior": false
+}

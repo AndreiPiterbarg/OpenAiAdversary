@@ -1,0 +1,14 @@
+{
+  "attempt": 3,
+  "status": "rejected",
+  "critique": {
+    "accepted": false,
+    "objections": [
+      {
+        "reason": "malformed",
+        "detail": "perturbation: syntax error: unterminated string literal (detected at line 10) (line 10)"
+      }
+    ],
+    "critic": "static"
+  }
+}

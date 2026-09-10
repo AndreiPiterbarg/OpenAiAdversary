@@ -1,0 +1,38 @@
+{
+  "kind": "durable_final_raw_evidence_preservation",
+  "unique_terminal_attempts_preserved": 236,
+  "prior_terminal_attempts": 220,
+  "final_registered_distinct_tasks": 50,
+  "final_dispatched_distinct_tasks": 8,
+  "final_terminal_episodes": 16,
+  "final_complete_pairs": 8,
+  "not_dispatched_tasks": 42,
+  "final_pair_results": {
+    "both_passed": 7,
+    "both_failed": 1,
+    "control_pass_treatment_fail": 0,
+    "unknown": 0
+  },
+  "deadline_snapshot": {
+    "terminal_episodes": 14,
+    "complete_pairs": 7,
+    "additional_pair_in_flight": 1,
+    "sha256": "b93517767e3965cc77a431edd568fbfe6aac65d7e3be3acfba895aeb7d028de8"
+  },
+  "completed_archive": {
+    "path": "/Users/andre/.codex/artifacts/adversary-final-20260910/raw-preservation/distinct50-final-completed-snapshot.tar.gz",
+    "sha256": "6e830222840a87d917cf52f535622de2b82be9b84f233513fe1063245dc6d0f8",
+    "bytes": 2346390,
+    "files": 1016,
+    "all_file_hashes_verified": true,
+    "all_file_reads_stable": true
+  },
+  "manifest": "/Users/andre/.codex/artifacts/adversary-final-20260910/raw-preservation/durable-preservation-manifest.json",
+  "per_file_manifest": "/Users/andre/.codex/artifacts/adversary-final-20260910/raw-preservation/distinct50-final-completed-preservation-manifest.json",
+  "limitations": [
+    "All16 final results are diagnostic, not protected generic verification.",
+    "The8 executed task pairs do not satisfy50 executed distinct task pairs.",
+    "Earlier Asgiref80 archive preserves16 infrastructure unknowns.",
+    "Deadline14 snapshot overlaps completed16 and is not double counted."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "kind": "permissive_model_generated_output",
+  "model": {
+    "id": "qwen3-adversary",
+    "version": "b968826d9c46dd6066d109eabc6255188de91218",
+    "license": "permissive",
+    "backend": "served"
+  },
+  "completion": "{\n  \"schema_version\": 2,\n  \"hypothesis\": \"The KeyError: 'locale' in Faker can be triggered by a missing locale parameter due to changes in CI configuration that affect the environment setup.\",\n  \"seed\": {\n    \"instance_id\": \"factoryboy__factory_boy-1067\",\n    \"repo\": \"FactoryBoy/factory_boy\",\n    \"base_commit\": \"7ed1e5417e06c3d83e0495a67508b3868de53823\",\n    \"miner\": \"ci_drift\",\n    \"sha\": \"7ed1e5417e06c3d83e0495a67508b3868de53823\",\n    \"ts\": 1714035525,\n    \"subject\": \"Don't duplicate CI checks on PRs\"\n  },\n  \"channel\": \"observation\",\n  \"clauses\": [\"ci_branch_check\"],\n  \"pair\": {\n    \"control\": {\n      \"ci_branch_check\": \"off\"\n    },\n    \"treatment\": {\n      \"ci_branch_check\": \"on\"\n    }\n  },\n  \"prediction\": {\n    \"min_effect\": 0.7,\n    \"alpha\": 0.95,\n    \"statement\": \"The treatment will increase the likelihood of encountering the KeyError: 'locale' in Faker due to altered CI configuration affecting locale parameter handling.\"\n  },\n  \"generator\": {\n    \"entrypoint\": \"Generator\",\n    \"source\": \"import json\\nimport random\\nfrom abc import ABC, abstractmethod\\n\\nclass Generator(ABC):\\n    version: str = \\\"0\\\"\\n    def __init__(self, cell, seed=None, **config):\\n        self.cell = cell\\n        self.seed = seed\\n        self.config = config\\n        self.rng = random.Random(self.seed)\\n\\n    def next_seed(self) -> int:\\n        return self.rng.randint(0, 2**32 - 1)\\n\\n    @abstractmethod\\n    def __next__(self) -> dict:\\n        pass\"\n  },\n  \"perturbation\": {\n    \"entrypoint\": \"Perturbation\",\n    \"source\": \"import json\\nimport random\\nfrom abc import ABC, abstractmethod\\n\\nclass Perturbation(ABC):\\n    channel: str = \\\"observation\\\"\\n    clauses: tuple[str, ...] = (\\\"ci_branch_check\\\",)\\n\\n    def __init__(self, cell, seed=None, **config):\\n        self.cell = cell\\n        self.seed = seed\\n        self.config = config\\n        self.rng = random.Random(self.seed)\\n        self.active = set()\\n\\n    def prepare(self, session, spec) -> None:\\n        pass\\n\\n    def observe(self, step: int, tool: str, args: dict, result: str) -> str:\\n        if \\\"ci_branch_check\\\" in self.active:\\n            if tool == \\\"tox\\\" and args.get(\\\"commands\\\") == [\\\"-e\\\", \\\"py3\\\"]:\\n                return json.dumps({\\\"error\\\": \\\"KeyError: 'locale'\\\", \\\"traceback\\\": \\\"...\\\"})\\n        return result\"\n  },\n  \"verifier\": {\n    \"entrypoint\": \"Verifier\",\n    \"source\": \"import json\\nimport random\\nfrom abc import ABC, abstractmethod\\n\\nclass Verifier(ABC):\\n    version: str = \\\"0\\\"\\n\\n    def verify(self, trajectory: dict, oracle) -> dict:\\n        # Check if the KeyError: 'locale' is present in the observation\\n        if any(\\\"KeyError: 'locale'\\\" in step.get(\\\"result\\\", \\\"\\\") for step in trajectory.get(\\\"steps\\\", [])):\\n            return {\\\"passed\\\": False, \\\"notes\\\": \\\"KeyError: 'locale' detected in observation\\\"}\\n        return {\\\"passed\\\": True, \\\"notes\\\": \\\"No KeyError: 'locale' detected\\\"}\"\n  }\n}",
+  "usage": {
+    "input_tokens": 3019,
+    "output_tokens": 868,
+    "wall_seconds": 6.215640129521489
+  },
+  "finish_reason": "stop",
+  "source_completion_sha256": "d26897d9e1fe7be292084d855bd0e02fb9f74e45de85761185d2235d68957f5e",
+  "source_request_sha256": "c85d0f2ae3e1ea7ff0d1f72d4a762b7b3a9e75543935bcd741edbbeeb97043f6"
+}

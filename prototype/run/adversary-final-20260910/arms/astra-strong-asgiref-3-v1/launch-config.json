@@ -1,0 +1,49 @@
+{
+  "draft": "/tmp/proposer-astra-search-evidence/candidate-1/frozen-draft.json",
+  "draft_file_sha256": "98eb6702af66981dbfa0df776d049ffcbef6b0c01ccc03a965ddf0bc859e67bb",
+  "tasks": [
+    {
+      "path": "/tmp/prun-host-prep-20260910/django__asgiref-523-historyfree-v1",
+      "corpus": "adaptive_cross_repository_transfer"
+    }
+  ],
+  "host_nproc": 1792,
+  "prompt_profile": "environment_guidance_v1",
+  "seed_base": 9300,
+  "source_archive_sha256": "f441ee321895ffe1b1a7762e22e5a4c7d25527406b8d939ad596f8da100ca920",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "low",
+  "purpose": "Twenty-run Astra cross-repository test of a stronger observation perturbation on Asgiref. Task selected for clean-control headroom in priorAstra arm; allfour acceptedprograms tested, not only firstFactorysuccesses. Noheldout/confirmedclaim.",
+  "registered_utc": "2026-09-10T20:26:26Z",
+  "parent_arm": "astra-strong-3-v1",
+  "program_change": "New Astra-authored notes and two clauses. Static/visible-four-cell gates passed at actual16000limit. No goldpatch provided toproposer.",
+  "integrity_assessment": {
+    "status": "valid",
+    "reason": "History-free prepared Factory task; guarded baseline/gold/denial gates valid; actual first-read outputs plus independent notes fit balanced16000-character limit. Everyliveepisode receives independent clauseexposure+freshcorrectnessreplay."
+  },
+  "parallel_shards": 4,
+  "repetitions_per_condition": 5,
+  "api_budget_policy": {
+    "calls_per_episode": 100,
+    "seconds_per_episode": 600,
+    "max_output_tokens_per_call": 1024,
+    "max_request_bytes": 1000000,
+    "reasoning_effort": "low",
+    "request_retries": 0
+  },
+  "stopping_rule": "Complete all60 registered episodes, retaining all unknown and censored outcomes; do notstopbasedonfinding.",
+  "comparison_scope": "Withinthis20-runarm only: sameAstra/runtime/observationlimit/budgets acrossall4cells. Neverpoolwith4000-limitarms or otherprograms.",
+  "controller_environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "TOKENIZERS_PARALLELISM": "false"
+  },
+  "runtime_correction": "Limit trusted controller BLAS pools before imports, measured2threads instead130; stronger1792 hostprocesscap preserves threadheadroom and conservative memory margin. No episode budget/model/program change.",
+  "observation_limit": 16000,
+  "request_byte_bound": 1000000,
+  "generated_verifier_status": "Symptom detection only; inherited fields may be stale and are not outcome authority. Independent frozen HostReplay determines correctness.",
+  "selection": "All four accepted strongercandidates aretested, frozen beforeanytargetoutcome. No selection basedonwhichprogramdefeatsAstra."
+}

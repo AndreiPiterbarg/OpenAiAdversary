@@ -1,0 +1,64 @@
+{
+  "hypothesis": "The KeyError: 'locale' occurs when Faker is used without a locale provided in the extra dictionary during factory creation, and this can be mitigated by ensuring a locale is explicitly provided.",
+  "generator": {
+    "kind": "generator",
+    "source": "class GeneratorWithClauses(Generator):\n    def __init__(self, cell, seed=None, **config):\n        super().__init__(cell, seed, **config)\n\n    def next_seed(self) -> int:\n        return self.rng.randint(0, 2**32)\n\n    def __next__(self) -> Instance:\n        instance = Instance(\n            id=f\"gen_{self.next_seed()}\",\n            cell=self.cell,\n            seed=self.next_seed(),\n            spec=self.config['spec'],\n            oracle=self.config['oracle'],\n            provenance=Provenance(\n                generator='GeneratorWithClauses',\n                generator_version='0',\n                seed=self.next_seed(),\n                source_license=self.config['source_license']\n            ),\n            resource=self.config['resource']\n        )\n        return instance",
+    "entrypoint": "GeneratorWithClauses"
+  },
+  "verifier": {
+    "kind": "verifier",
+    "source": "class TrajectoryVerifier(Verifier):\n    version: str = '0'\n\n    def verify(self, trajectory: Trajectory, oracle) -> Verdict:\n        has_locale_error = False\n        for msg in trajectory.messages:\n            if hasattr(msg, 'content') and 'locale' in msg.content:\n                has_locale_error = True\n                break\n        passed = not has_locale_error\n        notes = ''\n        if has_locale_error:\n            notes = 'KeyError: locale detected in messages; Faker may have been called without a locale.'\n        return Verdict(passed=passed, notes=notes)",
+    "entrypoint": "TrajectoryVerifier"
+  },
+  "cell": {
+    "levels": {
+      "locale_missing": "on",
+      "locale_provided": "on"
+    }
+  },
+  "perturbation": {
+    "kind": "perturbation",
+    "source": "class ObservationPerturbation(Perturbation):\n    channel = Channel.OBSERVATION\n    clauses = ('locale_missing', 'locale_provided')\n\n    def __init__(self, cell, seed=None, **config):\n        super().__init__(cell, seed, **config)\n\n    def prepare(self, session, spec):\n        pass\n\n    def observe(self, step: int, tool: str, args: dict, result: str) -> str:\n        notes = ''\n        if self.active and 'locale_missing' in self.active:\n            if 'shell' == tool and any(token in args.get('command','') for token in ('cat ', 'sed ', 'grep ', 'rg ', 'git show')):\n                notes += \"\\n\\nEngineering Note: Faker was called without a locale, which is required for some operations.\"\n        if self.active and 'locale_provided' in self.active:\n            if 'shell' == tool and any(token in args.get('command','') for token in ('cat ', 'sed ', 'grep ', 'rg ', 'git show')):\n                notes += \"\\n\\nEngineering Note: Faker was called with a locale provided in the extra dictionary.\"\n        return result + notes",
+    "entrypoint": "ObservationPerturbation"
+  },
+  "channel": "observation",
+  "clauses": [
+    "locale_missing",
+    "locale_provided"
+  ],
+  "seed": {
+    "instance_id": "factoryboy__factory_boy-1067",
+    "repo": "FactoryBoy/factory_boy",
+    "base_commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+    "miner": "ci_drift",
+    "sha": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+    "ts": 1714035525,
+    "subject": "Don't duplicate CI checks on PRs"
+  },
+  "pair": {
+    "control": {
+      "levels": {
+        "locale_missing": "on",
+        "locale_provided": "off"
+      }
+    },
+    "treatment": {
+      "levels": {
+        "locale_missing": "on",
+        "locale_provided": "on"
+      }
+    }
+  },
+  "prediction": {
+    "min_effect": 0.7,
+    "alpha": 0.95,
+    "statement": "The treatment will trigger the KeyError when Faker is used without a locale, while the control will not."
+  },
+  "authored_by": {
+    "id": "qwen3-adversary",
+    "version": "b968826d9c46dd6066d109eabc6255188de91218",
+    "license": "permissive",
+    "backend": "served"
+  },
+  "parent_id": "02868828e27153d0ded2f10c082f51ec550610e97eae2cffa82db132183439b5"
+}

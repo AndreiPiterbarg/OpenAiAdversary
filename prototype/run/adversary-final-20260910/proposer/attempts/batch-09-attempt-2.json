@@ -1,0 +1,20 @@
+{
+  "attempt": 2,
+  "status": "rejected",
+  "critique": {
+    "accepted": true,
+    "objections": [],
+    "critic": "static"
+  },
+  "semantic_probe": {
+    "accepted": false,
+    "reason": "generated verifier failed its own locale hypothesis contrast",
+    "text": "KeyError: locale",
+    "expected_passed": false,
+    "actual": {
+      "passed": true,
+      "channels": {},
+      "notes": ""
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "source_pin": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/host-runtime-pin.json",
+  "original_task_commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+  "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+  "worktree_preserved": true,
+  "venv_unchanged": true,
+  "commit_count": 1,
+  "object_count": 116,
+  "unreachable_objects": [],
+  "remotes": [],
+  "alternates": false,
+  "repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637"
+}

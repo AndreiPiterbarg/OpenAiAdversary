@@ -1,0 +1,11 @@
+{
+  "qualification": "Earlier prepatch fixture gate did not reproduce deployed observation clipping",
+  "fixture_observation_limit": 100000,
+  "deployed_observation_limit": 4000,
+  "first_source_read_raw_characters": 11519,
+  "first_read_append_visibility_proven": false,
+  "prior_receipts_preserved": true,
+  "authoritative_episode_exposure": "Each episode's saved prepare-spec and deterministic clause-exposure replay use the actual deployed observation limit. Only those verified visible contributions count as realized.",
+  "timing_requirement": "A pre-edit intervention claim additionally requires its first visible clause contribution to precede the first source edit in the recorded tool trace.",
+  "successor_policy": "Stronger variant arms explicitly use 16000 observation characters uniformly across all cells, with a new exact fixture visibility gate. They are separate arms and cannot be pooled with earlier 4000-character runs."
+}

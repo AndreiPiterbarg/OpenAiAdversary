@@ -1,0 +1,894 @@
+{
+  "arms": [
+    {
+      "arm": "astra-prepatch-v2",
+      "file": "arms/astra-prepatch-v2/public-results.json",
+      "summary": {
+        "planned": 60,
+        "diagnostic_measured": 60,
+        "diagnostic_passes": 40,
+        "diagnostic_unknown": 0,
+        "attributable_known": 60,
+        "unknown": 0,
+        "budget_exhausted": 0,
+        "visible_changed": 45,
+        "realized": 60,
+        "groups": [
+          {
+            "task": "factoryboy__factory_boy-1067",
+            "cell_index": 0,
+            "executions": 5,
+            "diagnostic_measured": 5,
+            "known": 5,
+            "unknown": 0,
+            "passes": 5,
+            "complete": true,
+            "task_failure": false,
+            "severity": 0.0
+          },
+          {
+            "task": "factoryboy__factory_boy-1067",
+            "cell_index": 1,
+            "executions": 5,
+            "diagnostic_measured": 5,
+            "known": 5,
+            "unknown": 0,
+            "passes": 5,
+            "complete": true,
+            "task_failure": false,
+            "severity": 0.0
+          },
+          {
+            "task": "factoryboy__factory_boy-1067",
+            "cell_index": 2,
+            "executions": 5,
+            "diagnostic_measured": 5,
+            "known": 5,
+            "unknown": 0,
+            "passes": 5,
+            "complete": true,
+            "task_failure": false,
+            "severity": 0.0
+          },
+          {
+            "task": "factoryboy__factory_boy-1067",
+            "cell_index": 3,
+            "executions": 5,
+            "diagnostic_measured": 5,
+            "known": 5,
+            "unknown": 0,
+            "passes": 5,
+            "complete": true,
+            "task_failure": false,
+            "severity": 0.0
+          },
+          {
+            "task": "django__asgiref-523",
+            "cell_index": 0,
+            "executions": 5,
+            "diagnostic_measured": 5,
+            "known": 5,
+            "unknown": 0,
+            "passes": 5,
+            "complete": true,
+            "task_failure": false,
+            "severity": 0.0
+          },
+          {
+            "task": "django__asgiref-523",
+            "cell_index": 1,
+            "executions": 5,
+            "diagnostic_measured": 5,
+            "known": 5,
+            "unknown": 0,
+            "passes": 5,
+            "complete": true,
+            "task_failure": false,
+            "severity": 0.0
+          },
+          {
+            "task": "django__asgiref-523",
+            "cell_index": 2,
+            "executions": 5,
+            "diagnostic_measured": 5,
+            "known": 5,
+            "unknown": 0,
+            "passes": 5,
+            "complete": true,
+            "task_failure": false,
+            "severity": 0.0
+          },
+          {
+            "task": "django__asgiref-523",
+            "cell_index": 3,
+            "executions": 5,
+            "diagnostic_measured": 5,
+            "known": 5,
+            "unknown": 0,
+            "passes": 5,
+            "complete": true,
+            "task_failure": false,
+            "severity": 0.0
+          },
+          {
+            "task": "stuartmaxwell__djpress-117",
+            "cell_index": 0,
+            "executions": 5,
+            "diagnostic_measured": 5,
+            "known": 5,
+            "unknown": 0,
+            "passes": 0,
+            "complete": true,
+            "task_failure": true,
+            "severity": 1.0
+          },
+          {
+            "task": "stuartmaxwell__djpress-117",
+            "cell_index": 1,
+            "executions": 5,
+            "diagnostic_measured": 5,
+            "known": 5,
+            "unknown": 0,
+            "passes": 0,
+            "complete": true,
+            "task_failure": true,
+            "severity": 1.0
+          },
+          {
+            "task": "stuartmaxwell__djpress-117",
+            "cell_index": 2,
+            "executions": 5,
+            "diagnostic_measured": 5,
+            "known": 5,
+            "unknown": 0,
+            "passes": 0,
+            "complete": true,
+            "task_failure": true,
+            "severity": 1.0
+          },
+          {
+            "task": "stuartmaxwell__djpress-117",
+            "cell_index": 3,
+            "executions": 5,
+            "diagnostic_measured": 5,
+            "known": 5,
+            "unknown": 0,
+            "passes": 0,
+            "complete": true,
+            "task_failure": true,
+            "severity": 1.0
+          }
+        ],
+        "contrasts": [
+          {
+            "task": "django__asgiref-523",
+            "complete": true,
+            "delta_a": 0.0,
+            "delta_b": 0.0,
+            "delta_all_on": 0.0,
+            "additive_prediction": 0.0,
+            "additive_excess": 0.0,
+            "raw_interaction_contrast": 0.0,
+            "scale": "five-execution failure fraction",
+            "descriptive_only": true,
+            "confidence_interval": null
+          },
+          {
+            "task": "factoryboy__factory_boy-1067",
+            "complete": true,
+            "delta_a": 0.0,
+            "delta_b": 0.0,
+            "delta_all_on": 0.0,
+            "additive_prediction": 0.0,
+            "additive_excess": 0.0,
+            "raw_interaction_contrast": 0.0,
+            "scale": "five-execution failure fraction",
+            "descriptive_only": true,
+            "confidence_interval": null
+          },
+          {
+            "task": "stuartmaxwell__djpress-117",
+            "complete": true,
+            "delta_a": 0.0,
+            "delta_b": 0.0,
+            "delta_all_on": 0.0,
+            "additive_prediction": 1.0,
+            "additive_excess": 0.0,
+            "raw_interaction_contrast": 0.0,
+            "scale": "five-execution failure fraction",
+            "descriptive_only": true,
+            "confidence_interval": null
+          }
+        ],
+        "protected": false,
+        "confirmed": false,
+        "trained": false,
+        "inference": "descriptive task-specific contrasts; no population or confidence claim"
+      },
+      "terminal": 60
+    },
+    {
+      "arm": "astra-strong-1-v1",
+      "file": "arms/astra-strong-1-v1/public-results.json",
+      "summary": {
+        "planned": 20,
+        "diagnostic_measured": 20,
+        "diagnostic_passes": 5,
+        "diagnostic_unknown": 0,
+        "attributable_known": 20,
+        "unknown": 0,
+        "budget_exhausted": 0,
+        "visible_changed": 15,
+        "realized": 20,
+        "groups": [
+          {
+            "task": "factoryboy__factory_boy-1067",
+            "cell_index": 0,
+            "executions": 5,
+            "diagnostic_measured": 5,
+            "known": 5,
+            "unknown": 0,
+            "passes": 5,
+            "complete": true,
+            "task_failure": false,
+            "severity": 0.0
+          },
+          {
+            "task": "factoryboy__factory_boy-1067",
+            "cell_index": 1,
+            "executions": 5,
+            "diagnostic_measured": 5,
+            "known": 5,
+            "unknown": 0,
+            "passes": 0,
+            "complete": true,
+            "task_failure": true,
+            "severity": 1.0
+          },
+          {
+            "task": "factoryboy__factory_boy-1067",
+            "cell_index": 2,
+            "executions": 5,
+            "diagnostic_measured": 5,
+            "known": 5,
+            "unknown": 0,
+            "passes": 0,
+            "complete": true,
+            "task_failure": true,
+            "severity": 1.0
+          },
+          {
+            "task": "factoryboy__factory_boy-1067",
+            "cell_index": 3,
+            "executions": 5,
+            "diagnostic_measured": 5,
+            "known": 5,
+            "unknown": 0,
+            "passes": 0,
+            "complete": true,
+            "task_failure": true,
+            "severity": 1.0
+          }
+        ],
+        "contrasts": [
+          {
+            "task": "factoryboy__factory_boy-1067",
+            "complete": true,
+            "delta_a": 1.0,
+            "delta_b": 1.0,
+            "delta_all_on": 1.0,
+            "additive_prediction": 1.0,
+            "additive_excess": 0.0,
+            "raw_interaction_contrast": -1.0,
+            "scale": "five-execution failure fraction",
+            "descriptive_only": true,
+            "confidence_interval": null
+          }
+        ],
+        "protected": false,
+        "confirmed": false,
+        "trained": false,
+        "inference": "descriptive task-specific contrasts; no population or confidence claim"
+      },
+      "terminal": 20
+    },
+    {
+      "arm": "astra-strong-2-v1",
+      "file": "arms/astra-strong-2-v1/public-results.json",
+      "summary": {
+        "planned": 20,
+        "diagnostic_measured": 20,
+        "diagnostic_passes": 7,
+        "diagnostic_unknown": 0,
+        "attributable_known": 20,
+        "unknown": 0,
+        "budget_exhausted": 0,
+        "visible_changed": 15,
+        "realized": 20,
+        "groups": [
+          {
+            "task": "factoryboy__factory_boy-1067",
+            "cell_index": 0,
+            "executions": 5,
+            "diagnostic_measured": 5,
+            "known": 5,
+            "unknown": 0,
+            "passes": 5,
+            "complete": true,
+            "task_failure": false,
+            "severity": 0.0
+          },
+          {
+            "task": "factoryboy__factory_boy-1067",
+            "cell_index": 1,
+            "executions": 5,
+            "diagnostic_measured": 5,
+            "known": 5,
+            "unknown": 0,
+            "passes": 0,
+            "complete": true,
+            "task_failure": true,
+            "severity": 1.0
+          },
+          {
+            "task": "factoryboy__factory_boy-1067",
+            "cell_index": 2,
+            "executions": 5,
+            "diagnostic_measured": 5,
+            "known": 5,
+            "unknown": 0,
+            "passes": 2,
+            "complete": true,
+            "task_failure": false,
+            "severity": 0.6
+          },
+          {
+            "task": "factoryboy__factory_boy-1067",
+            "cell_index": 3,
+            "executions": 5,
+            "diagnostic_measured": 5,
+            "known": 5,
+            "unknown": 0,
+            "passes": 0,
+            "complete": true,
+            "task_failure": true,
+            "severity": 1.0
+          }
+        ],
+        "contrasts": [
+          {
+            "task": "factoryboy__factory_boy-1067",
+            "complete": true,
+            "delta_a": 1.0,
+            "delta_b": 0.6,
+            "delta_all_on": 1.0,
+            "additive_prediction": 1.0,
+            "additive_excess": 0.0,
+            "raw_interaction_contrast": -0.6,
+            "scale": "five-execution failure fraction",
+            "descriptive_only": true,
+            "confidence_interval": null
+          }
+        ],
+        "protected": false,
+        "confirmed": false,
+        "trained": false,
+        "inference": "descriptive task-specific contrasts; no population or confidence claim"
+      },
+      "terminal": 20
+    },
+    {
+      "arm": "astra-strong-3-v1",
+      "file": "arms/astra-strong-3-v1/public-results.json",
+      "summary": {
+        "planned": 20,
+        "diagnostic_measured": 20,
+        "diagnostic_passes": 20,
+        "diagnostic_unknown": 0,
+        "attributable_known": 20,
+        "unknown": 0,
+        "budget_exhausted": 0,
+        "visible_changed": 15,
+        "realized": 20,
+        "groups": [
+          {
+            "task": "factoryboy__factory_boy-1067",
+            "cell_index": 0,
+            "executions": 5,
+            "diagnostic_measured": 5,
+            "known": 5,
+            "unknown": 0,
+            "passes": 5,
+            "complete": true,
+            "task_failure": false,
+            "severity": 0.0
+          },
+          {
+            "task": "factoryboy__factory_boy-1067",
+            "cell_index": 1,
+            "executions": 5,
+            "diagnostic_measured": 5,
+            "known": 5,
+            "unknown": 0,
+            "passes": 5,
+            "complete": true,
+            "task_failure": false,
+            "severity": 0.0
+          },
+          {
+            "task": "factoryboy__factory_boy-1067",
+            "cell_index": 2,
+            "executions": 5,
+            "diagnostic_measured": 5,
+            "known": 5,
+            "unknown": 0,
+            "passes": 5,
+            "complete": true,
+            "task_failure": false,
+            "severity": 0.0
+          },
+          {
+            "task": "factoryboy__factory_boy-1067",
+            "cell_index": 3,
+            "executions": 5,
+            "diagnostic_measured": 5,
+            "known": 5,
+            "unknown": 0,
+            "passes": 5,
+            "complete": true,
+            "task_failure": false,
+            "severity": 0.0
+          }
+        ],
+        "contrasts": [
+          {
+            "task": "factoryboy__factory_boy-1067",
+            "complete": true,
+            "delta_a": 0.0,
+            "delta_b": 0.0,
+            "delta_all_on": 0.0,
+            "additive_prediction": 0.0,
+            "additive_excess": 0.0,
+            "raw_interaction_contrast": 0.0,
+            "scale": "five-execution failure fraction",
+            "descriptive_only": true,
+            "confidence_interval": null
+          }
+        ],
+        "protected": false,
+        "confirmed": false,
+        "trained": false,
+        "inference": "descriptive task-specific contrasts; no population or confidence claim"
+      },
+      "terminal": 20
+    },
+    {
+      "arm": "astra-strong-4-v1",
+      "file": "arms/astra-strong-4-v1/public-results.json",
+      "summary": {
+        "planned": 20,
+        "diagnostic_measured": 20,
+        "diagnostic_passes": 20,
+        "diagnostic_unknown": 0,
+        "attributable_known": 20,
+        "unknown": 0,
+        "budget_exhausted": 0,
+        "visible_changed": 15,
+        "realized": 20,
+        "groups": [
+          {
+            "task": "factoryboy__factory_boy-1067",
+            "cell_index": 0,
+            "executions": 5,
+            "diagnostic_measured": 5,
+            "known": 5,
+            "unknown": 0,
+            "passes": 5,
+            "complete": true,
+            "task_failure": false,
+            "severity": 0.0
+          },
+          {
+            "task": "factoryboy__factory_boy-1067",
+            "cell_index": 1,
+            "executions": 5,
+            "diagnostic_measured": 5,
+            "known": 5,
+            "unknown": 0,
+            "passes": 5,
+            "complete": true,
+            "task_failure": false,
+            "severity": 0.0
+          },
+          {
+            "task": "factoryboy__factory_boy-1067",
+            "cell_index": 2,
+            "executions": 5,
+            "diagnostic_measured": 5,
+            "known": 5,
+            "unknown": 0,
+            "passes": 5,
+            "complete": true,
+            "task_failure": false,
+            "severity": 0.0
+          },
+          {
+            "task": "factoryboy__factory_boy-1067",
+            "cell_index": 3,
+            "executions": 5,
+            "diagnostic_measured": 5,
+            "known": 5,
+            "unknown": 0,
+            "passes": 5,
+            "complete": true,
+            "task_failure": false,
+            "severity": 0.0
+          }
+        ],
+        "contrasts": [
+          {
+            "task": "factoryboy__factory_boy-1067",
+            "complete": true,
+            "delta_a": 0.0,
+            "delta_b": 0.0,
+            "delta_all_on": 0.0,
+            "additive_prediction": 0.0,
+            "additive_excess": 0.0,
+            "raw_interaction_contrast": 0.0,
+            "scale": "five-execution failure fraction",
+            "descriptive_only": true,
+            "confidence_interval": null
+          }
+        ],
+        "protected": false,
+        "confirmed": false,
+        "trained": false,
+        "inference": "descriptive task-specific contrasts; no population or confidence claim"
+      },
+      "terminal": 20
+    },
+    {
+      "arm": "astra-strong-asgiref-1-v1",
+      "file": "arms/astra-strong-asgiref-1-v1/public-results.json",
+      "summary": {
+        "planned": 20,
+        "diagnostic_measured": 16,
+        "diagnostic_passes": 16,
+        "diagnostic_unknown": 4,
+        "attributable_known": 16,
+        "unknown": 4,
+        "budget_exhausted": 0,
+        "visible_changed": 15,
+        "realized": 20,
+        "groups": [
+          {
+            "task": "django__asgiref-523",
+            "cell_index": 0,
+            "executions": 5,
+            "diagnostic_measured": 4,
+            "known": 4,
+            "unknown": 1,
+            "passes": 4,
+            "complete": false,
+            "task_failure": null,
+            "severity": null
+          },
+          {
+            "task": "django__asgiref-523",
+            "cell_index": 1,
+            "executions": 5,
+            "diagnostic_measured": 4,
+            "known": 4,
+            "unknown": 1,
+            "passes": 4,
+            "complete": false,
+            "task_failure": null,
+            "severity": null
+          },
+          {
+            "task": "django__asgiref-523",
+            "cell_index": 2,
+            "executions": 5,
+            "diagnostic_measured": 4,
+            "known": 4,
+            "unknown": 1,
+            "passes": 4,
+            "complete": false,
+            "task_failure": null,
+            "severity": null
+          },
+          {
+            "task": "django__asgiref-523",
+            "cell_index": 3,
+            "executions": 5,
+            "diagnostic_measured": 4,
+            "known": 4,
+            "unknown": 1,
+            "passes": 4,
+            "complete": false,
+            "task_failure": null,
+            "severity": null
+          }
+        ],
+        "contrasts": [
+          {
+            "task": "django__asgiref-523",
+            "complete": false,
+            "delta_a": null,
+            "delta_b": null,
+            "delta_all_on": null,
+            "additive_prediction": null,
+            "additive_excess": null,
+            "raw_interaction_contrast": null,
+            "scale": "five-execution failure fraction",
+            "descriptive_only": true,
+            "confidence_interval": null
+          }
+        ],
+        "protected": false,
+        "confirmed": false,
+        "trained": false,
+        "inference": "descriptive task-specific contrasts; no population or confidence claim"
+      },
+      "terminal": 20
+    },
+    {
+      "arm": "astra-strong-asgiref-2-v1",
+      "file": "arms/astra-strong-asgiref-2-v1/public-results.json",
+      "summary": {
+        "planned": 20,
+        "diagnostic_measured": 16,
+        "diagnostic_passes": 16,
+        "diagnostic_unknown": 4,
+        "attributable_known": 16,
+        "unknown": 4,
+        "budget_exhausted": 0,
+        "visible_changed": 15,
+        "realized": 20,
+        "groups": [
+          {
+            "task": "django__asgiref-523",
+            "cell_index": 0,
+            "executions": 5,
+            "diagnostic_measured": 4,
+            "known": 4,
+            "unknown": 1,
+            "passes": 4,
+            "complete": false,
+            "task_failure": null,
+            "severity": null
+          },
+          {
+            "task": "django__asgiref-523",
+            "cell_index": 1,
+            "executions": 5,
+            "diagnostic_measured": 4,
+            "known": 4,
+            "unknown": 1,
+            "passes": 4,
+            "complete": false,
+            "task_failure": null,
+            "severity": null
+          },
+          {
+            "task": "django__asgiref-523",
+            "cell_index": 2,
+            "executions": 5,
+            "diagnostic_measured": 4,
+            "known": 4,
+            "unknown": 1,
+            "passes": 4,
+            "complete": false,
+            "task_failure": null,
+            "severity": null
+          },
+          {
+            "task": "django__asgiref-523",
+            "cell_index": 3,
+            "executions": 5,
+            "diagnostic_measured": 4,
+            "known": 4,
+            "unknown": 1,
+            "passes": 4,
+            "complete": false,
+            "task_failure": null,
+            "severity": null
+          }
+        ],
+        "contrasts": [
+          {
+            "task": "django__asgiref-523",
+            "complete": false,
+            "delta_a": null,
+            "delta_b": null,
+            "delta_all_on": null,
+            "additive_prediction": null,
+            "additive_excess": null,
+            "raw_interaction_contrast": null,
+            "scale": "five-execution failure fraction",
+            "descriptive_only": true,
+            "confidence_interval": null
+          }
+        ],
+        "protected": false,
+        "confirmed": false,
+        "trained": false,
+        "inference": "descriptive task-specific contrasts; no population or confidence claim"
+      },
+      "terminal": 20
+    },
+    {
+      "arm": "astra-strong-asgiref-3-v1",
+      "file": "arms/astra-strong-asgiref-3-v1/public-results.json",
+      "summary": {
+        "planned": 20,
+        "diagnostic_measured": 17,
+        "diagnostic_passes": 17,
+        "diagnostic_unknown": 3,
+        "attributable_known": 17,
+        "unknown": 3,
+        "budget_exhausted": 0,
+        "visible_changed": 15,
+        "realized": 20,
+        "groups": [
+          {
+            "task": "django__asgiref-523",
+            "cell_index": 0,
+            "executions": 5,
+            "diagnostic_measured": 4,
+            "known": 4,
+            "unknown": 1,
+            "passes": 4,
+            "complete": false,
+            "task_failure": null,
+            "severity": null
+          },
+          {
+            "task": "django__asgiref-523",
+            "cell_index": 1,
+            "executions": 5,
+            "diagnostic_measured": 5,
+            "known": 5,
+            "unknown": 0,
+            "passes": 5,
+            "complete": true,
+            "task_failure": false,
+            "severity": 0.0
+          },
+          {
+            "task": "django__asgiref-523",
+            "cell_index": 2,
+            "executions": 5,
+            "diagnostic_measured": 4,
+            "known": 4,
+            "unknown": 1,
+            "passes": 4,
+            "complete": false,
+            "task_failure": null,
+            "severity": null
+          },
+          {
+            "task": "django__asgiref-523",
+            "cell_index": 3,
+            "executions": 5,
+            "diagnostic_measured": 4,
+            "known": 4,
+            "unknown": 1,
+            "passes": 4,
+            "complete": false,
+            "task_failure": null,
+            "severity": null
+          }
+        ],
+        "contrasts": [
+          {
+            "task": "django__asgiref-523",
+            "complete": false,
+            "delta_a": null,
+            "delta_b": null,
+            "delta_all_on": null,
+            "additive_prediction": null,
+            "additive_excess": null,
+            "raw_interaction_contrast": null,
+            "scale": "five-execution failure fraction",
+            "descriptive_only": true,
+            "confidence_interval": null
+          }
+        ],
+        "protected": false,
+        "confirmed": false,
+        "trained": false,
+        "inference": "descriptive task-specific contrasts; no population or confidence claim"
+      },
+      "terminal": 20
+    },
+    {
+      "arm": "astra-strong-asgiref-4-v1",
+      "file": "arms/astra-strong-asgiref-4-v1/public-results.json",
+      "summary": {
+        "planned": 20,
+        "diagnostic_measured": 15,
+        "diagnostic_passes": 15,
+        "diagnostic_unknown": 5,
+        "attributable_known": 15,
+        "unknown": 5,
+        "budget_exhausted": 0,
+        "visible_changed": 14,
+        "realized": 19,
+        "groups": [
+          {
+            "task": "django__asgiref-523",
+            "cell_index": 0,
+            "executions": 5,
+            "diagnostic_measured": 4,
+            "known": 4,
+            "unknown": 1,
+            "passes": 4,
+            "complete": false,
+            "task_failure": null,
+            "severity": null
+          },
+          {
+            "task": "django__asgiref-523",
+            "cell_index": 1,
+            "executions": 5,
+            "diagnostic_measured": 4,
+            "known": 4,
+            "unknown": 1,
+            "passes": 4,
+            "complete": false,
+            "task_failure": null,
+            "severity": null
+          },
+          {
+            "task": "django__asgiref-523",
+            "cell_index": 2,
+            "executions": 5,
+            "diagnostic_measured": 3,
+            "known": 3,
+            "unknown": 2,
+            "passes": 3,
+            "complete": false,
+            "task_failure": null,
+            "severity": null
+          },
+          {
+            "task": "django__asgiref-523",
+            "cell_index": 3,
+            "executions": 5,
+            "diagnostic_measured": 4,
+            "known": 4,
+            "unknown": 1,
+            "passes": 4,
+            "complete": false,
+            "task_failure": null,
+            "severity": null
+          }
+        ],
+        "contrasts": [
+          {
+            "task": "django__asgiref-523",
+            "complete": false,
+            "delta_a": null,
+            "delta_b": null,
+            "delta_all_on": null,
+            "additive_prediction": null,
+            "additive_excess": null,
+            "raw_interaction_contrast": null,
+            "scale": "five-execution failure fraction",
+            "descriptive_only": true,
+            "confidence_interval": null
+          }
+        ],
+        "protected": false,
+        "confirmed": false,
+        "trained": false,
+        "inference": "descriptive task-specific contrasts; no population or confidence claim"
+      },
+      "terminal": 20
+    }
+  ],
+  "never_pool_arm_rates": true,
+  "distinct_underlying_bugs_in_completed_prior_arms": 3,
+  "scope": "Prior completed60+80+80 Astra batches; initialfour-run smoke and newdistinct50 follow-up are separate."
+}

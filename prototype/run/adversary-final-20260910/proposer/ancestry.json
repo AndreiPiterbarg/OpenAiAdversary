@@ -1,0 +1,26 @@
+{
+  "harvest_sha256": "6ee181c0764b2d8ceb5b4b5c5fffbfefe1ffe0533eb4f53054a63e81c22702ee",
+  "ancestry_exit": 0,
+  "diff_sha256": "08076b8126dc01f536ea28126f800e8874d31d725a82798a9bd472c9f239fe22",
+  "selection": "newest matching mined seed with ancestor check and diff length100..12000 before proposal",
+  "source_receipt_sha256": "49b61c5ccfffe8e21ed9e274e1e8dfc8c92204a1facf900cc42eaf3bb4812a5b",
+  "repository": "FactoryBoy/factory_boy",
+  "base_commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+  "mined_commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+  "ancestry_operation": [
+    "git",
+    "merge-base",
+    "--is-ancestor",
+    "7ed1e5417e06c3d83e0495a67508b3868de53823",
+    "7ed1e5417e06c3d83e0495a67508b3868de53823"
+  ],
+  "diff_operation": [
+    "git",
+    "show",
+    "--format=fuller",
+    "--no-ext-diff",
+    "--no-renames",
+    "7ed1e5417e06c3d83e0495a67508b3868de53823"
+  ],
+  "path_normalization": "Operations omit original machine-specific working-directory arguments; source receipt digest retained."
+}

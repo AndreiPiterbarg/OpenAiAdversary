@@ -1,0 +1,1119 @@
+{
+  "kind": "recorded_trace_timing_audit",
+  "method": "Explicit write-command markers; not an exhaustive proof of arbitrary shell side effects. Manually inspect candidate-positive pairs before pre-edit claims.",
+  "rows": [
+    {
+      "episode": "task-0-cell-3-rep-0",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 3,
+      "clauses": {
+        "locale_missing": {
+          "first_visible_step": 2,
+          "before_first_detected_write": true
+        },
+        "locale_provided": {
+          "first_visible_step": 3,
+          "before_first_detected_write": false
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 3,
+          "command": "python - <<'PY'\np='factory/declarations.py'\ns=open(p).read().replace('choice = self.decider.evaluate(instance=instance, step=step, extra={})', '# Evaluate the decider with its own defaults and context unrolling.\\n        # Call-time overrides belong to the selected target, not the decider.\\n        "
+        },
+        {
+          "step": 4,
+          "command": "cat > tests/test_maybe_decider_context.py <<'PY'\n\"\"\"Regression coverage for declaration context in Maybe deciders.\"\"\"\nimport unittest\n\nimport factory\n\n\nclass MaybeDeciderContextTests(unittest.TestCase):\n    def test_faker_defaults_and_lazy_provider_arguments(self):\n        for value, expected in [(0"
+        }
+      ]
+    },
+    {
+      "episode": "task-0-cell-3-rep-4",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 3,
+      "clauses": {
+        "locale_missing": {
+          "first_visible_step": 3,
+          "before_first_detected_write": false
+        },
+        "locale_provided": {
+          "first_visible_step": 3,
+          "before_first_detected_write": false
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 3,
+          "command": "python - <<'PY'\np='factory/declarations.py'\ns=open(p).read().replace('choice = self.decider.evaluate(instance=instance, step=step, extra={})','choice = self.decider.evaluate_pre(instance=instance, step=step, overrides={})')\nopen(p,'w').write(s)\nPY\ncat > tests/test_maybe_decider_regression.py <<'EOF'"
+        }
+      ]
+    },
+    {
+      "episode": "task-0-cell-3-rep-2",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 3,
+      "clauses": {
+        "locale_missing": {
+          "first_visible_step": 3,
+          "before_first_detected_write": false
+        },
+        "locale_provided": {
+          "first_visible_step": 3,
+          "before_first_detected_write": false
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 3,
+          "command": "python - <<'PY'\np='factory/declarations.py'\ns=open(p).read().replace('        choice = self.decider.evaluate(instance=instance, step=step, extra={})','        choice = self.decider.evaluate_pre(\\n            instance=instance, step=step, overrides={})')\nopen(p,'w').write(s)\nPY\ncat > tests/test_maybe"
+        }
+      ]
+    },
+    {
+      "episode": "task-0-cell-3-rep-3",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 3,
+      "clauses": {
+        "locale_missing": {
+          "first_visible_step": 3,
+          "before_first_detected_write": false
+        },
+        "locale_provided": {
+          "first_visible_step": 3,
+          "before_first_detected_write": false
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 3,
+          "command": "python - <<'PY'\np='factory/declarations.py'\ns=open(p).read().replace('choice = self.decider.evaluate(instance=instance, step=step, extra={})', '# Decider defaults must be resolved, but call-time overrides belong\\n        # to the selected declaration, not to the decider.\\n        choice = self.decid"
+        }
+      ]
+    },
+    {
+      "episode": "task-0-cell-3-rep-1",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 3,
+      "clauses": {
+        "locale_missing": {
+          "first_visible_step": 3,
+          "before_first_detected_write": false
+        },
+        "locale_provided": {
+          "first_visible_step": 3,
+          "before_first_detected_write": false
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 3,
+          "command": "python - <<'PY'\np='factory/declarations.py'\ns=open(p).read().replace('        choice = self.decider.evaluate(instance=instance, step=step, extra={})','        choice = self.decider.evaluate_pre(\\n            instance=instance, step=step, overrides={})')\nopen(p,'w').write(s)\nPY\ncat > tests/test_maybe"
+        },
+        {
+          "step": 4,
+          "command": "python - <<'PY'\np='tests/test_maybe_decider_regression.py'\ns=open(p).read().replace(\"'pybool', locale='en_US', truth_probability=100 if truth else 0,\", \"'random_element', locale='en_US', elements=(truth,),\").replace(\"factory.Faker('pybool', truth_probability=factory.LazyFunction(lambda: 100))\", \"fac"
+        }
+      ]
+    },
+    {
+      "episode": "task-0-cell-1-rep-2",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 3,
+      "clauses": {
+        "locale_missing": {
+          "first_visible_step": 3,
+          "before_first_detected_write": false
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 3,
+          "command": "python - <<'PY'\np='factory/declarations.py'\ns=open(p).read().replace('choice = self.decider.evaluate(instance=instance, step=step, extra={})','choice = self.decider.evaluate_pre(\\n            instance=instance, step=step, overrides={})')\nopen(p,'w').write(s)\nPY\ncat > tests/test_maybe_decider_regress"
+        }
+      ]
+    },
+    {
+      "episode": "task-0-cell-1-rep-4",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 3,
+      "clauses": {
+        "locale_missing": {
+          "first_visible_step": 3,
+          "before_first_detected_write": false
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 3,
+          "command": "python - <<'PY'\np='factory/declarations.py'\ns=open(p).read().replace('choice = self.decider.evaluate(instance=instance, step=step, extra={})', '''# Overrides belong to the selected branch, not to the decider.\n        choice = self.decider.evaluate_pre(\n            instance=instance, step=step, overr"
+        }
+      ]
+    },
+    {
+      "episode": "task-0-cell-1-rep-1",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 3,
+      "clauses": {
+        "locale_missing": {
+          "first_visible_step": 3,
+          "before_first_detected_write": false
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 3,
+          "command": "python - <<'PY'\np='factory/declarations.py'\ns=open(p).read().replace('choice = self.decider.evaluate(instance=instance, step=step, extra={})', '''# Overrides belong to the selected branch, not to the decider.\n        choice = self.decider.evaluate_pre(\n            instance=instance, step=step, overr"
+        }
+      ]
+    },
+    {
+      "episode": "task-0-cell-1-rep-3",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 3,
+      "clauses": {
+        "locale_missing": {
+          "first_visible_step": 3,
+          "before_first_detected_write": false
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 3,
+          "command": "python - <<'PY'\np='factory/declarations.py'\ns=open(p).read().replace('        choice = self.decider.evaluate(instance=instance, step=step, extra={})','        # The decider needs its own declaration defaults, but call-time\\n        # overrides belong to the selected target, not to the decider.\\n    "
+        }
+      ]
+    },
+    {
+      "episode": "task-0-cell-1-rep-0",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 3,
+      "clauses": {
+        "locale_missing": {
+          "first_visible_step": 3,
+          "before_first_detected_write": false
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 3,
+          "command": "python - <<'PY'\np='factory/declarations.py'\ns=open(p).read().replace('choice = self.decider.evaluate(instance=instance, step=step, extra={})', '# Deciders need their own defaults and context preparation, just like\\n        # any other declaration. Overrides belong to the selected target.\\n        ch"
+        }
+      ]
+    },
+    {
+      "episode": "task-2-cell-3-rep-4",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 6,
+      "clauses": {
+        "locale_missing": {
+          "first_visible_step": 1,
+          "before_first_detected_write": true
+        },
+        "locale_provided": {
+          "first_visible_step": 1,
+          "before_first_detected_write": true
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 6,
+          "command": "python - <<'PY'\np='src/djpress/models/category.py'\ns=open(p).read(); start=s.index('    @property\\n    def permalink('); end=s.index('    @property\\n    def url(',start); s=s[:start]+s[end:]; open(p,'w').write(s)\np='src/djpress/url_utils.py'; s=open(p).read().replace('    url = f\"/{category.permalin"
+        }
+      ]
+    },
+    {
+      "episode": "task-2-cell-3-rep-3",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 7,
+      "clauses": {
+        "locale_missing": {
+          "first_visible_step": 1,
+          "before_first_detected_write": true
+        },
+        "locale_provided": {
+          "first_visible_step": 1,
+          "before_first_detected_write": true
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 7,
+          "command": "python - <<'PY'\nfrom pathlib import Path\np=Path('src/djpress/models/category.py'); s=p.read_text(); a=s.index('    @property\\n    def permalink'); b=s.index('    @property\\n    def url',a); p.write_text(s[:a]+s[b:])\np=Path('src/djpress/url_utils.py'); s=p.read_text().replace('    url = f\"/{category."
+        },
+        {
+          "step": 8,
+          "command": "cat > tests/test_category_url_without_permalink.py <<'PY'\nimport pytest\n\nfrom djpress.models import Category\nfrom djpress.url_utils import get_category_url\n\n\n@pytest.mark.parametrize(\"enabled\", [True, False])\n@pytest.mark.parametrize(\"prefix\", [\"topics\", \"\"])\n@pytest.mark.parametrize(\"append_slash\","
+        }
+      ]
+    },
+    {
+      "episode": "task-2-cell-3-rep-2",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 7,
+      "clauses": {
+        "locale_missing": {
+          "first_visible_step": 1,
+          "before_first_detected_write": true
+        },
+        "locale_provided": {
+          "first_visible_step": 1,
+          "before_first_detected_write": true
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 7,
+          "command": "python - <<'PY'\np='src/djpress/models/category.py'\ns=open(p).read(); start=s.index('    @property\\n    def permalink'); end=s.index('    @property\\n    def url',start); s=s[:start]+s[end:]; open(p,'w').write(s)\np='src/djpress/url_utils.py'; s=open(p).read().replace('    url = f\"/{category.permalink}"
+        }
+      ]
+    },
+    {
+      "episode": "task-2-cell-3-rep-0",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 5,
+      "clauses": {
+        "locale_missing": {
+          "first_visible_step": 1,
+          "before_first_detected_write": true
+        },
+        "locale_provided": {
+          "first_visible_step": 1,
+          "before_first_detected_write": true
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 5,
+          "command": "python - <<'PY'\np='src/djpress/models/category.py'\ns=open(p).read(); start=s.index('    @property\\n    def permalink('); end=s.index('    @property\\n    def url(',start); s=s[:start]+s[end:]; open(p,'w').write(s)\np='src/djpress/url_utils.py'; s=open(p).read().replace('    url = f\"/{category.permalin"
+        },
+        {
+          "step": 6,
+          "command": "cat > tests/test_category_url_without_permalink.py <<'EOF'\nimport pytest\n\nfrom djpress.models import Category\nfrom djpress.url_utils import get_category_url\n\n\n@pytest.mark.parametrize(\"enabled\", [True, False])\n@pytest.mark.parametrize(\"prefix\", [\"category\", \"\"])\n@pytest.mark.parametrize(\"append_slas"
+        },
+        {
+          "step": 7,
+          "command": "git diff > baseline-check.patch; git show HEAD:src/djpress/models/category.py > src/djpress/models/category.py; git show HEAD:src/djpress/url_utils.py > src/djpress/url_utils.py; pytest --no-header -rA --tb=line --color=no -p no:cacheprovider -W ignore::DeprecationWarning tests/test_models_tag.py::t"
+        }
+      ]
+    },
+    {
+      "episode": "task-2-cell-3-rep-1",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 7,
+      "clauses": {
+        "locale_missing": {
+          "first_visible_step": 1,
+          "before_first_detected_write": true
+        },
+        "locale_provided": {
+          "first_visible_step": 1,
+          "before_first_detected_write": true
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 7,
+          "command": "python - <<'PY'\nfrom pathlib import Path\np=Path('src/djpress/models/category.py'); s=p.read_text(); a=s.index('    @property\\n    def permalink'); b=s.index('    @property\\n    def url',a); p.write_text(s[:a]+s[b:])\np=Path('src/djpress/url_utils.py'); s=p.read_text().replace('    url = f\"/{category."
+        }
+      ]
+    },
+    {
+      "episode": "task-2-cell-1-rep-3",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 6,
+      "clauses": {
+        "locale_missing": {
+          "first_visible_step": 1,
+          "before_first_detected_write": true
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 6,
+          "command": "python - <<'PY'\nfrom pathlib import Path\np=Path('src/djpress/models/category.py')\ns=p.read_text(); start=s.index('    @property\\n    def permalink('); end=s.index('    @property\\n    def url(',start); p.write_text(s[:start]+s[end:])\np=Path('src/djpress/url_utils.py'); s=p.read_text().replace('    ur"
+        },
+        {
+          "step": 7,
+          "command": "python - <<'PY'\nfrom pathlib import Path\np=Path('tests/test_category_url_without_permalink.py');s=p.read_text().replace('settings, enabled, prefix, append_slash):','settings, monkeypatch, enabled, prefix, append_slash):').replace('    settings.DJPRESS_SETTINGS[\"CATEGORY_ENABLED\"] = enabled','    mon"
+        }
+      ]
+    },
+    {
+      "episode": "task-2-cell-1-rep-4",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 6,
+      "clauses": {
+        "locale_missing": {
+          "first_visible_step": 1,
+          "before_first_detected_write": true
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 6,
+          "command": "python - <<'PY'\np='src/djpress/models/category.py'\ns=open(p).read(); a=s.index('    @property\\n    def permalink'); b=s.index('    @property\\n    def url',a); open(p,'w').write(s[:a]+s[b:])\np='src/djpress/url_utils.py'; s=open(p).read().replace('    url = f\"/{category.permalink}\"','    if djpress_se"
+        }
+      ]
+    },
+    {
+      "episode": "task-2-cell-1-rep-2",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 6,
+      "clauses": {
+        "locale_missing": {
+          "first_visible_step": 1,
+          "before_first_detected_write": true
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 6,
+          "command": "python - <<'PY'\np='src/djpress/models/category.py'\ns=open(p).read(); a=s.index('    @property\\n    def permalink'); b=s.index('    @property\\n    def url',a); open(p,'w').write(s[:a]+s[b:])\np='src/djpress/url_utils.py'; s=open(p).read().replace('    url = f\"/{category.permalink}\"','    if djpress_se"
+        }
+      ]
+    },
+    {
+      "episode": "task-2-cell-1-rep-1",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 6,
+      "clauses": {
+        "locale_missing": {
+          "first_visible_step": 1,
+          "before_first_detected_write": true
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 6,
+          "command": "python - <<'PY'\np='src/djpress/models/category.py'\ns=open(p).read(); start=s.index('    @property\\n    def permalink'); end=s.index('    @property\\n    def url',start); s=s[:start]+s[end:]; open(p,'w').write(s)\np='src/djpress/url_utils.py'; s=open(p).read().replace('    url = f\"/{category.permalink}"
+        }
+      ]
+    },
+    {
+      "episode": "task-2-cell-1-rep-0",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 7,
+      "clauses": {
+        "locale_missing": {
+          "first_visible_step": 1,
+          "before_first_detected_write": true
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 7,
+          "command": "python - <<'PY'\np='src/djpress/models/category.py'\ns=open(p).read(); a=s.index('    @property\\n    def permalink'); b=s.index('    @property\\n    def url',a);open(p,'w').write(s[:a]+s[b:])\np='src/djpress/url_utils.py';s=open(p).read().replace('    url = f\"/{category.permalink}\"','    if djpress_sett"
+        }
+      ]
+    },
+    {
+      "episode": "task-1-cell-1-rep-4",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 3,
+      "clauses": {
+        "locale_missing": {
+          "first_visible_step": 3,
+          "before_first_detected_write": false
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 3,
+          "command": "python - <<'PY'\np='asgiref/local.py'\ns=open(p).read(); start=s.index('        self._data:'); end=s.index('\\n\\nclass Local:',start)\ns=s[:start]+'''        self._data: contextvars.ContextVar[dict[str, Any]] = contextvars.ContextVar(\n            \"asgiref.local\"\n        )\n\n    def __getattr__(self, key:"
+        }
+      ]
+    },
+    {
+      "episode": "task-1-cell-1-rep-2",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 6,
+      "clauses": {
+        "locale_missing": {
+          "first_visible_step": 7,
+          "before_first_detected_write": false
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 6,
+          "command": "python - <<'PY'\np='asgiref/local.py'\ns=open(p).read(); a=s.index('    def __init__(self) -> None:'); b=s.index('\\n\\nclass Local:',a)\ns=s[:a]+'''    def __init__(self) -> None:\n        self._data: contextvars.ContextVar[dict[str, Any]] = contextvars.ContextVar(\n            \"asgiref.local\"\n        )\n\n"
+        },
+        {
+          "step": 7,
+          "command": "cat > tests/test_local_context_deletion.py <<'PY'\nimport contextvars\n\nimport pytest\n\nfrom asgiref.local import Local\nfrom asgiref.sync import sync_to_async\n\n\ndef test_context_deletion_isolation():\n    local = Local()\n    local.value = \"parent\"\n    child = contextvars.copy_context()\n    child.run(del"
+        }
+      ]
+    },
+    {
+      "episode": "task-1-cell-1-rep-3",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 3,
+      "clauses": {
+        "locale_missing": {
+          "first_visible_step": 3,
+          "before_first_detected_write": false
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 3,
+          "command": "python - <<'PY'\np='asgiref/local.py'\ns=open(p).read(); a=s.index('        self._data:'); b=s.index('\\n\\nclass Local:',a)\ns=s[:a]+'''        self._data: contextvars.ContextVar[dict[str, Any]] = contextvars.ContextVar(\n            \"asgiref.local\"\n        )\n\n    def __getattr__(self, key: str) -> Any:\n"
+        }
+      ]
+    },
+    {
+      "episode": "task-1-cell-1-rep-0",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 3,
+      "clauses": {
+        "locale_missing": {
+          "first_visible_step": 3,
+          "before_first_detected_write": false
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 3,
+          "command": "python - <<'PY'\np='asgiref/local.py'\ns=open(p).read(); start=s.index('    def __init__(self) -> None:'); end=s.index('\\n\\nclass Local:',start)\ns=s[:start]+'''    def __init__(self) -> None:\n        self._data: contextvars.ContextVar[dict[str, Any]] = contextvars.ContextVar(\n            \"asgiref.loca"
+        }
+      ]
+    },
+    {
+      "episode": "task-1-cell-1-rep-1",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 3,
+      "clauses": {
+        "locale_missing": {
+          "first_visible_step": 3,
+          "before_first_detected_write": false
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 3,
+          "command": "python - <<'PY'\np='asgiref/local.py'\ns=open(p).read(); a=s.index('    def __init__(self) -> None:'); b=s.index('\\n\\nclass Local:',a)\ns=s[:a]+'''    def __init__(self) -> None:\n        self._data: contextvars.ContextVar[dict[str, Any]] = contextvars.ContextVar(\n            \"asgiref.local\"\n        )\n\n"
+        }
+      ]
+    },
+    {
+      "episode": "task-1-cell-3-rep-4",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 3,
+      "clauses": {
+        "locale_missing": {
+          "first_visible_step": 3,
+          "before_first_detected_write": false
+        },
+        "locale_provided": {
+          "first_visible_step": 3,
+          "before_first_detected_write": false
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 3,
+          "command": "python - <<'PY'\np='asgiref/local.py'\ns=open(p).read(); start=s.index('        self._data:'); end=s.index('\\n\\nclass Local:')\ns=s[:start]+'''        self._data: contextvars.ContextVar[dict[str, Any]] = contextvars.ContextVar(\n            \"asgiref.local\"\n        )\n\n    def __getattr__(self, key: str) "
+        }
+      ]
+    },
+    {
+      "episode": "task-1-cell-3-rep-1",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 3,
+      "clauses": {
+        "locale_missing": {
+          "first_visible_step": 3,
+          "before_first_detected_write": false
+        },
+        "locale_provided": {
+          "first_visible_step": 3,
+          "before_first_detected_write": false
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 3,
+          "command": "python - <<'PY'\np='asgiref/local.py'\ns=open(p).read(); start=s.index('    def __init__(self) -> None:'); end=s.index('\\n\\nclass Local:',start)\ns=s[:start]+'''    def __init__(self) -> None:\n        self._data: contextvars.ContextVar[dict[str, Any]] = contextvars.ContextVar(\n            \"asgiref.loca"
+        }
+      ]
+    },
+    {
+      "episode": "task-1-cell-3-rep-2",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 3,
+      "clauses": {
+        "locale_missing": {
+          "first_visible_step": 3,
+          "before_first_detected_write": false
+        },
+        "locale_provided": {
+          "first_visible_step": 3,
+          "before_first_detected_write": false
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 3,
+          "command": "python - <<'PY'\np='asgiref/local.py'\ns=open(p).read(); a=s.index('        self._data:'); b=s.index('\\n\\nclass Local:',a)\ns=s[:a]+'''        self._data: contextvars.ContextVar[dict[str, Any]] = contextvars.ContextVar(\n            \"asgiref.local\"\n        )\n\n    def __getattr__(self, key: str) -> Any:\n"
+        }
+      ]
+    },
+    {
+      "episode": "task-1-cell-3-rep-0",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 3,
+      "clauses": {
+        "locale_missing": {
+          "first_visible_step": 3,
+          "before_first_detected_write": false
+        },
+        "locale_provided": {
+          "first_visible_step": 3,
+          "before_first_detected_write": false
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 3,
+          "command": "python - <<'PY'\np='asgiref/local.py'\ns=open(p).read(); a=s.index('    def __init__(self) -> None:'); b=s.index('\\n\\nclass Local:',a)\ns=s[:a]+'''    def __init__(self) -> None:\n        self._data: contextvars.ContextVar[dict[str, Any]] = contextvars.ContextVar(\n            \"asgiref.local\"\n        )\n\n"
+        }
+      ]
+    },
+    {
+      "episode": "task-1-cell-3-rep-3",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 3,
+      "clauses": {
+        "locale_missing": {
+          "first_visible_step": 3,
+          "before_first_detected_write": false
+        },
+        "locale_provided": {
+          "first_visible_step": 3,
+          "before_first_detected_write": false
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 3,
+          "command": "python - <<'PY'\np='asgiref/local.py'\ns=open(p).read(); start=s.index('        self._data:'); end=s.index('\\n\\nclass Local:',start)\ns=s[:start]+'''        self._data: contextvars.ContextVar[dict[str, Any]] = contextvars.ContextVar(\n            \"asgiref.local\"\n        )\n\n    def __getattr__(self, key:"
+        }
+      ]
+    },
+    {
+      "episode": "task-0-cell-0-rep-3",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 3,
+      "clauses": {},
+      "detected_writes": [
+        {
+          "step": 3,
+          "command": "python - <<'PY'\np='factory/declarations.py'\ns=open(p).read().replace('choice = self.decider.evaluate(instance=instance, step=step, extra={})', '# Evaluate through the declaration lifecycle so decider defaults and\\n        # nested declarations are resolved. Overrides belong to the target.\\n        c"
+        }
+      ]
+    },
+    {
+      "episode": "task-0-cell-0-rep-1",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 3,
+      "clauses": {},
+      "detected_writes": [
+        {
+          "step": 3,
+          "command": "python - <<'PY'\np='factory/declarations.py'\ns=open(p).read().replace('choice = self.decider.evaluate(instance=instance, step=step, extra={})', '# Deciders need their own defaults and context evaluated, just like\\n        # any other declaration. Call-time overrides belong to the target.\\n        cho"
+        },
+        {
+          "step": 4,
+          "command": "python - <<'PY'\np='tests/test_maybe_decider_regression.py'\ns=open(p).read().replace(\"'pybool', locale='en_US', truth_probability=100 if truth else 0\", \"'pyint', locale='en_US', min_value=int(truth), max_value=int(truth)\").replace(\"'pybool',\\n                truth_probability=factory.LazyFunction(lam"
+        }
+      ]
+    },
+    {
+      "episode": "task-0-cell-0-rep-0",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 3,
+      "clauses": {},
+      "detected_writes": [
+        {
+          "step": 3,
+          "command": "python - <<'PY'\np='factory/declarations.py'\ns=open(p).read().replace('choice = self.decider.evaluate(instance=instance, step=step, extra={})','choice = self.decider.evaluate_pre(\\n            instance=instance, step=step, overrides={})')\nopen(p,'w').write(s)\nPY\ncat > tests/test_maybe_decider_regress"
+        }
+      ]
+    },
+    {
+      "episode": "task-0-cell-0-rep-2",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 3,
+      "clauses": {},
+      "detected_writes": [
+        {
+          "step": 3,
+          "command": "python - <<'PY'\np='factory/declarations.py'\ns=open(p).read().replace('choice = self.decider.evaluate(instance=instance, step=step, extra={})','choice = self.decider.evaluate_pre(instance=instance, step=step, overrides={})')\nopen(p,'w').write(s)\nPY\ncat > tests/test_maybe_decider_regression.py <<'EOF'"
+        }
+      ]
+    },
+    {
+      "episode": "task-0-cell-0-rep-4",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 3,
+      "clauses": {},
+      "detected_writes": [
+        {
+          "step": 3,
+          "command": "python - <<'PY'\np='factory/declarations.py'\ns=open(p).read().replace('choice = self.decider.evaluate(instance=instance, step=step, extra={})', '# Decider defaults must be resolved, but call-time overrides belong\\n        # to the selected branch, not to the decider.\\n        choice = self.decider.ev"
+        },
+        {
+          "step": 4,
+          "command": "python - <<'PY'\np='tests/test_maybe_decider_defaults.py'\ns=open(p).read().replace(\"[(100, 'yes'), (0, 'no')]\", \"[(1, 'yes'), (0, 'no')]\").replace(\"factory.Faker('pybool', truth_probability=chance, locale='en_US')\", \"factory.Faker('random_int', min=chance, max=chance, locale='en_US')\").replace('chanc"
+        }
+      ]
+    },
+    {
+      "episode": "task-2-cell-2-rep-1",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 6,
+      "clauses": {
+        "locale_provided": {
+          "first_visible_step": 1,
+          "before_first_detected_write": true
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 6,
+          "command": "python - <<'PY'\np='src/djpress/models/category.py'\ns=open(p).read(); start=s.index('    @property\\n    def permalink'); end=s.index('    @property\\n    def url',start); s=s[:start]+s[end:]; open(p,'w').write(s)\np='src/djpress/url_utils.py'; s=open(p).read().replace('    url = f\"/{category.permalink}"
+        }
+      ]
+    },
+    {
+      "episode": "task-2-cell-2-rep-2",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 7,
+      "clauses": {
+        "locale_provided": {
+          "first_visible_step": 1,
+          "before_first_detected_write": true
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 7,
+          "command": "python - <<'PY'\nfrom pathlib import Path\np=Path('src/djpress/models/category.py'); s=p.read_text(); start=s.index('    @property\\n    def permalink'); end=s.index('    @property\\n    def url',start); p.write_text(s[:start]+s[end:])\np=Path('src/djpress/url_utils.py'); s=p.read_text().replace('    url"
+        }
+      ]
+    },
+    {
+      "episode": "task-2-cell-2-rep-0",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 5,
+      "clauses": {
+        "locale_provided": {
+          "first_visible_step": 1,
+          "before_first_detected_write": true
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 5,
+          "command": "python - <<'PY'\np='src/djpress/models/category.py'\ns=open(p).read(); start=s.index('    @property\\n    def permalink'); end=s.index('    @property\\n    def url',start); s=s[:start]+s[end:]; open(p,'w').write(s)\np='src/djpress/url_utils.py'; s=open(p).read().replace('    url = f\"/{category.permalink}"
+        }
+      ]
+    },
+    {
+      "episode": "task-2-cell-2-rep-4",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 6,
+      "clauses": {
+        "locale_provided": {
+          "first_visible_step": 1,
+          "before_first_detected_write": true
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 6,
+          "command": "python - <<'PY'\np='src/djpress/models/category.py'\ns=open(p).read(); start=s.index('    @property\\n    def permalink'); end=s.index('    @property\\n    def url',start); s=s[:start]+s[end:];open(p,'w').write(s)\np='src/djpress/url_utils.py';s=open(p).read().replace('    url = f\"/{category.permalink}\"'"
+        }
+      ]
+    },
+    {
+      "episode": "task-2-cell-2-rep-3",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 7,
+      "clauses": {
+        "locale_provided": {
+          "first_visible_step": 1,
+          "before_first_detected_write": true
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 7,
+          "command": "python - <<'PY'\nfrom pathlib import Path\np=Path('src/djpress/models/category.py'); s=p.read_text(); start=s.index('    @property\\n    def permalink'); end=s.index('    @property\\n    def url',start); p.write_text(s[:start]+s[end:])\np=Path('src/djpress/url_utils.py'); s=p.read_text().replace('    url"
+        }
+      ]
+    },
+    {
+      "episode": "task-2-cell-0-rep-0",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 6,
+      "clauses": {},
+      "detected_writes": [
+        {
+          "step": 6,
+          "command": "python - <<'PY'\np='src/djpress/models/category.py'\ns=open(p).read(); start=s.index('    @property\\n    def permalink'); end=s.index('    @property\\n    def url',start); s=s[:start]+s[end:]; open(p,'w').write(s)\np='src/djpress/url_utils.py'; s=open(p).read().replace('    url = f\"/{category.permalink}"
+        },
+        {
+          "step": 8,
+          "command": "sed -i 's/\\[\"topics\", \"\", None\\]/[\"topics\", \"\"]/' tests/test_category_url_without_permalink.py\npytest --no-header -rA --tb=line --color=no -p no:cacheprovider -W ignore::DeprecationWarning > \"${TMPDIR:-.}/djpress-test-output.txt\" 2>&1; result=$?; tail -n 5 \"${TMPDIR:-.}/djpress-test-output.txt\"; exi"
+        }
+      ]
+    },
+    {
+      "episode": "task-2-cell-0-rep-1",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 6,
+      "clauses": {},
+      "detected_writes": [
+        {
+          "step": 6,
+          "command": "python - <<'PY'\nfrom pathlib import Path\np=Path('src/djpress/models/category.py')\ns=p.read_text(); start=s.index('    @property\\n    def permalink'); end=s.index('    @property\\n    def url',start); p.write_text(s[:start]+s[end:])\np=Path('src/djpress/url_utils.py'); s=p.read_text().replace('    url "
+        }
+      ]
+    },
+    {
+      "episode": "task-2-cell-0-rep-3",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 6,
+      "clauses": {},
+      "detected_writes": [
+        {
+          "step": 6,
+          "command": "python - <<'PY'\nfrom pathlib import Path\np = Path('src/djpress/models/category.py')\ns = p.read_text(); start = s.index('    @property\\n    def permalink'); end = s.index('    @property\\n    def url', start); p.write_text(s[:start]+s[end:])\np = Path('src/djpress/url_utils.py'); s = p.read_text().repl"
+        }
+      ]
+    },
+    {
+      "episode": "task-2-cell-0-rep-4",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 6,
+      "clauses": {},
+      "detected_writes": [
+        {
+          "step": 6,
+          "command": "python - <<'PY'\np='src/djpress/models/category.py'\ns=open(p).read(); start=s.index('    @property\\n    def permalink'); end=s.index('    @property\\n    def url',start); s=s[:start]+s[end:]; open(p,'w').write(s)\np='src/djpress/url_utils.py'; s=open(p).read().replace('    url = f\"/{category.permalink}"
+        }
+      ]
+    },
+    {
+      "episode": "task-2-cell-0-rep-2",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 6,
+      "clauses": {},
+      "detected_writes": [
+        {
+          "step": 6,
+          "command": "python - <<'PY'\nfrom pathlib import Path\np = Path('src/djpress/models/category.py')\ns = p.read_text()\na = s.index('    @property\\n    def permalink(')\nb = s.index('    @property\\n    def url(', a)\np.write_text(s[:a] + s[b:])\np = Path('src/djpress/url_utils.py')\ns = p.read_text().replace('    url = f"
+        },
+        {
+          "step": 8,
+          "command": "git diff > .permalink-fix.patch; git show HEAD:src/djpress/models/category.py > src/djpress/models/category.py; git show HEAD:src/djpress/url_utils.py > src/djpress/url_utils.py; pytest --no-header -rA --tb=line --color=no -p no:cacheprovider -W ignore::DeprecationWarning --ignore=tests/test_categor"
+        }
+      ]
+    },
+    {
+      "episode": "task-1-cell-0-rep-2",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 3,
+      "clauses": {},
+      "detected_writes": [
+        {
+          "step": 3,
+          "command": "python - <<'PY'\np='asgiref/local.py'\ns=open(p).read(); start=s.index('        self._data:'); end=s.index('\\n\\nclass Local:')\ns=s[:start]+'''        self._data: contextvars.ContextVar[dict[str, Any]] = contextvars.ContextVar(\n            \"asgiref.local\"\n        )\n\n    def __getattr__(self, key: str) "
+        },
+        {
+          "step": 4,
+          "command": "python - <<'PY'\np='tests/test_local_context_deletion.py';s=open(p).read();s=s.replace('    await sync_to_async(delattr)(local, \"value\")\\n    # An absent value in the worker\\'s context must not destroy storage in the\\n    # caller\\'s context (context restoration does not propagate removals).\\n', '   "
+        }
+      ]
+    },
+    {
+      "episode": "task-1-cell-0-rep-4",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 3,
+      "clauses": {},
+      "detected_writes": [
+        {
+          "step": 3,
+          "command": "python - <<'PY'\np='asgiref/local.py'\ns=open(p).read(); start=s.index('    def __init__(self) -> None:'); end=s.index('\\n\\nclass Local:',start)\ns=s[:start]+'''    def __init__(self) -> None:\n        self._data: contextvars.ContextVar[dict[str, Any]] = contextvars.ContextVar(\n            \"asgiref.loca"
+        }
+      ]
+    },
+    {
+      "episode": "task-1-cell-0-rep-3",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 3,
+      "clauses": {},
+      "detected_writes": [
+        {
+          "step": 3,
+          "command": "python - <<'PY'\np='asgiref/local.py'\ns=open(p).read(); a=s.index('        self._data:'); b=s.index('\\n\\nclass Local:',a)\ns=s[:a]+'''        self._data: contextvars.ContextVar[dict[str, Any]] = contextvars.ContextVar(\n            \"asgiref.local\"\n        )\n\n    def __getattr__(self, key: str) -> Any:\n"
+        }
+      ]
+    },
+    {
+      "episode": "task-1-cell-0-rep-1",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 3,
+      "clauses": {},
+      "detected_writes": [
+        {
+          "step": 3,
+          "command": "python - <<'PY'\np='asgiref/local.py'\ns=open(p).read(); a=s.index('        self._data:'); b=s.index('\\n\\nclass Local:',a)\ns=s[:a]+'''        self._data: contextvars.ContextVar[dict[str, Any]] = contextvars.ContextVar(\n            \"asgiref.local\"\n        )\n\n    def __getattr__(self, key: str) -> Any:\n"
+        }
+      ]
+    },
+    {
+      "episode": "task-1-cell-0-rep-0",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 6,
+      "clauses": {},
+      "detected_writes": [
+        {
+          "step": 6,
+          "command": "python - <<'PY'\np='asgiref/local.py'\ns=open(p).read(); start=s.index('    def __init__(self) -> None:'); end=s.index('\\n\\nclass Local:',start)\ns=s[:start]+'''    def __init__(self) -> None:\n        self._data: contextvars.ContextVar[dict[str, Any]] = contextvars.ContextVar(\n            \"asgiref.loca"
+        }
+      ]
+    },
+    {
+      "episode": "task-1-cell-2-rep-0",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 3,
+      "clauses": {
+        "locale_provided": {
+          "first_visible_step": 3,
+          "before_first_detected_write": false
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 3,
+          "command": "python - <<'PY'\np='asgiref/local.py'\ns=open(p).read(); a=s.index('        self._data:'); b=s.index('\\n\\nclass Local:',a)\ns=s[:a]+'''        self._data: contextvars.ContextVar[dict[str, Any]] = contextvars.ContextVar(\n            \"asgiref.local\"\n        )\n\n    def __getattr__(self, key: str) -> Any:\n"
+        }
+      ]
+    },
+    {
+      "episode": "task-1-cell-2-rep-1",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 3,
+      "clauses": {
+        "locale_provided": {
+          "first_visible_step": 3,
+          "before_first_detected_write": false
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 3,
+          "command": "python - <<'PY'\np='asgiref/local.py'\ns=open(p).read(); start=s.index('    def __init__(self) -> None:'); end=s.index('\\n\\nclass Local:',start)\ns=s[:start]+'''    def __init__(self) -> None:\n        self._data: contextvars.ContextVar[dict[str, Any]] = contextvars.ContextVar(\n            \"asgiref.loca"
+        }
+      ]
+    },
+    {
+      "episode": "task-1-cell-2-rep-2",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 3,
+      "clauses": {
+        "locale_provided": {
+          "first_visible_step": 3,
+          "before_first_detected_write": false
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 3,
+          "command": "python - <<'PY'\np='asgiref/local.py'\ns=open(p).read(); a=s.index('        self._data:'); b=s.index('\\n\\nclass Local:',a)\ns=s[:a]+'''        self._data: contextvars.ContextVar[dict[str, Any]] = contextvars.ContextVar(\n            \"asgiref.local\"\n        )\n\n    def __getattr__(self, key: str) -> Any:\n"
+        }
+      ]
+    },
+    {
+      "episode": "task-1-cell-2-rep-4",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 3,
+      "clauses": {
+        "locale_provided": {
+          "first_visible_step": 3,
+          "before_first_detected_write": false
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 3,
+          "command": "python - <<'PY'\np='asgiref/local.py'\ns=open(p).read(); a=s.index('        self._data:'); b=s.index('\\n\\nclass Local:',a)\ns=s[:a]+'''        self._data: contextvars.ContextVar[dict[str, Any]] = contextvars.ContextVar(\n            \"asgiref.local\"\n        )\n\n    def __getattr__(self, key: str) -> Any:\n"
+        }
+      ]
+    },
+    {
+      "episode": "task-1-cell-2-rep-3",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 3,
+      "clauses": {
+        "locale_provided": {
+          "first_visible_step": 3,
+          "before_first_detected_write": false
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 3,
+          "command": "python - <<'PY'\np='asgiref/local.py'\ns=open(p).read(); start=s.index('        self._data:'); end=s.index('\\n\\nclass Local:')\ns=s[:start]+'''        self._data: contextvars.ContextVar[dict[str, Any]] = contextvars.ContextVar(\n            \"asgiref.local\"\n        )\n\n    def __getattr__(self, key: str) "
+        }
+      ]
+    },
+    {
+      "episode": "task-0-cell-2-rep-0",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 3,
+      "clauses": {
+        "locale_provided": {
+          "first_visible_step": 3,
+          "before_first_detected_write": false
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 3,
+          "command": "python - <<'PY'\np='factory/declarations.py'\ns=open(p).read().replace('choice = self.decider.evaluate(instance=instance, step=step, extra={})', '# Decider defaults must be resolved, but call-time overrides belong\\n        # to the selected branch, not to the decider.\\n        choice = self.decider.ev"
+        }
+      ]
+    },
+    {
+      "episode": "task-0-cell-2-rep-3",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 3,
+      "clauses": {
+        "locale_provided": {
+          "first_visible_step": 3,
+          "before_first_detected_write": false
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 3,
+          "command": "python - <<'PY'\np='factory/declarations.py'\ns=open(p).read().replace('choice = self.decider.evaluate(instance=instance, step=step, extra={})', '# Resolve the decider\\'s own defaults, but keep field overrides\\n        # for the selected declaration.\\n        choice = self.decider.evaluate_pre(instanc"
+        }
+      ]
+    },
+    {
+      "episode": "task-0-cell-2-rep-4",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 3,
+      "clauses": {
+        "locale_provided": {
+          "first_visible_step": 3,
+          "before_first_detected_write": false
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 3,
+          "command": "python - <<'PY'\np='factory/declarations.py'\ns=open(p).read().replace('choice = self.decider.evaluate(instance=instance, step=step, extra={})','choice = self.decider.evaluate_pre(instance=instance, step=step, overrides={})')\nopen(p,'w').write(s)\nPY\ncat > tests/test_maybe_decider_regression.py <<'PY'\n"
+        }
+      ]
+    },
+    {
+      "episode": "task-0-cell-2-rep-2",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 3,
+      "clauses": {
+        "locale_provided": {
+          "first_visible_step": 3,
+          "before_first_detected_write": false
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 3,
+          "command": "python - <<'PY'\np='factory/declarations.py'\ns=open(p).read().replace('        choice = self.decider.evaluate(instance=instance, step=step, extra={})','        # Deciders need their declaration defaults and context unrolled too.\\n        # Call-time overrides belong to the selected target, not the de"
+        }
+      ]
+    },
+    {
+      "episode": "task-0-cell-2-rep-1",
+      "exposure_verified": true,
+      "realized": true,
+      "first_detected_write": 3,
+      "clauses": {
+        "locale_provided": {
+          "first_visible_step": 3,
+          "before_first_detected_write": false
+        }
+      },
+      "detected_writes": [
+        {
+          "step": 3,
+          "command": "python - <<'PY'\np='factory/declarations.py'\ns=open(p).read().replace('choice = self.decider.evaluate(instance=instance, step=step, extra={})', 'choice = self.decider.evaluate_pre(\\n            instance=instance, step=step, overrides={})')\nopen(p,'w').write(s)\nPY\ncat > tests/test_maybe_decider_contex"
+        }
+      ]
+    }
+  ]
+}

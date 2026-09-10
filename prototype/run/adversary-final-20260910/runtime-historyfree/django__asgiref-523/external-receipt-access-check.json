@@ -1,0 +1,18 @@
+{
+  "existing_before_guard": true,
+  "all_denied": true,
+  "checks": [
+    {
+      "existing_path": "/tmp/prun-adversary-proposals-v10/frozen-draft.json",
+      "exit": 1,
+      "stdout": "",
+      "stderr": "cat: /tmp/prun-adversary-proposals-v10/frozen-draft.json: Permission denied\n"
+    },
+    {
+      "existing_path": "/tmp/prun-adversary-final-20260910/experiment-code-v3/domains/swe_agents/environment/interactive_replay.py",
+      "exit": 1,
+      "stdout": "",
+      "stderr": "cat: /tmp/prun-adversary-final-20260910/experiment-code-v3/domains/swe_agents/environment/interactive_replay.py: Permission denied\n"
+    }
+  ]
+}

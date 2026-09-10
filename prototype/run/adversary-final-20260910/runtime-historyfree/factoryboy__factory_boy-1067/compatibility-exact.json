@@ -1,0 +1,32 @@
+{
+  "key": "factoryboy__factory_boy-1067",
+  "kind": "new_host_guarded_compatibility",
+  "expected_count": 2,
+  "results": {
+    "baseline": {
+      "exit": 1,
+      "statuses": {
+        "tests/test_regression.py::FakerRegressionTests::test_evaluated_without_locale": "FAILED",
+        "tests/test_regression.py::FakerRegressionTests::test_locale_issue": "PASSED"
+      },
+      "receipt_path": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-historyfree-v1/guarded-baseline-historyfree-v2.json",
+      "receipt_sha256": "a541c14b46a40b61aaf15ffbef1132dc4ce23b9a887f1622b6134f0725e92954"
+    },
+    "gold": {
+      "exit": 0,
+      "statuses": {
+        "tests/test_regression.py::FakerRegressionTests::test_evaluated_without_locale": "PASSED",
+        "tests/test_regression.py::FakerRegressionTests::test_locale_issue": "PASSED"
+      },
+      "receipt_path": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-historyfree-v1/guarded-gold-historyfree-v2.json",
+      "receipt_sha256": "d9bc111836160b07f4cfd7b2cff46f8262a9547da03f34422b54f5fdefd00c56"
+    }
+  },
+  "baseline_valid": true,
+  "gold_valid": true,
+  "host_pin_sha256": "6eb3b4676dda16acf4e71dc6b5cece6eaeb11844d3a77aa5ff04438f77bdf2df",
+  "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+  "venv_digest_stable_after_raw_transport_and_tests": true,
+  "external_receipt_access_denied": true,
+  "single_commit_no_future_objects": true
+}

@@ -1,0 +1,862 @@
+{
+  "kind": "single_arm_descriptive_analysis",
+  "never_pool_arms": true,
+  "registration_kind": "generated_adversary_diagnostic_pilot",
+  "registered": 60,
+  "integrity_assessment": {
+    "status": "invalid",
+    "reason": "Future Git history and gold-fix objects were exposed in prepared task repositories; at least one target retrieved the gold fix. This arm cannot support uncontaminated capability or causal adversary claims.",
+    "known_example": {
+      "run_id": "task-1-cell-1-rep-1",
+      "task": "django__asgiref-523",
+      "steps": [
+        28,
+        29,
+        34,
+        35,
+        36,
+        37,
+        38,
+        41
+      ],
+      "future_commit_prefix": "fae2ab1",
+      "actions": [
+        "git log --all -- tests/test_local.py",
+        "git show fae2ab1",
+        "inspection and checkout of future main"
+      ]
+    },
+    "affected_scope": "All three prepared repositories retained history. Outcomes remain preserved; no retrospective removal of contaminated runs.",
+    "remediation": "Fresh single-commit snapshots with no original Git object database, external pins, and guarded access checks before later arms."
+  },
+  "integrity_metadata": {},
+  "causal_eligible": false,
+  "integrity_gate_passed": false,
+  "integrity_warning": "Potential contamination: descriptive recorded outcomes only; not valid causal evidence.",
+  "terminal": 60,
+  "completed": 59,
+  "exclusive_reasons": {
+    "attributable_failure": 36,
+    "admission_rejected": 7,
+    "attributable_pass": 9,
+    "budget_censored": 3,
+    "infrastructure_or_verifier_unknown": 1,
+    "exposure_unknown": 4
+  },
+  "exclusive_reason_priority": [
+    "missing_terminal",
+    "control_identity_violation",
+    "admission_rejected",
+    "infrastructure_or_verifier_unknown",
+    "budget_censored",
+    "exposure_unknown",
+    "attributable_pass",
+    "attributable_failure"
+  ],
+  "task_cells": [
+    {
+      "task": "factoryboy__factory_boy-1067",
+      "cell_index": 0,
+      "executions": 5,
+      "diagnostic_measured": 5,
+      "known": 5,
+      "unknown": 0,
+      "passes": 0,
+      "complete": true,
+      "task_failure": true,
+      "severity": 1.0,
+      "known_failures": 5,
+      "failure_fraction_bounds": [
+        1.0,
+        1.0
+      ],
+      "bounds_kind": "identification bounds with all unknowns in denominator",
+      "pass_fraction_bounds": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "task": "factoryboy__factory_boy-1067",
+      "cell_index": 1,
+      "executions": 5,
+      "diagnostic_measured": 5,
+      "known": 5,
+      "unknown": 0,
+      "passes": 0,
+      "complete": true,
+      "task_failure": true,
+      "severity": 1.0,
+      "known_failures": 5,
+      "failure_fraction_bounds": [
+        1.0,
+        1.0
+      ],
+      "bounds_kind": "identification bounds with all unknowns in denominator",
+      "pass_fraction_bounds": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "task": "factoryboy__factory_boy-1067",
+      "cell_index": 2,
+      "executions": 5,
+      "diagnostic_measured": 5,
+      "known": 5,
+      "unknown": 0,
+      "passes": 1,
+      "complete": true,
+      "task_failure": true,
+      "severity": 0.8,
+      "known_failures": 4,
+      "failure_fraction_bounds": [
+        0.8,
+        0.8
+      ],
+      "bounds_kind": "identification bounds with all unknowns in denominator",
+      "pass_fraction_bounds": [
+        0.2,
+        0.2
+      ]
+    },
+    {
+      "task": "factoryboy__factory_boy-1067",
+      "cell_index": 3,
+      "executions": 5,
+      "diagnostic_measured": 5,
+      "known": 5,
+      "unknown": 0,
+      "passes": 0,
+      "complete": true,
+      "task_failure": true,
+      "severity": 1.0,
+      "known_failures": 5,
+      "failure_fraction_bounds": [
+        1.0,
+        1.0
+      ],
+      "bounds_kind": "identification bounds with all unknowns in denominator",
+      "pass_fraction_bounds": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "task": "django__asgiref-523",
+      "cell_index": 0,
+      "executions": 5,
+      "diagnostic_measured": 4,
+      "known": 2,
+      "unknown": 3,
+      "passes": 0,
+      "complete": false,
+      "task_failure": null,
+      "severity": null,
+      "known_failures": 2,
+      "failure_fraction_bounds": [
+        0.4,
+        1.0
+      ],
+      "bounds_kind": "identification bounds with all unknowns in denominator",
+      "pass_fraction_bounds": [
+        0.0,
+        0.6
+      ]
+    },
+    {
+      "task": "django__asgiref-523",
+      "cell_index": 1,
+      "executions": 5,
+      "diagnostic_measured": 3,
+      "known": 3,
+      "unknown": 2,
+      "passes": 1,
+      "complete": false,
+      "task_failure": null,
+      "severity": null,
+      "known_failures": 2,
+      "failure_fraction_bounds": [
+        0.4,
+        0.8
+      ],
+      "bounds_kind": "identification bounds with all unknowns in denominator",
+      "pass_fraction_bounds": [
+        0.2,
+        0.6
+      ]
+    },
+    {
+      "task": "django__asgiref-523",
+      "cell_index": 2,
+      "executions": 5,
+      "diagnostic_measured": 4,
+      "known": 4,
+      "unknown": 1,
+      "passes": 1,
+      "complete": false,
+      "task_failure": null,
+      "severity": null,
+      "known_failures": 3,
+      "failure_fraction_bounds": [
+        0.6,
+        0.8
+      ],
+      "bounds_kind": "identification bounds with all unknowns in denominator",
+      "pass_fraction_bounds": [
+        0.2,
+        0.4
+      ]
+    },
+    {
+      "task": "django__asgiref-523",
+      "cell_index": 3,
+      "executions": 5,
+      "diagnostic_measured": 4,
+      "known": 4,
+      "unknown": 1,
+      "passes": 1,
+      "complete": false,
+      "task_failure": null,
+      "severity": null,
+      "known_failures": 3,
+      "failure_fraction_bounds": [
+        0.6,
+        0.8
+      ],
+      "bounds_kind": "identification bounds with all unknowns in denominator",
+      "pass_fraction_bounds": [
+        0.2,
+        0.4
+      ]
+    },
+    {
+      "task": "stuartmaxwell__djpress-117",
+      "cell_index": 0,
+      "executions": 5,
+      "diagnostic_measured": 4,
+      "known": 4,
+      "unknown": 1,
+      "passes": 2,
+      "complete": false,
+      "task_failure": null,
+      "severity": null,
+      "known_failures": 2,
+      "failure_fraction_bounds": [
+        0.4,
+        0.6
+      ],
+      "bounds_kind": "identification bounds with all unknowns in denominator",
+      "pass_fraction_bounds": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "task": "stuartmaxwell__djpress-117",
+      "cell_index": 1,
+      "executions": 5,
+      "diagnostic_measured": 3,
+      "known": 2,
+      "unknown": 3,
+      "passes": 2,
+      "complete": false,
+      "task_failure": null,
+      "severity": null,
+      "known_failures": 0,
+      "failure_fraction_bounds": [
+        0.0,
+        0.6
+      ],
+      "bounds_kind": "identification bounds with all unknowns in denominator",
+      "pass_fraction_bounds": [
+        0.4,
+        1.0
+      ]
+    },
+    {
+      "task": "stuartmaxwell__djpress-117",
+      "cell_index": 2,
+      "executions": 5,
+      "diagnostic_measured": 5,
+      "known": 3,
+      "unknown": 2,
+      "passes": 1,
+      "complete": false,
+      "task_failure": null,
+      "severity": null,
+      "known_failures": 2,
+      "failure_fraction_bounds": [
+        0.4,
+        0.8
+      ],
+      "bounds_kind": "identification bounds with all unknowns in denominator",
+      "pass_fraction_bounds": [
+        0.2,
+        0.6
+      ]
+    },
+    {
+      "task": "stuartmaxwell__djpress-117",
+      "cell_index": 3,
+      "executions": 5,
+      "diagnostic_measured": 5,
+      "known": 3,
+      "unknown": 2,
+      "passes": 0,
+      "complete": false,
+      "task_failure": null,
+      "severity": null,
+      "known_failures": 3,
+      "failure_fraction_bounds": [
+        0.6,
+        1.0
+      ],
+      "bounds_kind": "identification bounds with all unknowns in denominator",
+      "pass_fraction_bounds": [
+        0.0,
+        0.4
+      ]
+    }
+  ],
+  "control_headroom": [
+    {
+      "task": "factoryboy__factory_boy-1067",
+      "cell_index": 0,
+      "executions": 5,
+      "diagnostic_measured": 5,
+      "known": 5,
+      "unknown": 0,
+      "passes": 0,
+      "complete": true,
+      "task_failure": true,
+      "severity": 1.0,
+      "known_failures": 5,
+      "failure_fraction_bounds": [
+        1.0,
+        1.0
+      ],
+      "bounds_kind": "identification bounds with all unknowns in denominator",
+      "pass_fraction_bounds": [
+        0.0,
+        0.0
+      ],
+      "calibration_gate": {
+        "eligible": false,
+        "engineering_only": true,
+        "rule": "five attributable executions and at least two passes",
+        "reason": "integrity_not_valid",
+        "outcome_threshold_met": false
+      }
+    },
+    {
+      "task": "django__asgiref-523",
+      "cell_index": 0,
+      "executions": 5,
+      "diagnostic_measured": 4,
+      "known": 2,
+      "unknown": 3,
+      "passes": 0,
+      "complete": false,
+      "task_failure": null,
+      "severity": null,
+      "known_failures": 2,
+      "failure_fraction_bounds": [
+        0.4,
+        1.0
+      ],
+      "bounds_kind": "identification bounds with all unknowns in denominator",
+      "pass_fraction_bounds": [
+        0.0,
+        0.6
+      ],
+      "calibration_gate": {
+        "eligible": false,
+        "engineering_only": true,
+        "rule": "five attributable executions and at least two passes",
+        "reason": "integrity_not_valid",
+        "outcome_threshold_met": false
+      }
+    },
+    {
+      "task": "stuartmaxwell__djpress-117",
+      "cell_index": 0,
+      "executions": 5,
+      "diagnostic_measured": 4,
+      "known": 4,
+      "unknown": 1,
+      "passes": 2,
+      "complete": false,
+      "task_failure": null,
+      "severity": null,
+      "known_failures": 2,
+      "failure_fraction_bounds": [
+        0.4,
+        0.6
+      ],
+      "bounds_kind": "identification bounds with all unknowns in denominator",
+      "pass_fraction_bounds": [
+        0.4,
+        0.6
+      ],
+      "calibration_gate": {
+        "eligible": false,
+        "engineering_only": true,
+        "rule": "five attributable executions and at least two passes",
+        "reason": "integrity_not_valid",
+        "outcome_threshold_met": false
+      }
+    }
+  ],
+  "model_usage": {
+    "input_tokens": 39634824,
+    "output_tokens": 632697,
+    "episodes_with_complete_usage": 58,
+    "episodes_usage_unknown": 2,
+    "is_lower_bound": true
+  },
+  "batch": {
+    "elapsed_seconds": 674.9197473209351,
+    "terminal_per_hour": 320.03805023842125,
+    "completed_per_hour": 314.7040827344475,
+    "diagnostic_measured_per_hour": 277.36631020663174,
+    "attributable_per_hour": 240.02853767881592,
+    "basis": "recorded summary elapsed; no mtime or sum-of-latencies estimate"
+  },
+  "episode_walls": {
+    "measured": 60,
+    "p50_seconds": 295.0642357217148,
+    "p90_seconds": 521.1915635585785,
+    "episodes": [
+      {
+        "id": "task-0-cell-0-rep-0",
+        "wall_seconds": 215.8261529682204,
+        "episodes_per_hour": 16.680091594507022,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-0-cell-1-rep-0",
+        "wall_seconds": 306.77403836511075,
+        "episodes_per_hour": 11.735021709090706,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-0-cell-2-rep-0",
+        "wall_seconds": 318.1104254471138,
+        "episodes_per_hour": 11.316824951398846,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-0-cell-3-rep-0",
+        "wall_seconds": 252.77942874934524,
+        "episodes_per_hour": 14.241665224940995,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-1-cell-0-rep-0",
+        "wall_seconds": 351.30733629502356,
+        "episodes_per_hour": 10.247437579774209,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-1-cell-1-rep-0",
+        "wall_seconds": 241.63112679123878,
+        "episodes_per_hour": 14.898742756392803,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-1-cell-2-rep-0",
+        "wall_seconds": 202.0778036918491,
+        "episodes_per_hour": 17.814920462465455,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-1-cell-3-rep-0",
+        "wall_seconds": 209.49858997482806,
+        "episodes_per_hour": 17.183886538007496,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-2-cell-0-rep-0",
+        "wall_seconds": 491.05185087490827,
+        "episodes_per_hour": 7.331201366181333,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-2-cell-1-rep-0",
+        "wall_seconds": 412.28841048665345,
+        "episodes_per_hour": 8.731751629279763,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-2-cell-2-rep-0",
+        "wall_seconds": 524.2352074002847,
+        "episodes_per_hour": 6.867146557844952,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-2-cell-3-rep-0",
+        "wall_seconds": 531.8623431632295,
+        "episodes_per_hour": 6.768668709631044,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-0-cell-0-rep-1",
+        "wall_seconds": 247.09868574887514,
+        "episodes_per_hour": 14.56907789326997,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-0-cell-1-rep-1",
+        "wall_seconds": 291.8781081624329,
+        "episodes_per_hour": 12.333915765949005,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-0-cell-2-rep-1",
+        "wall_seconds": 308.1212127795443,
+        "episodes_per_hour": 11.683713586366224,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-0-cell-3-rep-1",
+        "wall_seconds": 285.58825109899044,
+        "episodes_per_hour": 12.60556057942373,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-1-cell-0-rep-1",
+        "wall_seconds": 470.5991823701188,
+        "episodes_per_hour": 7.649822045735424,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-1-cell-1-rep-1",
+        "wall_seconds": 180.87469933647662,
+        "episodes_per_hour": 19.903281184191556,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-1-cell-2-rep-1",
+        "wall_seconds": 215.48512353282422,
+        "episodes_per_hour": 16.706489714830003,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-1-cell-3-rep-1",
+        "wall_seconds": 206.431912522763,
+        "episodes_per_hour": 17.43916410987585,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-2-cell-0-rep-1",
+        "wall_seconds": 522.9373871022835,
+        "episodes_per_hour": 6.884189367198297,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-2-cell-1-rep-1",
+        "wall_seconds": 428.3602858548984,
+        "episodes_per_hour": 8.404140437097977,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-2-cell-2-rep-1",
+        "wall_seconds": 477.4175437828526,
+        "episodes_per_hour": 7.54056914514523,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-2-cell-3-rep-1",
+        "wall_seconds": 541.2356600500643,
+        "episodes_per_hour": 6.651446432164133,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-0-cell-0-rep-2",
+        "wall_seconds": 167.83224866725504,
+        "episodes_per_hour": 21.44998966877561,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-0-cell-1-rep-2",
+        "wall_seconds": 326.12855797912925,
+        "episodes_per_hour": 11.038591720723776,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-0-cell-2-rep-2",
+        "wall_seconds": 237.26654473971575,
+        "episodes_per_hour": 15.172809145719398,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-0-cell-3-rep-2",
+        "wall_seconds": 253.1171543104574,
+        "episodes_per_hour": 14.222663058168191,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-1-cell-0-rep-2",
+        "wall_seconds": 611.9467001082376,
+        "episodes_per_hour": 5.882865287717465,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-1-cell-1-rep-2",
+        "wall_seconds": 174.92791894357651,
+        "episodes_per_hour": 20.579905264643262,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-1-cell-2-rep-2",
+        "wall_seconds": 185.4751623319462,
+        "episodes_per_hour": 19.409606950805923,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-1-cell-3-rep-2",
+        "wall_seconds": 358.60969130322337,
+        "episodes_per_hour": 10.038769412274501,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-2-cell-0-rep-2",
+        "wall_seconds": 520.9975831648335,
+        "episodes_per_hour": 6.909820921109782,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-2-cell-1-rep-2",
+        "wall_seconds": 331.4204873004928,
+        "episodes_per_hour": 10.862333917021692,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-2-cell-2-rep-2",
+        "wall_seconds": 436.3233295623213,
+        "episodes_per_hour": 8.250762120859278,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-2-cell-3-rep-2",
+        "wall_seconds": 673.0107453884557,
+        "episodes_per_hour": 5.349097357906392,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-0-cell-0-rep-3",
+        "wall_seconds": 298.2503632809967,
+        "episodes_per_hour": 12.07039602700587,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-0-cell-1-rep-3",
+        "wall_seconds": 187.57773225475103,
+        "episodes_per_hour": 19.192043515649328,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-0-cell-2-rep-3",
+        "wall_seconds": 228.66175353061408,
+        "episodes_per_hour": 15.743778504340119,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-0-cell-3-rep-3",
+        "wall_seconds": 213.72051964793354,
+        "episodes_per_hour": 16.844428442951376,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-1-cell-0-rep-3",
+        "wall_seconds": 212.96014156378806,
+        "episodes_per_hour": 16.90457178308031,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-1-cell-1-rep-3",
+        "wall_seconds": 139.09821981936693,
+        "episodes_per_hour": 25.880992615685255,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-1-cell-2-rep-3",
+        "wall_seconds": 210.35273843444884,
+        "episodes_per_hour": 17.114110454625006,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-1-cell-3-rep-3",
+        "wall_seconds": 198.23300193063915,
+        "episodes_per_hour": 18.160447377271844,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-2-cell-0-rep-3",
+        "wall_seconds": 369.72615775000304,
+        "episodes_per_hour": 9.736936174351516,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-2-cell-1-rep-3",
+        "wall_seconds": 375.9217428313568,
+        "episodes_per_hour": 9.576461241336085,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-2-cell-2-rep-3",
+        "wall_seconds": 376.22282461542636,
+        "episodes_per_hour": 9.568797437210003,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-2-cell-3-rep-3",
+        "wall_seconds": 375.27188430260867,
+        "episodes_per_hour": 9.593044804542462,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-0-cell-0-rep-4",
+        "wall_seconds": 239.12285008095205,
+        "episodes_per_hour": 15.055022967404684,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-0-cell-1-rep-4",
+        "wall_seconds": 273.58019597735256,
+        "episodes_per_hour": 13.15884721530799,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-0-cell-2-rep-4",
+        "wall_seconds": 268.32065935246646,
+        "episodes_per_hour": 13.41678277285028,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-0-cell-3-rep-4",
+        "wall_seconds": 317.176300117746,
+        "episodes_per_hour": 11.350154468236008,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-1-cell-0-rep-4",
+        "wall_seconds": 163.58809430338442,
+        "episodes_per_hour": 22.0064914585017,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-1-cell-1-rep-4",
+        "wall_seconds": 188.26809988357127,
+        "episodes_per_hour": 19.121667463719618,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-1-cell-2-rep-4",
+        "wall_seconds": 113.90207497868687,
+        "episodes_per_hour": 31.60609673417824,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-1-cell-3-rep-4",
+        "wall_seconds": 153.5029786368832,
+        "episodes_per_hour": 23.45231364217322,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-2-cell-0-rep-4",
+        "wall_seconds": 366.33575130905956,
+        "episodes_per_hour": 9.827050696351108,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-2-cell-1-rep-4",
+        "wall_seconds": 315.5518232965842,
+        "episodes_per_hour": 11.408585640198929,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-2-cell-2-rep-4",
+        "wall_seconds": 312.67825409397483,
+        "episodes_per_hour": 11.513432587218,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      },
+      {
+        "id": "task-2-cell-3-rep-4",
+        "wall_seconds": 310.78747083060443,
+        "episodes_per_hour": 11.583478543644992,
+        "meaning": "reciprocal episode latency, not batch capacity"
+      }
+    ]
+  },
+  "protected": false,
+  "confirmed": false,
+  "inference": "descriptive only",
+  "evidence_sha256": {
+    "registration.json": "6ca6333b3d8ead5becc44808ba85b43bb12a58c1aec7638d1db3a68041613c00",
+    "integrity-assessment.json": "ec52bdbd677e43338a546dd48dd4e4d694a14aa4649536cf4d7e6c39bbc7f28c",
+    "launch-config.json": "39ec04ecd9c64a58ae86910234774d9fbe3bd48cf6385e3f6821773ae1b1182b",
+    "task-0-cell-0-rep-0/result.json": "62a226e0b6d4259ba7c64c09a8c1054c1df033a099e9b7b8403217fac4791981",
+    "task-0-cell-1-rep-0/result.json": "d9c91e2f17f5c8ae6d0e78ca1365922705743e90c1dde1e8e655356a24b341f3",
+    "task-0-cell-2-rep-0/result.json": "0eab58be8c8f6d30120747c0b4a2d5d04d05f52d637aee08d72c46c2afb7a02d",
+    "task-0-cell-3-rep-0/result.json": "2d8bcefede192817abe27c3e101a8421325510d1a49291d0b60361d24c6773f7",
+    "task-1-cell-0-rep-0/result.json": "c4513f0e59df3ab79cd0dfd3d29b13149ab107b6b2433b4502ee82cf94d3293a",
+    "task-1-cell-1-rep-0/result.json": "d079bcd9421ea204951e299b24efca8b5f0749c30721d55ac6776b86369c15f2",
+    "task-1-cell-2-rep-0/result.json": "4ab1e11f9605a0d7fc92ebfa2f4d3a16575e5cb722927eb321ee53311a898480",
+    "task-1-cell-3-rep-0/result.json": "d2614cbcd9d817cd8ced8cc3523b38c4d451f420de409c134c5859966917ec0c",
+    "task-2-cell-0-rep-0/result.json": "90a0fb2b4de133647ecd42acd6cd24be72643e855f2c63a9609fcb52557686e3",
+    "task-2-cell-1-rep-0/result.json": "95b253da9053e9090fdfad6cca2cef196dfbb343641f8bf9dad2c90f33088ecc",
+    "task-2-cell-2-rep-0/result.json": "209fc3b95e61305a0e1b3f9bad43906868c8fc09bcc4e8b1c7f9c305aa99d0aa",
+    "task-2-cell-3-rep-0/result.json": "bb13fb5210b0486dd2c0a7fbb9a014240f163e84ac08ec4844bdaeb5e9d3248e",
+    "task-0-cell-0-rep-1/result.json": "6dfa6b6e6ab8f1c877ffa439879acdf84809dc9e3a41fe1cc30ed541b9b2c295",
+    "task-0-cell-1-rep-1/result.json": "705a0342fbf451d8b016954be5ef44b22119ee252340603ee0612ccef43b06be",
+    "task-0-cell-2-rep-1/result.json": "47674e0207dbdc843f6abd15ebab9749c28be04e3a743ed43494c7003aea4b95",
+    "task-0-cell-3-rep-1/result.json": "672f8dfcdc5a38f549b176c0ebf35a0d748ab76e3baa6a3198138aa3987edf03",
+    "task-1-cell-0-rep-1/result.json": "e38c7e0cd6239820a4bc81b5dbd26ac683cb05745431cecc460d46ffeceabcd8",
+    "task-1-cell-1-rep-1/result.json": "8d3c1f8bf2f4c64bc57d6f6ec663f2ddd19565a6a1b1258fcdc82dee74f22b0e",
+    "task-1-cell-2-rep-1/result.json": "7a97180bd20088e3f27d20556a76f2f7377926a3cbb60bb9c16ed2156a778780",
+    "task-1-cell-3-rep-1/result.json": "7d0aa7d9a04ad1f189fd513202f11865a7adb90a66e1f4503b62e237c59953e5",
+    "task-2-cell-0-rep-1/result.json": "9e1701e6dba7c75c1ba6ed00377f408f83b42145b5fbb5532893fa5ba86c4c3f",
+    "task-2-cell-1-rep-1/result.json": "56484ff36e8b1ac601529c6b1599fa7992e6a8fa72c8ce7f67b3a5e3533f2bcb",
+    "task-2-cell-2-rep-1/result.json": "f9a4840ff6561389310212dd76ba0349f8df8017f557f0d7d6e0b57680bf88fe",
+    "task-2-cell-3-rep-1/result.json": "b58dff6981ccee9e010e904b8bcfd0abcec0bcfe9f864f3666556fe01721dec1",
+    "task-0-cell-0-rep-2/result.json": "251ad10ee9a5c1be2343068211046fa776a1f5b9a7b17949b40c68237d1b0c44",
+    "task-0-cell-1-rep-2/result.json": "1c1c14b893ff787b3522e03341c1b9e2fd93fe79813e1f114b7f6b153da84f9a",
+    "task-0-cell-2-rep-2/result.json": "94e016a11695616fd8a5ee3459e01f06b1deb35466d763101b687026475fd8a9",
+    "task-0-cell-3-rep-2/result.json": "f634892b74c3523802a823226bf3f3701d47b7653096247c4e4cfe453d751b38",
+    "task-1-cell-0-rep-2/result.json": "64c97aebc661f62262bec22d45745ea649e7570479786d4820df78bc7a0a8f75",
+    "task-1-cell-1-rep-2/result.json": "e9838fbe762a13584ff27424a8a9b4aa68d913e5e07d517292c4dfab2debae17",
+    "task-1-cell-2-rep-2/result.json": "61741b2ea102b6833607f546cc5dec3e1333545ae186269d8fadf818fd2a11a8",
+    "task-1-cell-3-rep-2/result.json": "2f9bb1f627ed78ce6d440f51285ecfc172c951143ef9089cfbd81818c450e87d",
+    "task-2-cell-0-rep-2/result.json": "f04970ac77a3f49d86de5975c82a1a7b10e2bdcadbdc1d8205b59ab0f1d58236",
+    "task-2-cell-1-rep-2/result.json": "7cfb26a28c02fdec8df7fffe18448ae6c7cfa10c8624192ffd87d32587121457",
+    "task-2-cell-2-rep-2/result.json": "51f70d33e77377eaa9fdca2bed9197f269819cf44a2b73d1e9e4bc3ada37a024",
+    "task-2-cell-3-rep-2/result.json": "ff97a84bdb34c59ee1d4fdfd5f0dd5909523994e91f4192ca4712acb674c6bfa",
+    "task-0-cell-0-rep-3/result.json": "1947e72f4c461bc1b36bbee9a28b9e2e492b66f2c589de41a488ccf7c081dabe",
+    "task-0-cell-1-rep-3/result.json": "c0f6d52e78c0a2fa6eefac31f4099023217ba3cfaeec7bbf16d2251b0cde6dd8",
+    "task-0-cell-2-rep-3/result.json": "375ab9f7619b101effc070fc8bf9eeded463c84a144ce8cf4ee2c9c40405b252",
+    "task-0-cell-3-rep-3/result.json": "997ce948f41bdc7ba86e080125501b5d37af9687c0036fa484fae060cce350e4",
+    "task-1-cell-0-rep-3/result.json": "ac0e7060dd4d66d400e0a3a7921ae972a516d5c5f7c6a6a02940f65d8b0a0377",
+    "task-1-cell-1-rep-3/result.json": "f1e0ee639ded84ce0399190e80cb0218c8caf30586671e4ff90c8201b636511d",
+    "task-1-cell-2-rep-3/result.json": "12312dd89c4bb3e536c442e2a5f080f8d1fef5514cc0bcc2c6ee5b64a03c0d5d",
+    "task-1-cell-3-rep-3/result.json": "124680f08e0c7f23f4245c38410847ab00578bc92b992663afb8b7d87f4e4d67",
+    "task-2-cell-0-rep-3/result.json": "6ab14aa289406674ea5d532e20d9214148944f1432b706e2dd877114fe7e2980",
+    "task-2-cell-1-rep-3/result.json": "9d59c4c1e12d9b4b7d259965dbd284e0a543795198133bcae9286f3868997e16",
+    "task-2-cell-2-rep-3/result.json": "dd67c77905991710ce04b4fdfebe4725afc358604db1650775656e4079b610ec",
+    "task-2-cell-3-rep-3/result.json": "0e450ba256a4f1e520024cc1fc32884b0c3ce328a84dc75038ac7d3af0e947c0",
+    "task-0-cell-0-rep-4/result.json": "7292c9a1b2df31e8716aa642c48728b39d0ef2ff7bb4a0d38775e9588d873bcc",
+    "task-0-cell-1-rep-4/result.json": "01c6085bfc5f70cb6aed0b701486e10c04d6be4dd166329456e02706412295cc",
+    "task-0-cell-2-rep-4/result.json": "fa455a1bafff6acceae3813cfe2421091b6d54c58d1c3a3bf34c9691b69a1635",
+    "task-0-cell-3-rep-4/result.json": "408e553992b1963e5183d2ef32b88e7abba4de88e5c7322dbb86ff470e92f798",
+    "task-1-cell-0-rep-4/result.json": "6adc9ed043f5a0670663e703bd71de071015d9ebc6c901b9617698f5ff3aa40f",
+    "task-1-cell-1-rep-4/result.json": "9af3a09948bdd8423c71d38dead4eb77f8e9616e0f55d5945638db8de4a4c535",
+    "task-1-cell-2-rep-4/result.json": "264fa0f90d5cfcf618e434ca6daedb95bd3264778feb95027246a7e3a81f36ac",
+    "task-1-cell-3-rep-4/result.json": "7d705e77651658f5b6024113ca613d6c8b6f7c62ffadb5bafdeaf5d09e660729",
+    "task-2-cell-0-rep-4/result.json": "1e7407d12e3d8b21600ca86de9ce400fe3525f01ab32c9c4cb9b464fe4173dc4",
+    "task-2-cell-1-rep-4/result.json": "5c789d9195d4da460d768807dc8864b702806c6e06f20a5af1b78bf1791a2222",
+    "task-2-cell-2-rep-4/result.json": "14d19f7488fd2e78ae0066dc435e89762badd9ffcca2b1f81f34de815088d392",
+    "task-2-cell-3-rep-4/result.json": "03baf74663fd611a9d91c29759781072076768824fd60ac0e0291a8b4b35d0cd",
+    "summary.json": "eb9a954829d814a4b7d1edddb702fdc666946038bc9571be8260008add73f8d0"
+  }
+}

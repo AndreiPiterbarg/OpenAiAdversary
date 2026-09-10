@@ -1,0 +1,13 @@
+{
+  "source_pin": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/host-runtime-pin.json",
+  "original_task_commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+  "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+  "worktree_preserved": true,
+  "venv_unchanged": true,
+  "commit_count": 1,
+  "object_count": 56,
+  "unreachable_objects": [],
+  "remotes": [],
+  "alternates": false,
+  "repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a"
+}

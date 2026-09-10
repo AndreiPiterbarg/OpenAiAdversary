@@ -1,0 +1,165 @@
+{
+  "scope": "Actual compatibility runs; resource headroom varied per run. These are not the final experiment resource registration.",
+  "resource_limit_caveat": "NPROC and per-process address-space bounds are conservative admission bounds; tree polling is a kill trigger, not a hard filesystem quota.",
+  "runs": [
+    {
+      "runtime_id": "factoryboy__factory_boy-1067-v3",
+      "phases": {
+        "baseline": {
+          "exit": 1,
+          "attestation": {
+            "guard_sha256": "a4077009c538a799eb6467b4b22e3859cb5f69c460e238ae34f3bbdbb84bac44",
+            "python_executable": "/usr/bin/python3.12",
+            "checks": {
+              "/proc/1/mem": true,
+              "/proc/self/status": true,
+              "network": true,
+              "signal": true,
+              "system_write": true
+            },
+            "scope": "all target tool commands use inherited kernel guard",
+            "runtime_kind": "host_python_guarded",
+            "host_nproc": 1267,
+            "address_space_bytes_per_process": 268435456,
+            "conservative_address_space_bound": 340107722752,
+            "host_runtime": "HOST_RUNTIME_ROOT/factoryboy__factory_boy-1067-v3/venv",
+            "observed_uid_threads": 1203,
+            "observed_mem_available": 1480128679936
+          },
+          "raw_transport_and_test_venv_hash_stable": true,
+          "raw_receipt_source_id": "factoryboy__factory_boy-1067-v3/guarded-baseline-venvfix.json"
+        },
+        "gold": {
+          "exit": 0,
+          "attestation": {
+            "guard_sha256": "a4077009c538a799eb6467b4b22e3859cb5f69c460e238ae34f3bbdbb84bac44",
+            "python_executable": "/usr/bin/python3.12",
+            "checks": {
+              "/proc/1/mem": true,
+              "/proc/self/status": true,
+              "network": true,
+              "signal": true,
+              "system_write": true
+            },
+            "scope": "all target tool commands use inherited kernel guard",
+            "runtime_kind": "host_python_guarded",
+            "host_nproc": 1267,
+            "address_space_bytes_per_process": 268435456,
+            "conservative_address_space_bound": 340107722752,
+            "host_runtime": "HOST_RUNTIME_ROOT/factoryboy__factory_boy-1067-v3/venv",
+            "observed_uid_threads": 1203,
+            "observed_mem_available": 1479552237568
+          },
+          "raw_transport_and_test_venv_hash_stable": true,
+          "raw_receipt_source_id": "factoryboy__factory_boy-1067-v3/guarded-gold-venvfix.json"
+        }
+      }
+    },
+    {
+      "runtime_id": "django__asgiref-523-v2",
+      "phases": {
+        "baseline": {
+          "exit": 1,
+          "attestation": {
+            "guard_sha256": "a4077009c538a799eb6467b4b22e3859cb5f69c460e238ae34f3bbdbb84bac44",
+            "python_executable": "/usr/bin/python3.12",
+            "checks": {
+              "/proc/1/mem": true,
+              "/proc/self/status": true,
+              "network": true,
+              "signal": true,
+              "system_write": true
+            },
+            "scope": "all target tool commands use inherited kernel guard",
+            "runtime_kind": "host_python_guarded",
+            "host_nproc": 1267,
+            "address_space_bytes_per_process": 268435456,
+            "conservative_address_space_bound": 340107722752,
+            "host_runtime": "HOST_RUNTIME_ROOT/django__asgiref-523-v2/venv",
+            "observed_uid_threads": 1203,
+            "observed_mem_available": 1478979100672
+          },
+          "raw_transport_and_test_venv_hash_stable": true,
+          "raw_receipt_source_id": "django__asgiref-523-v2/guarded-baseline-venvfix.json"
+        },
+        "gold": {
+          "exit": 0,
+          "attestation": {
+            "guard_sha256": "a4077009c538a799eb6467b4b22e3859cb5f69c460e238ae34f3bbdbb84bac44",
+            "python_executable": "/usr/bin/python3.12",
+            "checks": {
+              "/proc/1/mem": true,
+              "/proc/self/status": true,
+              "network": true,
+              "signal": true,
+              "system_write": true
+            },
+            "scope": "all target tool commands use inherited kernel guard",
+            "runtime_kind": "host_python_guarded",
+            "host_nproc": 1267,
+            "address_space_bytes_per_process": 268435456,
+            "conservative_address_space_bound": 340107722752,
+            "host_runtime": "HOST_RUNTIME_ROOT/django__asgiref-523-v2/venv",
+            "observed_uid_threads": 1203,
+            "observed_mem_available": 1478631215104
+          },
+          "raw_transport_and_test_venv_hash_stable": true,
+          "raw_receipt_source_id": "django__asgiref-523-v2/guarded-gold-venvfix.json"
+        }
+      }
+    },
+    {
+      "runtime_id": "stuartmaxwell__djpress-117-v2",
+      "phases": {
+        "baseline": {
+          "exit": 1,
+          "attestation": {
+            "guard_sha256": "a4077009c538a799eb6467b4b22e3859cb5f69c460e238ae34f3bbdbb84bac44",
+            "python_executable": "/usr/bin/python3.12",
+            "checks": {
+              "/proc/1/mem": true,
+              "/proc/self/status": true,
+              "network": true,
+              "signal": true,
+              "system_write": true
+            },
+            "scope": "all target tool commands use inherited kernel guard",
+            "runtime_kind": "host_python_guarded",
+            "host_nproc": 1267,
+            "address_space_bytes_per_process": 268435456,
+            "conservative_address_space_bound": 340107722752,
+            "host_runtime": "HOST_RUNTIME_ROOT/stuartmaxwell__djpress-117-v2/venv",
+            "observed_uid_threads": 1203,
+            "observed_mem_available": 1478067654656
+          },
+          "raw_transport_and_test_venv_hash_stable": true,
+          "raw_receipt_source_id": "stuartmaxwell__djpress-117-v2/guarded-baseline-venvfix.json"
+        },
+        "gold": {
+          "exit": 0,
+          "attestation": {
+            "guard_sha256": "a4077009c538a799eb6467b4b22e3859cb5f69c460e238ae34f3bbdbb84bac44",
+            "python_executable": "/usr/bin/python3.12",
+            "checks": {
+              "/proc/1/mem": true,
+              "/proc/self/status": true,
+              "network": true,
+              "signal": true,
+              "system_write": true
+            },
+            "scope": "all target tool commands use inherited kernel guard",
+            "runtime_kind": "host_python_guarded",
+            "host_nproc": 1267,
+            "address_space_bytes_per_process": 268435456,
+            "conservative_address_space_bound": 340107722752,
+            "host_runtime": "HOST_RUNTIME_ROOT/stuartmaxwell__djpress-117-v2/venv",
+            "observed_uid_threads": 1203,
+            "observed_mem_available": 1476561891328
+          },
+          "raw_transport_and_test_venv_hash_stable": true,
+          "raw_receipt_source_id": "stuartmaxwell__djpress-117-v2/guarded-gold-venvfix.json"
+        }
+      }
+    }
+  ]
+}

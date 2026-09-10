@@ -1,0 +1,21 @@
+{
+  "preserved_original_receipts": true,
+  "errata": [
+    {
+      "arms": [
+        "astra-strong-asgiref-1-v1",
+        "astra-strong-asgiref-2-v1",
+        "astra-strong-asgiref-3-v1",
+        "astra-strong-asgiref-4-v1"
+      ],
+      "field": "integrity-assessment explanatory text",
+      "correction": "Some copied explanation names Factory. Exact TaskPin and result task keys bind these arms to Asgiref."
+    },
+    {
+      "arm": "astra-prepatch-v2",
+      "field": "first-source-read exposure description",
+      "correction": "Original gate fixture used100000 while livearmused4000. Live clause-exposure audits use4000; note realization does not prove exposure before firstsourceedit. The preserved timing audit/fixture qualification correct this wording."
+    }
+  ],
+  "authority": "Frozen task/pin/program hashes and per-episode raw observations/replay receipts determine claims."
+}

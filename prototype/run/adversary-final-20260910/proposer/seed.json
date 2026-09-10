@@ -1,0 +1,9 @@
+{
+  "instance_id": "factoryboy__factory_boy-1067",
+  "repo": "FactoryBoy/factory_boy",
+  "base_commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+  "miner": "ci_drift",
+  "sha": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+  "ts": 1714035525,
+  "subject": "Don't duplicate CI checks on PRs"
+}

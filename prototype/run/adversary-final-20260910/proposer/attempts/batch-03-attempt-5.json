@@ -1,0 +1,6 @@
+{
+  "attempt": 5,
+  "status": "rejected",
+  "error_type": "ProposalError",
+  "reason": "malformed proposal: 1 validation error for MinimalPair\n  Value error, a minimal pair differs in exactly one factor, got ['ci_branch_check', 'locale_check'] [type=value_error, input_value={'control': Cell(levels={..._branch_check': 'off'})}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error"
+}

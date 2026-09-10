@@ -1,0 +1,60 @@
+{
+  "scope": "Completed main Astra arms and final snapshot; no overlappingdeadlinearchive",
+  "archives": [
+    {
+      "archive": "astra-prepatch-v2.tar.gz",
+      "sha256": "19e2e802ef4546da08d1f2b9920bfeeab7a32000391cd226b78e47c0cf3271f3",
+      "bytes": 4639990
+    },
+    {
+      "archive": "astra-strong-1-v1.tar.gz",
+      "sha256": "32ef8c50352a42695085a4140adcb1c129aa876cba5307ec554c271963e2d480",
+      "bytes": 1159535
+    },
+    {
+      "archive": "astra-strong-2-v1.tar.gz",
+      "sha256": "f8db68cbf111f6c1bfba3267bb4cb36bf1ec4a2b2c5449370dde9464ea3027f0",
+      "bytes": 1280392
+    },
+    {
+      "archive": "astra-strong-3-v1.tar.gz",
+      "sha256": "9a80dd6d3f1d985fe00f9732c22573400db49a6ee11a0f59bc4c0b8d46a993e7",
+      "bytes": 1319410
+    },
+    {
+      "archive": "astra-strong-4-v1.tar.gz",
+      "sha256": "f5a79d15d370eda02038cf9aacbcdf2c6bc30b2cba5e92eadfcaa407c28843f3",
+      "bytes": 1293392
+    },
+    {
+      "archive": "astra-strong-asgiref-1-v1.tar.gz",
+      "sha256": "c7b96d4e7ce3a8d0987cff94be1db7c25b7fc8306d3b578f4454cda13dbc4494",
+      "bytes": 1116920
+    },
+    {
+      "archive": "astra-strong-asgiref-2-v1.tar.gz",
+      "sha256": "39e66507fbe5146b0a258b066661690fb963d4aab74c017ab958cd76774a8c16",
+      "bytes": 1078806
+    },
+    {
+      "archive": "astra-strong-asgiref-3-v1.tar.gz",
+      "sha256": "27add7fb76ab09ca4ae42fd36721142310fb0190fea6da5f795e9b284ca3cadd",
+      "bytes": 1168502
+    },
+    {
+      "archive": "astra-strong-asgiref-4-v1.tar.gz",
+      "sha256": "5ae6e32d479a9a4a9ae98796ee070f1d91cb62e1cf885c5848e76e7c974f8d6f",
+      "bytes": 1090244
+    },
+    {
+      "archive": "runtime-and-registration-support-v1.tar.gz",
+      "sha256": "ab6ca26f5d452e290c4d207cc8331533cfe2a05f2fd95d70dcbf71acab6e5ee0",
+      "bytes": 785940
+    },
+    {
+      "archive": "distinct50-final-completed-snapshot.tar.gz",
+      "sha256": "6e830222840a87d917cf52f535622de2b82be9b84f233513fe1063245dc6d0f8",
+      "bytes": 2346390
+    }
+  ]
+}

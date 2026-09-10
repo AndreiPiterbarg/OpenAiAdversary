@@ -1,0 +1,170 @@
+{
+  "arms": {
+    "calibration-v1": {
+      "saved_tool_traces": 15,
+      "known_fix_hash_visible_count": 3,
+      "episodes": [
+        {
+          "episode": "task-1-rep-0",
+          "tools_sha256": "d61cf8fa8b487b0ece91aea7fca593e98a8521a1af06f166cc0eb87e099add2b",
+          "known_gold_fix_hash_visible": true,
+          "git_show_known_fix_literal_present": true
+        },
+        {
+          "episode": "task-1-rep-1",
+          "tools_sha256": "edc8f24ccaa47564e4f84a4f02f337038c4ddb87750175fbfcf9ddd39718217b",
+          "known_gold_fix_hash_visible": true,
+          "git_show_known_fix_literal_present": true
+        },
+        {
+          "episode": "task-1-rep-4",
+          "tools_sha256": "d64c59db24ac303c6b22b818589d4dc5e0cdb8ec1c9c7ce840de2cd52cd3717c",
+          "known_gold_fix_hash_visible": true,
+          "git_show_known_fix_literal_present": true
+        }
+      ],
+      "all_attempts_potentially_contaminated": true
+    },
+    "pilot-v2": {
+      "saved_tool_traces": 40,
+      "known_fix_hash_visible_count": 10,
+      "episodes": [
+        {
+          "episode": "task-1-cell-0-rep-2",
+          "tools_sha256": "97666215f70e1078bc21c861028f1c192417417b9c5332b62410e90e15d5288e",
+          "known_gold_fix_hash_visible": true,
+          "git_show_known_fix_literal_present": true
+        },
+        {
+          "episode": "task-1-cell-0-rep-3",
+          "tools_sha256": "939be32cb3b3c2813129ad829f66ab74f376cd62d5eb8ec7c7738716c9051cff",
+          "known_gold_fix_hash_visible": true,
+          "git_show_known_fix_literal_present": true
+        },
+        {
+          "episode": "task-1-cell-1-rep-0",
+          "tools_sha256": "0144e6537b6fb2cf3e752554dc3acd9c15d9839065809d626d5ee286469baff6",
+          "known_gold_fix_hash_visible": true,
+          "git_show_known_fix_literal_present": true
+        },
+        {
+          "episode": "task-1-cell-1-rep-1",
+          "tools_sha256": "39c09d3c490fe035d9f8072a0646e8dd86e010a572fea47dddbd080be1df0585",
+          "known_gold_fix_hash_visible": true,
+          "git_show_known_fix_literal_present": true
+        },
+        {
+          "episode": "task-1-cell-1-rep-2",
+          "tools_sha256": "f280316ba6fbadfeaef58fe302b6058038acf02eae551f52e2647dfa496c7201",
+          "known_gold_fix_hash_visible": true,
+          "git_show_known_fix_literal_present": true
+        },
+        {
+          "episode": "task-1-cell-1-rep-3",
+          "tools_sha256": "ffa3b849b72408e944fe036b9908dc2422b48a96803dffdeaed1a7f43605a003",
+          "known_gold_fix_hash_visible": true,
+          "git_show_known_fix_literal_present": true
+        },
+        {
+          "episode": "task-1-cell-1-rep-4",
+          "tools_sha256": "dc1e2e1537abbdb91816600ac075b878509c71fb3de34b5ebe7d445d18e7da91",
+          "known_gold_fix_hash_visible": true,
+          "git_show_known_fix_literal_present": true
+        },
+        {
+          "episode": "task-1-cell-2-rep-1",
+          "tools_sha256": "20b463b2042277ab529734b2429f2d3b26eab88b18d82c5e8707e23f45df0c5c",
+          "known_gold_fix_hash_visible": true,
+          "git_show_known_fix_literal_present": true
+        },
+        {
+          "episode": "task-1-cell-2-rep-4",
+          "tools_sha256": "eea8ed521963de486531207cd18ee4c22e25d9708c378fc64bb6262188558f11",
+          "known_gold_fix_hash_visible": true,
+          "git_show_known_fix_literal_present": true
+        },
+        {
+          "episode": "task-1-cell-3-rep-3",
+          "tools_sha256": "31bcb6602bd27e843778ba308cf44bc84c7df1f1a647460d530ff8dee51b01a0",
+          "known_gold_fix_hash_visible": true,
+          "git_show_known_fix_literal_present": true
+        }
+      ],
+      "all_attempts_potentially_contaminated": true
+    },
+    "final-v3": {
+      "saved_tool_traces": 60,
+      "known_fix_hash_visible_count": 11,
+      "episodes": [
+        {
+          "episode": "task-1-cell-0-rep-1",
+          "tools_sha256": "e16075e46e23aaf207b9bd74e9b527a827afe774f3c857bea51e88dbc84201a5",
+          "known_gold_fix_hash_visible": true,
+          "git_show_known_fix_literal_present": true
+        },
+        {
+          "episode": "task-1-cell-1-rep-0",
+          "tools_sha256": "8f20dbd83b0701b06c7e29c53b05ff439442fe8d9ce6095d9ac736eb259d3cfd",
+          "known_gold_fix_hash_visible": true,
+          "git_show_known_fix_literal_present": true
+        },
+        {
+          "episode": "task-1-cell-1-rep-1",
+          "tools_sha256": "c28c811bfef7c4b9b278f946cfbf7807c14efa9ebc79159d152abd74911b1f08",
+          "known_gold_fix_hash_visible": true,
+          "git_show_known_fix_literal_present": true
+        },
+        {
+          "episode": "task-1-cell-1-rep-2",
+          "tools_sha256": "51cd25f456fbb83d33d3a3831af1a758c24f2e9bec5aa2ccd07f2230d74b9c2d",
+          "known_gold_fix_hash_visible": true,
+          "git_show_known_fix_literal_present": true
+        },
+        {
+          "episode": "task-1-cell-1-rep-4",
+          "tools_sha256": "32f3e409e797dbe74488558416a22a3ec370de35af7629687face20b17cbec7a",
+          "known_gold_fix_hash_visible": true,
+          "git_show_known_fix_literal_present": true
+        },
+        {
+          "episode": "task-1-cell-2-rep-1",
+          "tools_sha256": "bf6da2756a4ce6a6eb345c9a7118fe37c1ed405960771f0effa66abc9bb5451f",
+          "known_gold_fix_hash_visible": true,
+          "git_show_known_fix_literal_present": true
+        },
+        {
+          "episode": "task-1-cell-2-rep-2",
+          "tools_sha256": "f11b62ae687d701d83be394519516992fb92f70ccefab98913fc508b9bc83f3c",
+          "known_gold_fix_hash_visible": true,
+          "git_show_known_fix_literal_present": true
+        },
+        {
+          "episode": "task-1-cell-2-rep-3",
+          "tools_sha256": "02d74695661ae89914e0e56bfa4d36dc4384e513632e1df017af903fcd14500d",
+          "known_gold_fix_hash_visible": true,
+          "git_show_known_fix_literal_present": true
+        },
+        {
+          "episode": "task-1-cell-3-rep-0",
+          "tools_sha256": "1a94738d197fe31cd2110f28951b45599052dc73f26152ebb6d40c321b8161f1",
+          "known_gold_fix_hash_visible": true,
+          "git_show_known_fix_literal_present": true
+        },
+        {
+          "episode": "task-1-cell-3-rep-3",
+          "tools_sha256": "280d854d8e72a193102118f81a1b6da82b8efae48c698cff57caa0e6875e6318",
+          "known_gold_fix_hash_visible": true,
+          "git_show_known_fix_literal_present": true
+        },
+        {
+          "episode": "task-1-cell-3-rep-4",
+          "tools_sha256": "246d620b08c5e26dee7ae470a2e5d8907949597f060eb007e8447919ca78555f",
+          "known_gold_fix_hash_visible": true,
+          "git_show_known_fix_literal_present": true
+        }
+      ],
+      "all_attempts_potentially_contaminated": true
+    }
+  },
+  "qualification": "Known-hash scan is a lower bound, not proof of clean episodes when absent. Prior object stores contained future source and exact task repair."
+}

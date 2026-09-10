@@ -1,0 +1,154 @@
+{
+  "old_arms_preserved": true,
+  "repairs": [
+    {
+      "runtime_id": "factoryboy__factory_boy-1067-v3",
+      "venv_repair": {
+        "old_pin_path": "HOST_RUNTIME_ROOT/factoryboy__factory_boy-1067-v2/host-runtime-pin.json",
+        "cause": "trusted python -I ignores PYTHONDONTWRITEBYTECODE and startup .pth writes _virtualenv bytecode",
+        "only_added_paths": [
+          "lib/python3.12/site-packages/__pycache__",
+          "lib/python3.12/site-packages/__pycache__/_virtualenv.cpython-312.pyc"
+        ],
+        "reconstructed_old_digest_matches": true,
+        "rewritten_bin_paths": [
+          "activate.bat",
+          "activate.fish",
+          "activate.nu",
+          "faker",
+          "activate.csh",
+          "activate",
+          "py.test",
+          "pytest"
+        ],
+        "pin_audit": {
+          "factoryboy__factory_boy-1067-v2": {
+            "expected": "6ea73c823c132faecd12e17a3975a7427992910d148b5c0b911bff84305c7141",
+            "actual": "a63b25e437d5951aaae2296680ef1c7239bb807427e8ec0d200a292d8d5af6b5",
+            "matches": false
+          },
+          "django__asgiref-523": {
+            "expected": "a580b94a41382abbcdb51ab59af85ea75f039d0dd30261af8fee855ec8a6b6f4",
+            "actual": "4c78263571024730f6444760cb2f72992c6909e5c0961e28b99e3509975dfdda",
+            "matches": false
+          },
+          "stuartmaxwell__djpress-117": {
+            "expected": "d3645bb8b643497d73c3ef5768283c75416c9234763162c6454974f80d2f3d3a",
+            "actual": "cf429efff904e0e37a3eeba5906adc42112ec73ba5258ad1b73c01c454da3724",
+            "matches": false
+          }
+        },
+        "new_venv_digest": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe"
+      },
+      "documentation_materialization": {
+        "previous_pin_path": "HOST_RUNTIME_ROOT/factoryboy__factory_boy-1067/host-runtime-pin.json",
+        "previous_prepared_ref": "a2e56e3ed66bed49714b69d7e24ad6a9f9abb824",
+        "prepared_ref": "6659398c3aed729e6a447855a1da517edb9a9cb5",
+        "materialized": [
+          {
+            "path": "ChangeLog",
+            "old_git_mode": "120000",
+            "original_relative_target": "docs/changelog.rst",
+            "new_git_mode": "100644",
+            "content_sha256": "e47063c92bbadbb417367c81a0d8dcde36a7d79fc1794b08882020b958b790e5"
+          },
+          {
+            "path": "docs/credits.rst",
+            "old_git_mode": "120000",
+            "original_relative_target": "../CREDITS",
+            "new_git_mode": "100644",
+            "content_sha256": "5cf75c29264bf2d0a5c4d5baf7be1f44cfa8de8fbaffeb5c7ba63d4f39e0bf1d"
+          }
+        ],
+        "reason": "trusted host copy dereferenced documentation links; checkpoint now matches actual baseline",
+        "original_task_pin_unchanged": true
+      }
+    },
+    {
+      "runtime_id": "django__asgiref-523-v2",
+      "venv_repair": {
+        "old_pin_path": "HOST_RUNTIME_ROOT/django__asgiref-523/host-runtime-pin.json",
+        "cause": "trusted python -I ignores PYTHONDONTWRITEBYTECODE and startup .pth writes _virtualenv bytecode",
+        "only_added_paths": [
+          "lib/python3.12/site-packages/__pycache__",
+          "lib/python3.12/site-packages/__pycache__/_virtualenv.cpython-312.pyc"
+        ],
+        "reconstructed_old_digest_matches": true,
+        "rewritten_bin_paths": [
+          "activate.bat",
+          "activate.fish",
+          "activate.nu",
+          "activate.csh",
+          "activate",
+          "py.test",
+          "pytest"
+        ],
+        "pin_audit": {
+          "factoryboy__factory_boy-1067-v2": {
+            "expected": "6ea73c823c132faecd12e17a3975a7427992910d148b5c0b911bff84305c7141",
+            "actual": "a63b25e437d5951aaae2296680ef1c7239bb807427e8ec0d200a292d8d5af6b5",
+            "matches": false
+          },
+          "django__asgiref-523": {
+            "expected": "a580b94a41382abbcdb51ab59af85ea75f039d0dd30261af8fee855ec8a6b6f4",
+            "actual": "4c78263571024730f6444760cb2f72992c6909e5c0961e28b99e3509975dfdda",
+            "matches": false
+          },
+          "stuartmaxwell__djpress-117": {
+            "expected": "d3645bb8b643497d73c3ef5768283c75416c9234763162c6454974f80d2f3d3a",
+            "actual": "cf429efff904e0e37a3eeba5906adc42112ec73ba5258ad1b73c01c454da3724",
+            "matches": false
+          }
+        },
+        "new_venv_digest": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1"
+      }
+    },
+    {
+      "runtime_id": "stuartmaxwell__djpress-117-v2",
+      "venv_repair": {
+        "old_pin_path": "HOST_RUNTIME_ROOT/stuartmaxwell__djpress-117/host-runtime-pin.json",
+        "cause": "trusted python -I ignores PYTHONDONTWRITEBYTECODE and startup .pth writes _virtualenv bytecode",
+        "only_added_paths": [
+          "lib/python3.12/site-packages/__pycache__",
+          "lib/python3.12/site-packages/__pycache__/_virtualenv.cpython-312.pyc"
+        ],
+        "reconstructed_old_digest_matches": true,
+        "rewritten_bin_paths": [
+          "markdown_py",
+          "sqlformat",
+          "activate.bat",
+          "coverage-3.12",
+          "activate.fish",
+          "activate.nu",
+          "django-admin",
+          "activate.csh",
+          "coverage3",
+          "activate",
+          "py.test",
+          "pytest",
+          "coverage"
+        ],
+        "pin_audit": {
+          "factoryboy__factory_boy-1067-v2": {
+            "expected": "6ea73c823c132faecd12e17a3975a7427992910d148b5c0b911bff84305c7141",
+            "actual": "a63b25e437d5951aaae2296680ef1c7239bb807427e8ec0d200a292d8d5af6b5",
+            "matches": false
+          },
+          "django__asgiref-523": {
+            "expected": "a580b94a41382abbcdb51ab59af85ea75f039d0dd30261af8fee855ec8a6b6f4",
+            "actual": "4c78263571024730f6444760cb2f72992c6909e5c0961e28b99e3509975dfdda",
+            "matches": false
+          },
+          "stuartmaxwell__djpress-117": {
+            "expected": "d3645bb8b643497d73c3ef5768283c75416c9234763162c6454974f80d2f3d3a",
+            "actual": "cf429efff904e0e37a3eeba5906adc42112ec73ba5258ad1b73c01c454da3724",
+            "matches": false
+          }
+        },
+        "new_venv_digest": "d096ed5cb5fd007cfe0e6b065d76fa5fb6641afc7450060ae899b643ef82ad27"
+      }
+    }
+  ],
+  "source_index_repair": "Pristine Git checks use a private copied GIT_INDEX_FILE. Git probes must not refresh the frozen repository index.",
+  "trusted_python_repair": "Trusted isolated Python commands explicitly use -I -B; -I ignores PYTHONDONTWRITEBYTECODE."
+}

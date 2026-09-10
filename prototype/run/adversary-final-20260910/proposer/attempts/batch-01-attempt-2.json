@@ -1,0 +1,6 @@
+{
+  "attempt": 2,
+  "status": "rejected",
+  "error_type": "ProposalError",
+  "reason": "malformed proposal: 'observation|worktree_unread|harness_config|task_text' is not a valid Channel"
+}

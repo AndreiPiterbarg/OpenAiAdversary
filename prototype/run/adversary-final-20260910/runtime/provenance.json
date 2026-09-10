@@ -1,0 +1,134 @@
+{
+  "schema": "raw_receipt_digest_manifest_v1",
+  "source_archive": {
+    "sha256": "c1ae89eda5dda0638f1e22af59110fb89b05a958ed808ecd4b15e5f2500a77a3",
+    "contents": "adversary/**/*.py, domains/**/*.py, pyproject.toml at launch; exact gzip archive"
+  },
+  "runtime_source_files": {
+    "domains/swe_agents/environment/artifact_delta.py": "c0a2329045e5fda75abcdc09de31a0dfa9f82849430e6490d5996de1d2d988f8",
+    "domains/swe_agents/environment/interactive_runtime.py": "9243b9e5cddd8b5a6f112a712f9b34e852b4aaee1d36fba8d208f08b172f5bca",
+    "domains/swe_agents/environment/target_guard.py": "a4077009c538a799eb6467b4b22e3859cb5f69c460e238ae34f3bbdbb84bac44"
+  },
+  "normalization": "Absolute task-runtime prefixes replaced with HOST_RUNTIME_ROOT; local package build URLs replaced with LOCAL_BUILD_FROM_PINNED_REPOSITORY. Original byte-level receipt hashes are retained below. Raw original receipts are retained in the evidence store; they are not reconstructed by undoing normalization.",
+  "raw_sources": [
+    {
+      "source_id": "factoryboy__factory_boy-1067-v3/host-runtime-pin.json",
+      "raw_sha256": "b50ce4ab8b73ee41e69858e40ac33ad9351b91639bb11ac586ff62be1e0a94d3",
+      "raw_bytes": 607
+    },
+    {
+      "source_id": "factoryboy__factory_boy-1067-v3/prepared-ref.txt",
+      "raw_sha256": "011f4eb2a9b5ef99894a4543d7e0c60091af262cd23fab5c11da41274b21856a"
+    },
+    {
+      "source_id": "factoryboy__factory_boy-1067-v3/baseline-untracked.json",
+      "raw_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "raw_bytes": 3
+    },
+    {
+      "source_id": "factoryboy__factory_boy-1067-v3/compatibility-exact.json",
+      "raw_sha256": "4c079c2ae96bf21a723009a80fa293d3fd43997e0db07e9b523475670c67cbcb",
+      "raw_bytes": 1306
+    },
+    {
+      "source_id": "factoryboy__factory_boy-1067-v3/guarded-baseline-venvfix.json",
+      "raw_sha256": "c87428884d0a817a3daa53158997f677c497604d05e8957d820cc1c5e91238b2",
+      "raw_bytes": 1624
+    },
+    {
+      "source_id": "factoryboy__factory_boy-1067-v3/guarded-gold-venvfix.json",
+      "raw_sha256": "ba275e8ac28a414acfa4434c32d1424a78342a889e6d867f7d3e8084204413a3",
+      "raw_bytes": 1465
+    },
+    {
+      "source_id": "factoryboy__factory_boy-1067-v3/venv-drift-repair.json",
+      "raw_sha256": "1d0accb595fab4562d3ef97c929cf811ec063058f6ae62a79ab376ef22404dff",
+      "raw_bytes": 1396
+    },
+    {
+      "source_id": "factoryboy__factory_boy-1067-v3/materialization-ledger.json",
+      "raw_sha256": "db315990125e8358f29cdbafac1af811c71b1dd67dd4573a762d9ddcbbe45d1f",
+      "raw_bytes": 911
+    },
+    {
+      "source_id": "factoryboy__factory_boy-1067-v3/versions.txt",
+      "raw_sha256": "518929f76ccd5e6db4c299ee56ff26cab70317e4a3ae6a62363051b85bccbc17"
+    },
+    {
+      "source_id": "django__asgiref-523-v2/host-runtime-pin.json",
+      "raw_sha256": "fe24c2968a5a5eb8b32c3bca02f9b5f19e36e6ec4555abf9a1d62c26a0c28d9e",
+      "raw_bytes": 580
+    },
+    {
+      "source_id": "django__asgiref-523-v2/prepared-ref.txt",
+      "raw_sha256": "5154e8356d4034e72a489bc0bb7dd3a3da223ffb30292cf8a641df586a18cf8f"
+    },
+    {
+      "source_id": "django__asgiref-523-v2/baseline-untracked.json",
+      "raw_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "raw_bytes": 2
+    },
+    {
+      "source_id": "django__asgiref-523-v2/compatibility-exact.json",
+      "raw_sha256": "d9e7aea24f119aa605baf7abfd7a4761e2ce6d06af16af78870dcafc42d0bd4a",
+      "raw_bytes": 3002
+    },
+    {
+      "source_id": "django__asgiref-523-v2/guarded-baseline-venvfix.json",
+      "raw_sha256": "ed26452af6060f6bdc5e08540cc606f3f6a7357745b133bdde7924bb791f3a7a",
+      "raw_bytes": 2423
+    },
+    {
+      "source_id": "django__asgiref-523-v2/guarded-gold-venvfix.json",
+      "raw_sha256": "2674b168444d839d8495135df70839b03dc5f8c1dc4c86bd2a7d397b353ac6db",
+      "raw_bytes": 2149
+    },
+    {
+      "source_id": "django__asgiref-523-v2/venv-drift-repair.json",
+      "raw_sha256": "6056a7895410037e1c554f8b835e8103f3919a3e212ba62e4f3f8d29196df46e",
+      "raw_bytes": 1371
+    },
+    {
+      "source_id": "django__asgiref-523-v2/versions.txt",
+      "raw_sha256": "c3a91cd96dbbf435436297eeee30fdb3711fa5ea2633806a1c21915f803bf8a3"
+    },
+    {
+      "source_id": "stuartmaxwell__djpress-117-v2/host-runtime-pin.json",
+      "raw_sha256": "b6caf3d600dfbde9c930106156eab17f8c660c75c4bd726b189bc00c3a9c7e97",
+      "raw_bytes": 601
+    },
+    {
+      "source_id": "stuartmaxwell__djpress-117-v2/prepared-ref.txt",
+      "raw_sha256": "2ca570af10650288b4cb90fc6495061b99b597cd8603f63f4db8afe88d73cbe5"
+    },
+    {
+      "source_id": "stuartmaxwell__djpress-117-v2/baseline-untracked.json",
+      "raw_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "raw_bytes": 2
+    },
+    {
+      "source_id": "stuartmaxwell__djpress-117-v2/compatibility-exact.json",
+      "raw_sha256": "033e5ce89d7f3537f52793ec5c06a47440627d1960a612dfca21ea894d8ed2b8",
+      "raw_bytes": 10967
+    },
+    {
+      "source_id": "stuartmaxwell__djpress-117-v2/guarded-baseline-venvfix.json",
+      "raw_sha256": "21d7df0c5baecbfe2b6fc7ec6d1bffec89f9f81def27bd827c8231ad14fff78c",
+      "raw_bytes": 34853
+    },
+    {
+      "source_id": "stuartmaxwell__djpress-117-v2/guarded-gold-venvfix.json",
+      "raw_sha256": "0c1cb3523e8343767fd21bb8439dcc9fbd668d1408445cd6b2f50e3b96c7cafa",
+      "raw_bytes": 34354
+    },
+    {
+      "source_id": "stuartmaxwell__djpress-117-v2/venv-drift-repair.json",
+      "raw_sha256": "1f190c76f158f1d934d78b06fb3aa903cafb7b6b0934b8b91b30fc758f408526",
+      "raw_bytes": 1488
+    },
+    {
+      "source_id": "stuartmaxwell__djpress-117-v2/versions.txt",
+      "raw_sha256": "2508923d133182f3bb9977f0d2da4558c18b7f693d001f58ab68efa7fa92288c"
+    }
+  ]
+}

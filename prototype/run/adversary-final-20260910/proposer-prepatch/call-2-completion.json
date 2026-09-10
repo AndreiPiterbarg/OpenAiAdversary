@@ -1,0 +1,17 @@
+{
+  "model": {
+    "id": "qwen3-adversary",
+    "version": "b968826d9c46dd6066d109eabc6255188de91218",
+    "license": "permissive",
+    "backend": "served"
+  },
+  "completion": "class ObservationPerturbation(Perturbation):\n    channel = Channel.OBSERVATION\n    clauses = ('locale_missing', 'locale_provided')\n\n    def __init__(self, cell, seed=None, **config):\n        super().__init__(cell, seed, **config)\n\n    def prepare(self, session, spec):\n        pass\n\n    def observe(self, step: int, tool: str, args: dict, result: str) -> str:\n        notes = ''\n        if self.active and 'locale_missing' in self.active:\n            if 'shell' == tool and any(s in args.get('command', '') for s in ['cat-space', 'sed-space', 'grep-space', 'rg-space', 'git show']):\n                notes += \"\\n\\nEngineering Note: Faker was called without a locale, which is required for some operations.\"\n        if self.active and 'locale_provided' in self.active:\n            if 'shell' == tool and any(s in args.get('command', '') for s in ['cat-space', 'sed-space', 'grep-space', 'rg-space', 'git show']):\n                notes += \"\\n\\nEngineering Note: Faker was called with a locale provided in the extra dictionary.\"\n        return result + notes",
+  "usage": {
+    "input_tokens": 390,
+    "output_tokens": 254,
+    "wall_seconds": 1.714235850609839
+  },
+  "finish_reason": "stop",
+  "source_completion_sha256": "d7a35f56424132b26de263665f0117d7d5e886cf75afcbc1a07b46e61d5b9104",
+  "source_request_sha256": "7dfa23f691b1eaa5ba48a2699aa229e675358dcf976bb49dc60921fdd023fae5"
+}

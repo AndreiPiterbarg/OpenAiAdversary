@@ -1,0 +1,3 @@
+The earlier synthetic fixture allowed 100,000 observation characters, while the deployed target allowed 4,000. Its first source read contained 11,519 characters, so that fixture did not establish that appended notes were visible on the first deployed read. The old receipt is retained with this qualification.
+
+Per-episode exposure receipts remain authoritative: they replay the actual recorded observations with the saved deployed limit. A separate temporal check is needed before calling any visible contribution a pre-edit intervention. Successor arms with a uniform 16,000-character limit are separate experiments.

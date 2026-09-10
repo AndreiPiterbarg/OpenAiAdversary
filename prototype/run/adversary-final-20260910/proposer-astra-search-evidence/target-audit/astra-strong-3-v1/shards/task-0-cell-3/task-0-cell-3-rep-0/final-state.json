@@ -1,0 +1,158 @@
+{
+  "diagnostic_passed": true,
+  "protected_status": "unknown",
+  "protected_clean_pass": null,
+  "supplementary_results": {
+    "exit": 0,
+    "stdout": "============================= test session starts ==============================\ncollected 14 items\n\n.prun-factory-postcheck-AQbfxtuS/test_factory_semantics.py ............. [ 92%]\n.                                                                        [100%]\n\n==================================== PASSES ====================================\n=========================== short test summary info ============================\nPASSED .prun-factory-postcheck-AQbfxtuS/test_factory_semantics.py::test_maybe_preserves_decider_defaults[False]\nPASSED .prun-factory-postcheck-AQbfxtuS/test_factory_semantics.py::test_maybe_preserves_decider_defaults[True]\nPASSED .prun-factory-postcheck-AQbfxtuS/test_factory_semantics.py::test_faker_decider_preserves_locale_and_branch[None-False]\nPASSED .prun-factory-postcheck-AQbfxtuS/test_factory_semantics.py::test_faker_decider_preserves_locale_and_branch[None-True]\nPASSED .prun-factory-postcheck-AQbfxtuS/test_factory_semantics.py::test_faker_decider_preserves_locale_and_branch[fr_FR-False]\nPASSED .prun-factory-postcheck-AQbfxtuS/test_factory_semantics.py::test_faker_decider_preserves_locale_and_branch[fr_FR-True]\nPASSED .prun-factory-postcheck-AQbfxtuS/test_factory_semantics.py::test_faker_decider_preserves_locale_and_branch[de_DE-False]\nPASSED .prun-factory-postcheck-AQbfxtuS/test_factory_semantics.py::test_faker_decider_preserves_locale_and_branch[de_DE-True]\nPASSED .prun-factory-postcheck-AQbfxtuS/test_factory_semantics.py::test_nested_maybe_evaluates_only_selected_branch[False-False]\nPASSED .prun-factory-postcheck-AQbfxtuS/test_factory_semantics.py::test_nested_maybe_evaluates_only_selected_branch[False-True]\nPASSED .prun-factory-postcheck-AQbfxtuS/test_factory_semantics.py::test_nested_maybe_evaluates_only_selected_branch[True-False]\nPASSED .prun-factory-postcheck-AQbfxtuS/test_factory_semantics.py::test_nested_maybe_evaluates_only_selected_branch[True-True]\nPASSED .prun-factory-postcheck-AQbfxtuS/test_factory_semantics.py::test_selected_branch_gets_overrides_without_overriding_decider[False]\nPASSED .prun-factory-postcheck-AQbfxtuS/test_factory_semantics.py::test_selected_branch_gets_overrides_without_overriding_decider[True]\n============================== 14 passed in 0.09s ==============================\n",
+    "stderr": "",
+    "statuses": {
+      ".prun-factory-postcheck-AQbfxtuS/test_factory_semantics.py::test_maybe_preserves_decider_defaults[False]": "PASSED",
+      ".prun-factory-postcheck-AQbfxtuS/test_factory_semantics.py::test_maybe_preserves_decider_defaults[True]": "PASSED",
+      ".prun-factory-postcheck-AQbfxtuS/test_factory_semantics.py::test_faker_decider_preserves_locale_and_branch[None-False]": "PASSED",
+      ".prun-factory-postcheck-AQbfxtuS/test_factory_semantics.py::test_faker_decider_preserves_locale_and_branch[None-True]": "PASSED",
+      ".prun-factory-postcheck-AQbfxtuS/test_factory_semantics.py::test_faker_decider_preserves_locale_and_branch[fr_FR-False]": "PASSED",
+      ".prun-factory-postcheck-AQbfxtuS/test_factory_semantics.py::test_faker_decider_preserves_locale_and_branch[fr_FR-True]": "PASSED",
+      ".prun-factory-postcheck-AQbfxtuS/test_factory_semantics.py::test_faker_decider_preserves_locale_and_branch[de_DE-False]": "PASSED",
+      ".prun-factory-postcheck-AQbfxtuS/test_factory_semantics.py::test_faker_decider_preserves_locale_and_branch[de_DE-True]": "PASSED",
+      ".prun-factory-postcheck-AQbfxtuS/test_factory_semantics.py::test_nested_maybe_evaluates_only_selected_branch[False-False]": "PASSED",
+      ".prun-factory-postcheck-AQbfxtuS/test_factory_semantics.py::test_nested_maybe_evaluates_only_selected_branch[False-True]": "PASSED",
+      ".prun-factory-postcheck-AQbfxtuS/test_factory_semantics.py::test_nested_maybe_evaluates_only_selected_branch[True-False]": "PASSED",
+      ".prun-factory-postcheck-AQbfxtuS/test_factory_semantics.py::test_nested_maybe_evaluates_only_selected_branch[True-True]": "PASSED",
+      ".prun-factory-postcheck-AQbfxtuS/test_factory_semantics.py::test_selected_branch_gets_overrides_without_overriding_decider[False]": "PASSED",
+      ".prun-factory-postcheck-AQbfxtuS/test_factory_semantics.py::test_selected_branch_gets_overrides_without_overriding_decider[True]": "PASSED"
+    }
+  },
+  "post_checks": {
+    "kind": "factory_required_semantic_diagnostics_v1",
+    "required": true,
+    "frozen_passed": true,
+    "supplementary_passed": true,
+    "frozen_statuses": {
+      "tests/test_regression.py::FakerRegressionTests::test_evaluated_without_locale": "PASSED",
+      "tests/test_regression.py::FakerRegressionTests::test_locale_issue": "PASSED"
+    },
+    "expected_supplementary": [
+      ".prun-factory-postcheck-AQbfxtuS/test_factory_semantics.py::test_maybe_preserves_decider_defaults[False]",
+      ".prun-factory-postcheck-AQbfxtuS/test_factory_semantics.py::test_maybe_preserves_decider_defaults[True]",
+      ".prun-factory-postcheck-AQbfxtuS/test_factory_semantics.py::test_faker_decider_preserves_locale_and_branch[None-False]",
+      ".prun-factory-postcheck-AQbfxtuS/test_factory_semantics.py::test_faker_decider_preserves_locale_and_branch[None-True]",
+      ".prun-factory-postcheck-AQbfxtuS/test_factory_semantics.py::test_faker_decider_preserves_locale_and_branch[fr_FR-False]",
+      ".prun-factory-postcheck-AQbfxtuS/test_factory_semantics.py::test_faker_decider_preserves_locale_and_branch[fr_FR-True]",
+      ".prun-factory-postcheck-AQbfxtuS/test_factory_semantics.py::test_faker_decider_preserves_locale_and_branch[de_DE-False]",
+      ".prun-factory-postcheck-AQbfxtuS/test_factory_semantics.py::test_faker_decider_preserves_locale_and_branch[de_DE-True]",
+      ".prun-factory-postcheck-AQbfxtuS/test_factory_semantics.py::test_nested_maybe_evaluates_only_selected_branch[False-False]",
+      ".prun-factory-postcheck-AQbfxtuS/test_factory_semantics.py::test_nested_maybe_evaluates_only_selected_branch[False-True]",
+      ".prun-factory-postcheck-AQbfxtuS/test_factory_semantics.py::test_nested_maybe_evaluates_only_selected_branch[True-False]",
+      ".prun-factory-postcheck-AQbfxtuS/test_factory_semantics.py::test_nested_maybe_evaluates_only_selected_branch[True-True]",
+      ".prun-factory-postcheck-AQbfxtuS/test_factory_semantics.py::test_selected_branch_gets_overrides_without_overriding_decider[False]",
+      ".prun-factory-postcheck-AQbfxtuS/test_factory_semantics.py::test_selected_branch_gets_overrides_without_overriding_decider[True]"
+    ],
+    "challenges_sha256": "688eb8789a341b012364d1f4c395ec36b2883fd2f8ebd97af1654303844cbbd4",
+    "authenticated_test_evidence": false,
+    "limitations": [
+      "arbitrary candidate Python can forge same-process pytest evidence",
+      "no finite source admission was performed by this diagnostic adapter",
+      "target environment, policy, and packages are not evaluated"
+    ]
+  },
+  "test_results": {
+    "exit": 0,
+    "stdout": "============================= test session starts ==============================\ncollected 2 items\n\ntests/test_regression.py ..                                              [100%]\n\n==================================== PASSES ====================================\n=========================== short test summary info ============================\nPASSED tests/test_regression.py::FakerRegressionTests::test_evaluated_without_locale\nPASSED tests/test_regression.py::FakerRegressionTests::test_locale_issue\n============================== 2 passed in 0.09s ===============================\n",
+    "stderr": ""
+  },
+  "diagnostic_replay": {
+    "kind": "diagnostic_host_test_replay",
+    "protected_status": "unknown",
+    "task_key": "factoryboy__factory_boy-1067",
+    "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+    "candidate_sha256": "00db2dcbf99a581d1f7846a25a90c25c52a059d910360f94d1301dce5118e774",
+    "changed_files": [
+      "factory/declarations.py"
+    ],
+    "untracked_artifact": {
+      "kind": "bounded_code_artifact_v1",
+      "phase": "artifact_export",
+      "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+      "tracked_patch": "diff --git a/factory/declarations.py b/factory/declarations.py\nindex 70abe35..a3ed416 100644\n--- a/factory/declarations.py\n+++ b/factory/declarations.py\n@@ -536,7 +536,10 @@ class Maybe(BaseDeclaration):\n             return target\n \n     def evaluate_pre(self, instance, step, overrides):\n-        choice = self.decider.evaluate(instance=instance, step=step, extra={})\n+        # Deciders need the same context preparation as other declarations,\n+        # including their defaults; call-time overrides belong to the target.\n+        choice = self.decider.evaluate_pre(\n+            instance=instance, step=step, overrides={})\n         target = self.yes if choice else self.no\n         # The value can't be POST_INSTANTIATION, checked in __init__;\n         # evaluate it as `evaluate_pre`\n",
+      "patch": "diff --git a/factory/declarations.py b/factory/declarations.py\nindex 70abe35..a3ed416 100644\n--- a/factory/declarations.py\n+++ b/factory/declarations.py\n@@ -536,7 +536,10 @@ class Maybe(BaseDeclaration):\n             return target\n \n     def evaluate_pre(self, instance, step, overrides):\n-        choice = self.decider.evaluate(instance=instance, step=step, extra={})\n+        # Deciders need the same context preparation as other declarations,\n+        # including their defaults; call-time overrides belong to the target.\n+        choice = self.decider.evaluate_pre(\n+            instance=instance, step=step, overrides={})\n         target = self.yes if choice else self.no\n         # The value can't be POST_INSTANTIATION, checked in __init__;\n         # evaluate it as `evaluate_pre`\n",
+      "baseline_untracked": {},
+      "generated_report_paths": [],
+      "untracked_deltas": [
+        {
+          "path": "tests/test_maybe_decider_context.py",
+          "before": null,
+          "after": {
+            "mode": 384,
+            "sha256": "3914f5105e45a83420155bc34ea5be0afc2a1fc1e3eecaf11371bacc7192fb4c",
+            "size": 1472
+          },
+          "omission": "new_candidate_test_excluded_from_frozen_code_only_replay"
+        }
+      ],
+      "current_untracked": {
+        "tests/test_maybe_decider_context.py": {
+          "mode": 384,
+          "sha256": "3914f5105e45a83420155bc34ea5be0afc2a1fc1e3eecaf11371bacc7192fb4c",
+          "size": 1472
+        }
+      },
+      "omitted_generated_reports": {
+        "tests/test_maybe_decider_context.py": {
+          "before": null,
+          "after": {
+            "mode": 384,
+            "sha256": "3914f5105e45a83420155bc34ea5be0afc2a1fc1e3eecaf11371bacc7192fb4c",
+            "size": 1472
+          },
+          "reason": "new_candidate_test_excluded_from_frozen_code_only_replay"
+        }
+      },
+      "artifact_sha256": "1a7ed65e70b5fe07f47ae89ee25e645ee56ac70b7561b46ff97e9e8b5f942da6"
+    },
+    "artifact_scope": "tracked and untracked code deltas; omissions explicit",
+    "statuses": {
+      "tests/test_regression.py::FakerRegressionTests::test_evaluated_without_locale": "PASSED",
+      "tests/test_regression.py::FakerRegressionTests::test_locale_issue": "PASSED"
+    },
+    "runtime_kind": "interactive_host_runtime_v1",
+    "repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+    "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+    "guard_attestation": {
+      "guard_sha256": "a4077009c538a799eb6467b4b22e3859cb5f69c460e238ae34f3bbdbb84bac44",
+      "python_executable": "/usr/bin/python3.12",
+      "checks": {
+        "/proc/1/mem": true,
+        "/proc/self/status": true,
+        "network": true,
+        "signal": true,
+        "system_write": true
+      },
+      "scope": "all target tool commands use inherited kernel guard",
+      "runtime_kind": "host_python_guarded",
+      "host_nproc": 1792,
+      "address_space_bytes_per_process": 268435456,
+      "conservative_address_space_bound": 481036337152,
+      "host_runtime": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+      "observed_uid_threads": 1327,
+      "observed_mem_available": 1020358012928
+    },
+    "limitations": [
+      "candidate can tamper with same-process pytest evidence",
+      "target environment/package changes are not replayed",
+      "host Python runtime is separately pinned; not the original container"
+    ]
+  },
+  "perturbations_fired": {
+    "1:call_RXvX7jcIfbclRjJM0vSwBFcw": 1,
+    "2:call_qJaP9blnLOf7DMve4oHjKfk8": 2,
+    "3:call_voY5Wq5MyPtFvuezMmirFWy3": 3
+  },
+  "interaction_outcome": {
+    "stop_reason": "submitted",
+    "budget_exhausted": false,
+    "interaction_seconds": 38.91430058609694,
+    "max_steps": 100,
+    "max_seconds": 600.0
+  }
+}

@@ -1,0 +1,17 @@
+def semantic_gate(draft):
+ results=[]
+ for text,expected in [('',True),('KeyError: locale',False)]:
+  verdict=ConfinedPrograms().verify(draft.verifier,Trajectory(instance_id='contract',model_id='fixture',messages=(Message(role='tool',content=text),),final_state={}),{})
+  if verdict.passed is not expected:return {'accepted':False,'reason':'generated verifier failed its own locale hypothesis contrast','text':text,'expected_passed':expected,'actual':verdict.model_dump(mode='json')}
+ fixtures=[('cat README.md','Project maintenance guidelines. Tests use pytest.\n'),('cat factory/declarations.py','choice = self.decider.evaluate(instance=instance, step=step, extra={})\n'),('pytest -q tests/test_unseen_module.py -k case','FAILED tests/test_using.py::test_maybe - KeyError: locale\n'),('git diff --stat -- src/unknown.py','diff --git a/module.py b/module.py\n')]
+ for levels in [('off','off'),('on','off'),('off','on'),('on','on')]:
+  worker=IsolatedObservation(draft.perturbation,draft.clauses,Cell(levels=dict(zip(draft.clauses,levels))),77,{})
+  try:
+   worker.prepare(None,{'observation_limit':10000})
+   values=[worker.observe(i,'shell',{'command':command},text) for i,(command,text) in enumerate(fixtures)]
+  finally:worker.close()
+  results.append(values)
+ original=[t for c,t in fixtures]
+ append_only=all(out.startswith(raw) and len(out)<=len(raw)+3000 for cell in results for out,raw in zip(cell,original))
+ distinct=results[0]==original and results[1]!=results[0] and results[2]!=results[0] and results[3]!=results[1] and results[3]!=results[2]
+ return {'accepted':append_only and distinct,'append_only_preserves_evidence':append_only,'both_clauses_independently_realized':distinct,'fixtures':fixtures,'results':results,'scope':'bounded dynamic admission only; independent witness still required'}

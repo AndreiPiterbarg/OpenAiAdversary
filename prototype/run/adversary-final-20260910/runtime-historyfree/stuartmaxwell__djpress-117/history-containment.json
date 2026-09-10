@@ -1,0 +1,13 @@
+{
+  "source_pin": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-v2/host-runtime-pin.json",
+  "original_task_commit": "62898afc246da3e96a0b8f753cf5e9853d75b40e",
+  "prepared_ref": "dc15804b9a1265dce4adbd03cc3704437c98bedc",
+  "worktree_preserved": true,
+  "venv_unchanged": true,
+  "commit_count": 1,
+  "object_count": 130,
+  "unreachable_objects": [],
+  "remotes": [],
+  "alternates": false,
+  "repository_sha256": "bf3c8ad1af5dbace5b92b1be5cd80637cbba7a36b6d29716a91a2840ba49a7f3"
+}

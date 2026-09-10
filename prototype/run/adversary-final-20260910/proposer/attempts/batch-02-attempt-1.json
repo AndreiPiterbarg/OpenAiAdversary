@@ -1,0 +1,9 @@
+{
+  "attempt": 1,
+  "status": "static_accepted",
+  "critique": {
+    "accepted": true,
+    "objections": [],
+    "critic": "static"
+  }
+}

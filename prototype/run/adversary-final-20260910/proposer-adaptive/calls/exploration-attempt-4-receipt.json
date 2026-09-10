@@ -1,0 +1,6 @@
+{
+  "attempt": 4,
+  "status": "rejected",
+  "error_type": "JSONDecodeError",
+  "reason": "Unterminated string starting at: line 11 column 15 (char 445)"
+}

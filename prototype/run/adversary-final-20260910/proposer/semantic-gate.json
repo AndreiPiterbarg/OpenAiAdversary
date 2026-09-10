@@ -1,0 +1,50 @@
+{
+  "accepted": true,
+  "append_only_preserves_evidence": true,
+  "both_clauses_independently_realized": true,
+  "fixtures": [
+    [
+      "cat README.md",
+      "Project maintenance guidelines. Tests use pytest.\n"
+    ],
+    [
+      "cat factory/declarations.py",
+      "choice = self.decider.evaluate(instance=instance, step=step, extra={})\n"
+    ],
+    [
+      "pytest -q tests/test_unseen_module.py -k case",
+      "FAILED tests/test_using.py::test_maybe - KeyError: locale\n"
+    ],
+    [
+      "git diff --stat -- src/unknown.py",
+      "diff --git a/module.py b/module.py\n"
+    ]
+  ],
+  "results": [
+    [
+      "Project maintenance guidelines. Tests use pytest.\n",
+      "choice = self.decider.evaluate(instance=instance, step=step, extra={})\n",
+      "FAILED tests/test_using.py::test_maybe - KeyError: locale\n",
+      "diff --git a/module.py b/module.py\n"
+    ],
+    [
+      "Project maintenance guidelines. Tests use pytest.\n",
+      "choice = self.decider.evaluate(instance=instance, step=step, extra={})\n",
+      "FAILED tests/test_using.py::test_maybe - KeyError: locale\n\n\nEngineering Note: Faker was called without a locale, which is required for some operations.",
+      "diff --git a/module.py b/module.py\n"
+    ],
+    [
+      "Project maintenance guidelines. Tests use pytest.\n",
+      "choice = self.decider.evaluate(instance=instance, step=step, extra={})\n",
+      "FAILED tests/test_using.py::test_maybe - KeyError: locale\n\n\nEngineering Note: Faker was called with a locale provided in the extra dictionary.",
+      "diff --git a/module.py b/module.py\n"
+    ],
+    [
+      "Project maintenance guidelines. Tests use pytest.\n",
+      "choice = self.decider.evaluate(instance=instance, step=step, extra={})\n",
+      "FAILED tests/test_using.py::test_maybe - KeyError: locale\n\n\nEngineering Note: Faker was called without a locale, which is required for some operations.\n\nEngineering Note: Faker was called with a locale provided in the extra dictionary.",
+      "diff --git a/module.py b/module.py\n"
+    ]
+  ],
+  "scope": "bounded dynamic admission only; independent witness still required"
+}

@@ -1,0 +1,211 @@
+{
+  "created_utc": "2026-09-10T20:30:38.347906+00:00",
+  "remote_source_root": "/tmp/prun-adversary-final-20260910",
+  "archives": [
+    {
+      "archive": "astra-prepatch-v2.tar.gz",
+      "remote_archive": "/tmp/prun-preservation-20260910/astra-prepatch-v2.tar.gz",
+      "sha256": "19e2e802ef4546da08d1f2b9920bfeeab7a32000391cd226b78e47c0cf3271f3",
+      "bytes": 4639990,
+      "members": 2278,
+      "original_relative_paths": [
+        "astra-prepatch-v2"
+      ],
+      "terminal_episode_count": 60,
+      "local_archive": "/Users/andre/.codex/artifacts/adversary-final-20260910/raw-preservation/astra-prepatch-v2.tar.gz",
+      "local_sha256_verified": true
+    },
+    {
+      "archive": "astra-strong-1-v1.tar.gz",
+      "remote_archive": "/tmp/prun-preservation-20260910/astra-strong-1-v1.tar.gz",
+      "sha256": "32ef8c50352a42695085a4140adcb1c129aa876cba5307ec554c271963e2d480",
+      "bytes": 1159535,
+      "members": 672,
+      "original_relative_paths": [
+        "astra-strong-1-v1"
+      ],
+      "terminal_episode_count": 20,
+      "local_archive": "/Users/andre/.codex/artifacts/adversary-final-20260910/raw-preservation/astra-strong-1-v1.tar.gz",
+      "local_sha256_verified": true
+    },
+    {
+      "archive": "astra-strong-2-v1.tar.gz",
+      "remote_archive": "/tmp/prun-preservation-20260910/astra-strong-2-v1.tar.gz",
+      "sha256": "f8db68cbf111f6c1bfba3267bb4cb36bf1ec4a2b2c5449370dde9464ea3027f0",
+      "bytes": 1280392,
+      "members": 672,
+      "original_relative_paths": [
+        "astra-strong-2-v1"
+      ],
+      "terminal_episode_count": 20,
+      "local_archive": "/Users/andre/.codex/artifacts/adversary-final-20260910/raw-preservation/astra-strong-2-v1.tar.gz",
+      "local_sha256_verified": true
+    },
+    {
+      "archive": "astra-strong-3-v1.tar.gz",
+      "remote_archive": "/tmp/prun-preservation-20260910/astra-strong-3-v1.tar.gz",
+      "sha256": "9a80dd6d3f1d985fe00f9732c22573400db49a6ee11a0f59bc4c0b8d46a993e7",
+      "bytes": 1319410,
+      "members": 659,
+      "original_relative_paths": [
+        "astra-strong-3-v1"
+      ],
+      "terminal_episode_count": 20,
+      "local_archive": "/Users/andre/.codex/artifacts/adversary-final-20260910/raw-preservation/astra-strong-3-v1.tar.gz",
+      "local_sha256_verified": true
+    },
+    {
+      "archive": "astra-strong-4-v1.tar.gz",
+      "remote_archive": "/tmp/prun-preservation-20260910/astra-strong-4-v1.tar.gz",
+      "sha256": "f5a79d15d370eda02038cf9aacbcdf2c6bc30b2cba5e92eadfcaa407c28843f3",
+      "bytes": 1293392,
+      "members": 655,
+      "original_relative_paths": [
+        "astra-strong-4-v1"
+      ],
+      "terminal_episode_count": 20,
+      "local_archive": "/Users/andre/.codex/artifacts/adversary-final-20260910/raw-preservation/astra-strong-4-v1.tar.gz",
+      "local_sha256_verified": true
+    },
+    {
+      "archive": "runtime-and-registration-support-v1.tar.gz",
+      "remote_archive": "/tmp/prun-preservation-20260910/runtime-and-registration-support-v1.tar.gz",
+      "sha256": "ab6ca26f5d452e290c4d207cc8331533cfe2a05f2fd95d70dcbf71acab6e5ee0",
+      "bytes": 785940,
+      "members": 471,
+      "original_relative_paths": [
+        "experiment-code-v7",
+        "experiment-code-v8",
+        "public-results-final-v3-snapshot.json",
+        "future-history-audit.json",
+        "astra-prepatch-v2-config.json",
+        "pilot-v2-config.json",
+        "public-results-final-v3.json",
+        "termination-calibration-v1-pilot-v2.json",
+        "astra-strong-asgiref-1-v1-config.json",
+        "termination-devstral-extended-user-scope-change.json",
+        "final-v3-launch.json",
+        "calibration-v2-config.json",
+        "astra-strong-2-v1-config.json",
+        "djpress-ci-extended-v1-launch.json",
+        "pilot-v2-launch.json",
+        "final-v3-config.json",
+        "astra-v1-config.json",
+        "astra-strong-1-v1-config.json",
+        "calibration-v2-launch.json",
+        "strong-first-repetition-witness-certificate.json",
+        "astra-strong-asgiref-2-v1-config.json",
+        "djpress-v10-extended-v1-config.json",
+        "astra-strong-3-v1-config.json",
+        "djpress-v10-extended-v1-launch.json",
+        "calibration-v1-launch.json",
+        "public-results-pilot-v2.json",
+        "astra-prepatch-v1-config.json",
+        "astra-strong-4-v1-config.json",
+        "public-results-calibration-v1.json",
+        "djpress-ci-extended-v1-config.json",
+        "astra-strong-asgiref-3-v1-config.json",
+        "astra-strong-asgiref-4-v1-config.json"
+      ],
+      "local_archive": "/Users/andre/.codex/artifacts/adversary-final-20260910/raw-preservation/runtime-and-registration-support-v1.tar.gz",
+      "local_sha256_verified": true
+    },
+    {
+      "archive": "astra-strong-asgiref-1-v1.tar.gz",
+      "remote_archive": "/tmp/prun-preservation-20260910/astra-strong-asgiref-1-v1.tar.gz",
+      "sha256": "c7b96d4e7ce3a8d0987cff94be1db7c25b7fc8306d3b578f4454cda13dbc4494",
+      "bytes": 1116920,
+      "members": 641,
+      "original_relative_paths": [
+        "astra-strong-asgiref-1-v1"
+      ],
+      "terminal_episode_count": 20,
+      "local_archive": "/Users/andre/.codex/artifacts/adversary-final-20260910/raw-preservation/astra-strong-asgiref-1-v1.tar.gz",
+      "local_sha256_verified": true,
+      "terminal_status_counts": {
+        "completed": 16,
+        "unknown": 4
+      }
+    },
+    {
+      "archive": "astra-strong-asgiref-2-v1.tar.gz",
+      "remote_archive": "/tmp/prun-preservation-20260910/astra-strong-asgiref-2-v1.tar.gz",
+      "sha256": "39e66507fbe5146b0a258b066661690fb963d4aab74c017ab958cd76774a8c16",
+      "bytes": 1078806,
+      "members": 629,
+      "original_relative_paths": [
+        "astra-strong-asgiref-2-v1"
+      ],
+      "terminal_episode_count": 20,
+      "local_archive": "/Users/andre/.codex/artifacts/adversary-final-20260910/raw-preservation/astra-strong-asgiref-2-v1.tar.gz",
+      "local_sha256_verified": true,
+      "terminal_status_counts": {
+        "completed": 16,
+        "unknown": 4
+      }
+    },
+    {
+      "archive": "astra-strong-asgiref-3-v1.tar.gz",
+      "remote_archive": "/tmp/prun-preservation-20260910/astra-strong-asgiref-3-v1.tar.gz",
+      "sha256": "27add7fb76ab09ca4ae42fd36721142310fb0190fea6da5f795e9b284ca3cadd",
+      "bytes": 1168502,
+      "members": 640,
+      "original_relative_paths": [
+        "astra-strong-asgiref-3-v1"
+      ],
+      "terminal_episode_count": 20,
+      "local_archive": "/Users/andre/.codex/artifacts/adversary-final-20260910/raw-preservation/astra-strong-asgiref-3-v1.tar.gz",
+      "local_sha256_verified": true,
+      "terminal_status_counts": {
+        "completed": 17,
+        "unknown": 3
+      }
+    },
+    {
+      "archive": "astra-strong-asgiref-4-v1.tar.gz",
+      "remote_archive": "/tmp/prun-preservation-20260910/astra-strong-asgiref-4-v1.tar.gz",
+      "sha256": "5ae6e32d479a9a4a9ae98796ee070f1d91cb62e1cf885c5848e76e7c974f8d6f",
+      "bytes": 1090244,
+      "members": 614,
+      "original_relative_paths": [
+        "astra-strong-asgiref-4-v1"
+      ],
+      "terminal_episode_count": 20,
+      "local_archive": "/Users/andre/.codex/artifacts/adversary-final-20260910/raw-preservation/astra-strong-asgiref-4-v1.tar.gz",
+      "local_sha256_verified": true,
+      "terminal_status_counts": {
+        "completed": 15,
+        "unknown": 5
+      }
+    },
+    {
+      "archive": "distinct50-final-deadline-snapshot.tar.gz",
+      "local_archive": "/Users/andre/.codex/artifacts/adversary-final-20260910/raw-preservation/distinct50-final-deadline-snapshot.tar.gz",
+      "sha256": "b93517767e3965cc77a431edd568fbfe6aac65d7e3be3acfba895aeb7d028de8",
+      "bytes": 2130014,
+      "members": 957,
+      "terminal_episode_count": 14,
+      "registered_task_count": 50,
+      "completed_distinct_pairs": 7,
+      "local_sha256_verified": true,
+      "member_manifest": "distinct50-final-preservation-manifest.json"
+    },
+    {
+      "archive": "distinct50-final-completed-snapshot.tar.gz",
+      "local_archive": "/Users/andre/.codex/artifacts/adversary-final-20260910/raw-preservation/distinct50-final-completed-snapshot.tar.gz",
+      "sha256": "6e830222840a87d917cf52f535622de2b82be9b84f233513fe1063245dc6d0f8",
+      "bytes": 2346390,
+      "members": 1016,
+      "terminal_episode_count": 16,
+      "registered_task_count": 50,
+      "completed_distinct_pairs": 8,
+      "local_sha256_verified": true,
+      "member_manifest": "distinct50-final-completed-preservation-manifest.json",
+      "overlaps_previous_archive": "distinct50-final-deadline-snapshot.tar.gz"
+    }
+  ],
+  "verified_utc": "2026-09-10T20:33:52.481808+00:00",
+  "total_terminal_episodes": 236,
+  "credentials": "Remote task evidence only; local API credential values are not included.",
+  "total_terminal_episodes_scope": "Unique attempts:220prior plus16final. The preserved14-episode deadline snapshot overlaps the final16 and is not added again."
+}

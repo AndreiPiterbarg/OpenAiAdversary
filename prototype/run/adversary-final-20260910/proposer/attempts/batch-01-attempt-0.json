@@ -1,0 +1,6 @@
+{
+  "attempt": 0,
+  "status": "rejected",
+  "error_type": "ValueError",
+  "reason": "pilot requires two observation clauses"
+}

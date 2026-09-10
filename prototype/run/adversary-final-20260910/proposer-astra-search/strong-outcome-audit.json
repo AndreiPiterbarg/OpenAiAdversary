@@ -1,0 +1,1294 @@
+{
+  "astra-strong-1-v1": {
+    "arm": "astra-strong-1-v1",
+    "planned": 20,
+    "observed_at": "2026-09-10T20:27:56.025139+00:00",
+    "groups": [
+      {
+        "cell": 0,
+        "registered": 5,
+        "terminal": 5,
+        "known": 5,
+        "passes": 5,
+        "failures": 0,
+        "unknown": 0,
+        "failure_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "cell": 1,
+        "registered": 5,
+        "terminal": 5,
+        "known": 5,
+        "passes": 0,
+        "failures": 5,
+        "unknown": 0,
+        "failure_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "cell": 2,
+        "registered": 5,
+        "terminal": 5,
+        "known": 5,
+        "passes": 0,
+        "failures": 5,
+        "unknown": 0,
+        "failure_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "cell": 3,
+        "registered": 5,
+        "terminal": 5,
+        "known": 5,
+        "passes": 0,
+        "failures": 5,
+        "unknown": 0,
+        "failure_bounds": [
+          1.0,
+          1.0
+        ]
+      }
+    ],
+    "matched_repetition_discordances": [
+      {
+        "cell": 1,
+        "control_pass_treatment_fail_reps": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "cell": 2,
+        "control_pass_treatment_fail_reps": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "cell": 3,
+        "control_pass_treatment_fail_reps": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    ],
+    "rows": [
+      {
+        "id": "task-0-cell-0-rep-0",
+        "cell_index": 0,
+        "repetition": 0,
+        "status": "completed",
+        "diagnostic_passed": true,
+        "attributable": true,
+        "admission_status": "artifact_replayed",
+        "budget_exhausted": false,
+        "realized": true,
+        "clause_exposure_status": "verified",
+        "visible_changed": false,
+        "visible_steps": [],
+        "frozen_passed": true,
+        "supplementary_passed": true,
+        "failed_nodes": []
+      },
+      {
+        "id": "task-0-cell-0-rep-1",
+        "cell_index": 0,
+        "repetition": 1,
+        "status": "completed",
+        "diagnostic_passed": true,
+        "attributable": true,
+        "admission_status": "artifact_replayed",
+        "budget_exhausted": false,
+        "realized": true,
+        "clause_exposure_status": "verified",
+        "visible_changed": false,
+        "visible_steps": [],
+        "frozen_passed": true,
+        "supplementary_passed": true,
+        "failed_nodes": []
+      },
+      {
+        "id": "task-0-cell-0-rep-2",
+        "cell_index": 0,
+        "repetition": 2,
+        "status": "completed",
+        "diagnostic_passed": true,
+        "attributable": true,
+        "admission_status": "artifact_replayed",
+        "budget_exhausted": false,
+        "realized": true,
+        "clause_exposure_status": "verified",
+        "visible_changed": false,
+        "visible_steps": [],
+        "frozen_passed": true,
+        "supplementary_passed": true,
+        "failed_nodes": []
+      },
+      {
+        "id": "task-0-cell-0-rep-3",
+        "cell_index": 0,
+        "repetition": 3,
+        "status": "completed",
+        "diagnostic_passed": true,
+        "attributable": true,
+        "admission_status": "artifact_replayed",
+        "budget_exhausted": false,
+        "realized": true,
+        "clause_exposure_status": "verified",
+        "visible_changed": false,
+        "visible_steps": [],
+        "frozen_passed": true,
+        "supplementary_passed": true,
+        "failed_nodes": []
+      },
+      {
+        "id": "task-0-cell-0-rep-4",
+        "cell_index": 0,
+        "repetition": 4,
+        "status": "completed",
+        "diagnostic_passed": true,
+        "attributable": true,
+        "admission_status": "artifact_replayed",
+        "budget_exhausted": false,
+        "realized": true,
+        "clause_exposure_status": "verified",
+        "visible_changed": false,
+        "visible_steps": [],
+        "frozen_passed": true,
+        "supplementary_passed": true,
+        "failed_nodes": []
+      },
+      {
+        "id": "task-0-cell-1-rep-0",
+        "cell_index": 1,
+        "repetition": 0,
+        "status": "completed",
+        "diagnostic_passed": false,
+        "attributable": true,
+        "admission_status": "artifact_replayed",
+        "budget_exhausted": false,
+        "realized": true,
+        "clause_exposure_status": "verified",
+        "visible_changed": true,
+        "visible_steps": [
+          1
+        ],
+        "frozen_passed": true,
+        "supplementary_passed": false,
+        "failed_nodes": [
+          "test_maybe_preserves_decider_defaults[False]",
+          "test_maybe_preserves_decider_defaults[True]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-False]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-True]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-False]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-True]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[False]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[True]"
+        ]
+      },
+      {
+        "id": "task-0-cell-1-rep-1",
+        "cell_index": 1,
+        "repetition": 1,
+        "status": "completed",
+        "diagnostic_passed": false,
+        "attributable": true,
+        "admission_status": "artifact_replayed",
+        "budget_exhausted": false,
+        "realized": true,
+        "clause_exposure_status": "verified",
+        "visible_changed": true,
+        "visible_steps": [
+          1
+        ],
+        "frozen_passed": true,
+        "supplementary_passed": false,
+        "failed_nodes": [
+          "test_maybe_preserves_decider_defaults[False]",
+          "test_maybe_preserves_decider_defaults[True]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-False]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-True]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-False]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-True]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[False]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[True]"
+        ]
+      },
+      {
+        "id": "task-0-cell-1-rep-2",
+        "cell_index": 1,
+        "repetition": 2,
+        "status": "completed",
+        "diagnostic_passed": false,
+        "attributable": true,
+        "admission_status": "artifact_replayed",
+        "budget_exhausted": false,
+        "realized": true,
+        "clause_exposure_status": "verified",
+        "visible_changed": true,
+        "visible_steps": [
+          1
+        ],
+        "frozen_passed": true,
+        "supplementary_passed": false,
+        "failed_nodes": [
+          "test_maybe_preserves_decider_defaults[False]",
+          "test_maybe_preserves_decider_defaults[True]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-False]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-True]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-False]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-True]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[False]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[True]"
+        ]
+      },
+      {
+        "id": "task-0-cell-1-rep-3",
+        "cell_index": 1,
+        "repetition": 3,
+        "status": "completed",
+        "diagnostic_passed": false,
+        "attributable": true,
+        "admission_status": "artifact_replayed",
+        "budget_exhausted": false,
+        "realized": true,
+        "clause_exposure_status": "verified",
+        "visible_changed": true,
+        "visible_steps": [
+          1
+        ],
+        "frozen_passed": true,
+        "supplementary_passed": false,
+        "failed_nodes": [
+          "test_maybe_preserves_decider_defaults[False]",
+          "test_maybe_preserves_decider_defaults[True]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-False]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-True]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-False]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-True]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[False]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[True]"
+        ]
+      },
+      {
+        "id": "task-0-cell-1-rep-4",
+        "cell_index": 1,
+        "repetition": 4,
+        "status": "completed",
+        "diagnostic_passed": false,
+        "attributable": true,
+        "admission_status": "artifact_replayed",
+        "budget_exhausted": false,
+        "realized": true,
+        "clause_exposure_status": "verified",
+        "visible_changed": true,
+        "visible_steps": [
+          1
+        ],
+        "frozen_passed": true,
+        "supplementary_passed": false,
+        "failed_nodes": [
+          "test_maybe_preserves_decider_defaults[False]",
+          "test_maybe_preserves_decider_defaults[True]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-False]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-True]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-False]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-True]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[False]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[True]"
+        ]
+      },
+      {
+        "id": "task-0-cell-2-rep-0",
+        "cell_index": 2,
+        "repetition": 0,
+        "status": "completed",
+        "diagnostic_passed": false,
+        "attributable": true,
+        "admission_status": "artifact_replayed",
+        "budget_exhausted": false,
+        "realized": true,
+        "clause_exposure_status": "verified",
+        "visible_changed": true,
+        "visible_steps": [
+          1
+        ],
+        "frozen_passed": true,
+        "supplementary_passed": false,
+        "failed_nodes": [
+          "test_maybe_preserves_decider_defaults[False]",
+          "test_maybe_preserves_decider_defaults[True]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[False]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[True]"
+        ]
+      },
+      {
+        "id": "task-0-cell-2-rep-1",
+        "cell_index": 2,
+        "repetition": 1,
+        "status": "completed",
+        "diagnostic_passed": false,
+        "attributable": true,
+        "admission_status": "artifact_replayed",
+        "budget_exhausted": false,
+        "realized": true,
+        "clause_exposure_status": "verified",
+        "visible_changed": true,
+        "visible_steps": [
+          1
+        ],
+        "frozen_passed": true,
+        "supplementary_passed": false,
+        "failed_nodes": [
+          "test_maybe_preserves_decider_defaults[False]",
+          "test_maybe_preserves_decider_defaults[True]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[False]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[True]"
+        ]
+      },
+      {
+        "id": "task-0-cell-2-rep-2",
+        "cell_index": 2,
+        "repetition": 2,
+        "status": "completed",
+        "diagnostic_passed": false,
+        "attributable": true,
+        "admission_status": "artifact_replayed",
+        "budget_exhausted": false,
+        "realized": true,
+        "clause_exposure_status": "verified",
+        "visible_changed": true,
+        "visible_steps": [
+          1
+        ],
+        "frozen_passed": true,
+        "supplementary_passed": false,
+        "failed_nodes": [
+          "test_maybe_preserves_decider_defaults[False]",
+          "test_maybe_preserves_decider_defaults[True]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-False]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-True]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-False]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-True]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[False]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[True]"
+        ]
+      },
+      {
+        "id": "task-0-cell-2-rep-3",
+        "cell_index": 2,
+        "repetition": 3,
+        "status": "completed",
+        "diagnostic_passed": false,
+        "attributable": true,
+        "admission_status": "artifact_replayed",
+        "budget_exhausted": false,
+        "realized": true,
+        "clause_exposure_status": "verified",
+        "visible_changed": true,
+        "visible_steps": [
+          1
+        ],
+        "frozen_passed": true,
+        "supplementary_passed": false,
+        "failed_nodes": [
+          "test_maybe_preserves_decider_defaults[False]",
+          "test_maybe_preserves_decider_defaults[True]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-False]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-True]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-False]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-True]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[False]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[True]"
+        ]
+      },
+      {
+        "id": "task-0-cell-2-rep-4",
+        "cell_index": 2,
+        "repetition": 4,
+        "status": "completed",
+        "diagnostic_passed": false,
+        "attributable": true,
+        "admission_status": "artifact_replayed",
+        "budget_exhausted": false,
+        "realized": true,
+        "clause_exposure_status": "verified",
+        "visible_changed": true,
+        "visible_steps": [
+          1
+        ],
+        "frozen_passed": true,
+        "supplementary_passed": false,
+        "failed_nodes": [
+          "test_maybe_preserves_decider_defaults[False]",
+          "test_maybe_preserves_decider_defaults[True]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-False]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-True]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-False]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-True]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[False]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[True]"
+        ]
+      },
+      {
+        "id": "task-0-cell-3-rep-0",
+        "cell_index": 3,
+        "repetition": 0,
+        "status": "completed",
+        "diagnostic_passed": false,
+        "attributable": true,
+        "admission_status": "artifact_replayed",
+        "budget_exhausted": false,
+        "realized": true,
+        "clause_exposure_status": "verified",
+        "visible_changed": true,
+        "visible_steps": [
+          1
+        ],
+        "frozen_passed": true,
+        "supplementary_passed": false,
+        "failed_nodes": [
+          "test_maybe_preserves_decider_defaults[False]",
+          "test_maybe_preserves_decider_defaults[True]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-False]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-True]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-False]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-True]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[False]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[True]"
+        ]
+      },
+      {
+        "id": "task-0-cell-3-rep-1",
+        "cell_index": 3,
+        "repetition": 1,
+        "status": "completed",
+        "diagnostic_passed": false,
+        "attributable": true,
+        "admission_status": "artifact_replayed",
+        "budget_exhausted": false,
+        "realized": true,
+        "clause_exposure_status": "verified",
+        "visible_changed": true,
+        "visible_steps": [
+          1
+        ],
+        "frozen_passed": true,
+        "supplementary_passed": false,
+        "failed_nodes": [
+          "test_maybe_preserves_decider_defaults[False]",
+          "test_maybe_preserves_decider_defaults[True]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[False]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[True]"
+        ]
+      },
+      {
+        "id": "task-0-cell-3-rep-2",
+        "cell_index": 3,
+        "repetition": 2,
+        "status": "completed",
+        "diagnostic_passed": false,
+        "attributable": true,
+        "admission_status": "artifact_replayed",
+        "budget_exhausted": false,
+        "realized": true,
+        "clause_exposure_status": "verified",
+        "visible_changed": true,
+        "visible_steps": [
+          1
+        ],
+        "frozen_passed": true,
+        "supplementary_passed": false,
+        "failed_nodes": [
+          "test_maybe_preserves_decider_defaults[False]",
+          "test_maybe_preserves_decider_defaults[True]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-False]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-True]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-False]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-True]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[False]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[True]"
+        ]
+      },
+      {
+        "id": "task-0-cell-3-rep-3",
+        "cell_index": 3,
+        "repetition": 3,
+        "status": "completed",
+        "diagnostic_passed": false,
+        "attributable": true,
+        "admission_status": "artifact_replayed",
+        "budget_exhausted": false,
+        "realized": true,
+        "clause_exposure_status": "verified",
+        "visible_changed": true,
+        "visible_steps": [
+          1
+        ],
+        "frozen_passed": true,
+        "supplementary_passed": false,
+        "failed_nodes": [
+          "test_maybe_preserves_decider_defaults[False]",
+          "test_maybe_preserves_decider_defaults[True]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-False]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-True]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-False]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-True]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[False]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[True]"
+        ]
+      },
+      {
+        "id": "task-0-cell-3-rep-4",
+        "cell_index": 3,
+        "repetition": 4,
+        "status": "completed",
+        "diagnostic_passed": false,
+        "attributable": true,
+        "admission_status": "artifact_replayed",
+        "budget_exhausted": false,
+        "realized": true,
+        "clause_exposure_status": "verified",
+        "visible_changed": true,
+        "visible_steps": [
+          1
+        ],
+        "frozen_passed": true,
+        "supplementary_passed": false,
+        "failed_nodes": [
+          "test_maybe_preserves_decider_defaults[False]",
+          "test_maybe_preserves_decider_defaults[True]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-False]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-True]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-False]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-True]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[False]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[True]"
+        ]
+      }
+    ],
+    "evidence_sha256": {
+      "shards/task-0-cell-0/task-0-cell-0-rep-0/result.json": "c539f799730af43505d00c6c1fd7989925733f8ad39918b526656383e01bdd67",
+      "shards/task-0-cell-0/task-0-cell-0-rep-0/observations.json": "32389be4be514bc702b3fcfb9dc2b93888cac71abbaf407a17dd912914c522fa",
+      "shards/task-0-cell-0/task-0-cell-0-rep-0/final-state.json": "f2e8a622cf725ac08b53d4cd9a9483af69b3c1c4592b8d963c7ef2ee5dc885a6",
+      "shards/task-0-cell-0/task-0-cell-0-rep-1/result.json": "490772799b903771602adbab12a639a7dbea0dd4ad41d5541172367f32b5b388",
+      "shards/task-0-cell-0/task-0-cell-0-rep-1/observations.json": "ec348fc71a385f320ead364e17e8e9f09d7e67bba198d5594feaebbe0bedbd6f",
+      "shards/task-0-cell-0/task-0-cell-0-rep-1/final-state.json": "0006f4990f45eac78dcf8cb2957968423517223960fae6f0645c743896757425",
+      "shards/task-0-cell-0/task-0-cell-0-rep-2/result.json": "0156af11d49d345ed5637f2af828b52e45ec08b2db48ac9a4e8c19469e03ed67",
+      "shards/task-0-cell-0/task-0-cell-0-rep-2/observations.json": "cc8d3d2eeac707841b6d80c57437c852b9dfe9ac078d1fe40f361ee638475896",
+      "shards/task-0-cell-0/task-0-cell-0-rep-2/final-state.json": "846d5e6567b7ed504e6958be810323a5948b1c3a1fd324e21c5c426b5a5e8a32",
+      "shards/task-0-cell-0/task-0-cell-0-rep-3/result.json": "a97f488decfb8b880ef6bd60ebd164c9ad989446e93b5894218834d33650543b",
+      "shards/task-0-cell-0/task-0-cell-0-rep-3/observations.json": "8d630b127a2475ef239203a618ec89b00d197a3568005847b474da54ff989b0d",
+      "shards/task-0-cell-0/task-0-cell-0-rep-3/final-state.json": "d69e0ea2f8198a9902bc1ad1744fe21a2f10586f9d2d9361f240c1fe58602eb7",
+      "shards/task-0-cell-0/task-0-cell-0-rep-4/result.json": "d440c9e6a79a3ab8e752c9f6dd294b60e73fb3b91ff431396248b8134fa03f52",
+      "shards/task-0-cell-0/task-0-cell-0-rep-4/observations.json": "fa748d4a6ffa1755b3268bcdb532d153afbdb527713c34a5d659d143f139594d",
+      "shards/task-0-cell-0/task-0-cell-0-rep-4/final-state.json": "1f7cca62e8ee6e0ebb8e09ca0ef885df40756757bdf658a7e94ef235d7c22fce",
+      "shards/task-0-cell-1/task-0-cell-1-rep-0/result.json": "e578f195fe3db9dee46d28f0f8007f9be107f84281ef479d17ca4dd96c78b322",
+      "shards/task-0-cell-1/task-0-cell-1-rep-0/observations.json": "9f0115a6e410758470deb0da47a985879599939f399751fa048ac9036f0cbc90",
+      "shards/task-0-cell-1/task-0-cell-1-rep-0/final-state.json": "6059851f6889347bcf014670ee3e8094ba40999de2e5868f092c701669fb771e",
+      "shards/task-0-cell-1/task-0-cell-1-rep-1/result.json": "cf7c29a24406ae64f82cb2a58b4397dc282eb9bc2bbaf427440e653100db215c",
+      "shards/task-0-cell-1/task-0-cell-1-rep-1/observations.json": "7e90c16cb1d824424a71f0e4a75f0ea9da26ab09f208085b62a407bdae1beddc",
+      "shards/task-0-cell-1/task-0-cell-1-rep-1/final-state.json": "9d0acbb41a3f5654446378663a3ee6d9fb8b82a7df58d128f3b48e7c8de0ecb4",
+      "shards/task-0-cell-1/task-0-cell-1-rep-2/result.json": "d1e2d534e082e54a22e877dcb1212f4611ffdcf33dbe1d10b642809519150240",
+      "shards/task-0-cell-1/task-0-cell-1-rep-2/observations.json": "840f7605cf06bf604a51757e9ed4fc0d918d9615f40a1977c3c1b391f6d2936f",
+      "shards/task-0-cell-1/task-0-cell-1-rep-2/final-state.json": "db2b8a64b1d0d1391f87c5176ddb2c2ab9ecee69ffd543023fdd4d594e752849",
+      "shards/task-0-cell-1/task-0-cell-1-rep-3/result.json": "3e0a9c747432e192f4e34bd27486eb5c13a820ea5c3d1e70533b436b74a2d6b2",
+      "shards/task-0-cell-1/task-0-cell-1-rep-3/observations.json": "b42820ff298b3d2ce6c73120f1d35332d42ac7c21ed02b438a68f8469fc5b21d",
+      "shards/task-0-cell-1/task-0-cell-1-rep-3/final-state.json": "cb158d7d068cfd2cb563ff81234f4a95ac1b8fca123be3178594577d323c7193",
+      "shards/task-0-cell-1/task-0-cell-1-rep-4/result.json": "99adee121314a061d861f5366b002babcec2757c47167e549dba0d4442e333d1",
+      "shards/task-0-cell-1/task-0-cell-1-rep-4/observations.json": "19080ef1466536d522ca8fb68c1fff0fe800c1f404868b2139108c71637df3a6",
+      "shards/task-0-cell-1/task-0-cell-1-rep-4/final-state.json": "e05885e5639d82e5e9df42126c7b7af6616fe583c47c736a8824f3c37b95def8",
+      "shards/task-0-cell-2/task-0-cell-2-rep-0/result.json": "e756a5677793e10475e29eaac2d730e5ec6468f890aff7bd55dcf3bcec387345",
+      "shards/task-0-cell-2/task-0-cell-2-rep-0/observations.json": "1ef6858cce3c72341bbcb6d13d311cf8da0a0a757d0b8920b560f5fcee02ba59",
+      "shards/task-0-cell-2/task-0-cell-2-rep-0/final-state.json": "7ad0acd9a3644d8406129056999bfdede410e1d4f1a30e5159fb778827dec1ec",
+      "shards/task-0-cell-2/task-0-cell-2-rep-1/result.json": "c0770289a9cc46be0c60b71b670ba877575f72525ababa7f352aebba4ffa7565",
+      "shards/task-0-cell-2/task-0-cell-2-rep-1/observations.json": "efdb5ca96dffc44c907c484342d5a8d8430e2908ae1b4a54b1ac796cd6445848",
+      "shards/task-0-cell-2/task-0-cell-2-rep-1/final-state.json": "c866debe09c5518b2539d02016ec30fa57992cafa8b2471d4e4b74709044a7d3",
+      "shards/task-0-cell-2/task-0-cell-2-rep-2/result.json": "a7c329e38698b6e1443b0ea4fdc9f248203f8eede9a640f29bccbb481cbdad8d",
+      "shards/task-0-cell-2/task-0-cell-2-rep-2/observations.json": "11bf29fd2c19f6e1c520224c91fa2d7e94fc26e20724c48309a9ee3b6d01d51d",
+      "shards/task-0-cell-2/task-0-cell-2-rep-2/final-state.json": "c537189d656c1da58401f6b813bbf0475241688a757bd290bf1112853c58bcba",
+      "shards/task-0-cell-2/task-0-cell-2-rep-3/result.json": "0dc2a4826009d82bf5055ba1b6210d9eee8ccab70c48d3b057c601fb38055c2b",
+      "shards/task-0-cell-2/task-0-cell-2-rep-3/observations.json": "e7aaf54d87df1ff82d7e7ec69c8b5f316c56411cdf75f2de5aefb1309ddf813f",
+      "shards/task-0-cell-2/task-0-cell-2-rep-3/final-state.json": "c45cc2e58d1abe2da96afc06116d9c5e36d10e1c795a292c332754171c670b59",
+      "shards/task-0-cell-2/task-0-cell-2-rep-4/result.json": "ee2651cdb5822eab8e42717295d069bd3c8fad14b0ced4db4d2fed64c61cebe5",
+      "shards/task-0-cell-2/task-0-cell-2-rep-4/observations.json": "0a22b61c2427ac7936c82c8d05854bd49d995ad206a846bce89ae448547bc79e",
+      "shards/task-0-cell-2/task-0-cell-2-rep-4/final-state.json": "238b938bd56aa12abbf8b82a83f473a3e7f56fb2a10e03ebe28b9afae06b2add",
+      "shards/task-0-cell-3/task-0-cell-3-rep-0/result.json": "9ffad234f96e40b949bfb7b21bab775e35058784a22cdf4e3a9fd9c6fd852e80",
+      "shards/task-0-cell-3/task-0-cell-3-rep-0/observations.json": "250db2b8d97de15df52ec3773a2eb0562115ca7e82c2f0ae6d01f24ffcaa4ee4",
+      "shards/task-0-cell-3/task-0-cell-3-rep-0/final-state.json": "2be8a26579a6af4183e35d34fd0f2b363336ed380e36727f8b0c92dd13806b08",
+      "shards/task-0-cell-3/task-0-cell-3-rep-1/result.json": "638588e433495b938cd03a1803841645c40aec9e17ed595ed021dadfe73bfd0b",
+      "shards/task-0-cell-3/task-0-cell-3-rep-1/observations.json": "992294ab563b5e62f8958d9bd4c62a01aa5ddd86bd82eee509432dae3111fb44",
+      "shards/task-0-cell-3/task-0-cell-3-rep-1/final-state.json": "426197eba6e95dd0dd9bec247d168d8d69fca7092270517b0d22d4a9090b3c3d",
+      "shards/task-0-cell-3/task-0-cell-3-rep-2/result.json": "7b4a2b8e2c0dc8bf7ab20fd08237334700e6e361107b7ad6dd580458d8ff699b",
+      "shards/task-0-cell-3/task-0-cell-3-rep-2/observations.json": "4f5301e419cd4b66a3daf2cf79f1d3a62e57df40e8e383c659b48ba3fa49a844",
+      "shards/task-0-cell-3/task-0-cell-3-rep-2/final-state.json": "4f868355bc01fd3746ded23d83d9b75cadd8a93ef59680df467e23c9bdf7a13e",
+      "shards/task-0-cell-3/task-0-cell-3-rep-3/result.json": "707b4c9faa52a10eba7d6098a6d45a832bb4179708428c47ed07e8377282232b",
+      "shards/task-0-cell-3/task-0-cell-3-rep-3/observations.json": "3abd20799369ab582672178ce5ae3cc0323bac6afa5460ce96ccdeeabe8a6fce",
+      "shards/task-0-cell-3/task-0-cell-3-rep-3/final-state.json": "96ae569cfee4d7adb3cff609db1aa6bcfbab1a65bdd7d7b6c43a4effcde8c06f",
+      "shards/task-0-cell-3/task-0-cell-3-rep-4/result.json": "c71678c7dd99f3f6fd87359fbbfce5a2535dfa8808ecb53d6f571c9aa4394f40",
+      "shards/task-0-cell-3/task-0-cell-3-rep-4/observations.json": "78e41c89eab94fec9c452d95b5c73378f5dc7394ea8727dc8db9a33774895531",
+      "shards/task-0-cell-3/task-0-cell-3-rep-4/final-state.json": "d8bb3e4e2ad1bb547149ebae9e8b72c9db8c06c86ba26e72a5827fca5ff547c6"
+    },
+    "api_seed": null,
+    "deterministic_counterfactual": false,
+    "protected": false,
+    "confirmed": false
+  },
+  "astra-strong-2-v1": {
+    "arm": "astra-strong-2-v1",
+    "planned": 20,
+    "observed_at": "2026-09-10T20:27:56.033375+00:00",
+    "groups": [
+      {
+        "cell": 0,
+        "registered": 5,
+        "terminal": 5,
+        "known": 5,
+        "passes": 5,
+        "failures": 0,
+        "unknown": 0,
+        "failure_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "cell": 1,
+        "registered": 5,
+        "terminal": 5,
+        "known": 5,
+        "passes": 0,
+        "failures": 5,
+        "unknown": 0,
+        "failure_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "cell": 2,
+        "registered": 5,
+        "terminal": 5,
+        "known": 5,
+        "passes": 2,
+        "failures": 3,
+        "unknown": 0,
+        "failure_bounds": [
+          0.6,
+          0.6
+        ]
+      },
+      {
+        "cell": 3,
+        "registered": 5,
+        "terminal": 5,
+        "known": 5,
+        "passes": 0,
+        "failures": 5,
+        "unknown": 0,
+        "failure_bounds": [
+          1.0,
+          1.0
+        ]
+      }
+    ],
+    "matched_repetition_discordances": [
+      {
+        "cell": 1,
+        "control_pass_treatment_fail_reps": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "cell": 2,
+        "control_pass_treatment_fail_reps": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "cell": 3,
+        "control_pass_treatment_fail_reps": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    ],
+    "rows": [
+      {
+        "id": "task-0-cell-0-rep-0",
+        "cell_index": 0,
+        "repetition": 0,
+        "status": "completed",
+        "diagnostic_passed": true,
+        "attributable": true,
+        "admission_status": "artifact_replayed",
+        "budget_exhausted": false,
+        "realized": true,
+        "clause_exposure_status": "verified",
+        "visible_changed": false,
+        "visible_steps": [],
+        "frozen_passed": true,
+        "supplementary_passed": true,
+        "failed_nodes": []
+      },
+      {
+        "id": "task-0-cell-0-rep-1",
+        "cell_index": 0,
+        "repetition": 1,
+        "status": "completed",
+        "diagnostic_passed": true,
+        "attributable": true,
+        "admission_status": "artifact_replayed",
+        "budget_exhausted": false,
+        "realized": true,
+        "clause_exposure_status": "verified",
+        "visible_changed": false,
+        "visible_steps": [],
+        "frozen_passed": true,
+        "supplementary_passed": true,
+        "failed_nodes": []
+      },
+      {
+        "id": "task-0-cell-0-rep-2",
+        "cell_index": 0,
+        "repetition": 2,
+        "status": "completed",
+        "diagnostic_passed": true,
+        "attributable": true,
+        "admission_status": "artifact_replayed",
+        "budget_exhausted": false,
+        "realized": true,
+        "clause_exposure_status": "verified",
+        "visible_changed": false,
+        "visible_steps": [],
+        "frozen_passed": true,
+        "supplementary_passed": true,
+        "failed_nodes": []
+      },
+      {
+        "id": "task-0-cell-0-rep-3",
+        "cell_index": 0,
+        "repetition": 3,
+        "status": "completed",
+        "diagnostic_passed": true,
+        "attributable": true,
+        "admission_status": "artifact_replayed",
+        "budget_exhausted": false,
+        "realized": true,
+        "clause_exposure_status": "verified",
+        "visible_changed": false,
+        "visible_steps": [],
+        "frozen_passed": true,
+        "supplementary_passed": true,
+        "failed_nodes": []
+      },
+      {
+        "id": "task-0-cell-0-rep-4",
+        "cell_index": 0,
+        "repetition": 4,
+        "status": "completed",
+        "diagnostic_passed": true,
+        "attributable": true,
+        "admission_status": "artifact_replayed",
+        "budget_exhausted": false,
+        "realized": true,
+        "clause_exposure_status": "verified",
+        "visible_changed": false,
+        "visible_steps": [],
+        "frozen_passed": true,
+        "supplementary_passed": true,
+        "failed_nodes": []
+      },
+      {
+        "id": "task-0-cell-1-rep-0",
+        "cell_index": 1,
+        "repetition": 0,
+        "status": "completed",
+        "diagnostic_passed": false,
+        "attributable": true,
+        "admission_status": "artifact_replayed",
+        "budget_exhausted": false,
+        "realized": true,
+        "clause_exposure_status": "verified",
+        "visible_changed": true,
+        "visible_steps": [
+          1
+        ],
+        "frozen_passed": true,
+        "supplementary_passed": false,
+        "failed_nodes": [
+          "test_maybe_preserves_decider_defaults[False]",
+          "test_maybe_preserves_decider_defaults[True]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-False]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-True]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-False]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-True]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[False]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[True]"
+        ]
+      },
+      {
+        "id": "task-0-cell-1-rep-1",
+        "cell_index": 1,
+        "repetition": 1,
+        "status": "completed",
+        "diagnostic_passed": false,
+        "attributable": true,
+        "admission_status": "artifact_replayed",
+        "budget_exhausted": false,
+        "realized": true,
+        "clause_exposure_status": "verified",
+        "visible_changed": true,
+        "visible_steps": [
+          1
+        ],
+        "frozen_passed": true,
+        "supplementary_passed": false,
+        "failed_nodes": [
+          "test_maybe_preserves_decider_defaults[False]",
+          "test_maybe_preserves_decider_defaults[True]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-False]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-True]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-False]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-True]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[False]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[True]"
+        ]
+      },
+      {
+        "id": "task-0-cell-1-rep-2",
+        "cell_index": 1,
+        "repetition": 2,
+        "status": "completed",
+        "diagnostic_passed": false,
+        "attributable": true,
+        "admission_status": "artifact_replayed",
+        "budget_exhausted": false,
+        "realized": true,
+        "clause_exposure_status": "verified",
+        "visible_changed": true,
+        "visible_steps": [
+          1
+        ],
+        "frozen_passed": true,
+        "supplementary_passed": false,
+        "failed_nodes": [
+          "test_maybe_preserves_decider_defaults[False]",
+          "test_maybe_preserves_decider_defaults[True]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-False]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-True]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-False]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-True]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[False]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[True]"
+        ]
+      },
+      {
+        "id": "task-0-cell-1-rep-3",
+        "cell_index": 1,
+        "repetition": 3,
+        "status": "completed",
+        "diagnostic_passed": false,
+        "attributable": true,
+        "admission_status": "artifact_replayed",
+        "budget_exhausted": false,
+        "realized": true,
+        "clause_exposure_status": "verified",
+        "visible_changed": true,
+        "visible_steps": [
+          1
+        ],
+        "frozen_passed": true,
+        "supplementary_passed": false,
+        "failed_nodes": [
+          "test_maybe_preserves_decider_defaults[False]",
+          "test_maybe_preserves_decider_defaults[True]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-False]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-True]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-False]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-True]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[False]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[True]"
+        ]
+      },
+      {
+        "id": "task-0-cell-1-rep-4",
+        "cell_index": 1,
+        "repetition": 4,
+        "status": "completed",
+        "diagnostic_passed": false,
+        "attributable": true,
+        "admission_status": "artifact_replayed",
+        "budget_exhausted": false,
+        "realized": true,
+        "clause_exposure_status": "verified",
+        "visible_changed": true,
+        "visible_steps": [
+          1
+        ],
+        "frozen_passed": true,
+        "supplementary_passed": false,
+        "failed_nodes": [
+          "test_maybe_preserves_decider_defaults[False]",
+          "test_maybe_preserves_decider_defaults[True]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-False]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-True]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-False]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-True]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[False]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[True]"
+        ]
+      },
+      {
+        "id": "task-0-cell-2-rep-0",
+        "cell_index": 2,
+        "repetition": 0,
+        "status": "completed",
+        "diagnostic_passed": true,
+        "attributable": true,
+        "admission_status": "artifact_replayed",
+        "budget_exhausted": false,
+        "realized": true,
+        "clause_exposure_status": "verified",
+        "visible_changed": true,
+        "visible_steps": [
+          1
+        ],
+        "frozen_passed": true,
+        "supplementary_passed": true,
+        "failed_nodes": []
+      },
+      {
+        "id": "task-0-cell-2-rep-1",
+        "cell_index": 2,
+        "repetition": 1,
+        "status": "completed",
+        "diagnostic_passed": false,
+        "attributable": true,
+        "admission_status": "artifact_replayed",
+        "budget_exhausted": false,
+        "realized": true,
+        "clause_exposure_status": "verified",
+        "visible_changed": true,
+        "visible_steps": [
+          1
+        ],
+        "frozen_passed": true,
+        "supplementary_passed": false,
+        "failed_nodes": [
+          "test_maybe_preserves_decider_defaults[False]",
+          "test_maybe_preserves_decider_defaults[True]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-False]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-True]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-False]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-True]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[False]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[True]"
+        ]
+      },
+      {
+        "id": "task-0-cell-2-rep-2",
+        "cell_index": 2,
+        "repetition": 2,
+        "status": "completed",
+        "diagnostic_passed": false,
+        "attributable": true,
+        "admission_status": "artifact_replayed",
+        "budget_exhausted": false,
+        "realized": true,
+        "clause_exposure_status": "verified",
+        "visible_changed": true,
+        "visible_steps": [
+          1
+        ],
+        "frozen_passed": true,
+        "supplementary_passed": false,
+        "failed_nodes": [
+          "test_maybe_preserves_decider_defaults[False]",
+          "test_maybe_preserves_decider_defaults[True]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-False]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-True]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-False]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-True]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[False]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[True]"
+        ]
+      },
+      {
+        "id": "task-0-cell-2-rep-3",
+        "cell_index": 2,
+        "repetition": 3,
+        "status": "completed",
+        "diagnostic_passed": false,
+        "attributable": true,
+        "admission_status": "artifact_replayed",
+        "budget_exhausted": false,
+        "realized": true,
+        "clause_exposure_status": "verified",
+        "visible_changed": true,
+        "visible_steps": [
+          1
+        ],
+        "frozen_passed": true,
+        "supplementary_passed": false,
+        "failed_nodes": [
+          "test_maybe_preserves_decider_defaults[False]",
+          "test_maybe_preserves_decider_defaults[True]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-False]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-True]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-False]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-True]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[False]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[True]"
+        ]
+      },
+      {
+        "id": "task-0-cell-2-rep-4",
+        "cell_index": 2,
+        "repetition": 4,
+        "status": "completed",
+        "diagnostic_passed": true,
+        "attributable": true,
+        "admission_status": "artifact_replayed",
+        "budget_exhausted": false,
+        "realized": true,
+        "clause_exposure_status": "verified",
+        "visible_changed": true,
+        "visible_steps": [
+          1
+        ],
+        "frozen_passed": true,
+        "supplementary_passed": true,
+        "failed_nodes": []
+      },
+      {
+        "id": "task-0-cell-3-rep-0",
+        "cell_index": 3,
+        "repetition": 0,
+        "status": "completed",
+        "diagnostic_passed": false,
+        "attributable": true,
+        "admission_status": "artifact_replayed",
+        "budget_exhausted": false,
+        "realized": true,
+        "clause_exposure_status": "verified",
+        "visible_changed": true,
+        "visible_steps": [
+          1
+        ],
+        "frozen_passed": true,
+        "supplementary_passed": false,
+        "failed_nodes": [
+          "test_maybe_preserves_decider_defaults[False]",
+          "test_maybe_preserves_decider_defaults[True]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-False]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-True]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-False]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-True]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[False]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[True]"
+        ]
+      },
+      {
+        "id": "task-0-cell-3-rep-1",
+        "cell_index": 3,
+        "repetition": 1,
+        "status": "completed",
+        "diagnostic_passed": false,
+        "attributable": true,
+        "admission_status": "artifact_replayed",
+        "budget_exhausted": false,
+        "realized": true,
+        "clause_exposure_status": "verified",
+        "visible_changed": true,
+        "visible_steps": [
+          1
+        ],
+        "frozen_passed": true,
+        "supplementary_passed": false,
+        "failed_nodes": [
+          "test_maybe_preserves_decider_defaults[False]",
+          "test_maybe_preserves_decider_defaults[True]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-False]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-True]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-False]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-True]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[False]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[True]"
+        ]
+      },
+      {
+        "id": "task-0-cell-3-rep-2",
+        "cell_index": 3,
+        "repetition": 2,
+        "status": "completed",
+        "diagnostic_passed": false,
+        "attributable": true,
+        "admission_status": "artifact_replayed",
+        "budget_exhausted": false,
+        "realized": true,
+        "clause_exposure_status": "verified",
+        "visible_changed": true,
+        "visible_steps": [
+          1
+        ],
+        "frozen_passed": true,
+        "supplementary_passed": false,
+        "failed_nodes": [
+          "test_maybe_preserves_decider_defaults[False]",
+          "test_maybe_preserves_decider_defaults[True]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-False]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-True]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-False]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-True]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[False]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[True]"
+        ]
+      },
+      {
+        "id": "task-0-cell-3-rep-3",
+        "cell_index": 3,
+        "repetition": 3,
+        "status": "completed",
+        "diagnostic_passed": false,
+        "attributable": true,
+        "admission_status": "artifact_replayed",
+        "budget_exhausted": false,
+        "realized": true,
+        "clause_exposure_status": "verified",
+        "visible_changed": true,
+        "visible_steps": [
+          1
+        ],
+        "frozen_passed": true,
+        "supplementary_passed": false,
+        "failed_nodes": [
+          "test_maybe_preserves_decider_defaults[False]",
+          "test_maybe_preserves_decider_defaults[True]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-False]",
+          "test_faker_decider_preserves_locale_and_branch[fr_FR-True]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-False]",
+          "test_faker_decider_preserves_locale_and_branch[de_DE-True]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[False]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[True]"
+        ]
+      },
+      {
+        "id": "task-0-cell-3-rep-4",
+        "cell_index": 3,
+        "repetition": 4,
+        "status": "completed",
+        "diagnostic_passed": false,
+        "attributable": true,
+        "admission_status": "artifact_replayed",
+        "budget_exhausted": false,
+        "realized": true,
+        "clause_exposure_status": "verified",
+        "visible_changed": true,
+        "visible_steps": [
+          1
+        ],
+        "frozen_passed": true,
+        "supplementary_passed": false,
+        "failed_nodes": [
+          "test_maybe_preserves_decider_defaults[False]",
+          "test_maybe_preserves_decider_defaults[True]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[False]",
+          "test_selected_branch_gets_overrides_without_overriding_decider[True]"
+        ]
+      }
+    ],
+    "evidence_sha256": {
+      "shards/task-0-cell-0/task-0-cell-0-rep-0/result.json": "2bad4c228fe451fe43d87896685831e5e4b57f4159f751de21f41520398526ae",
+      "shards/task-0-cell-0/task-0-cell-0-rep-0/observations.json": "dfff4ad275cc0e3f4a480cdca30295efb2a1712537bc2483decde6193a4dbe7c",
+      "shards/task-0-cell-0/task-0-cell-0-rep-0/final-state.json": "b1427b99f162293702a4279b57cf448a12ef4696518461c9ffe47dab61b03b3f",
+      "shards/task-0-cell-0/task-0-cell-0-rep-1/result.json": "749191303dde4f50281898850182d6913203b83e9e747dbcec20c9a08a496141",
+      "shards/task-0-cell-0/task-0-cell-0-rep-1/observations.json": "86d1799896c5f7911ae184bf7bad8bf16f36a40bc23dd91c7c9e4fecbafd794c",
+      "shards/task-0-cell-0/task-0-cell-0-rep-1/final-state.json": "1047b74489e2a7520f399b00601e06881265fa33ae8d9f896061cf5696e8d252",
+      "shards/task-0-cell-0/task-0-cell-0-rep-2/result.json": "18c5ccee40ffa32d6f50b3a6ccd744d0b261cb3a5bbc6ee6c58e9bb4b33d6265",
+      "shards/task-0-cell-0/task-0-cell-0-rep-2/observations.json": "d47fcd9694ecbe9986f0d7ec6194cb292b428cede572aaa05757042a4bf9feee",
+      "shards/task-0-cell-0/task-0-cell-0-rep-2/final-state.json": "983c896b1c09b2f4dec89b3d2d3422624a1438512d7af4073aab2d2551731560",
+      "shards/task-0-cell-0/task-0-cell-0-rep-3/result.json": "cf4b6e253e4d03a299c7d6e928f9dfebba2e05f906b819068a9a84752dc32d51",
+      "shards/task-0-cell-0/task-0-cell-0-rep-3/observations.json": "79bd9db3452ffa0fa825a6ff0791bd79a7c1c744bcea34f045ae7ce7839119c5",
+      "shards/task-0-cell-0/task-0-cell-0-rep-3/final-state.json": "12ae74ceee96322089133b73de724de9bda263a2c5c0e8507041b189f5299f5f",
+      "shards/task-0-cell-0/task-0-cell-0-rep-4/result.json": "3a5e89a726fdfc92508c0c245c76177e0753141e357a9dc15cc0759016ed7cff",
+      "shards/task-0-cell-0/task-0-cell-0-rep-4/observations.json": "08b65c99b532f4161dcbad5cd331b2b95282375426cd7c903be24861ad91ea21",
+      "shards/task-0-cell-0/task-0-cell-0-rep-4/final-state.json": "f95f8b6ec7592dbd60bf84785cf4dd6d824ab4e7f6aa7bd9649533121723cbfb",
+      "shards/task-0-cell-1/task-0-cell-1-rep-0/result.json": "e5be409becc6452199a5cb8fb6df481c3e694d5115dc9bd83bb2b836499cfb85",
+      "shards/task-0-cell-1/task-0-cell-1-rep-0/observations.json": "06bc4606a92b8a8cbd9a8792b2971d4d465f7df9648e8116b10fa8287694c3eb",
+      "shards/task-0-cell-1/task-0-cell-1-rep-0/final-state.json": "88c6e8583bd0d03554573fcea40f818341704df4c1a2fcffe8b003b25f5ad7aa",
+      "shards/task-0-cell-1/task-0-cell-1-rep-1/result.json": "15b667ec58a943af9f0d8590c45457d610df87a7ce1262f0f2a2f89c88b8b2af",
+      "shards/task-0-cell-1/task-0-cell-1-rep-1/observations.json": "fe71db167a6cbcfe81b32b1357c52f1feda08083913cac765237be769217f260",
+      "shards/task-0-cell-1/task-0-cell-1-rep-1/final-state.json": "eea946c3a529e2c40edf95ba26f2f7375c580f793f46331dd57363a674087a8c",
+      "shards/task-0-cell-1/task-0-cell-1-rep-2/result.json": "d1284c0ba11861f3953c47f0ded3e62954a6aad7a08dbb41dfa0cb18060d03f5",
+      "shards/task-0-cell-1/task-0-cell-1-rep-2/observations.json": "56a542bf2322bf2a29a90ca0a607d16d56ddf4a830d73ebb5aab0682fb893a0d",
+      "shards/task-0-cell-1/task-0-cell-1-rep-2/final-state.json": "7518fab83dde0b46bf68f4209b16a30cd90859dcc68d435520102175ddc3164a",
+      "shards/task-0-cell-1/task-0-cell-1-rep-3/result.json": "9cc350f57fbc158a1420bbebba21ad7afea3de0135e08a0a09c35c8a97b13835",
+      "shards/task-0-cell-1/task-0-cell-1-rep-3/observations.json": "c95451d1f1628ec51d81e8e6875d4a7cd85f6c832770afdaad1e77a9ab722e4b",
+      "shards/task-0-cell-1/task-0-cell-1-rep-3/final-state.json": "c96dde208d357f9408264a826d6fa15ef2b8ca71ea33f08934f32e8d185fb077",
+      "shards/task-0-cell-1/task-0-cell-1-rep-4/result.json": "fb7cedffbff5ea602fc8712236cf05b8df931ad3bbdc38a9c43a0292e78360f7",
+      "shards/task-0-cell-1/task-0-cell-1-rep-4/observations.json": "591c394802ff73d901a12cfc7fe447425e186e3d95903bd8c92848472d1c6fcc",
+      "shards/task-0-cell-1/task-0-cell-1-rep-4/final-state.json": "d5fab50406f1b6cbaa1e977d591b1b7821682305af216c0144782c92bc7157bb",
+      "shards/task-0-cell-2/task-0-cell-2-rep-0/result.json": "668bcaa98a892238980c7a61427b5c750e6e7368bcf9a32a1c6f5a84a89029a5",
+      "shards/task-0-cell-2/task-0-cell-2-rep-0/observations.json": "5b62c3794654568673eb116409ac8c7e179e5e379fed4359126a6da963f389d5",
+      "shards/task-0-cell-2/task-0-cell-2-rep-0/final-state.json": "233b7e94f1fa9760c9fe14ab07c6a4107464238be5b2385df0083efc209c99a0",
+      "shards/task-0-cell-2/task-0-cell-2-rep-1/result.json": "4deeecc30d2259b2498a99d81a41f66bd262ffcbb3536c11bbf5852614404ccd",
+      "shards/task-0-cell-2/task-0-cell-2-rep-1/observations.json": "06b2f4feab60c720f4ed60500d15955e706f488abee202f3f706777a9a58ef29",
+      "shards/task-0-cell-2/task-0-cell-2-rep-1/final-state.json": "356eb3df48e8d568514a6bc816644428e274dfdde2bc28bad5f59bb1e85f43b9",
+      "shards/task-0-cell-2/task-0-cell-2-rep-2/result.json": "ae6d60ad936688f6d55723bd3a84a10000b50337a3da001c3f6d5d1ac0ff9894",
+      "shards/task-0-cell-2/task-0-cell-2-rep-2/observations.json": "a25c28fdd8c5ae371dbad81a1a9842938e84433feb4f55a8abd3fb2a76c9393f",
+      "shards/task-0-cell-2/task-0-cell-2-rep-2/final-state.json": "1358f11e01153fdfe692de50c9f2262609c07a2e9ebf71f49d590380e3ddd684",
+      "shards/task-0-cell-2/task-0-cell-2-rep-3/result.json": "3c64b78e89991480a3efa05c074ce89909d315dcfaca197f87a0be5b7cc3de6a",
+      "shards/task-0-cell-2/task-0-cell-2-rep-3/observations.json": "e59dc72ac27b2bbc689ea1073be669c7671c0b80607054d486c66b770d12c1fb",
+      "shards/task-0-cell-2/task-0-cell-2-rep-3/final-state.json": "3d9fb426fde88e02f8c4c8997c5fa5d1eea06262ca6de45035d8bf4d7434993e",
+      "shards/task-0-cell-2/task-0-cell-2-rep-4/result.json": "a0b0a412b94d4c89d65fa5ac24ea26353cc708bc1b29a9b35d0c52ff99a75fba",
+      "shards/task-0-cell-2/task-0-cell-2-rep-4/observations.json": "0d16e750e5ac43df3ebcee0b1d5ba8f554c236471b00b64cd9bc25f588851465",
+      "shards/task-0-cell-2/task-0-cell-2-rep-4/final-state.json": "9cdf03f653fdaebf1a11a569c8e0acad358808e0d6d5d49ff0d7ab0789c3cc2c",
+      "shards/task-0-cell-3/task-0-cell-3-rep-0/result.json": "589099253596d22c0972394744637ee137d3752b790ed13e776ff509382fd53a",
+      "shards/task-0-cell-3/task-0-cell-3-rep-0/observations.json": "e27b53bfedbaf4c18510985f019f56ffb851abeef3ebe9445fd58288efa409ec",
+      "shards/task-0-cell-3/task-0-cell-3-rep-0/final-state.json": "b6e8d1535aa64139d66f83f1142b6d052c37b2dbf0b573acf6c78cf93fe30bba",
+      "shards/task-0-cell-3/task-0-cell-3-rep-1/result.json": "084797dca67705e3915e30a3ed3de610bbff37c55acbf9d13b6c5b0a0e7a3ad2",
+      "shards/task-0-cell-3/task-0-cell-3-rep-1/observations.json": "2f0f04c92d3e144ae202110d1c74399ad53ac99671968f6e8137df0d35135430",
+      "shards/task-0-cell-3/task-0-cell-3-rep-1/final-state.json": "85a951341306c97f70dc1f838b990009c7b04c69f89f1be7cf258df19ad0d95d",
+      "shards/task-0-cell-3/task-0-cell-3-rep-2/result.json": "2f2c038f30ea7ee024bb4e77c32da73987175400f9e74dd54fd029327a6c861c",
+      "shards/task-0-cell-3/task-0-cell-3-rep-2/observations.json": "9915658b70dcd4c44fb7502ac13e8839050dcf0da592f09a68bf1b15652d8753",
+      "shards/task-0-cell-3/task-0-cell-3-rep-2/final-state.json": "96f0c3ea36eb716479ecf474f9d958ef78ba9dcc87efb4d384ec0b484b1f3c28",
+      "shards/task-0-cell-3/task-0-cell-3-rep-3/result.json": "f3b74604b2033a570e233d7912c26f73321b8ef8a77b8e052cdfa7f8dce37826",
+      "shards/task-0-cell-3/task-0-cell-3-rep-3/observations.json": "dc644715976539681c86b073b0726bff4c9b084f7c9758bd35ab0b23ffe34e43",
+      "shards/task-0-cell-3/task-0-cell-3-rep-3/final-state.json": "cd2df450f6bab7e027c809aa7b29e480ac5d5c84b88fdf0f821d0d435164334c",
+      "shards/task-0-cell-3/task-0-cell-3-rep-4/result.json": "f01a7c18e46095e25a2b530a395f43336cf25c3d9f3d1f247f6870a8c2bfa1c8",
+      "shards/task-0-cell-3/task-0-cell-3-rep-4/observations.json": "85a9abe127524c1e0add9231ac7dfe0c751c0c6f471064e0304b53638c15e465",
+      "shards/task-0-cell-3/task-0-cell-3-rep-4/final-state.json": "c651aa7a797620a687f9241b0ddc9444424a9e1ea7615ab015923b46d49dfc85"
+    },
+    "api_seed": null,
+    "deterministic_counterfactual": false,
+    "protected": false,
+    "confirmed": false
+  }
+}

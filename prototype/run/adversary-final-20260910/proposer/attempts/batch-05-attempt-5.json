@@ -1,0 +1,58 @@
+{
+  "attempt": 5,
+  "status": "rejected",
+  "critique": {
+    "accepted": false,
+    "objections": [
+      {
+        "reason": "malformed",
+        "detail": "generator changed trusted resource"
+      },
+      {
+        "reason": "malformed",
+        "detail": "generator changed trusted resource"
+      },
+      {
+        "reason": "malformed",
+        "detail": "generator changed trusted resource"
+      },
+      {
+        "reason": "malformed",
+        "detail": "generator changed trusted resource"
+      },
+      {
+        "reason": "malformed",
+        "detail": "generator changed trusted resource"
+      },
+      {
+        "reason": "malformed",
+        "detail": "generator changed trusted resource"
+      },
+      {
+        "reason": "malformed",
+        "detail": "generator changed trusted resource"
+      },
+      {
+        "reason": "malformed",
+        "detail": "generator changed trusted resource"
+      },
+      {
+        "reason": "malformed",
+        "detail": "generator changed trusted resource"
+      },
+      {
+        "reason": "malformed",
+        "detail": "generator changed trusted resource"
+      },
+      {
+        "reason": "malformed",
+        "detail": "generator changed trusted resource"
+      },
+      {
+        "reason": "malformed",
+        "detail": "generator changed trusted resource"
+      }
+    ],
+    "critic": "static"
+  }
+}

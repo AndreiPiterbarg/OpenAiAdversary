@@ -1,0 +1,16 @@
+asgiref==3.12.1
+coverage==7.16.0
+django==5.2.17
+django-debug-toolbar==8.0.0
+django-environ==0.14.0
+-e file:///tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117/pristine
+djpress-example-plugin @ file:///tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117/pristine/djpress-example-plugin
+iniconfig==2.3.0
+markdown==3.10.3
+packaging==26.3
+pillow==12.3.0
+pluggy==1.6.0
+pytest==8.3.5
+pytest-cov==7.1.0
+pytest-django==4.14.0
+sqlparse==0.6.0

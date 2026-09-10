@@ -1,0 +1,75 @@
+{
+  "id": "task-0-cell-0-rep-1",
+  "task": {
+    "key": "django__asgiref-523",
+    "corpus": "adaptive_cross_repository_transfer",
+    "host_repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a",
+    "host_venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+    "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+    "original_pin_sha256": "ed37e140b5d904d6165eb9c55310d65298dd8431cdc6c5fe76fce9f0efd4e271"
+  },
+  "cell": {
+    "legacy_dispatch_cue": "off",
+    "legacy_argument_cue": "off"
+  },
+  "cell_index": 0,
+  "repetition": 1,
+  "seed": 9401,
+  "diagnostic_passed": true,
+  "status": "completed",
+  "kind": "generated_perturbation_host_diagnostic_episode",
+  "observation_limit": 16000,
+  "episode_id": "task-0-cell-0-rep-1",
+  "task_key": "django__asgiref-523",
+  "host_runtime": {
+    "task_key": "django__asgiref-523",
+    "commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+    "repository": "/tmp/prun-host-prep-20260910/django__asgiref-523-historyfree-v1/repository",
+    "repository_sha256": "de6b1342939d70b354938aa5cc83e66ea9d4b33be9dee8e2ef1f57e4c3ea709a",
+    "venv": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2/venv",
+    "venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+    "system_python": "/usr/bin/python3.12",
+    "kind": "interactive_host_runtime_v1"
+  },
+  "prepared_ref": "a648ad81e3e1ad702f453e59f70075f6c63d347c",
+  "endpoint": "local_credential_bridge",
+  "budget_profile": "explicit_model_override",
+  "budget": {
+    "max_steps": 100,
+    "max_seconds": 600,
+    "max_tokens": 1024
+  },
+  "protected": false,
+  "confirmed": false,
+  "sampling_policy": {
+    "temperature": "provider_default",
+    "seed": null,
+    "reasoning_effort": "low"
+  },
+  "target_model": {
+    "id": "gpt-6-astra",
+    "version": "",
+    "license": "restricted",
+    "backend": "openai"
+  },
+  "prompt_profile": "environment_guidance_v1",
+  "prompt_sha256": "56c7da96c3b35def67b6aac6bde48ced8996c22a9d272021559b6ce035598945",
+  "prompt_sha256_scope": "task_guidance_user_message",
+  "admission_status": "artifact_replayed",
+  "guarded_gold_control": "not_needed",
+  "steps": 5,
+  "stop_reason": "submitted",
+  "budget_exhausted": false,
+  "usage": {
+    "input_tokens": 19660,
+    "output_tokens": 1229,
+    "wall_seconds": 41.677688639611006
+  },
+  "usage_unknown": false,
+  "realized": true,
+  "wall_seconds": 43.617819850333035,
+  "visible_changed": false,
+  "clause_exposure_status": "verified",
+  "clause_visible_contribution": {},
+  "control_identity_violation": false
+}

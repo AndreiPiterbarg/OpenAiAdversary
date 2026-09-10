@@ -1,0 +1,1804 @@
+{
+  "kind": "registered_interactive_public_results_v1",
+  "arm_kind": "generated_four_cell_pilot",
+  "never_pool_with_other_arms": true,
+  "registration_kind": "astra_twenty_episode_discovery_batch",
+  "summary": {
+    "planned": 20,
+    "diagnostic_measured": 20,
+    "diagnostic_passes": 20,
+    "diagnostic_unknown": 0,
+    "attributable_known": 20,
+    "unknown": 0,
+    "budget_exhausted": 0,
+    "visible_changed": 15,
+    "realized": 20,
+    "groups": [
+      {
+        "task": "factoryboy__factory_boy-1067",
+        "cell_index": 0,
+        "executions": 5,
+        "diagnostic_measured": 5,
+        "known": 5,
+        "unknown": 0,
+        "passes": 5,
+        "complete": true,
+        "task_failure": false,
+        "severity": 0.0
+      },
+      {
+        "task": "factoryboy__factory_boy-1067",
+        "cell_index": 1,
+        "executions": 5,
+        "diagnostic_measured": 5,
+        "known": 5,
+        "unknown": 0,
+        "passes": 5,
+        "complete": true,
+        "task_failure": false,
+        "severity": 0.0
+      },
+      {
+        "task": "factoryboy__factory_boy-1067",
+        "cell_index": 2,
+        "executions": 5,
+        "diagnostic_measured": 5,
+        "known": 5,
+        "unknown": 0,
+        "passes": 5,
+        "complete": true,
+        "task_failure": false,
+        "severity": 0.0
+      },
+      {
+        "task": "factoryboy__factory_boy-1067",
+        "cell_index": 3,
+        "executions": 5,
+        "diagnostic_measured": 5,
+        "known": 5,
+        "unknown": 0,
+        "passes": 5,
+        "complete": true,
+        "task_failure": false,
+        "severity": 0.0
+      }
+    ],
+    "contrasts": [
+      {
+        "task": "factoryboy__factory_boy-1067",
+        "complete": true,
+        "delta_a": 0.0,
+        "delta_b": 0.0,
+        "delta_all_on": 0.0,
+        "additive_prediction": 0.0,
+        "additive_excess": 0.0,
+        "raw_interaction_contrast": 0.0,
+        "scale": "five-execution failure fraction",
+        "descriptive_only": true,
+        "confidence_interval": null
+      }
+    ],
+    "protected": false,
+    "confirmed": false,
+    "trained": false,
+    "inference": "descriptive task-specific contrasts; no population or confidence claim"
+  },
+  "terminal_receipts": 20,
+  "rows": [
+    {
+      "id": "task-0-cell-0-rep-0",
+      "task": {
+        "key": "factoryboy__factory_boy-1067",
+        "corpus": "adaptive_discovery_followup",
+        "host_repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+        "host_venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+        "original_pin_sha256": "57991d28eb31216ca40b59cdc3e0e8ecd58a178eeb1c9fe9721c1b856408fdb5"
+      },
+      "cell": {
+        "legacy_dispatch_cue": "off",
+        "legacy_argument_cue": "off"
+      },
+      "cell_index": 0,
+      "repetition": 0,
+      "seed": 8300,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "observation_limit": 16000,
+      "episode_id": "task-0-cell-0-rep-0",
+      "task_key": "factoryboy__factory_boy-1067",
+      "host_runtime": {
+        "task_key": "factoryboy__factory_boy-1067",
+        "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+        "repository": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-historyfree-v1/repository",
+        "repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+        "venv": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+        "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+      "endpoint": "local_credential_bridge",
+      "budget_profile": "explicit_model_override",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": "provider_default",
+        "seed": null,
+        "reasoning_effort": "low"
+      },
+      "target_model": {
+        "id": "gpt-6-astra",
+        "version": "",
+        "license": "restricted",
+        "backend": "openai"
+      },
+      "prompt_profile": "environment_guidance_v1",
+      "prompt_sha256": "70f3ddead314e5510b8aec5cf186d59a8aeb953b3281e91336c1872b2a7ed838",
+      "prompt_sha256_scope": "task_guidance_user_message",
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 5,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 23370,
+        "output_tokens": 964,
+        "wall_seconds": 37.655057520605624
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 40.069967068731785,
+      "visible_changed": false,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {},
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-1-rep-0",
+      "task": {
+        "key": "factoryboy__factory_boy-1067",
+        "corpus": "adaptive_discovery_followup",
+        "host_repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+        "host_venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+        "original_pin_sha256": "57991d28eb31216ca40b59cdc3e0e8ecd58a178eeb1c9fe9721c1b856408fdb5"
+      },
+      "cell": {
+        "legacy_dispatch_cue": "on",
+        "legacy_argument_cue": "off"
+      },
+      "cell_index": 1,
+      "repetition": 0,
+      "seed": 8300,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "observation_limit": 16000,
+      "episode_id": "task-0-cell-1-rep-0",
+      "task_key": "factoryboy__factory_boy-1067",
+      "host_runtime": {
+        "task_key": "factoryboy__factory_boy-1067",
+        "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+        "repository": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-historyfree-v1/repository",
+        "repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+        "venv": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+        "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+      "endpoint": "local_credential_bridge",
+      "budget_profile": "explicit_model_override",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": "provider_default",
+        "seed": null,
+        "reasoning_effort": "low"
+      },
+      "target_model": {
+        "id": "gpt-6-astra",
+        "version": "",
+        "license": "restricted",
+        "backend": "openai"
+      },
+      "prompt_profile": "environment_guidance_v1",
+      "prompt_sha256": "70f3ddead314e5510b8aec5cf186d59a8aeb953b3281e91336c1872b2a7ed838",
+      "prompt_sha256_scope": "task_guidance_user_message",
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 6,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 26816,
+        "output_tokens": 1063,
+        "wall_seconds": 41.8836670583114
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 44.35996623057872,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "legacy_dispatch_cue": {
+          "exposed": true,
+          "observation_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-2-rep-0",
+      "task": {
+        "key": "factoryboy__factory_boy-1067",
+        "corpus": "adaptive_discovery_followup",
+        "host_repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+        "host_venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+        "original_pin_sha256": "57991d28eb31216ca40b59cdc3e0e8ecd58a178eeb1c9fe9721c1b856408fdb5"
+      },
+      "cell": {
+        "legacy_dispatch_cue": "off",
+        "legacy_argument_cue": "on"
+      },
+      "cell_index": 2,
+      "repetition": 0,
+      "seed": 8300,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "observation_limit": 16000,
+      "episode_id": "task-0-cell-2-rep-0",
+      "task_key": "factoryboy__factory_boy-1067",
+      "host_runtime": {
+        "task_key": "factoryboy__factory_boy-1067",
+        "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+        "repository": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-historyfree-v1/repository",
+        "repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+        "venv": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+        "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+      "endpoint": "local_credential_bridge",
+      "budget_profile": "explicit_model_override",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": "provider_default",
+        "seed": null,
+        "reasoning_effort": "low"
+      },
+      "target_model": {
+        "id": "gpt-6-astra",
+        "version": "",
+        "license": "restricted",
+        "backend": "openai"
+      },
+      "prompt_profile": "environment_guidance_v1",
+      "prompt_sha256": "70f3ddead314e5510b8aec5cf186d59a8aeb953b3281e91336c1872b2a7ed838",
+      "prompt_sha256_scope": "task_guidance_user_message",
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 5,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 23983,
+        "output_tokens": 1204,
+        "wall_seconds": 40.492505078203976
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 42.911761006340384,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "legacy_argument_cue": {
+          "exposed": true,
+          "observation_indices": [
+            0,
+            1,
+            3
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-3-rep-0",
+      "task": {
+        "key": "factoryboy__factory_boy-1067",
+        "corpus": "adaptive_discovery_followup",
+        "host_repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+        "host_venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+        "original_pin_sha256": "57991d28eb31216ca40b59cdc3e0e8ecd58a178eeb1c9fe9721c1b856408fdb5"
+      },
+      "cell": {
+        "legacy_dispatch_cue": "on",
+        "legacy_argument_cue": "on"
+      },
+      "cell_index": 3,
+      "repetition": 0,
+      "seed": 8300,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "observation_limit": 16000,
+      "episode_id": "task-0-cell-3-rep-0",
+      "task_key": "factoryboy__factory_boy-1067",
+      "host_runtime": {
+        "task_key": "factoryboy__factory_boy-1067",
+        "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+        "repository": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-historyfree-v1/repository",
+        "repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+        "venv": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+        "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+      "endpoint": "local_credential_bridge",
+      "budget_profile": "explicit_model_override",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": "provider_default",
+        "seed": null,
+        "reasoning_effort": "low"
+      },
+      "target_model": {
+        "id": "gpt-6-astra",
+        "version": "",
+        "license": "restricted",
+        "backend": "openai"
+      },
+      "prompt_profile": "environment_guidance_v1",
+      "prompt_sha256": "70f3ddead314e5510b8aec5cf186d59a8aeb953b3281e91336c1872b2a7ed838",
+      "prompt_sha256_scope": "task_guidance_user_message",
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 5,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 21534,
+        "output_tokens": 980,
+        "wall_seconds": 45.33617764338851
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 47.7104536741972,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "legacy_dispatch_cue": {
+          "exposed": true,
+          "observation_indices": [
+            0,
+            1
+          ]
+        },
+        "legacy_argument_cue": {
+          "exposed": true,
+          "observation_indices": [
+            0,
+            1
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-0-rep-1",
+      "task": {
+        "key": "factoryboy__factory_boy-1067",
+        "corpus": "adaptive_discovery_followup",
+        "host_repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+        "host_venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+        "original_pin_sha256": "57991d28eb31216ca40b59cdc3e0e8ecd58a178eeb1c9fe9721c1b856408fdb5"
+      },
+      "cell": {
+        "legacy_dispatch_cue": "off",
+        "legacy_argument_cue": "off"
+      },
+      "cell_index": 0,
+      "repetition": 1,
+      "seed": 8301,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "observation_limit": 16000,
+      "episode_id": "task-0-cell-0-rep-1",
+      "task_key": "factoryboy__factory_boy-1067",
+      "host_runtime": {
+        "task_key": "factoryboy__factory_boy-1067",
+        "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+        "repository": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-historyfree-v1/repository",
+        "repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+        "venv": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+        "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+      "endpoint": "local_credential_bridge",
+      "budget_profile": "explicit_model_override",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": "provider_default",
+        "seed": null,
+        "reasoning_effort": "low"
+      },
+      "target_model": {
+        "id": "gpt-6-astra",
+        "version": "",
+        "license": "restricted",
+        "backend": "openai"
+      },
+      "prompt_profile": "environment_guidance_v1",
+      "prompt_sha256": "70f3ddead314e5510b8aec5cf186d59a8aeb953b3281e91336c1872b2a7ed838",
+      "prompt_sha256_scope": "task_guidance_user_message",
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 6,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 26438,
+        "output_tokens": 1023,
+        "wall_seconds": 41.99119456578046
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 44.12740849889815,
+      "visible_changed": false,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {},
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-1-rep-1",
+      "task": {
+        "key": "factoryboy__factory_boy-1067",
+        "corpus": "adaptive_discovery_followup",
+        "host_repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+        "host_venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+        "original_pin_sha256": "57991d28eb31216ca40b59cdc3e0e8ecd58a178eeb1c9fe9721c1b856408fdb5"
+      },
+      "cell": {
+        "legacy_dispatch_cue": "on",
+        "legacy_argument_cue": "off"
+      },
+      "cell_index": 1,
+      "repetition": 1,
+      "seed": 8301,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "observation_limit": 16000,
+      "episode_id": "task-0-cell-1-rep-1",
+      "task_key": "factoryboy__factory_boy-1067",
+      "host_runtime": {
+        "task_key": "factoryboy__factory_boy-1067",
+        "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+        "repository": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-historyfree-v1/repository",
+        "repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+        "venv": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+        "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+      "endpoint": "local_credential_bridge",
+      "budget_profile": "explicit_model_override",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": "provider_default",
+        "seed": null,
+        "reasoning_effort": "low"
+      },
+      "target_model": {
+        "id": "gpt-6-astra",
+        "version": "",
+        "license": "restricted",
+        "backend": "openai"
+      },
+      "prompt_profile": "environment_guidance_v1",
+      "prompt_sha256": "70f3ddead314e5510b8aec5cf186d59a8aeb953b3281e91336c1872b2a7ed838",
+      "prompt_sha256_scope": "task_guidance_user_message",
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 4,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 14824,
+        "output_tokens": 740,
+        "wall_seconds": 29.32133284304291
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 31.404099688865244,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "legacy_dispatch_cue": {
+          "exposed": true,
+          "observation_indices": [
+            0,
+            2
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-2-rep-1",
+      "task": {
+        "key": "factoryboy__factory_boy-1067",
+        "corpus": "adaptive_discovery_followup",
+        "host_repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+        "host_venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+        "original_pin_sha256": "57991d28eb31216ca40b59cdc3e0e8ecd58a178eeb1c9fe9721c1b856408fdb5"
+      },
+      "cell": {
+        "legacy_dispatch_cue": "off",
+        "legacy_argument_cue": "on"
+      },
+      "cell_index": 2,
+      "repetition": 1,
+      "seed": 8301,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "observation_limit": 16000,
+      "episode_id": "task-0-cell-2-rep-1",
+      "task_key": "factoryboy__factory_boy-1067",
+      "host_runtime": {
+        "task_key": "factoryboy__factory_boy-1067",
+        "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+        "repository": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-historyfree-v1/repository",
+        "repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+        "venv": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+        "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+      "endpoint": "local_credential_bridge",
+      "budget_profile": "explicit_model_override",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": "provider_default",
+        "seed": null,
+        "reasoning_effort": "low"
+      },
+      "target_model": {
+        "id": "gpt-6-astra",
+        "version": "",
+        "license": "restricted",
+        "backend": "openai"
+      },
+      "prompt_profile": "environment_guidance_v1",
+      "prompt_sha256": "70f3ddead314e5510b8aec5cf186d59a8aeb953b3281e91336c1872b2a7ed838",
+      "prompt_sha256_scope": "task_guidance_user_message",
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 5,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 21810,
+        "output_tokens": 1024,
+        "wall_seconds": 43.188464391976595
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 45.37236978113651,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "legacy_argument_cue": {
+          "exposed": true,
+          "observation_indices": [
+            0,
+            1,
+            2
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-3-rep-1",
+      "task": {
+        "key": "factoryboy__factory_boy-1067",
+        "corpus": "adaptive_discovery_followup",
+        "host_repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+        "host_venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+        "original_pin_sha256": "57991d28eb31216ca40b59cdc3e0e8ecd58a178eeb1c9fe9721c1b856408fdb5"
+      },
+      "cell": {
+        "legacy_dispatch_cue": "on",
+        "legacy_argument_cue": "on"
+      },
+      "cell_index": 3,
+      "repetition": 1,
+      "seed": 8301,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "observation_limit": 16000,
+      "episode_id": "task-0-cell-3-rep-1",
+      "task_key": "factoryboy__factory_boy-1067",
+      "host_runtime": {
+        "task_key": "factoryboy__factory_boy-1067",
+        "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+        "repository": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-historyfree-v1/repository",
+        "repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+        "venv": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+        "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+      "endpoint": "local_credential_bridge",
+      "budget_profile": "explicit_model_override",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": "provider_default",
+        "seed": null,
+        "reasoning_effort": "low"
+      },
+      "target_model": {
+        "id": "gpt-6-astra",
+        "version": "",
+        "license": "restricted",
+        "backend": "openai"
+      },
+      "prompt_profile": "environment_guidance_v1",
+      "prompt_sha256": "70f3ddead314e5510b8aec5cf186d59a8aeb953b3281e91336c1872b2a7ed838",
+      "prompt_sha256_scope": "task_guidance_user_message",
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 4,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 16447,
+        "output_tokens": 968,
+        "wall_seconds": 34.4513477794826
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 36.59480991773307,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "legacy_dispatch_cue": {
+          "exposed": true,
+          "observation_indices": [
+            0,
+            1
+          ]
+        },
+        "legacy_argument_cue": {
+          "exposed": true,
+          "observation_indices": [
+            0,
+            1
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-0-rep-2",
+      "task": {
+        "key": "factoryboy__factory_boy-1067",
+        "corpus": "adaptive_discovery_followup",
+        "host_repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+        "host_venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+        "original_pin_sha256": "57991d28eb31216ca40b59cdc3e0e8ecd58a178eeb1c9fe9721c1b856408fdb5"
+      },
+      "cell": {
+        "legacy_dispatch_cue": "off",
+        "legacy_argument_cue": "off"
+      },
+      "cell_index": 0,
+      "repetition": 2,
+      "seed": 8302,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "observation_limit": 16000,
+      "episode_id": "task-0-cell-0-rep-2",
+      "task_key": "factoryboy__factory_boy-1067",
+      "host_runtime": {
+        "task_key": "factoryboy__factory_boy-1067",
+        "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+        "repository": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-historyfree-v1/repository",
+        "repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+        "venv": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+        "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+      "endpoint": "local_credential_bridge",
+      "budget_profile": "explicit_model_override",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": "provider_default",
+        "seed": null,
+        "reasoning_effort": "low"
+      },
+      "target_model": {
+        "id": "gpt-6-astra",
+        "version": "",
+        "license": "restricted",
+        "backend": "openai"
+      },
+      "prompt_profile": "environment_guidance_v1",
+      "prompt_sha256": "70f3ddead314e5510b8aec5cf186d59a8aeb953b3281e91336c1872b2a7ed838",
+      "prompt_sha256_scope": "task_guidance_user_message",
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 3,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 11313,
+        "output_tokens": 820,
+        "wall_seconds": 27.589448045939207
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 29.663230420090258,
+      "visible_changed": false,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {},
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-1-rep-2",
+      "task": {
+        "key": "factoryboy__factory_boy-1067",
+        "corpus": "adaptive_discovery_followup",
+        "host_repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+        "host_venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+        "original_pin_sha256": "57991d28eb31216ca40b59cdc3e0e8ecd58a178eeb1c9fe9721c1b856408fdb5"
+      },
+      "cell": {
+        "legacy_dispatch_cue": "on",
+        "legacy_argument_cue": "off"
+      },
+      "cell_index": 1,
+      "repetition": 2,
+      "seed": 8302,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "observation_limit": 16000,
+      "episode_id": "task-0-cell-1-rep-2",
+      "task_key": "factoryboy__factory_boy-1067",
+      "host_runtime": {
+        "task_key": "factoryboy__factory_boy-1067",
+        "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+        "repository": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-historyfree-v1/repository",
+        "repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+        "venv": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+        "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+      "endpoint": "local_credential_bridge",
+      "budget_profile": "explicit_model_override",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": "provider_default",
+        "seed": null,
+        "reasoning_effort": "low"
+      },
+      "target_model": {
+        "id": "gpt-6-astra",
+        "version": "",
+        "license": "restricted",
+        "backend": "openai"
+      },
+      "prompt_profile": "environment_guidance_v1",
+      "prompt_sha256": "70f3ddead314e5510b8aec5cf186d59a8aeb953b3281e91336c1872b2a7ed838",
+      "prompt_sha256_scope": "task_guidance_user_message",
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 4,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 15213,
+        "output_tokens": 912,
+        "wall_seconds": 31.346167623065412
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 33.438316121697426,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "legacy_dispatch_cue": {
+          "exposed": true,
+          "observation_indices": [
+            0,
+            1,
+            2
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-2-rep-2",
+      "task": {
+        "key": "factoryboy__factory_boy-1067",
+        "corpus": "adaptive_discovery_followup",
+        "host_repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+        "host_venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+        "original_pin_sha256": "57991d28eb31216ca40b59cdc3e0e8ecd58a178eeb1c9fe9721c1b856408fdb5"
+      },
+      "cell": {
+        "legacy_dispatch_cue": "off",
+        "legacy_argument_cue": "on"
+      },
+      "cell_index": 2,
+      "repetition": 2,
+      "seed": 8302,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "observation_limit": 16000,
+      "episode_id": "task-0-cell-2-rep-2",
+      "task_key": "factoryboy__factory_boy-1067",
+      "host_runtime": {
+        "task_key": "factoryboy__factory_boy-1067",
+        "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+        "repository": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-historyfree-v1/repository",
+        "repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+        "venv": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+        "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+      "endpoint": "local_credential_bridge",
+      "budget_profile": "explicit_model_override",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": "provider_default",
+        "seed": null,
+        "reasoning_effort": "low"
+      },
+      "target_model": {
+        "id": "gpt-6-astra",
+        "version": "",
+        "license": "restricted",
+        "backend": "openai"
+      },
+      "prompt_profile": "environment_guidance_v1",
+      "prompt_sha256": "70f3ddead314e5510b8aec5cf186d59a8aeb953b3281e91336c1872b2a7ed838",
+      "prompt_sha256_scope": "task_guidance_user_message",
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 4,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 15801,
+        "output_tokens": 815,
+        "wall_seconds": 30.08630177564919
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 32.275614682585,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "legacy_argument_cue": {
+          "exposed": true,
+          "observation_indices": [
+            0,
+            1,
+            2
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-3-rep-2",
+      "task": {
+        "key": "factoryboy__factory_boy-1067",
+        "corpus": "adaptive_discovery_followup",
+        "host_repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+        "host_venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+        "original_pin_sha256": "57991d28eb31216ca40b59cdc3e0e8ecd58a178eeb1c9fe9721c1b856408fdb5"
+      },
+      "cell": {
+        "legacy_dispatch_cue": "on",
+        "legacy_argument_cue": "on"
+      },
+      "cell_index": 3,
+      "repetition": 2,
+      "seed": 8302,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "observation_limit": 16000,
+      "episode_id": "task-0-cell-3-rep-2",
+      "task_key": "factoryboy__factory_boy-1067",
+      "host_runtime": {
+        "task_key": "factoryboy__factory_boy-1067",
+        "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+        "repository": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-historyfree-v1/repository",
+        "repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+        "venv": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+        "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+      "endpoint": "local_credential_bridge",
+      "budget_profile": "explicit_model_override",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": "provider_default",
+        "seed": null,
+        "reasoning_effort": "low"
+      },
+      "target_model": {
+        "id": "gpt-6-astra",
+        "version": "",
+        "license": "restricted",
+        "backend": "openai"
+      },
+      "prompt_profile": "environment_guidance_v1",
+      "prompt_sha256": "70f3ddead314e5510b8aec5cf186d59a8aeb953b3281e91336c1872b2a7ed838",
+      "prompt_sha256_scope": "task_guidance_user_message",
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 5,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 20625,
+        "output_tokens": 817,
+        "wall_seconds": 32.4511295966804
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 34.579416958615184,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "legacy_dispatch_cue": {
+          "exposed": true,
+          "observation_indices": [
+            0,
+            1
+          ]
+        },
+        "legacy_argument_cue": {
+          "exposed": true,
+          "observation_indices": [
+            0,
+            1
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-0-rep-3",
+      "task": {
+        "key": "factoryboy__factory_boy-1067",
+        "corpus": "adaptive_discovery_followup",
+        "host_repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+        "host_venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+        "original_pin_sha256": "57991d28eb31216ca40b59cdc3e0e8ecd58a178eeb1c9fe9721c1b856408fdb5"
+      },
+      "cell": {
+        "legacy_dispatch_cue": "off",
+        "legacy_argument_cue": "off"
+      },
+      "cell_index": 0,
+      "repetition": 3,
+      "seed": 8303,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "observation_limit": 16000,
+      "episode_id": "task-0-cell-0-rep-3",
+      "task_key": "factoryboy__factory_boy-1067",
+      "host_runtime": {
+        "task_key": "factoryboy__factory_boy-1067",
+        "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+        "repository": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-historyfree-v1/repository",
+        "repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+        "venv": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+        "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+      "endpoint": "local_credential_bridge",
+      "budget_profile": "explicit_model_override",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": "provider_default",
+        "seed": null,
+        "reasoning_effort": "low"
+      },
+      "target_model": {
+        "id": "gpt-6-astra",
+        "version": "",
+        "license": "restricted",
+        "backend": "openai"
+      },
+      "prompt_profile": "environment_guidance_v1",
+      "prompt_sha256": "70f3ddead314e5510b8aec5cf186d59a8aeb953b3281e91336c1872b2a7ed838",
+      "prompt_sha256_scope": "task_guidance_user_message",
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 7,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 30650,
+        "output_tokens": 1050,
+        "wall_seconds": 48.73246289137751
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 50.780570211820304,
+      "visible_changed": false,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {},
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-1-rep-3",
+      "task": {
+        "key": "factoryboy__factory_boy-1067",
+        "corpus": "adaptive_discovery_followup",
+        "host_repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+        "host_venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+        "original_pin_sha256": "57991d28eb31216ca40b59cdc3e0e8ecd58a178eeb1c9fe9721c1b856408fdb5"
+      },
+      "cell": {
+        "legacy_dispatch_cue": "on",
+        "legacy_argument_cue": "off"
+      },
+      "cell_index": 1,
+      "repetition": 3,
+      "seed": 8303,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "observation_limit": 16000,
+      "episode_id": "task-0-cell-1-rep-3",
+      "task_key": "factoryboy__factory_boy-1067",
+      "host_runtime": {
+        "task_key": "factoryboy__factory_boy-1067",
+        "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+        "repository": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-historyfree-v1/repository",
+        "repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+        "venv": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+        "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+      "endpoint": "local_credential_bridge",
+      "budget_profile": "explicit_model_override",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": "provider_default",
+        "seed": null,
+        "reasoning_effort": "low"
+      },
+      "target_model": {
+        "id": "gpt-6-astra",
+        "version": "",
+        "license": "restricted",
+        "backend": "openai"
+      },
+      "prompt_profile": "environment_guidance_v1",
+      "prompt_sha256": "70f3ddead314e5510b8aec5cf186d59a8aeb953b3281e91336c1872b2a7ed838",
+      "prompt_sha256_scope": "task_guidance_user_message",
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 7,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 35776,
+        "output_tokens": 1359,
+        "wall_seconds": 53.65634608827531
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 55.77546643652022,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "legacy_dispatch_cue": {
+          "exposed": true,
+          "observation_indices": [
+            0,
+            1,
+            3,
+            4
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-2-rep-3",
+      "task": {
+        "key": "factoryboy__factory_boy-1067",
+        "corpus": "adaptive_discovery_followup",
+        "host_repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+        "host_venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+        "original_pin_sha256": "57991d28eb31216ca40b59cdc3e0e8ecd58a178eeb1c9fe9721c1b856408fdb5"
+      },
+      "cell": {
+        "legacy_dispatch_cue": "off",
+        "legacy_argument_cue": "on"
+      },
+      "cell_index": 2,
+      "repetition": 3,
+      "seed": 8303,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "observation_limit": 16000,
+      "episode_id": "task-0-cell-2-rep-3",
+      "task_key": "factoryboy__factory_boy-1067",
+      "host_runtime": {
+        "task_key": "factoryboy__factory_boy-1067",
+        "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+        "repository": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-historyfree-v1/repository",
+        "repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+        "venv": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+        "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+      "endpoint": "local_credential_bridge",
+      "budget_profile": "explicit_model_override",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": "provider_default",
+        "seed": null,
+        "reasoning_effort": "low"
+      },
+      "target_model": {
+        "id": "gpt-6-astra",
+        "version": "",
+        "license": "restricted",
+        "backend": "openai"
+      },
+      "prompt_profile": "environment_guidance_v1",
+      "prompt_sha256": "70f3ddead314e5510b8aec5cf186d59a8aeb953b3281e91336c1872b2a7ed838",
+      "prompt_sha256_scope": "task_guidance_user_message",
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 4,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 15365,
+        "output_tokens": 762,
+        "wall_seconds": 28.428727434948087
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 30.682040443643928,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "legacy_argument_cue": {
+          "exposed": true,
+          "observation_indices": [
+            0,
+            1,
+            2
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-3-rep-3",
+      "task": {
+        "key": "factoryboy__factory_boy-1067",
+        "corpus": "adaptive_discovery_followup",
+        "host_repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+        "host_venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+        "original_pin_sha256": "57991d28eb31216ca40b59cdc3e0e8ecd58a178eeb1c9fe9721c1b856408fdb5"
+      },
+      "cell": {
+        "legacy_dispatch_cue": "on",
+        "legacy_argument_cue": "on"
+      },
+      "cell_index": 3,
+      "repetition": 3,
+      "seed": 8303,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "observation_limit": 16000,
+      "episode_id": "task-0-cell-3-rep-3",
+      "task_key": "factoryboy__factory_boy-1067",
+      "host_runtime": {
+        "task_key": "factoryboy__factory_boy-1067",
+        "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+        "repository": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-historyfree-v1/repository",
+        "repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+        "venv": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+        "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+      "endpoint": "local_credential_bridge",
+      "budget_profile": "explicit_model_override",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": "provider_default",
+        "seed": null,
+        "reasoning_effort": "low"
+      },
+      "target_model": {
+        "id": "gpt-6-astra",
+        "version": "",
+        "license": "restricted",
+        "backend": "openai"
+      },
+      "prompt_profile": "environment_guidance_v1",
+      "prompt_sha256": "70f3ddead314e5510b8aec5cf186d59a8aeb953b3281e91336c1872b2a7ed838",
+      "prompt_sha256_scope": "task_guidance_user_message",
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 4,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 14503,
+        "output_tokens": 784,
+        "wall_seconds": 30.630953965708613
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 32.75173996947706,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "legacy_dispatch_cue": {
+          "exposed": true,
+          "observation_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "legacy_argument_cue": {
+          "exposed": true,
+          "observation_indices": [
+            0,
+            1,
+            2
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-0-rep-4",
+      "task": {
+        "key": "factoryboy__factory_boy-1067",
+        "corpus": "adaptive_discovery_followup",
+        "host_repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+        "host_venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+        "original_pin_sha256": "57991d28eb31216ca40b59cdc3e0e8ecd58a178eeb1c9fe9721c1b856408fdb5"
+      },
+      "cell": {
+        "legacy_dispatch_cue": "off",
+        "legacy_argument_cue": "off"
+      },
+      "cell_index": 0,
+      "repetition": 4,
+      "seed": 8304,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "observation_limit": 16000,
+      "episode_id": "task-0-cell-0-rep-4",
+      "task_key": "factoryboy__factory_boy-1067",
+      "host_runtime": {
+        "task_key": "factoryboy__factory_boy-1067",
+        "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+        "repository": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-historyfree-v1/repository",
+        "repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+        "venv": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+        "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+      "endpoint": "local_credential_bridge",
+      "budget_profile": "explicit_model_override",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": "provider_default",
+        "seed": null,
+        "reasoning_effort": "low"
+      },
+      "target_model": {
+        "id": "gpt-6-astra",
+        "version": "",
+        "license": "restricted",
+        "backend": "openai"
+      },
+      "prompt_profile": "environment_guidance_v1",
+      "prompt_sha256": "70f3ddead314e5510b8aec5cf186d59a8aeb953b3281e91336c1872b2a7ed838",
+      "prompt_sha256_scope": "task_guidance_user_message",
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 4,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 15047,
+        "output_tokens": 852,
+        "wall_seconds": 28.85878646466881
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 30.98638734128326,
+      "visible_changed": false,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {},
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-1-rep-4",
+      "task": {
+        "key": "factoryboy__factory_boy-1067",
+        "corpus": "adaptive_discovery_followup",
+        "host_repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+        "host_venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+        "original_pin_sha256": "57991d28eb31216ca40b59cdc3e0e8ecd58a178eeb1c9fe9721c1b856408fdb5"
+      },
+      "cell": {
+        "legacy_dispatch_cue": "on",
+        "legacy_argument_cue": "off"
+      },
+      "cell_index": 1,
+      "repetition": 4,
+      "seed": 8304,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "observation_limit": 16000,
+      "episode_id": "task-0-cell-1-rep-4",
+      "task_key": "factoryboy__factory_boy-1067",
+      "host_runtime": {
+        "task_key": "factoryboy__factory_boy-1067",
+        "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+        "repository": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-historyfree-v1/repository",
+        "repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+        "venv": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+        "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+      "endpoint": "local_credential_bridge",
+      "budget_profile": "explicit_model_override",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": "provider_default",
+        "seed": null,
+        "reasoning_effort": "low"
+      },
+      "target_model": {
+        "id": "gpt-6-astra",
+        "version": "",
+        "license": "restricted",
+        "backend": "openai"
+      },
+      "prompt_profile": "environment_guidance_v1",
+      "prompt_sha256": "70f3ddead314e5510b8aec5cf186d59a8aeb953b3281e91336c1872b2a7ed838",
+      "prompt_sha256_scope": "task_guidance_user_message",
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 6,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 29065,
+        "output_tokens": 1360,
+        "wall_seconds": 47.942834039218724
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 50.236957465298474,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "legacy_dispatch_cue": {
+          "exposed": true,
+          "observation_indices": [
+            0,
+            1,
+            3
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-2-rep-4",
+      "task": {
+        "key": "factoryboy__factory_boy-1067",
+        "corpus": "adaptive_discovery_followup",
+        "host_repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+        "host_venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+        "original_pin_sha256": "57991d28eb31216ca40b59cdc3e0e8ecd58a178eeb1c9fe9721c1b856408fdb5"
+      },
+      "cell": {
+        "legacy_dispatch_cue": "off",
+        "legacy_argument_cue": "on"
+      },
+      "cell_index": 2,
+      "repetition": 4,
+      "seed": 8304,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "observation_limit": 16000,
+      "episode_id": "task-0-cell-2-rep-4",
+      "task_key": "factoryboy__factory_boy-1067",
+      "host_runtime": {
+        "task_key": "factoryboy__factory_boy-1067",
+        "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+        "repository": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-historyfree-v1/repository",
+        "repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+        "venv": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+        "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+      "endpoint": "local_credential_bridge",
+      "budget_profile": "explicit_model_override",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": "provider_default",
+        "seed": null,
+        "reasoning_effort": "low"
+      },
+      "target_model": {
+        "id": "gpt-6-astra",
+        "version": "",
+        "license": "restricted",
+        "backend": "openai"
+      },
+      "prompt_profile": "environment_guidance_v1",
+      "prompt_sha256": "70f3ddead314e5510b8aec5cf186d59a8aeb953b3281e91336c1872b2a7ed838",
+      "prompt_sha256_scope": "task_guidance_user_message",
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 4,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 16428,
+        "output_tokens": 788,
+        "wall_seconds": 29.3322942154482
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 31.329751957207918,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "legacy_argument_cue": {
+          "exposed": true,
+          "observation_indices": [
+            0,
+            1,
+            2
+          ]
+        }
+      },
+      "control_identity_violation": false
+    },
+    {
+      "id": "task-0-cell-3-rep-4",
+      "task": {
+        "key": "factoryboy__factory_boy-1067",
+        "corpus": "adaptive_discovery_followup",
+        "host_repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+        "host_venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+        "original_pin_sha256": "57991d28eb31216ca40b59cdc3e0e8ecd58a178eeb1c9fe9721c1b856408fdb5"
+      },
+      "cell": {
+        "legacy_dispatch_cue": "on",
+        "legacy_argument_cue": "on"
+      },
+      "cell_index": 3,
+      "repetition": 4,
+      "seed": 8304,
+      "diagnostic_passed": true,
+      "status": "completed",
+      "kind": "generated_perturbation_host_diagnostic_episode",
+      "observation_limit": 16000,
+      "episode_id": "task-0-cell-3-rep-4",
+      "task_key": "factoryboy__factory_boy-1067",
+      "host_runtime": {
+        "task_key": "factoryboy__factory_boy-1067",
+        "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+        "repository": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-historyfree-v1/repository",
+        "repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+        "venv": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+        "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1"
+      },
+      "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+      "endpoint": "local_credential_bridge",
+      "budget_profile": "explicit_model_override",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600,
+        "max_tokens": 1024
+      },
+      "protected": false,
+      "confirmed": false,
+      "sampling_policy": {
+        "temperature": "provider_default",
+        "seed": null,
+        "reasoning_effort": "low"
+      },
+      "target_model": {
+        "id": "gpt-6-astra",
+        "version": "",
+        "license": "restricted",
+        "backend": "openai"
+      },
+      "prompt_profile": "environment_guidance_v1",
+      "prompt_sha256": "70f3ddead314e5510b8aec5cf186d59a8aeb953b3281e91336c1872b2a7ed838",
+      "prompt_sha256_scope": "task_guidance_user_message",
+      "admission_status": "artifact_replayed",
+      "guarded_gold_control": "not_needed",
+      "steps": 7,
+      "stop_reason": "submitted",
+      "budget_exhausted": false,
+      "usage": {
+        "input_tokens": 32619,
+        "output_tokens": 1133,
+        "wall_seconds": 46.44885332789272
+      },
+      "usage_unknown": false,
+      "realized": true,
+      "wall_seconds": 48.613310961052775,
+      "visible_changed": true,
+      "clause_exposure_status": "verified",
+      "clause_visible_contribution": {
+        "legacy_dispatch_cue": {
+          "exposed": true,
+          "observation_indices": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        "legacy_argument_cue": {
+          "exposed": true,
+          "observation_indices": [
+            0,
+            1,
+            2,
+            4
+          ]
+        }
+      },
+      "control_identity_violation": false
+    }
+  ],
+  "terminal_outcome_counts": {
+    "diagnostic_measured": 20,
+    "pending_or_missing": 0
+  },
+  "exporter_sha256": "11117787c5afc239def0c3b4dd3e1d11dca87db9b9f729c75a3bd19f910b205f",
+  "pending_or_missing": 0,
+  "pending_run_ids": [],
+  "unknown_by_stage": [],
+  "evidence_sha256": {
+    "registration.json": "0918996d6fdbce1a3f86c0210d2af54ccb8d769fba83e93c2bf21a7a86973ecc",
+    "shards/task-0-cell-0/registration.json": "622022509dee0403f033c10df0ac1297b4152a62f9be9162d749a007369a2fae",
+    "shards/task-0-cell-1/registration.json": "ac97dfa585504538635038a6291d0e42bb94ebca63086a7e5a13241d20a8439a",
+    "shards/task-0-cell-2/registration.json": "a66804638741e927a7982199c3f4459c1fbf6148b07933b1b882e75a09fe15c0",
+    "shards/task-0-cell-3/registration.json": "76530da16c5f127d1ded5d75897b7fbb3a4a601ffee8601b01fbc69664f48325",
+    "shards/task-0-cell-0/task-0-cell-0-rep-0/result.json": "f00663e400c78d1bf7f3e384946d8edad3248f6e199ac97448c85a582586db4e",
+    "shards/task-0-cell-1/task-0-cell-1-rep-0/result.json": "df0c0f6bf9f898408f49ce3e5ad07a17f8363b9c7b1243a3eb55e4ac3716c7c7",
+    "shards/task-0-cell-2/task-0-cell-2-rep-0/result.json": "53b7b2b29a00e68a295a286a9b5a50d5f5c04b1a5c6e6a325442b8ca8f1a75ae",
+    "shards/task-0-cell-3/task-0-cell-3-rep-0/result.json": "c8c5ae4d48d97c6e116981aea734c18a85f17dcbe19c2b7e1a57be5fe317bd93",
+    "shards/task-0-cell-0/task-0-cell-0-rep-1/result.json": "1c91d1c1ba14b34409f6dedaa4458df3a16d7fed29e9fb36db73308318ff7990",
+    "shards/task-0-cell-1/task-0-cell-1-rep-1/result.json": "21c79ac82565660d15d2898e733846853cfea148ecabf2a8802359a3aecc2165",
+    "shards/task-0-cell-2/task-0-cell-2-rep-1/result.json": "77d80b1e321ce23e105f1c52043283ee4c155ddf3c56d5a6828cc6e53f13c4f6",
+    "shards/task-0-cell-3/task-0-cell-3-rep-1/result.json": "4e3017b6e7bf2bd1db838e233878b18aaddade458b0eb6162aa713974aaf3daf",
+    "shards/task-0-cell-0/task-0-cell-0-rep-2/result.json": "77b320ff7898a76b04da4d12f7eca8691697663562ea01a544325630751e0d9e",
+    "shards/task-0-cell-1/task-0-cell-1-rep-2/result.json": "61a2de7c30e87e1458eb8640e9e0b8a3f0779e1259c2f27ee4664c8f1c71c9e1",
+    "shards/task-0-cell-2/task-0-cell-2-rep-2/result.json": "88c774814a0df33b01d153ec99870d00517bcff2c927e92575321375c1976f3e",
+    "shards/task-0-cell-3/task-0-cell-3-rep-2/result.json": "d9ac3bff73ff112bcd3b1092a34e8381e6f1a60f3c830ad427e3296ef22062f1",
+    "shards/task-0-cell-0/task-0-cell-0-rep-3/result.json": "efc291e32832f1c0daa45964fdfdc92f6a15852308079fa6ee97a7b4a1b5ac67",
+    "shards/task-0-cell-1/task-0-cell-1-rep-3/result.json": "f89cd3154ab1868b5279116160c0a13d8153b47c9d18ab7548bebac65a2a979e",
+    "shards/task-0-cell-2/task-0-cell-2-rep-3/result.json": "8a9dc129066fa07713697f67e18d874294f61dc8bf8cbcc66e91071ce92d48b1",
+    "shards/task-0-cell-3/task-0-cell-3-rep-3/result.json": "6092e445c9481da86e692918fccddae4562c5d1dab1c5b58f473cbc90277db55",
+    "shards/task-0-cell-0/task-0-cell-0-rep-4/result.json": "3b4f5ef81b36186058ae1189594b6801cc35c96723385e3ca009ed1e1e3a3ebe",
+    "shards/task-0-cell-1/task-0-cell-1-rep-4/result.json": "8e39c599657c07152ef9a88a81eb5286c5b3bb7171e3a1716a5a16971fd0e903",
+    "shards/task-0-cell-2/task-0-cell-2-rep-4/result.json": "cd7e517ad62f914b4ae0bafeaafd6211dada545ccc5399542793ebe3b7d640e8",
+    "shards/task-0-cell-3/task-0-cell-3-rep-4/result.json": "2af80973d8cb100194b22e3e896cfd30182d1c86f30002205ca99ff971dcd331"
+  },
+  "limitations": [
+    "Host runtime differs from the original container runtime.",
+    "Same-process pytest outputs are diagnostic, not protected semantic evidence.",
+    "Unrealized active conditions and censored runs remain attributable unknowns.",
+    "Five repeated executions per task do not establish population generalization.",
+    "No trained, protected, confirmed, or confidence-interval claim."
+  ]
+}

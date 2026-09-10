@@ -140,14 +140,31 @@ def _request(
     return request.model_copy(update={"reasoning_effort": "low"})
 
 
-def run_bridge(argv: list[str], out: Path, maxepisodes: int = 1) -> dict:
+def run_bridge(
+    argv: list[str],
+    out: Path,
+    maxepisodes: int = 1,
+    *,
+    call_limit: int = 8,
+    output_limit: int = 8192,
+    request_byte_limit: int = REQUEST_LIMIT,
+) -> dict:
     """Run a trusted caller's controller argv; never place API keys in its environment.
 
     The caller owns protected-verifier preflight and negative gates. Output files
     record requests before spending and completions before remote forwarding.
     """
-    if type(maxepisodes) is not int or maxepisodes not in (1, 5, 20):
-        raise ValueError("maxepisodes must be explicitly 1, 5 or 20")
+    if type(maxepisodes) is not int or maxepisodes not in (1, 4, 5, 20):
+        raise ValueError("maxepisodes must be explicitly 1, 4, 5 or 20")
+    if (
+        type(call_limit) is not int
+        or not 1 <= call_limit <= 100
+        or type(output_limit) is not int
+        or not 1 <= output_limit <= 102400
+        or type(request_byte_limit) is not int
+        or not 1 <= request_byte_limit <= 1000000
+    ):
+        raise ValueError("invalid explicit bridge bounds")
     if (
         not isinstance(argv, list)
         or not argv
@@ -203,7 +220,14 @@ def run_bridge(argv: list[str], out: Path, maxepisodes: int = 1) -> dict:
                 _write(out / f"event-{number:06d}.json", event)
                 continue
             stage = "request_validation"
-            request = _request(event, episodes, maxepisodes)
+            request = _request(
+                event,
+                episodes,
+                maxepisodes,
+                call_limit=call_limit,
+                output_limit=output_limit,
+                request_byte_limit=request_byte_limit,
+            )
             stem = f"call-{attempts + 1:04d}"
             _write(out / f"{stem}-request.json", event)
             stage, attempted_call = "model_call", True

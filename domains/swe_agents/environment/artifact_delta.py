@@ -180,7 +180,7 @@ def _run_payload_script(session: Session, script: str, payload: Any) -> tuple[in
             )
             if code:
                 raise RuntimeUnavailable("artifact payload transport failed: " + err[-500:])
-        return session.exec("python -I -c " + shlex.quote(script) + " " + quoted, 120)
+        return session.exec("python -I -B -c " + shlex.quote(script) + " " + quoted, 120)
     finally:
         session.exec("rm -- " + quoted, 30)
 

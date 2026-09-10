@@ -1,0 +1,18 @@
+{
+  "attempt": 3,
+  "status": "rejected",
+  "critique": {
+    "accepted": false,
+    "objections": [
+      {
+        "reason": "malformed",
+        "detail": "verifier: syntax error: unterminated f-string literal (detected at line 11) (line 11)"
+      },
+      {
+        "reason": "malformed",
+        "detail": "perturbation: syntax error: unterminated string literal (detected at line 17) (line 17)"
+      }
+    ],
+    "critic": "static"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "authorship": "assistant-authored, user explicitly requested manual perturbations",
+  "api_calls_for_generation": 0,
+  "design_inputs": "pristine Asgiref issue and local.py; no gold or completed candidate patches read for this design",
+  "gate_fixture": "actual clean first source-read observation, 10872 characters, before edits",
+  "observation_limit": 16000,
+  "inherited_generator_verifier": "template retained; not an Asgiref validity or outcome oracle",
+  "actual_oracle": "HostReplay frozen pinned Asgiref tests",
+  "evidence_sha256": {
+    "candidate-0/draft.json": "350e51d55be4e19d68bf569736eb1edd85925cbbd703f7c40293acc4c719e360",
+    "candidate-0/provenance.json": "dc65dcc95eded5a6c2d638337bc1f50c73b3e700348721de5500994fa74fb5eb",
+    "candidate-0/gate.json": "564c6f3eb66069dcfc6121928ee86096a0624fef0bdf304e6190f5be00b2cf7c",
+    "candidate-1/draft.json": "eaca7a86c80428b624af1de971996cb140a2e72314fbace2a06c337dba1d7031",
+    "candidate-1/provenance.json": "dc65dcc95eded5a6c2d638337bc1f50c73b3e700348721de5500994fa74fb5eb",
+    "candidate-1/gate.json": "543076ad6e5899d9656af0f3ac4e06b733adc772edf1c06bee56f91c17e72764"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "phase": "frozen_tests",
+  "command": "pytest --no-header -rA --tb=line --color=no -p no:cacheprovider -W ignore::DeprecationWarning tests/test_local.py",
+  "exit": 0,
+  "stdout": "============================= test session starts ==============================\ncollected 15 items\n\ntests/test_local.py ...............                                      [100%]\n\n==================================== PASSES ====================================\n=========================== short test summary info ============================\nPASSED tests/test_local.py::test_local_task\nPASSED tests/test_local.py::test_local_thread\nPASSED tests/test_local.py::test_local_thread_nested\nPASSED tests/test_local.py::test_local_cycle\nPASSED tests/test_local.py::test_local_task_to_sync\nPASSED tests/test_local.py::test_local_thread_to_async\nPASSED tests/test_local.py::test_local_task_to_sync_to_task\nPASSED tests/test_local.py::test_local_many_layers\nPASSED tests/test_local.py::test_local_critical_no_task_to_thread\nPASSED tests/test_local.py::test_local_critical_no_thread_to_task\nPASSED tests/test_local.py::test_local_threads_and_tasks\nPASSED tests/test_local.py::test_thread_critical_local_not_context_dependent_in_sync_thread\nPASSED tests/test_local.py::test_visibility_thread_asgiref\nPASSED tests/test_local.py::test_visibility_task\nPASSED tests/test_local.py::test_deletion\n============================== 15 passed in 0.06s ==============================\n",
+  "stderr": "",
+  "candidate_sha256": "837a3003301c45e9ca2c0aa29092cdeac625973ff9fd0800fd334940cd4ae635",
+  "kind": "diagnostic_host_test_replay",
+  "protected_status": "unknown"
+}

@@ -1,0 +1,10 @@
+{
+  "authorship": "assistant-authored, explicitly requested by user",
+  "design_inputs": "clean issue text and pristine asgiref/local.py only; no gold patch or completed candidate patch read for design",
+  "template": "parent program schema reused; clause names retained only as identifiers",
+  "generator": "unchanged template",
+  "generated_verifier": "inherited template; not validated or authoritative",
+  "actual_outcome_oracle": "HostReplay original frozen Asgiref tests",
+  "observation_limit": 16000,
+  "api_calls_for_generation": 0
+}

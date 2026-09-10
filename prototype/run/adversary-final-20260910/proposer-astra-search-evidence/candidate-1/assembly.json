@@ -1,0 +1,8 @@
+{
+  "model_authored_header_replacement": {
+    "old": "    def observe(self, tool, args, result):",
+    "new": "    def observe(self, step: int, tool: str, args: dict, result: str) -> str:"
+  },
+  "parent_source_sha256": "ad3d05d16b8c1ea1b3700607c4cf00128d53daa34dd6c62974a14c4252fbc6be",
+  "all_other_bytes_unchanged": true
+}

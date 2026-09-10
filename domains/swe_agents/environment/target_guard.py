@@ -77,7 +77,9 @@ def _directory(path: str) -> Path:
     return raw
 
 
-def install_filesystem_policy(repo: Path, scratch: Path) -> None:
+def install_filesystem_policy(
+    repo: Path, scratch: Path, *, host_runtime: Path | None = None
+) -> None:
     library = _libc()
     abi = landlock_abi()
     # ABI 3 supports bits 0..14, including cross-directory references/truncation.
@@ -91,11 +93,17 @@ def install_filesystem_policy(repo: Path, scratch: Path) -> None:
     read = (1 << 0) | (1 << 2) | (1 << 3)
     writable = ((1 << 15) - 1) & ~((1 << 6) | (1 << 9) | (1 << 11))
     rules = [(repo, writable), (scratch, writable)]
-    rules.extend(
-        (Path(p), read)
-        for p in ("/usr", "/lib", "/lib64", "/bin", "/sbin", "/etc", "/opt")
-        if Path(p).exists()
-    )
+    roots = ("/usr", "/lib", "/lib64", "/bin", "/sbin")
+    if host_runtime is None:
+        roots += ("/etc", "/opt")
+    rules.extend((Path(p), read) for p in roots if Path(p).exists())
+    if host_runtime is not None:
+        rules.append((host_runtime, read))
+        for name in ("/etc/ld.so.cache", "/etc/localtime", "/etc/nsswitch.conf",
+                     "/etc/passwd", "/etc/group"):
+            path = Path(name)
+            if path.is_file():
+                rules.append((path.resolve(), 1 << 2))
     rules.extend(((Path("/dev/null"), (1 << 1) | (1 << 2)), (Path("/dev/urandom"), 1 << 2)))
     try:
         for path, access in rules:
@@ -341,7 +349,8 @@ def install_syscall_policy() -> None:
 
 
 def guarded_exec(
-    repo: str, scratch: str, command: list[str], *, cpu_seconds: int = 60
+    repo: str, scratch: str, command: list[str], *, cpu_seconds: int = 60,
+    host_runtime: str | None = None, host_nproc: int = 128, host_memory_mb: int = 256
 ) -> None:
     if type(cpu_seconds) is not int or not 0 < cpu_seconds <= 900:
         raise GuardUnavailable("CPU seconds must be an integer in [1, 900]")
@@ -376,6 +385,21 @@ def guarded_exec(
         or temporary in repository.parents
     ):
         raise GuardUnavailable("repository and scratch must be disjoint")
+    runtime = _directory(host_runtime) if host_runtime is not None else None
+    if runtime is not None:
+        if os.getuid() == 0:
+            raise GuardUnavailable("host process limits require an unprivileged UID")
+        if type(host_nproc) is not int or not 1 <= host_nproc <= 4096:
+            raise GuardUnavailable("host process cap must be in [1, 4096]")
+        if type(host_memory_mb) is not int or not 64 <= host_memory_mb <= 512:
+            raise GuardUnavailable("host memory limit must be in [64, 512] MiB")
+        if runtime == Path("/") or runtime in (Path("/tmp"), Path("/home"), Path("/opt")):
+            raise GuardUnavailable("host runtime must be a dedicated directory")
+        for writable in (repository, temporary):
+            if runtime == writable or runtime in writable.parents or writable in runtime.parents:
+                raise GuardUnavailable("host runtime overlaps writable task state")
+        resource.setrlimit(resource.RLIMIT_AS, (host_memory_mb * 1024**2,) * 2)
+        resource.setrlimit(resource.RLIMIT_NPROC, (host_nproc,) * 2)
     os.chdir(repository)
     # Close inherited descriptors before installing any policy or executing target code.
     _, hard = resource.getrlimit(resource.RLIMIT_NOFILE)
@@ -386,7 +410,8 @@ def guarded_exec(
     resource.setrlimit(resource.RLIMIT_FSIZE, (64 * 1024 * 1024, 64 * 1024 * 1024))
     resource.setrlimit(resource.RLIMIT_CPU, (cpu_seconds, cpu_seconds))
     environment = {
-        "PATH": str(Path(sys.executable).parent) + ":/usr/local/bin:/usr/bin:/bin",
+        "PATH": str(runtime / "bin" if runtime is not None else Path(sys.executable).parent)
+        + ":/usr/local/bin:/usr/bin:/bin",
         "HOME": str(temporary),
         "TMPDIR": str(temporary),
         "LANG": "C.UTF-8",
@@ -394,8 +419,10 @@ def guarded_exec(
         "PYTEST_ADDOPTS": "-p no:cacheprovider",
         "PYTHONNOUSERSITE": "1",
     }
+    if runtime is not None:
+        environment.update(GIT_CONFIG_NOSYSTEM="1", GIT_CONFIG_GLOBAL="/dev/null")
     _no_new_privileges(_libc())
-    install_filesystem_policy(repository, temporary)
+    install_filesystem_policy(repository, temporary, host_runtime=runtime)
     install_syscall_policy()
     os.execve(command[0], command, environment)
 
@@ -405,11 +432,16 @@ def main() -> None:
     parser.add_argument("--repo", required=True)
     parser.add_argument("--scratch", required=True)
     parser.add_argument("--cpu-seconds", type=int, default=60)
+    parser.add_argument("--host-runtime")
+    parser.add_argument("--host-nproc", type=int, default=128)
+    parser.add_argument("--host-memory-mb", type=int, default=256)
     parser.add_argument("command", nargs=argparse.REMAINDER)
     args = parser.parse_args()
     command = args.command[1:] if args.command[:1] == ["--"] else args.command
     try:
-        guarded_exec(args.repo, args.scratch, command, cpu_seconds=args.cpu_seconds)
+        guarded_exec(args.repo, args.scratch, command, cpu_seconds=args.cpu_seconds,
+                     host_runtime=args.host_runtime, host_nproc=args.host_nproc,
+                     host_memory_mb=args.host_memory_mb)
     except Exception as exc:
         print("target guard refused: " + type(exc).__name__ + ": " + str(exc), file=sys.stderr)
         raise SystemExit(125) from exc

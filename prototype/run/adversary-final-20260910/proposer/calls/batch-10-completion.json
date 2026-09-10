@@ -1,0 +1,18 @@
+{
+  "kind": "permissive_model_generated_output",
+  "model": {
+    "id": "qwen3-adversary",
+    "version": "b968826d9c46dd6066d109eabc6255188de91218",
+    "license": "permissive",
+    "backend": "served"
+  },
+  "completion": "{\n  \"entrypoint\": \"TrajectoryVerifier\",\n  \"source\": \"class TrajectoryVerifier(Verifier):\\n    version: str = '0'\\n\\n    def verify(self, trajectory: Trajectory, oracle) -> Verdict:\\n        has_locale_error = False\\n        for msg in trajectory.messages:\\n            if hasattr(msg, 'content') and 'locale' in msg.content:\\n                has_locale_error = True\\n                break\\n        passed = not has_locale_error\\n        notes = ''\\n        if has_locale_error:\\n            notes = 'KeyError: locale detected in messages; Faker may have been called without a locale.'\\n        return Verdict(passed=passed, notes=notes)\"\n}",
+  "usage": {
+    "input_tokens": 237,
+    "output_tokens": 152,
+    "wall_seconds": 1.0824817130342126
+  },
+  "finish_reason": "stop",
+  "source_completion_sha256": "233f0ebba251c8957c9130e7883c3d9ae88d824a5ba13ad23438f6e4a9de12a9",
+  "source_request_sha256": "19df42e382f27061ffe21129ed7bfa0737aebeb1fcaa541dcd3e2d19ac9b7829"
+}

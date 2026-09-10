@@ -1,0 +1,10 @@
+{
+  "phase": "frozen_tests",
+  "command": "pytest --no-header -rA --tb=line --color=no -p no:cacheprovider -W ignore::DeprecationWarning tests/test_regression.py",
+  "exit": 0,
+  "stdout": "============================= test session starts ==============================\ncollected 2 items\n\ntests/test_regression.py ..                                              [100%]\n\n==================================== PASSES ====================================\n=========================== short test summary info ============================\nPASSED tests/test_regression.py::FakerRegressionTests::test_evaluated_without_locale\nPASSED tests/test_regression.py::FakerRegressionTests::test_locale_issue\n============================== 2 passed in 0.09s ===============================\n",
+  "stderr": "",
+  "candidate_sha256": "00db2dcbf99a581d1f7846a25a90c25c52a059d910360f94d1301dce5118e774",
+  "kind": "diagnostic_host_test_replay",
+  "protected_status": "unknown"
+}

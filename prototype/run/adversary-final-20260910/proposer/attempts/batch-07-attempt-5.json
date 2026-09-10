@@ -1,0 +1,18 @@
+{
+  "attempt": 5,
+  "status": "rejected",
+  "critique": {
+    "accepted": false,
+    "objections": [
+      {
+        "reason": "malformed",
+        "detail": "generator raised WorkerError('program worker exited without a reply')"
+      },
+      {
+        "reason": "malformed",
+        "detail": "generator raised WorkerError('program worker exited without a reply')"
+      }
+    ],
+    "critic": "static"
+  }
+}

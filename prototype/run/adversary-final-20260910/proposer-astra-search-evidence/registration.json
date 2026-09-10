@@ -1,0 +1,10 @@
+{
+  "model": "gpt-6-astra",
+  "reasoning_effort": "low",
+  "candidate_count": 2,
+  "max_calls": 3,
+  "max_total_requested_output": 4096,
+  "adaptive_exploratory": true,
+  "parent_sha256": "59f5103ffdbeb0f81847d1b552d24c9fe2db67d807f612a73a4eb8492876c709",
+  "not_training": true
+}

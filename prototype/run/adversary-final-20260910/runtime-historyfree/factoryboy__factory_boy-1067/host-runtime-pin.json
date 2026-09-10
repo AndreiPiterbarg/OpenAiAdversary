@@ -1,0 +1,12 @@
+{
+  "task_key": "factoryboy__factory_boy-1067",
+  "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+  "repository": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-historyfree-v1/repository",
+  "repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+  "venv": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+  "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+  "system_python": "/usr/bin/python3.12",
+  "kind": "interactive_host_runtime_v1",
+  "prepared_frozen_tests": true,
+  "original_container_equivalence": false
+}

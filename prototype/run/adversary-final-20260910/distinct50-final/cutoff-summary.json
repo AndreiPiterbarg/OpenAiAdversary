@@ -1,0 +1,253 @@
+{
+  "cutoff_utc": "2026-09-10T20:44:08Z",
+  "selected": 50,
+  "owned_processes_signaled": 6,
+  "rows": [
+    {
+      "key": "factoryboy__factory_boy-1067",
+      "status": "existing_historyfree_ready"
+    },
+    {
+      "key": "django__asgiref-523",
+      "status": "existing_historyfree_ready"
+    },
+    {
+      "status": "not_ready",
+      "key": "mpmath__mpmath-966",
+      "error": "required baseline/gold transitions notverified",
+      "seconds": 140.70245504379272
+    },
+    {
+      "status": "not_ready",
+      "key": "nolar__kopf-1031",
+      "error": "required baseline/gold transitions notverified",
+      "seconds": 52.494871616363525
+    },
+    {
+      "status": "new_historyfree_ready",
+      "key": "omni-us__jsonargparse-717",
+      "path": "/tmp/prun-distinct-host-prep-v3/omni-us__jsonargparse-717",
+      "seconds": 28.693456888198853
+    },
+    {
+      "status": "not_ready",
+      "key": "owkin__pydeseq2-356",
+      "error": "required baseline/gold transitions notverified",
+      "seconds": 118.6940529346466
+    },
+    {
+      "status": "new_historyfree_ready",
+      "key": "palantir__python-language-server-885",
+      "path": "/tmp/prun-distinct-host-prep-v3/palantir__python-language-server-885",
+      "seconds": 92.90226459503174
+    },
+    {
+      "status": "new_historyfree_ready",
+      "key": "pallets__click-2935",
+      "path": "/tmp/prun-distinct-host-prep-v3/pallets__click-2935",
+      "seconds": 24.91061496734619
+    },
+    {
+      "status": "not_ready",
+      "key": "pallets__werkzeug-2997",
+      "error": "required baseline/gold transitions notverified",
+      "seconds": 32.52039432525635
+    },
+    {
+      "status": "new_historyfree_ready",
+      "key": "pimutils__todoman-541",
+      "path": "/tmp/prun-distinct-host-prep-v3/pimutils__todoman-541",
+      "seconds": 41.74366521835327
+    },
+    {
+      "status": "not_ready",
+      "key": "prometheus__client_python-1012",
+      "error": "required baseline/gold transitions notverified",
+      "seconds": 39.88789463043213
+    },
+    {
+      "status": "not_ready",
+      "key": "psd-tools__psd-tools-452",
+      "error": "required baseline/gold transitions notverified",
+      "seconds": 178.29894518852234
+    },
+    {
+      "key": "pvlib__pvanalytics-214",
+      "status": "preparation_incomplete_at_cutoff"
+    },
+    {
+      "status": "not_ready",
+      "key": "pydicom__pynetdicom-998",
+      "error": "required baseline/gold transitions notverified",
+      "seconds": 26.308815717697144
+    },
+    {
+      "key": "pyfar__pyfar-776",
+      "status": "preparation_incomplete_at_cutoff"
+    },
+    {
+      "status": "not_ready",
+      "key": "pygfx__pygfx-1044",
+      "error": "required baseline/gold transitions notverified",
+      "seconds": 30.510700225830078
+    },
+    {
+      "status": "not_ready",
+      "key": "pypa__pip-13303",
+      "error": "required baseline/gold transitions notverified",
+      "seconds": 30.537921905517578
+    },
+    {
+      "status": "not_ready",
+      "key": "pypa__setuptools_scm-681",
+      "error": "required baseline/gold transitions notverified",
+      "seconds": 31.71585249900818
+    },
+    {
+      "status": "not_ready",
+      "key": "pypa__virtualenv-2907",
+      "error": "required baseline/gold transitions notverified",
+      "seconds": 26.054497003555298
+    },
+    {
+      "status": "new_historyfree_ready",
+      "key": "python-attrs__attrs-1417",
+      "path": "/tmp/prun-distinct-host-prep-v3/python-attrs__attrs-1417",
+      "seconds": 32.47378945350647
+    },
+    {
+      "key": "scikit-activeml__scikit-activeml-504",
+      "status": "preparation_incomplete_at_cutoff"
+    },
+    {
+      "status": "not_ready",
+      "key": "scrapy__scrapy-6897",
+      "error": "required baseline/gold transitions notverified",
+      "seconds": 39.78269696235657
+    },
+    {
+      "key": "skrub-data__skrub-1445",
+      "status": "preparation_incomplete_at_cutoff"
+    },
+    {
+      "status": "not_ready",
+      "key": "sktime__sktime-8358",
+      "error": "tracked links/submodules require separate materialization policy",
+      "seconds": 3.1118180751800537
+    },
+    {
+      "key": "skypyproject__skypy-573",
+      "status": "preparation_incomplete_at_cutoff"
+    },
+    {
+      "status": "not_ready",
+      "key": "terrapower__armi-2175",
+      "error": "tracked links/submodules require separate materialization policy",
+      "seconds": 2.938894271850586
+    },
+    {
+      "status": "not_ready",
+      "key": "theacodes__nox-567",
+      "error": "tracked links/submodules require separate materialization policy",
+      "seconds": 2.4336674213409424
+    },
+    {
+      "key": "tornadoweb__tornado-3521",
+      "status": "preparation_incomplete_at_cutoff"
+    },
+    {
+      "key": "tox-dev__pipdeptree-488",
+      "status": "preparation_incomplete_at_cutoff"
+    },
+    {
+      "key": "trailofbits__pip-audit-359",
+      "status": "preparation_incomplete_at_cutoff"
+    },
+    {
+      "key": "useblocks__sphinx-needs-1428",
+      "status": "preparation_incomplete_at_cutoff"
+    },
+    {
+      "key": "wtforms__wtforms-823",
+      "status": "preparation_incomplete_at_cutoff"
+    },
+    {
+      "key": "xgcm__xgcm-615",
+      "status": "preparation_incomplete_at_cutoff"
+    },
+    {
+      "key": "ReviewNB__treon-25",
+      "status": "preparation_incomplete_at_cutoff"
+    },
+    {
+      "key": "amplify-education__python-hcl2-73",
+      "status": "preparation_incomplete_at_cutoff"
+    },
+    {
+      "key": "benmoran56__esper-81",
+      "status": "preparation_incomplete_at_cutoff"
+    },
+    {
+      "key": "boolangery__py-lua-parser-32",
+      "status": "preparation_incomplete_at_cutoff"
+    },
+    {
+      "key": "boxed__mutmut-363",
+      "status": "preparation_incomplete_at_cutoff"
+    },
+    {
+      "key": "christiansandberg__canopen-506",
+      "status": "preparation_incomplete_at_cutoff"
+    },
+    {
+      "key": "fetzerch__kasserver-6",
+      "status": "preparation_incomplete_at_cutoff"
+    },
+    {
+      "key": "ipython__ipython-14695",
+      "status": "preparation_incomplete_at_cutoff"
+    },
+    {
+      "key": "oasis-open__cti-taxii-client-55",
+      "status": "preparation_incomplete_at_cutoff"
+    },
+    {
+      "key": "pysal__momepy-661",
+      "status": "preparation_incomplete_at_cutoff"
+    },
+    {
+      "key": "scieloorg__xylose-158",
+      "status": "preparation_incomplete_at_cutoff"
+    },
+    {
+      "key": "srsudar__eg-88",
+      "status": "preparation_incomplete_at_cutoff"
+    },
+    {
+      "key": "stuartmaxwell__djpress-117",
+      "status": "existing_historyfree_ready"
+    },
+    {
+      "key": "aeon-toolkit__aeon-2822",
+      "status": "preparation_incomplete_at_cutoff"
+    },
+    {
+      "key": "aeye-lab__pymovements-1154",
+      "status": "preparation_incomplete_at_cutoff"
+    },
+    {
+      "key": "agronholm__anyio-935",
+      "status": "preparation_incomplete_at_cutoff"
+    },
+    {
+      "key": "aiogram__aiogram-1674",
+      "status": "preparation_incomplete_at_cutoff"
+    }
+  ],
+  "counts": {
+    "existing_historyfree_ready": 3,
+    "new_historyfree_ready": 5,
+    "not_ready": 15,
+    "preparation_incomplete_at_cutoff": 27
+  }
+}

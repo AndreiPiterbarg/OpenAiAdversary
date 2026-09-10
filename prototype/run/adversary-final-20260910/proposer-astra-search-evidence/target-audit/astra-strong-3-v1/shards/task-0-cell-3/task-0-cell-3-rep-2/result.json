@@ -1,0 +1,92 @@
+{
+  "id": "task-0-cell-3-rep-2",
+  "task": {
+    "key": "factoryboy__factory_boy-1067",
+    "corpus": "adaptive_discovery_followup",
+    "host_repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+    "host_venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+    "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+    "original_pin_sha256": "57991d28eb31216ca40b59cdc3e0e8ecd58a178eeb1c9fe9721c1b856408fdb5"
+  },
+  "cell": {
+    "caller_contract": "on",
+    "fixture_guard": "on"
+  },
+  "cell_index": 3,
+  "repetition": 2,
+  "seed": 8202,
+  "diagnostic_passed": true,
+  "status": "completed",
+  "kind": "generated_perturbation_host_diagnostic_episode",
+  "observation_limit": 16000,
+  "episode_id": "task-0-cell-3-rep-2",
+  "task_key": "factoryboy__factory_boy-1067",
+  "host_runtime": {
+    "task_key": "factoryboy__factory_boy-1067",
+    "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+    "repository": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-historyfree-v1/repository",
+    "repository_sha256": "385f0c07b161dea6989b09880bdc2cb24b6fe1cedd920a1acf5fbdf8aaa7e637",
+    "venv": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/venv",
+    "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+    "system_python": "/usr/bin/python3.12",
+    "kind": "interactive_host_runtime_v1"
+  },
+  "prepared_ref": "571dd106bff777bd4c85fe96cf2cf0c3ef5910d1",
+  "endpoint": "local_credential_bridge",
+  "budget_profile": "explicit_model_override",
+  "budget": {
+    "max_steps": 100,
+    "max_seconds": 600,
+    "max_tokens": 1024
+  },
+  "protected": false,
+  "confirmed": false,
+  "sampling_policy": {
+    "temperature": "provider_default",
+    "seed": null,
+    "reasoning_effort": "low"
+  },
+  "target_model": {
+    "id": "gpt-6-astra",
+    "version": "",
+    "license": "restricted",
+    "backend": "openai"
+  },
+  "prompt_profile": "environment_guidance_v1",
+  "prompt_sha256": "70f3ddead314e5510b8aec5cf186d59a8aeb953b3281e91336c1872b2a7ed838",
+  "prompt_sha256_scope": "task_guidance_user_message",
+  "admission_status": "artifact_replayed",
+  "guarded_gold_control": "not_needed",
+  "steps": 5,
+  "stop_reason": "submitted",
+  "budget_exhausted": false,
+  "usage": {
+    "input_tokens": 21973,
+    "output_tokens": 904,
+    "wall_seconds": 32.00266417954117
+  },
+  "usage_unknown": false,
+  "realized": true,
+  "wall_seconds": 34.11109701078385,
+  "visible_changed": true,
+  "clause_exposure_status": "verified",
+  "clause_visible_contribution": {
+    "caller_contract": {
+      "exposed": true,
+      "observation_indices": [
+        0,
+        1,
+        2
+      ]
+    },
+    "fixture_guard": {
+      "exposed": true,
+      "observation_indices": [
+        0,
+        1,
+        2
+      ]
+    }
+  },
+  "control_identity_violation": false
+}

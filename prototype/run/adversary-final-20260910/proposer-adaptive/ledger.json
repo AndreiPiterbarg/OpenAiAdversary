@@ -1,0 +1,142 @@
+{
+  "total_model_calls": 13,
+  "calls": [
+    {
+      "phase": "exploration",
+      "receipt": "calls/exploration-attempt-0.json",
+      "usage": {
+        "input_tokens": 1193,
+        "output_tokens": 2048,
+        "wall_seconds": 14.733590041287243
+      }
+    },
+    {
+      "phase": "exploration",
+      "receipt": "calls/exploration-attempt-1.json",
+      "usage": {
+        "input_tokens": 1193,
+        "output_tokens": 350,
+        "wall_seconds": 2.453051212243736
+      }
+    },
+    {
+      "phase": "exploration",
+      "receipt": "calls/exploration-attempt-2.json",
+      "usage": {
+        "input_tokens": 1193,
+        "output_tokens": 361,
+        "wall_seconds": 2.5643874891102314
+      }
+    },
+    {
+      "phase": "exploration",
+      "receipt": "calls/exploration-attempt-3.json",
+      "usage": {
+        "input_tokens": 1193,
+        "output_tokens": 336,
+        "wall_seconds": 2.2669026777148247
+      }
+    },
+    {
+      "phase": "exploration",
+      "receipt": "calls/exploration-attempt-4.json",
+      "usage": {
+        "input_tokens": 1193,
+        "output_tokens": 2048,
+        "wall_seconds": 13.999748413451016
+      }
+    },
+    {
+      "phase": "exploration",
+      "receipt": "calls/exploration-attempt-5.json",
+      "usage": {
+        "input_tokens": 1193,
+        "output_tokens": 352,
+        "wall_seconds": 2.3759373538196087
+      }
+    },
+    {
+      "phase": "repair",
+      "receipt": "calls/repair-call-1.json",
+      "usage": {
+        "input_tokens": 509,
+        "output_tokens": 227,
+        "wall_seconds": 1.5783542785793543
+      }
+    },
+    {
+      "phase": "repair",
+      "receipt": "calls/repair-call-2.json",
+      "usage": {
+        "input_tokens": 529,
+        "output_tokens": 230,
+        "wall_seconds": 1.558252572081983
+      }
+    },
+    {
+      "phase": "repair",
+      "receipt": "calls/repair-call-3.json",
+      "usage": {
+        "input_tokens": 557,
+        "output_tokens": 204,
+        "wall_seconds": 1.387816104106605
+      }
+    },
+    {
+      "phase": "repair",
+      "receipt": "calls/repair-call-4.json",
+      "usage": {
+        "input_tokens": 337,
+        "output_tokens": 259,
+        "wall_seconds": 1.7846660120412707
+      }
+    },
+    {
+      "phase": "repair",
+      "receipt": "calls/repair-call-5.json",
+      "usage": {
+        "input_tokens": 399,
+        "output_tokens": 259,
+        "wall_seconds": 1.7812484027817845
+      }
+    },
+    {
+      "phase": "repair",
+      "receipt": "calls/repair-call-6.json",
+      "usage": {
+        "input_tokens": 460,
+        "output_tokens": 141,
+        "wall_seconds": 0.966123778373003
+      }
+    },
+    {
+      "phase": "repair",
+      "receipt": "calls/repair-call-7.json",
+      "usage": {
+        "input_tokens": 219,
+        "output_tokens": 134,
+        "wall_seconds": 0.9470085157081485
+      }
+    }
+  ],
+  "input_tokens": 10168,
+  "output_tokens": 6949,
+  "no_frontier_calls": true,
+  "trained": false,
+  "selection": "first complete candidate passing all registered static/exposure/aligned-verifier gates; adaptive exploratory",
+  "source_registrations": {
+    "exploration_sha256": "f1fe758cd75f2236951e33f7ab419d0882d93df8f126bcb0d387449c9d28314b",
+    "repair_sha256": "56a8e44181b7ea62c7c6a97dd380beee75d18fa48364f662847a9af52381ba05"
+  },
+  "parent": "../proposer/frozen-draft.json",
+  "parent_sha256": "02868828e27153d0ded2f10c082f51ec550610e97eae2cffa82db132183439b5",
+  "candidate": "frozen-draft.json",
+  "candidate_sha256": "2fe462ceed723c27b972c5cd30c85822f636685a8df667202c5e093a4a14e075",
+  "seed": "../proposer/seed.json",
+  "ancestry": "../proposer/ancestry.json",
+  "prediction_thresholds": "harness-fixed exploratory min_effect.1 alpha.05, not a model-estimated effect or confidence claim",
+  "hypothesis_source": "model-authored perturbation class docstring",
+  "generator_byte_preserved": true,
+  "verifier_final_repair": "model-authored removal of an undefined Message type guard; no manual program edits",
+  "evidence_note": "Original request hashes retained; permissive generated completion text exported for all13 calls. Full raw requests remain locally preserved."
+}

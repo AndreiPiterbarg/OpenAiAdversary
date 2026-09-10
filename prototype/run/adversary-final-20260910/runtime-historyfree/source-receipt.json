@@ -1,0 +1,8 @@
+{
+  "module": "domains/swe_agents/scripts/host_snapshot.py",
+  "sha256": "d59c8ba6aff17786a31a9def54bb8f1ad26371d4dc367865af77c820b6857bd8",
+  "change": "Prepared worktree copied byte-for-byte into a fresh single-root-commit repository. No inherited Git objects, refs, remotes, alternates, or unreachable objects. Original task commit retained only as external metadata.",
+  "source_test": "tests/test_host_snapshot.py: passed",
+  "executed_snapshot_module_sha256": "94c9cd2c0bb5db7b19e9f96483399b69c3117dff3eb97bcb26d0f02a7d6b8a6b",
+  "source_difference": "Local module additionally rejects nested .git entries; executed snapshot input had none. Snapshot receipts attest full object reachability."
+}

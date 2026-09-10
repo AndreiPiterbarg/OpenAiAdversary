@@ -1,0 +1,17 @@
+{
+  "affected_arms": [
+    "calibration-v1",
+    "pilot-v2",
+    "final-v3"
+  ],
+  "integrity": "future_repository_history_available",
+  "clean_benchmark_admissible": false,
+  "retained_as": "diagnostic contaminated historical data",
+  "known_gold_fix_hash": "fae2ab1",
+  "visibility_counts": {
+    "calibration-v1": 3,
+    "pilot-v2": 10,
+    "final-v3": 11
+  },
+  "qualification": "Counts are a lower bound from saved tool traces, not proof of clean episodes when absent. At least one final-v3 trace explicitly read the exact future repair via git show. Preserve all original outcomes; exclude these arms from clean calibration and confirmation."
+}

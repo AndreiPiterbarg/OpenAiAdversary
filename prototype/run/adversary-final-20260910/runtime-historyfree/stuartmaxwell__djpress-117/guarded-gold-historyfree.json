@@ -1,0 +1,5 @@
+{
+  "error": "{'old_pin': {'exit': 1, 'stdout': '', 'stderr': 'cat: /tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3/original-pin.json: Permission denied\\n'}, 'controller': {'exit': 1, 'stdout': '', 'stderr': 'cat: /tmp/prun-adversary-final-20260910/final-v3/registration.json: Permission denied\\n'}, 'proposer': {'exit': 1, 'stdout': '', 'stderr': 'cat: /tmp/prun-adversary-final-20260910/proposals-v10/frozen-draft.json: No such file or directory\\n'}, 'future_commit': {'exit': 128, 'stdout': '', 'stderr': \"fatal: ambiguous argument 'fae2ab1': unknown revision or path not in the working tree.\\nUse '--' to separate paths from revisions, like this:\\n'git <command> [<revision>...] -- [<file>...]'\\n\"}, 'unreachable': {'exit': 0, 'stdout': '', 'stderr': ''}, 'commit_count': {'exit': 0, 'stdout': '1\\n', 'stderr': ''}}",
+  "kind": "actual_host_guard_compatibility",
+  "venv_digest_stable_after_raw_transport_and_tests": true
+}

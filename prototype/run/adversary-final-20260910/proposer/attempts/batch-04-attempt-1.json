@@ -1,0 +1,14 @@
+{
+  "attempt": 1,
+  "status": "rejected",
+  "critique": {
+    "accepted": false,
+    "objections": [
+      {
+        "reason": "malformed",
+        "detail": "program worker exited without a reply"
+      }
+    ],
+    "critic": "static"
+  }
+}

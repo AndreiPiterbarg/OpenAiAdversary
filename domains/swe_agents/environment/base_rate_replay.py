@@ -79,7 +79,7 @@ print(json.dumps(result,sort_keys=True))
 
 def capture_untracked(session: Session) -> dict[str, dict[str, Any]]:
     """Fingerprint ignored and ordinary untracked regular files, with explicit read bounds."""
-    value = json.loads(_checked(session, "python -I -c " + shlex.quote(_UNTRACKED_CAPTURE), 120))
+    value = json.loads(_checked(session, "python -I -B -c " + shlex.quote(_UNTRACKED_CAPTURE), 120))
     if type(value) is not dict:
         raise RuntimeUnavailable("invalid untracked fingerprint map")
     for path, entry in value.items():
@@ -324,14 +324,9 @@ class BaseRateReplay:
             if item["omission"] is None and self.transport._protected(item["path"]):
                 raise ValueError("artifact changes protected input: " + item["path"])
 
-    def evaluate_patch(
-        self,
-        patch: str,
-        *,
-        source_session: Session | None = None,
-        untracked_artifact: dict[str, Any] | None = None,
-        release_source: Callable[[], None] | None = None,
-    ) -> dict[str, Any]:
+    def _validate_patch_transport(
+        self, patch: str, untracked_artifact: dict[str, Any] | None = None
+    ) -> bytes:
         if untracked_artifact is not None:
             try:
                 self._validate_bound_artifact(untracked_artifact)
@@ -356,6 +351,17 @@ class BaseRateReplay:
         ):
             if mode not in ("100644", "100755"):
                 raise CandidatePatchRejected("candidate patch contains unsupported file mode")
+        return encoded
+
+    def evaluate_patch(
+        self,
+        patch: str,
+        *,
+        source_session: Session | None = None,
+        untracked_artifact: dict[str, Any] | None = None,
+        release_source: Callable[[], None] | None = None,
+    ) -> dict[str, Any]:
+        encoded = self._validate_patch_transport(patch, untracked_artifact)
         self.verify_image(self.pin.image, self.pin.image_sha256)
         # The caller persists the complete bound artifact and waits for source release.
         # Fresh allocation remains non-overlapping even if Slurm epilogue is still pending.

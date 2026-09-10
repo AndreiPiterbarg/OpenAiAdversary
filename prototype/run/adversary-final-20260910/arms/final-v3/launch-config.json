@@ -1,0 +1,47 @@
+{
+  "draft": "/tmp/prun-adversary-proposals-v10/frozen-draft.json",
+  "draft_file_sha256": "02868828e27153d0ded2f10c082f51ec550610e97eae2cffa82db132183439b5",
+  "endpoints": [
+    "http://127.0.0.1:18102/v1",
+    "http://127.0.0.1:18103/v1",
+    "http://127.0.0.1:18104/v1",
+    "http://127.0.0.1:18105/v1",
+    "http://127.0.0.1:18106/v1",
+    "http://127.0.0.1:18107/v1",
+    "http://127.0.0.1:18200/v1",
+    "http://127.0.0.1:18201/v1",
+    "http://127.0.0.1:18202/v1",
+    "http://127.0.0.1:18203/v1",
+    "http://127.0.0.1:18204/v1",
+    "http://127.0.0.1:18205/v1",
+    "http://127.0.0.1:18206/v1",
+    "http://127.0.0.1:18207/v1"
+  ],
+  "tasks": [
+    {
+      "path": "/tmp/prun-host-prep-20260910/factoryboy__factory_boy-1067-v3",
+      "corpus": "discovery"
+    },
+    {
+      "path": "/tmp/prun-host-prep-20260910/django__asgiref-523-v2",
+      "corpus": "confirm_A"
+    },
+    {
+      "path": "/tmp/prun-host-prep-20260910/stuartmaxwell__djpress-117-v2",
+      "corpus": "confirm_B"
+    }
+  ],
+  "workers": 42,
+  "host_nproc": 2048,
+  "runtime_arm": "interactive_host_v3_readonly_transport",
+  "source_archive_sha256": "c1ae89eda5dda0638f1e22af59110fb89b05a958ed808ecd4b15e5f2500a77a3",
+  "registered_utc": "2026-09-10T19:32:46Z",
+  "trained": false,
+  "protected": false,
+  "solvability_witness": "not_certified",
+  "semantic_review": "append-only independent clause activation and byte-preserving Qwen verifier repair passed",
+  "generated_verifier_status": "executable_positive_negative_discrimination_passed; symptom_detector_only",
+  "outcome_authority": "independent_frozen_host_replay",
+  "clause_exposure": "deterministic_actual_and_drop_one_shadow_audit",
+  "purpose": "final scaled four-cell diagnostic experiment; not statistical confirmation"
+}

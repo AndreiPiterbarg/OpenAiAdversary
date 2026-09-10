@@ -1,0 +1,19 @@
+{
+  "README.md": "aec63da67633a67a0044326af11c9182ec653b567a81a40aab97589dd7957491",
+  "ast-gate.py.txt": "71903a029c1e4203b54365c4243f4bae95921107c7233d4b824eec1e5381052e",
+  "call-1-completion.json": "eb2d027f5f391b4783f339bed3c429be93dfe9f38d90a8bb5a3392bbf2ee0195",
+  "call-1-rejection.json": "21fc6f337c160d2de10d1bb0759d8aa2d480568645137c049e078d963842dd5e",
+  "call-2-completion.json": "f05e35029fc76be73978f3484243c5f89b36011fa2dd8e6945b18a6be4a1dca9",
+  "call-2-rejection.json": "21fc6f337c160d2de10d1bb0759d8aa2d480568645137c049e078d963842dd5e",
+  "call-3-completion.json": "acc0bee355f0e1857257248a18ce4ff0f9d0d7c5353c44424c3465c5988bfe6f",
+  "exposure-gate.json": "fcbeb94c872203f927c73a1d23187ea9200e5bc94dbbf145d9d6af4fb29f5659",
+  "final-static-gate.json": "3c90ef3bb0823e396220b71c2a8a884235440adc24adbbec1e32f002b494f562",
+  "frozen-draft.json": "59f5103ffdbeb0f81847d1b552d24c9fe2db67d807f612a73a4eb8492876c709",
+  "generator.py": "5947373b194e498a12ac404be9c660cfe7bad9d6f66d1793469fcc136b110b27",
+  "literal-space-repair-registration.json": "c2fa6acec956ac837d2811c5e67fb01655bbe28d3be85b995dcd56067bdfd742",
+  "perturbation.py": "cf1e502b5de4802565ab68f8ee6d534e19c83900a91d3b87139615b032783efd",
+  "provenance.json": "acc18b1af31daffe6587da6df78119961abe7594c51791e2c595a13d9d6960b1",
+  "registration.json": "1770744308ed02ae50b40878e83a45541bbce7928a56f32447679a3aba8267a0",
+  "summary.json": "d7c236702ee4d31be229f898df19db2b497807545c568c3602f1af16d8a934b5",
+  "verifier.py": "5b98d3f538af5b41d1253fce81b447644337ebf71e0ecb64166604edb74e641d"
+}

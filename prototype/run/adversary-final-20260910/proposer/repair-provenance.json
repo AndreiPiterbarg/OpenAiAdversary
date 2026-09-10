@@ -1,0 +1,8 @@
+{
+  "source": "parent-v8-draft.json",
+  "parent_sha256": "676ff0153c6d263b5473089980508304c9094160cabfeee2c78e1067b9ed35f0",
+  "only_model_written_verifier_replaced": true,
+  "generator_unchanged": true,
+  "perturbation_unchanged": true,
+  "model_revision": "b968826d9c46dd6066d109eabc6255188de91218"
+}

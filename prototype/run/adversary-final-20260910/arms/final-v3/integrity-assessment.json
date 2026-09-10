@@ -1,0 +1,26 @@
+{
+  "status": "invalid",
+  "reason": "Future Git history and gold-fix objects were exposed in prepared task repositories; at least one target retrieved the gold fix. This arm cannot support uncontaminated capability or causal adversary claims.",
+  "known_example": {
+    "run_id": "task-1-cell-1-rep-1",
+    "task": "django__asgiref-523",
+    "steps": [
+      28,
+      29,
+      34,
+      35,
+      36,
+      37,
+      38,
+      41
+    ],
+    "future_commit_prefix": "fae2ab1",
+    "actions": [
+      "git log --all -- tests/test_local.py",
+      "git show fae2ab1",
+      "inspection and checkout of future main"
+    ]
+  },
+  "affected_scope": "All three prepared repositories retained history. Outcomes remain preserved; no retrospective removal of contaminated runs.",
+  "remediation": "Fresh single-commit snapshots with no original Git object database, external pins, and guarded access checks before later arms."
+}

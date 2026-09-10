@@ -1,0 +1,20 @@
+{
+  "kind": "adaptive_prepatch_timing_variant",
+  "max_calls": 1,
+  "parent_sha256": "02868828e27153d0ded2f10c082f51ec550610e97eae2cffa82db132183439b5",
+  "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "modification": "Only two inner observe trigger tests; source reads instead of pytest; model writes full returned source",
+  "held_fixed": [
+    "generator",
+    "verifier",
+    "hypothesis",
+    "clauses",
+    "note strings",
+    "pair",
+    "prediction"
+  ],
+  "fixture_origin": "First real source-read command of prior Astra cell1, before source edits",
+  "fixture_command": "sed -n '1,165p' factory/declarations.py; sed -n '420,550p' factory/declarations.py; cat factory/faker.py",
+  "fixture_raw_sha256": "ebcae1d7e5d3ac1ac3dccd030defab5a1b5d28d99e847b0845e4d9f45b346674",
+  "prior_late_exposure_results_not_pooled": true
+}

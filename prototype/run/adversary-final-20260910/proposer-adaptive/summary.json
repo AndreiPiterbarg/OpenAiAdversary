@@ -1,0 +1,11 @@
+{
+  "accepted": true,
+  "repair_calls": 7,
+  "prior_exploration_calls": 6,
+  "candidate_sha256": "2fe462ceed723c27b972c5cd30c85822f636685a8df667202c5e093a4a14e075",
+  "generator_unchanged": true,
+  "perturbation_unchanged_from_gated_candidate": true,
+  "verifier_checks": 7,
+  "new_authorization": "one extra model call repairing unavailable Message name; output cap512",
+  "scope": "adaptive exploratory diagnostic; cue detector not correctness oracle"
+}

@@ -1,0 +1,59 @@
+{
+  "attempt": 1,
+  "status": "rejected",
+  "critique": {
+    "accepted": true,
+    "objections": [],
+    "critic": "static"
+  },
+  "semantic_probe": {
+    "accepted": false,
+    "append_only_preserves_evidence": true,
+    "both_clauses_independently_realized": false,
+    "fixtures": [
+      [
+        "cat README.md",
+        "Project maintenance guidelines. Tests use pytest.\n"
+      ],
+      [
+        "cat factory/declarations.py",
+        "choice = self.decider.evaluate(instance=instance, step=step, extra={})\n"
+      ],
+      [
+        "pytest -q tests/test_unseen_module.py -k case",
+        "FAILED tests/test_using.py::test_maybe - KeyError: locale\n"
+      ],
+      [
+        "git diff --stat -- src/unknown.py",
+        "diff --git a/module.py b/module.py\n"
+      ]
+    ],
+    "results": [
+      [
+        "Project maintenance guidelines. Tests use pytest.\n",
+        "choice = self.decider.evaluate(instance=instance, step=step, extra={})\n",
+        "FAILED tests/test_using.py::test_maybe - KeyError: locale\n",
+        "diff --git a/module.py b/module.py\n"
+      ],
+      [
+        "Project maintenance guidelines. Tests use pytest.\n",
+        "choice = self.decider.evaluate(instance=instance, step=step, extra={})\n",
+        "FAILED tests/test_using.py::test_maybe - KeyError: locale\n",
+        "diff --git a/module.py b/module.py\n"
+      ],
+      [
+        "Project maintenance guidelines. Tests use pytest.\n",
+        "choice = self.decider.evaluate(instance=instance, step=step, extra={})\n",
+        "FAILED tests/test_using.py::test_maybe - KeyError: locale\n",
+        "diff --git a/module.py b/module.py\n"
+      ],
+      [
+        "Project maintenance guidelines. Tests use pytest.\n",
+        "choice = self.decider.evaluate(instance=instance, step=step, extra={})\n",
+        "FAILED tests/test_using.py::test_maybe - KeyError: locale\n",
+        "diff --git a/module.py b/module.py\n"
+      ]
+    ],
+    "scope": "bounded dynamic admission only; independent witness still required"
+  }
+}

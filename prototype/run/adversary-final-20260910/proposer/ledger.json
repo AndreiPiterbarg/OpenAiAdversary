@@ -1,0 +1,749 @@
+{
+  "kind": "all_proposal_attempts_and_model_authored_repairs",
+  "total_model_calls": 37,
+  "input_tokens": 131793,
+  "output_tokens": 36015,
+  "selected_sha256": "02868828e27153d0ded2f10c082f51ec550610e97eae2cffa82db132183439b5",
+  "selection_rule": "first candidate passing static, executable generated verifier discrimination, append-only varied-command four-cell checks, with final repair preserving generator/perturbation bytes",
+  "no_heldout_outcome_feedback": true,
+  "trained": false,
+  "protected": false,
+  "formal_confirmation": false,
+  "witness_reliability": "not established by these receipts",
+  "selected": "frozen-draft.json",
+  "calls": [
+    {
+      "batch": 1,
+      "receipt": "calls/batch-01-call-0001.completion.json",
+      "usage": {
+        "input_tokens": 3019,
+        "output_tokens": 868,
+        "wall_seconds": 6.215640129521489
+      },
+      "source_completion_sha256": "d26897d9e1fe7be292084d855bd0e02fb9f74e45de85761185d2235d68957f5e"
+    },
+    {
+      "batch": 1,
+      "receipt": "calls/batch-01-call-0002.completion.json",
+      "usage": {
+        "input_tokens": 3019,
+        "output_tokens": 830,
+        "wall_seconds": 5.661664746701717
+      },
+      "source_completion_sha256": "c4bdc457619882efa82c38070acc2fd0a04e7f163c4b73f851de08a58da5aa7f"
+    },
+    {
+      "batch": 1,
+      "receipt": "calls/batch-01-call-0003.completion.json",
+      "usage": {
+        "input_tokens": 3019,
+        "output_tokens": 1200,
+        "wall_seconds": 8.198025101795793
+      },
+      "source_completion_sha256": "f77930c63b5957299920e62b96045ab358fd6ad8602cbd6313a99a1b8dc74985"
+    },
+    {
+      "batch": 2,
+      "receipt": "calls/batch-02-call-0001.completion.json",
+      "usage": {
+        "input_tokens": 3193,
+        "output_tokens": 965,
+        "wall_seconds": 6.705181405879557
+      },
+      "source_completion_sha256": "fa5020c8418bc66e777098aa90072ab651350358a2897db3cec5ec6cd21a097b"
+    },
+    {
+      "batch": 2,
+      "receipt": "calls/batch-02-call-0002.completion.json",
+      "usage": {
+        "input_tokens": 3193,
+        "output_tokens": 885,
+        "wall_seconds": 6.049436446279287
+      },
+      "source_completion_sha256": "99d92b9a67df43e1c11c54273e895aecc0a5f5e4dfb82c29e112aea333789e8f"
+    },
+    {
+      "batch": 3,
+      "receipt": "calls/batch-03-call-0001.completion.json",
+      "usage": {
+        "input_tokens": 3338,
+        "output_tokens": 1015,
+        "wall_seconds": 7.0493014538660645
+      },
+      "source_completion_sha256": "67c02955e78ad15fa13bd9399eb055d35fe0bf111d47094fcda065621009f2c3"
+    },
+    {
+      "batch": 3,
+      "receipt": "calls/batch-03-call-0002.completion.json",
+      "usage": {
+        "input_tokens": 3338,
+        "output_tokens": 867,
+        "wall_seconds": 5.932740664109588
+      },
+      "source_completion_sha256": "9ca686e9d954ea455cd9161ae7d7e2c825ee62c117892b7a721d4f6b4223da5d"
+    },
+    {
+      "batch": 3,
+      "receipt": "calls/batch-03-call-0003.completion.json",
+      "usage": {
+        "input_tokens": 3338,
+        "output_tokens": 869,
+        "wall_seconds": 5.946973260492086
+      },
+      "source_completion_sha256": "0e963cd6d982f2b9c3b9f8a686cdeab68c8588d72835bfdcaa36b41f5d9ea8ec"
+    },
+    {
+      "batch": 3,
+      "receipt": "calls/batch-03-call-0004.completion.json",
+      "usage": {
+        "input_tokens": 3338,
+        "output_tokens": 1059,
+        "wall_seconds": 7.251110998913646
+      },
+      "source_completion_sha256": "f755e6cbe9294d09b20501022d63c2ef7ce16f4500051ea9e4a01195972a4669"
+    },
+    {
+      "batch": 3,
+      "receipt": "calls/batch-03-call-0005.completion.json",
+      "usage": {
+        "input_tokens": 3338,
+        "output_tokens": 930,
+        "wall_seconds": 6.3640915816649795
+      },
+      "source_completion_sha256": "7ab99778b5891f478fd13aa1136f386e18ae67f8555da12cb68b87498f319088"
+    },
+    {
+      "batch": 3,
+      "receipt": "calls/batch-03-call-0006.completion.json",
+      "usage": {
+        "input_tokens": 3338,
+        "output_tokens": 952,
+        "wall_seconds": 6.516190014779568
+      },
+      "source_completion_sha256": "5d120f58f7bc21ce17578df851cdc9c2d192ce3e459e6ef99528473a0297df3e"
+    },
+    {
+      "batch": 4,
+      "receipt": "calls/batch-04-call-0001.completion.json",
+      "usage": {
+        "input_tokens": 3352,
+        "output_tokens": 1134,
+        "wall_seconds": 7.825549902394414
+      },
+      "source_completion_sha256": "5154e00422589c145940016b6421c0043ce9b05ce68267f102007c98d3f4d4c4"
+    },
+    {
+      "batch": 4,
+      "receipt": "calls/batch-04-call-0002.completion.json",
+      "usage": {
+        "input_tokens": 3352,
+        "output_tokens": 1014,
+        "wall_seconds": 6.944911126047373
+      },
+      "source_completion_sha256": "98e040dca2520ca10e3872ac94e41b7e33d2fc9a7a925660a6287aa50a9be4f6"
+    },
+    {
+      "batch": 4,
+      "receipt": "calls/batch-04-call-0003.completion.json",
+      "usage": {
+        "input_tokens": 3352,
+        "output_tokens": 1044,
+        "wall_seconds": 7.150448880158365
+      },
+      "source_completion_sha256": "f055a8093b895c64306e82b0593b1db5ec734b4daf0b142c3a25a2d8d9260f7c"
+    },
+    {
+      "batch": 5,
+      "receipt": "calls/batch-05-call-0006.completion.json",
+      "usage": {
+        "input_tokens": 3538,
+        "output_tokens": 938,
+        "wall_seconds": 6.431616296991706
+      },
+      "source_completion_sha256": "5969fdd82107109cc9dff24aed3bedddfd88d158b31661d28b4946c0d2b378b8"
+    },
+    {
+      "batch": 5,
+      "receipt": "calls/batch-05-call-0001.completion.json",
+      "usage": {
+        "input_tokens": 3538,
+        "output_tokens": 1044,
+        "wall_seconds": 7.2761393105611205
+      },
+      "source_completion_sha256": "be20902a659626726d5745db47ae4e234fa36d7eff6a4475ea17a92a9722237a"
+    },
+    {
+      "batch": 5,
+      "receipt": "calls/batch-05-call-0003.completion.json",
+      "usage": {
+        "input_tokens": 3538,
+        "output_tokens": 1054,
+        "wall_seconds": 7.229890709742904
+      },
+      "source_completion_sha256": "a84a6ebce611f76d9da28fb9e32bfdd1149df69dfac60f3d774cafd22518a794"
+    },
+    {
+      "batch": 5,
+      "receipt": "calls/batch-05-call-0004.completion.json",
+      "usage": {
+        "input_tokens": 3538,
+        "output_tokens": 984,
+        "wall_seconds": 6.750642776489258
+      },
+      "source_completion_sha256": "7c9315289909a30ce508b3093c12c1e21f7df9700daa14cc04cc43bd5886c787"
+    },
+    {
+      "batch": 5,
+      "receipt": "calls/batch-05-call-0005.completion.json",
+      "usage": {
+        "input_tokens": 3538,
+        "output_tokens": 1050,
+        "wall_seconds": 7.199458052404225
+      },
+      "source_completion_sha256": "cc4bacd54026df2cb6191140f8deaad5de67779b12bf5ac34726975a504c7184"
+    },
+    {
+      "batch": 5,
+      "receipt": "calls/batch-05-call-0002.completion.json",
+      "usage": {
+        "input_tokens": 3538,
+        "output_tokens": 1080,
+        "wall_seconds": 7.411626849323511
+      },
+      "source_completion_sha256": "d4336aff0fa64ba77ec6a36387337c74a29db50f037e0f286eb67b224911189f"
+    },
+    {
+      "batch": 6,
+      "receipt": "calls/batch-06-call-0006.completion.json",
+      "usage": {
+        "input_tokens": 3723,
+        "output_tokens": 973,
+        "wall_seconds": 6.68678227532655
+      },
+      "source_completion_sha256": "f2ea8b27ecd656e13fcffe1e5eb1dcd986bd8f42b50d3d3a05c7397de869a89c"
+    },
+    {
+      "batch": 6,
+      "receipt": "calls/batch-06-call-0001.completion.json",
+      "usage": {
+        "input_tokens": 3723,
+        "output_tokens": 1117,
+        "wall_seconds": 7.73069591075182
+      },
+      "source_completion_sha256": "3ade7243a27a419984aabc4ec4a86d1035de99daedaf64dfd9fc8fe8d7237816"
+    },
+    {
+      "batch": 6,
+      "receipt": "calls/batch-06-call-0003.completion.json",
+      "usage": {
+        "input_tokens": 3723,
+        "output_tokens": 1019,
+        "wall_seconds": 7.001282284967601
+      },
+      "source_completion_sha256": "6e331062fa696cb8a0c1f375394e716b0ad8a1fcdec731cf8b10c35b1e2b50cb"
+    },
+    {
+      "batch": 6,
+      "receipt": "calls/batch-06-call-0004.completion.json",
+      "usage": {
+        "input_tokens": 3723,
+        "output_tokens": 1035,
+        "wall_seconds": 7.109844719991088
+      },
+      "source_completion_sha256": "49b9e1e927182d6deda4fed651d0b8621794392e77041792c5bdcd527410a043"
+    },
+    {
+      "batch": 6,
+      "receipt": "calls/batch-06-call-0005.completion.json",
+      "usage": {
+        "input_tokens": 3723,
+        "output_tokens": 956,
+        "wall_seconds": 6.567870428785682
+      },
+      "source_completion_sha256": "d47cbbf6cbf8bc0bee50f514525dbbbd7cd26cffc10bb3d3b6dbdb8aae47f18f"
+    },
+    {
+      "batch": 6,
+      "receipt": "calls/batch-06-call-0002.completion.json",
+      "usage": {
+        "input_tokens": 3723,
+        "output_tokens": 995,
+        "wall_seconds": 6.834024204872549
+      },
+      "source_completion_sha256": "112ecb862a8b00b1282182940d50d11e7cc0967003e28795d0834f75c045b7c9"
+    },
+    {
+      "batch": 7,
+      "receipt": "calls/batch-07-call-0006.completion.json",
+      "usage": {
+        "input_tokens": 3792,
+        "output_tokens": 981,
+        "wall_seconds": 6.750855038873851
+      },
+      "source_completion_sha256": "cad7d7a9df9cc990eb50207107e288937e61fd0ea4d6c943460b5f6b6d95368e"
+    },
+    {
+      "batch": 7,
+      "receipt": "calls/batch-07-call-0001.completion.json",
+      "usage": {
+        "input_tokens": 3792,
+        "output_tokens": 1011,
+        "wall_seconds": 7.026468861848116
+      },
+      "source_completion_sha256": "2e57b7046f158661862ccab6004f6d4f8653d981157c0d6092f360dff9682de2"
+    },
+    {
+      "batch": 7,
+      "receipt": "calls/batch-07-call-0003.completion.json",
+      "usage": {
+        "input_tokens": 3792,
+        "output_tokens": 1013,
+        "wall_seconds": 6.972217220813036
+      },
+      "source_completion_sha256": "cface895960b1df29d633e56ae421738636ad860f66ae1ce0020e4b8935abe88"
+    },
+    {
+      "batch": 7,
+      "receipt": "calls/batch-07-call-0004.completion.json",
+      "usage": {
+        "input_tokens": 3792,
+        "output_tokens": 1031,
+        "wall_seconds": 7.102757801301777
+      },
+      "source_completion_sha256": "7fa706f3c410d2e8ac7121ca74124b77f9a1b6f6b4ea0828f6fbb271d1ec428a"
+    },
+    {
+      "batch": 7,
+      "receipt": "calls/batch-07-call-0005.completion.json",
+      "usage": {
+        "input_tokens": 3792,
+        "output_tokens": 1003,
+        "wall_seconds": 6.90328527521342
+      },
+      "source_completion_sha256": "2106b91b8c8c5e00caea81004e47f580a0651e23e0070c60c3ea5bc158096b48"
+    },
+    {
+      "batch": 7,
+      "receipt": "calls/batch-07-call-0002.completion.json",
+      "usage": {
+        "input_tokens": 3792,
+        "output_tokens": 1024,
+        "wall_seconds": 7.047382873483002
+      },
+      "source_completion_sha256": "0d0aae8b456aa9de9fd15ee4d7d6f0cd04c3e111121ae7a12054988f1c714b38"
+    },
+    {
+      "batch": 8,
+      "receipt": "calls/batch-08-call-0001.completion.json",
+      "usage": {
+        "input_tokens": 4861,
+        "output_tokens": 976,
+        "wall_seconds": 6.851217411458492
+      },
+      "source_completion_sha256": "81c781edcdba84af3028ea5f449466854d26f76b29d39f3c7ac822cf87c0566b"
+    },
+    {
+      "batch": 9,
+      "receipt": "calls/batch-09-call-0001.completion.json",
+      "usage": {
+        "input_tokens": 4950,
+        "output_tokens": 984,
+        "wall_seconds": 6.905978663824499
+      },
+      "source_completion_sha256": "47c4d4c1cb55764555209ade67eef861c17199825b0abe5578ca9acf48496c9b"
+    },
+    {
+      "batch": 9,
+      "receipt": "calls/batch-09-call-0003.completion.json",
+      "usage": {
+        "input_tokens": 4950,
+        "output_tokens": 979,
+        "wall_seconds": 6.796755866147578
+      },
+      "source_completion_sha256": "627cb8498946a0f65070f1864e5bbff30ff4da3618befd191afd8aa042e974a8"
+    },
+    {
+      "batch": 9,
+      "receipt": "calls/batch-09-call-0002.completion.json",
+      "usage": {
+        "input_tokens": 4950,
+        "output_tokens": 984,
+        "wall_seconds": 6.831151015125215
+      },
+      "source_completion_sha256": "220d8d37c1f0e5cc935ab477e93aa6a1374daab8b172b55bf247679c644eaedd"
+    },
+    {
+      "batch": 10,
+      "receipt": "calls/batch-10-completion.json",
+      "usage": {
+        "input_tokens": 237,
+        "output_tokens": 152,
+        "wall_seconds": 1.0824817130342126
+      },
+      "source_completion_sha256": "233f0ebba251c8957c9130e7883c3d9ae88d824a5ba13ad23438f6e4a9de12a9"
+    }
+  ],
+  "proposal_rows": [
+    {
+      "batch": 1,
+      "index": 0,
+      "status": "rejected",
+      "static_accepted": false,
+      "dynamic_accepted": false,
+      "reason": "pilot requires two observation clauses",
+      "receipt": "attempts/batch-01-attempt-0.json",
+      "source_receipt_sha256": "bbd1ea83a0bede98e42b57c2f6203f27e735ef9fa6739fd546d0ac27a066e557"
+    },
+    {
+      "batch": 1,
+      "index": 1,
+      "status": "rejected",
+      "static_accepted": false,
+      "dynamic_accepted": false,
+      "reason": "pilot requires two observation clauses",
+      "receipt": "attempts/batch-01-attempt-1.json",
+      "source_receipt_sha256": "6905b9fc6e1995b890dcd584027264164145bbd9692416f80d8c664dccbb8f9d"
+    },
+    {
+      "batch": 1,
+      "index": 2,
+      "status": "rejected",
+      "static_accepted": false,
+      "dynamic_accepted": false,
+      "reason": "malformed proposal: 'observation|worktree_unread|harness_config|task_text' is not a valid Channel",
+      "receipt": "attempts/batch-01-attempt-2.json",
+      "source_receipt_sha256": "00e2c7d450c0bdb240ce8384e3a5c2daf08294069a859e776a5b40d6c9de7d19"
+    },
+    {
+      "batch": 2,
+      "index": 0,
+      "status": "rejected",
+      "static_accepted": false,
+      "dynamic_accepted": false,
+      "reason": "malformed proposal: 1 validation error for MinimalPair\n  Value error, a minimal pair differs in exactly one factor, got ['ci_branch_check', 'locale_inference'] [type=value_error, input_value={'control': Cell(levels={...i_branch_check': 'on'})}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "receipt": "attempts/batch-02-attempt-0.json",
+      "source_receipt_sha256": "33db7dde5a78550e8de28f525f879a43bb4ebe5c1ca6a284cbbe74c6e5307cfe"
+    },
+    {
+      "batch": 2,
+      "index": 1,
+      "status": "static_accepted",
+      "static_accepted": true,
+      "dynamic_accepted": false,
+      "reason": null,
+      "receipt": "attempts/batch-02-attempt-1.json",
+      "source_receipt_sha256": "e5e44dfb78b5eee6e06d233c28c8d954a6578c433beb64e91530fbd047df25d5"
+    },
+    {
+      "batch": 3,
+      "index": 0,
+      "status": "rejected",
+      "static_accepted": false,
+      "dynamic_accepted": false,
+      "reason": "malformed proposal: 1 validation error for MinimalPair\n  Value error, a minimal pair differs in exactly one factor, got ['ci_branch_check', 'locale_config_check'] [type=value_error, input_value={'control': Cell(levels={..._config_check': 'off'})}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "receipt": "attempts/batch-03-attempt-0.json",
+      "source_receipt_sha256": "b11f5263068c41929f69c8eb1511326efed0cd8d218cee5371e50d95dce63204"
+    },
+    {
+      "batch": 3,
+      "index": 1,
+      "status": "rejected",
+      "static_accepted": false,
+      "dynamic_accepted": false,
+      "reason": "malformed proposal: 1 validation error for MinimalPair\n  Value error, a minimal pair differs in exactly one factor, got ['ci_check', 'locale_check'] [type=value_error, input_value={'control': Cell(levels={...n', 'ci_check': 'off'})}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "receipt": "attempts/batch-03-attempt-1.json",
+      "source_receipt_sha256": "4fbf06ff1110c869cc999e2598870f6dd6ccc0d291438b06f11145530da0fea1"
+    },
+    {
+      "batch": 3,
+      "index": 2,
+      "status": "rejected",
+      "static_accepted": false,
+      "dynamic_accepted": false,
+      "reason": "malformed proposal: 1 validation error for MinimalPair\n  Value error, a minimal pair differs in exactly one factor, got ['ci_check', 'locale_check'] [type=value_error, input_value={'control': Cell(levels={...n', 'ci_check': 'off'})}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "receipt": "attempts/batch-03-attempt-2.json",
+      "source_receipt_sha256": "0f62e50a3b37e9f99199b5ec5c22c3ee74e6ef939fb32c39efb7230b41ec7222"
+    },
+    {
+      "batch": 3,
+      "index": 3,
+      "status": "rejected",
+      "static_accepted": false,
+      "dynamic_accepted": false,
+      "reason": "malformed proposal: 1 validation error for MinimalPair\n  Value error, a minimal pair differs in exactly one factor, got ['ci_drift_observation', 'locale_config_observation'] [type=value_error, input_value={'control': Cell(levels={...ig_observation': 'on'})}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "receipt": "attempts/batch-03-attempt-3.json",
+      "source_receipt_sha256": "bd4c2d20544cd8d3de6c1c67dfe19e81d19c5fb3a82260a785e7eea23fdf70a0"
+    },
+    {
+      "batch": 3,
+      "index": 4,
+      "status": "rejected",
+      "static_accepted": false,
+      "dynamic_accepted": false,
+      "reason": "malformed proposal: 1 validation error for MinimalPair\n  Value error, a minimal pair differs in exactly one factor, got ['ci_check', 'locale_check'] [type=value_error, input_value={'control': Cell(levels={...ff', 'ci_check': 'on'})}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "receipt": "attempts/batch-03-attempt-4.json",
+      "source_receipt_sha256": "ccf7c3b496e689580a645531a7fa8e46d607e410b61c4322d81c49d05d64a5b6"
+    },
+    {
+      "batch": 3,
+      "index": 5,
+      "status": "rejected",
+      "static_accepted": false,
+      "dynamic_accepted": false,
+      "reason": "malformed proposal: 1 validation error for MinimalPair\n  Value error, a minimal pair differs in exactly one factor, got ['ci_branch_check', 'locale_check'] [type=value_error, input_value={'control': Cell(levels={..._branch_check': 'off'})}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+      "receipt": "attempts/batch-03-attempt-5.json",
+      "source_receipt_sha256": "7577910611e9537697d827b8d4b95ada4312b87277370529ee9b1cb69702391e"
+    },
+    {
+      "batch": 4,
+      "index": 0,
+      "status": "rejected",
+      "static_accepted": false,
+      "dynamic_accepted": false,
+      "reason": null,
+      "receipt": "attempts/batch-04-attempt-0.json",
+      "source_receipt_sha256": "fc0d8244aeaa828a8ac74cb47232f611add3a706255c80b8f01d0caeac3ff77f"
+    },
+    {
+      "batch": 4,
+      "index": 1,
+      "status": "rejected",
+      "static_accepted": false,
+      "dynamic_accepted": false,
+      "reason": null,
+      "receipt": "attempts/batch-04-attempt-1.json",
+      "source_receipt_sha256": "7eede5cd509591e98b255417ce20805925ace744e4a84740e74c044f74ebf238"
+    },
+    {
+      "batch": 4,
+      "index": 2,
+      "status": "static_accepted",
+      "static_accepted": true,
+      "dynamic_accepted": true,
+      "reason": null,
+      "receipt": "attempts/batch-04-attempt-2.json",
+      "source_receipt_sha256": "f6df23ac0d7fcf91c0370e814b41b3b87637e0b84e392d6433b00ac1344a1a4c"
+    },
+    {
+      "batch": 5,
+      "index": 0,
+      "status": "rejected",
+      "static_accepted": false,
+      "dynamic_accepted": false,
+      "reason": null,
+      "receipt": "attempts/batch-05-attempt-0.json",
+      "source_receipt_sha256": "fc0d8244aeaa828a8ac74cb47232f611add3a706255c80b8f01d0caeac3ff77f"
+    },
+    {
+      "batch": 5,
+      "index": 1,
+      "status": "rejected",
+      "static_accepted": false,
+      "dynamic_accepted": false,
+      "reason": null,
+      "receipt": "attempts/batch-05-attempt-1.json",
+      "source_receipt_sha256": "7eede5cd509591e98b255417ce20805925ace744e4a84740e74c044f74ebf238"
+    },
+    {
+      "batch": 5,
+      "index": 2,
+      "status": "rejected",
+      "static_accepted": false,
+      "dynamic_accepted": false,
+      "reason": null,
+      "receipt": "attempts/batch-05-attempt-2.json",
+      "source_receipt_sha256": "d0ce6b4b4f0b6de225b4cfee532d89ae85d4c83835189c9427fc3d0e2746b6fe"
+    },
+    {
+      "batch": 5,
+      "index": 3,
+      "status": "rejected",
+      "static_accepted": false,
+      "dynamic_accepted": false,
+      "reason": null,
+      "receipt": "attempts/batch-05-attempt-3.json",
+      "source_receipt_sha256": "6832ef6c820683f5faea42a098f41d9fadd0e27ba272665f36c6d5a545671325"
+    },
+    {
+      "batch": 5,
+      "index": 4,
+      "status": "rejected",
+      "static_accepted": false,
+      "dynamic_accepted": false,
+      "reason": null,
+      "receipt": "attempts/batch-05-attempt-4.json",
+      "source_receipt_sha256": "d51d2b0113f6ca6ac5d0952a91c44bb5f8eab263dfb81bd4a98bfa5ff7d4cebb"
+    },
+    {
+      "batch": 5,
+      "index": 5,
+      "status": "rejected",
+      "static_accepted": false,
+      "dynamic_accepted": false,
+      "reason": null,
+      "receipt": "attempts/batch-05-attempt-5.json",
+      "source_receipt_sha256": "e7d00fee0c4f3f3df0f965284d888a4364059fe230412fffc5d3b87c28557249"
+    },
+    {
+      "batch": 6,
+      "index": 0,
+      "status": "rejected",
+      "static_accepted": false,
+      "dynamic_accepted": false,
+      "reason": null,
+      "receipt": "attempts/batch-06-attempt-0.json",
+      "source_receipt_sha256": "e9ec442f9fd17b9e9b43ac2b0322e9f21074e3adbf81b08b69e81d9bdc54c2b8"
+    },
+    {
+      "batch": 6,
+      "index": 1,
+      "status": "rejected",
+      "static_accepted": false,
+      "dynamic_accepted": false,
+      "reason": null,
+      "receipt": "attempts/batch-06-attempt-1.json",
+      "source_receipt_sha256": "10e83bc293b3a4d980d5cb20f5cf4acf6cea54448c51129b97b0edef88cf75b8"
+    },
+    {
+      "batch": 6,
+      "index": 2,
+      "status": "rejected",
+      "static_accepted": false,
+      "dynamic_accepted": false,
+      "reason": null,
+      "receipt": "attempts/batch-06-attempt-2.json",
+      "source_receipt_sha256": "8a1b45c31ff876a13e67e6a198db7ec0473d5848eecc5e98616d6ebf174b6bc9"
+    },
+    {
+      "batch": 6,
+      "index": 3,
+      "status": "rejected",
+      "static_accepted": false,
+      "dynamic_accepted": false,
+      "reason": null,
+      "receipt": "attempts/batch-06-attempt-3.json",
+      "source_receipt_sha256": "be2726cc74600ab1d763527c754815db39e6f7f1bc576427a73728b7f8eb27a3"
+    },
+    {
+      "batch": 6,
+      "index": 4,
+      "status": "rejected",
+      "static_accepted": true,
+      "dynamic_accepted": false,
+      "reason": null,
+      "receipt": "attempts/batch-06-attempt-4.json",
+      "source_receipt_sha256": "cebe9c6d907acf2c7c4ddf2133db99f58057ecf7a429ab7355d7aedf2296d3bf"
+    },
+    {
+      "batch": 6,
+      "index": 5,
+      "status": "rejected",
+      "static_accepted": true,
+      "dynamic_accepted": false,
+      "reason": null,
+      "receipt": "attempts/batch-06-attempt-5.json",
+      "source_receipt_sha256": "41808bba07cbcdaae44383f5e33eb3903dc0edde2dfe5451a4645613b28ed21e"
+    },
+    {
+      "batch": 7,
+      "index": 0,
+      "status": "rejected",
+      "static_accepted": false,
+      "dynamic_accepted": false,
+      "reason": null,
+      "receipt": "attempts/batch-07-attempt-0.json",
+      "source_receipt_sha256": "d07b5af54e2e8f9e8cf5ecd113ae64070a0d7b241a74b52e6240fc2eb27d9d17"
+    },
+    {
+      "batch": 7,
+      "index": 1,
+      "status": "rejected",
+      "static_accepted": true,
+      "dynamic_accepted": false,
+      "reason": null,
+      "receipt": "attempts/batch-07-attempt-1.json",
+      "source_receipt_sha256": "20564b7615e3ecd5f7a7ed47c749157640b9ef1ad5b688e96a8f52385d666f3b"
+    },
+    {
+      "batch": 7,
+      "index": 2,
+      "status": "rejected",
+      "static_accepted": false,
+      "dynamic_accepted": false,
+      "reason": null,
+      "receipt": "attempts/batch-07-attempt-2.json",
+      "source_receipt_sha256": "e9891cd9de5475df1b50d62f821ed0be531a43482b8be78f827c61f1802d5b32"
+    },
+    {
+      "batch": 7,
+      "index": 3,
+      "status": "rejected",
+      "static_accepted": true,
+      "dynamic_accepted": false,
+      "reason": null,
+      "receipt": "attempts/batch-07-attempt-3.json",
+      "source_receipt_sha256": "0e12acdf4ee2dfef3e15bd346d6d12e49fcd1fb1c9287214482ab6751ee3eb35"
+    },
+    {
+      "batch": 7,
+      "index": 4,
+      "status": "rejected",
+      "static_accepted": true,
+      "dynamic_accepted": false,
+      "reason": null,
+      "receipt": "attempts/batch-07-attempt-4.json",
+      "source_receipt_sha256": "0713315d5582e3d122b78844987275b8595ec44d8a597fe9d078bff7f1a7faa4"
+    },
+    {
+      "batch": 7,
+      "index": 5,
+      "status": "rejected",
+      "static_accepted": false,
+      "dynamic_accepted": false,
+      "reason": null,
+      "receipt": "attempts/batch-07-attempt-5.json",
+      "source_receipt_sha256": "c81548d0f39186282f63d4127d3a6fa7c05249c429b57896f5a64522fdb54bc6"
+    },
+    {
+      "batch": 8,
+      "index": 0,
+      "status": "static_accepted",
+      "static_accepted": true,
+      "dynamic_accepted": true,
+      "reason": null,
+      "receipt": "attempts/batch-08-attempt-0.json",
+      "source_receipt_sha256": "ea68cfa2f676d13cb68368a241423f68f6f7e48ecfc099e7659157f211c7621d"
+    },
+    {
+      "batch": 9,
+      "index": 0,
+      "status": "rejected",
+      "static_accepted": true,
+      "dynamic_accepted": false,
+      "reason": null,
+      "receipt": "attempts/batch-09-attempt-0.json",
+      "source_receipt_sha256": "6587268a17bd6208e41c7cd3740b9fb83e8557f20b906339665663479866021b"
+    },
+    {
+      "batch": 9,
+      "index": 1,
+      "status": "rejected",
+      "static_accepted": true,
+      "dynamic_accepted": false,
+      "reason": null,
+      "receipt": "attempts/batch-09-attempt-1.json",
+      "source_receipt_sha256": "a13b186480a85ac8f6902b03e3edc268577fb1231913bfd547140e46be2f5692"
+    },
+    {
+      "batch": 9,
+      "index": 2,
+      "status": "rejected",
+      "static_accepted": true,
+      "dynamic_accepted": false,
+      "reason": null,
+      "receipt": "attempts/batch-09-attempt-2.json",
+      "source_receipt_sha256": "3fb6f9513629c4aab9b00ea32d5e1284e082bc2e3e52263ff6de2b0c29de30d8"
+    }
+  ],
+  "raw_request_export": "Only hashes exported; original local receipts remain preserved. Model-generated completion text and measured usage exported for every call."
+}

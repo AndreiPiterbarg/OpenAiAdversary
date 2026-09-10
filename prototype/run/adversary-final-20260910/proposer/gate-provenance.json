@@ -1,0 +1,9 @@
+{
+  "kind": "trusted_gate_source_excerpt",
+  "source": "trusted-gate.py.txt",
+  "original_caller_sha256": "5952c7abfa0cf5db11160e4ed187e723d4eacbb81abf075b0398ee314a35c555",
+  "final_repair_caller_sha256": "d7706868d989fb252b35820114c7908600a86391a58ccb72266bf0e39e13ed70",
+  "final_execution_semantics": "The final repair caller invokes this exact extracted gate and asserts accepted before writing frozen-draft.json. The first two checks run real confined generated verifier positive/negative inputs.",
+  "candidate": "frozen-draft.json",
+  "gate_result": "semantic-gate.json"
+}

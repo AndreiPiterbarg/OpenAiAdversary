@@ -1,0 +1,193 @@
+{
+  "schema": "normalized_host_runtime_pins_v1",
+  "path_normalization": "HOST_RUNTIME_ROOT is a symbolic relocation root; raw byte hashes refer to retained original receipts, not normalized JSON.",
+  "pins": [
+    {
+      "runtime_id": "factoryboy__factory_boy-1067-v3",
+      "host_pin": {
+        "task_key": "factoryboy__factory_boy-1067",
+        "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+        "repository": "HOST_RUNTIME_ROOT/factoryboy__factory_boy-1067-v3/pristine",
+        "repository_sha256": "29c43d92e4f808d5358f7436e7bf167c4fb0e6b0f2f9763f01c9b6c9cdfcfb50",
+        "venv": "HOST_RUNTIME_ROOT/factoryboy__factory_boy-1067-v3/venv",
+        "venv_sha256": "d072cec1cffc81ec9e6c4284ced7a8908fed87319a99794d9e89741501dd6ffe",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1",
+        "prepared_frozen_tests": true,
+        "original_container_equivalence": false
+      },
+      "prepared_ref": "6659398c3aed729e6a447855a1da517edb9a9cb5",
+      "task": {
+        "key": "factoryboy__factory_boy-1067",
+        "repo": "FactoryBoy/factory_boy",
+        "url": "https://github.com/FactoryBoy/factory_boy",
+        "commit": "7ed1e5417e06c3d83e0495a67508b3868de53823",
+        "test_command": "pytest --no-header -rA --tb=line --color=no -p no:cacheprovider -W ignore::DeprecationWarning tests/test_regression.py",
+        "fail_to_pass": [
+          "tests/test_regression.py::FakerRegressionTests::test_evaluated_without_locale"
+        ],
+        "pass_to_pass": [
+          "tests/test_regression.py::FakerRegressionTests::test_locale_issue"
+        ],
+        "test_patch": "diff --git a/tests/test_regression.py b/tests/test_regression.py\nindex a9ea1c6..2cca0bd 100644\n--- a/tests/test_regression.py\n+++ b/tests/test_regression.py\n@@ -51,3 +51,24 @@ class FakerRegressionTests(unittest.TestCase):\n \n         unknown_author = AuthorFactory(unknown=True)\n         self.assertEqual(\"\", unknown_author.fullname)\n+\n+    def test_evaluated_without_locale(self):\n+        \"\"\"Regression test for `KeyError: 'locale'` raised in `evaluate`.\n+\n+        See #965\n+\n+        \"\"\"\n+        class AuthorFactory(factory.Factory):\n+            fullname = factory.Faker(\"name\")\n+            pseudonym = factory.Maybe(\n+                decider=factory.Faker(\"pybool\"),\n+                yes_declaration=\"yes\",\n+                no_declaration=\"no\",\n+            )\n+\n+            class Meta:\n+                model = Author\n+\n+        author = AuthorFactory()\n+\n+        self.assertIn(author.pseudonym, [\"yes\", \"no\"])\n",
+        "gold_patch": "diff --git a/factory/declarations.py b/factory/declarations.py\nindex 70abe35..951b45f 100644\n--- a/factory/declarations.py\n+++ b/factory/declarations.py\n@@ -536,7 +536,7 @@ class Maybe(BaseDeclaration):\n             return target\n \n     def evaluate_pre(self, instance, step, overrides):\n-        choice = self.decider.evaluate(instance=instance, step=step, extra={})\n+        choice = self.decider.evaluate_pre(instance=instance, step=step, overrides={})\n         target = self.yes if choice else self.no\n         # The value can't be POST_INSTANTIATION, checked in __init__;\n         # evaluate it as `evaluate_pre`\n",
+        "protected_paths": [
+          "tests/"
+        ],
+        "public_benchmark": "SWE-rebench-V2"
+      },
+      "baseline_untracked": {}
+    },
+    {
+      "runtime_id": "django__asgiref-523-v2",
+      "host_pin": {
+        "task_key": "django__asgiref-523",
+        "commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+        "repository": "HOST_RUNTIME_ROOT/django__asgiref-523-v2/pristine",
+        "repository_sha256": "a5b35a6687984709638b9f074d129388af6a996b21ac9059cf668bd27e270b91",
+        "venv": "HOST_RUNTIME_ROOT/django__asgiref-523-v2/venv",
+        "venv_sha256": "bab7ec75c8f1266a827bc1585e3b833db21994d2132f95b31558abce439948e1",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1",
+        "prepared_frozen_tests": true,
+        "original_container_equivalence": false
+      },
+      "prepared_ref": "92d325fb7729184a7ad60fb68e308889a16f7497",
+      "task": {
+        "key": "django__asgiref-523",
+        "repo": "django/asgiref",
+        "url": "https://github.com/django/asgiref",
+        "commit": "f22bea26ff268c26253e827b127be76b61a612cf",
+        "test_command": "pytest --no-header -rA --tb=line --color=no -p no:cacheprovider -W ignore::DeprecationWarning tests/test_local.py",
+        "fail_to_pass": [
+          "tests/test_local.py::test_deletion"
+        ],
+        "pass_to_pass": [
+          "tests/test_local.py::test_local_task",
+          "tests/test_local.py::test_local_thread",
+          "tests/test_local.py::test_local_thread_nested",
+          "tests/test_local.py::test_local_cycle",
+          "tests/test_local.py::test_local_task_to_sync",
+          "tests/test_local.py::test_local_thread_to_async",
+          "tests/test_local.py::test_local_task_to_sync_to_task",
+          "tests/test_local.py::test_local_many_layers",
+          "tests/test_local.py::test_local_critical_no_task_to_thread",
+          "tests/test_local.py::test_local_critical_no_thread_to_task",
+          "tests/test_local.py::test_local_threads_and_tasks",
+          "tests/test_local.py::test_thread_critical_local_not_context_dependent_in_sync_thread",
+          "tests/test_local.py::test_visibility_thread_asgiref",
+          "tests/test_local.py::test_visibility_task"
+        ],
+        "test_patch": "diff --git a/tests/test_local.py b/tests/test_local.py\nindex cdcbd28..77e57e8 100644\n--- a/tests/test_local.py\n+++ b/tests/test_local.py\n@@ -375,3 +375,19 @@ async def test_visibility_task() -> None:\n \n     # Changes should not leak to the caller\n     assert test_local.value == 0\n+\n+\n+@pytest.mark.asyncio\n+async def test_deletion() -> None:\n+    \"\"\"Check visibility with asyncio tasks.\"\"\"\n+    test_local = Local()\n+    test_local.value = 123\n+\n+    async def _test() -> None:\n+        # Local is inherited when changing task\n+        assert test_local.value == 123\n+        del test_local.value\n+        assert not hasattr(test_local, \"value\")\n+\n+    await asyncio.create_task(_test())\n+    assert test_local.value == 123\n",
+        "gold_patch": "diff --git a/CHANGELOG.txt b/CHANGELOG.txt\nindex af34745..0157dde 100644\n--- a/CHANGELOG.txt\n+++ b/CHANGELOG.txt\n@@ -15,6 +15,11 @@\n * Fixes a deadlock in CurrentThreadExecutor with nested async_to_sync →\n   sync_to_async → async_to_sync → create_task calls. (#494)\n \n+* The ApplicationCommunicator testing utility will now return the task result\n+  if it's already completed on send_input and receive_nothing. You may need to\n+  catch (e.g.) the asyncio.exceptions.CancelledError if sending messages to\n+  already finished consumers in your tests. (#505)\n+\n 3.8.1 (2024-03-22)\n ------------------\n \ndiff --git a/asgiref/local.py b/asgiref/local.py\nindex 19b395f..845313a 100644\n--- a/asgiref/local.py\n+++ b/asgiref/local.py\n@@ -2,38 +2,37 @@ import asyncio\n import contextlib\n import contextvars\n import threading\n-from typing import Any, Union\n+from typing import Any, Dict, Union\n \n \n class _CVar:\n     \"\"\"Storage utility for Local.\"\"\"\n \n     def __init__(self) -> None:\n-        self._data: dict[str, contextvars.ContextVar[Any]] = {}\n+        self._data: \"contextvars.ContextVar[Dict[str, Any]]\" = contextvars.ContextVar(\n+            \"asgiref.local\"\n+        )\n \n-    def __getattr__(self, key: str) -> Any:\n+    def __getattr__(self, key):\n+        storage_object = self._data.get({})\n         try:\n-            var = self._data[key]\n+            return storage_object[key]\n         except KeyError:\n             raise AttributeError(f\"{self!r} object has no attribute {key!r}\")\n \n-        try:\n-            return var.get()\n-        except LookupError:\n-            raise AttributeError(f\"{self!r} object has no attribute {key!r}\")\n-\n     def __setattr__(self, key: str, value: Any) -> None:\n         if key == \"_data\":\n             return super().__setattr__(key, value)\n \n-        var = self._data.get(key)\n-        if var is None:\n-            self._data[key] = var = contextvars.ContextVar(key)\n-        var.set(value)\n+        storage_object = self._data.get({}).copy()\n+        storage_object[key] = value\n+        self._data.set(storage_object)\n \n     def __delattr__(self, key: str) -> None:\n-        if key in self._data:\n-            del self._data[key]\n+        storage_object = self._data.get({}).copy()\n+        if key in storage_object:\n+            del storage_object[key]\n+            self._data.set(storage_object)\n         else:\n             raise AttributeError(f\"{self!r} object has no attribute {key!r}\")\n \n",
+        "protected_paths": [
+          "tests/"
+        ],
+        "public_benchmark": "SWE-rebench-V2"
+      },
+      "baseline_untracked": {}
+    },
+    {
+      "runtime_id": "stuartmaxwell__djpress-117-v2",
+      "host_pin": {
+        "task_key": "stuartmaxwell__djpress-117",
+        "commit": "62898afc246da3e96a0b8f753cf5e9853d75b40e",
+        "repository": "HOST_RUNTIME_ROOT/stuartmaxwell__djpress-117-v2/pristine",
+        "repository_sha256": "984289f38db59ffc17ba896c942ddba7e42a1b8cdae1be43379650368243d4e7",
+        "venv": "HOST_RUNTIME_ROOT/stuartmaxwell__djpress-117-v2/venv",
+        "venv_sha256": "d096ed5cb5fd007cfe0e6b065d76fa5fb6641afc7450060ae899b643ef82ad27",
+        "system_python": "/usr/bin/python3.12",
+        "kind": "interactive_host_runtime_v1",
+        "prepared_frozen_tests": true,
+        "original_container_equivalence": false
+      },
+      "prepared_ref": "8bfcfb6f0e7bf9afc6e8aed67e2e517ff927e797",
+      "task": {
+        "key": "stuartmaxwell__djpress-117",
+        "repo": "stuartmaxwell/djpress",
+        "url": "https://github.com/stuartmaxwell/djpress",
+        "commit": "62898afc246da3e96a0b8f753cf5e9853d75b40e",
+        "test_command": "pytest --no-header -rA --tb=line --color=no -p no:cacheprovider -W ignore::DeprecationWarning",
+        "fail_to_pass": [
+          "tests/test_models_tag.py::test_tag_url",
+          "tests/test_url_utils.py::test_get_category_url_blank",
+          "tests/test_url_utils.py::test_get_tag_url_blank"
+        ],
+        "pass_to_pass": [
+          "tests/test_models_category.py::test_category_model",
+          "tests/test_models_category.py::test_category_save_slug_generation",
+          "tests/test_models_category.py::test_category_save_slug_uniqueness",
+          "tests/test_models_category.py::test_category_save_invalid_name",
+          "tests/test_models_category.py::test_category_slug_auto_generation",
+          "tests/test_models_category.py::test_get_categories_cache_enabled",
+          "tests/test_models_category.py::test_get_categories_cache_disabled",
+          "tests/test_models_category.py::test_get_category_by_slug_cache_enabled",
+          "tests/test_models_category.py::test_get_category_by_slug_cache_disabled",
+          "tests/test_models_category.py::test_get_category_by_slug_not_exists",
+          "tests/test_models_category.py::test_category_posts",
+          "tests/test_models_category.py::test_category_has_posts",
+          "tests/test_models_category.py::test_get_category_published",
+          "tests/test_models_category.py::test_category_last_modified",
+          "tests/test_models_tag.py::test_tag_model",
+          "tests/test_models_tag.py::test_tag_save_slug_generation",
+          "tests/test_models_tag.py::test_tag_save_slug_uniqueness",
+          "tests/test_models_tag.py::test_tag_save_invalid_name",
+          "tests/test_models_tag.py::test_tag_slug_auto_generation",
+          "tests/test_models_tag.py::test_get_tags_cache_enabled",
+          "tests/test_models_tag.py::test_get_tags_cache_disabled",
+          "tests/test_models_tag.py::test_get_cached_tags",
+          "tests/test_models_tag.py::test_get_tag_by_slug_cache_enabled",
+          "tests/test_models_tag.py::test_get_category_by_slug_cache_disabled",
+          "tests/test_models_tag.py::test_get_tag_by_slug_not_exists",
+          "tests/test_models_tag.py::test_tag_posts",
+          "tests/test_models_tag.py::test_tag_has_posts",
+          "tests/test_models_tag.py::test_get_tag_published",
+          "tests/test_models_tag.py::test_tag_last_modified",
+          "tests/test_url_utils.py::test_basic_year_month_day",
+          "tests/test_url_utils.py::test_basic_year_month_day_no_spaces",
+          "tests/test_url_utils.py::test_basic_year_month_day_mixed_spaces",
+          "tests/test_url_utils.py::test_with_static_prefix",
+          "tests/test_url_utils.py::test_year_only",
+          "tests/test_url_utils.py::test_static_only",
+          "tests/test_url_utils.py::test_mixed_order",
+          "tests/test_url_utils.py::test_with_regex_special_chars",
+          "tests/test_url_utils.py::test_empty_prefix",
+          "tests/test_url_utils.py::test_unknown_placeholder",
+          "tests/test_url_utils.py::test_no_slashes",
+          "tests/test_url_utils.py::test_weird_order",
+          "tests/test_url_utils.py::test_nested_curly_braces",
+          "tests/test_url_utils.py::test_empty_placeholder",
+          "tests/test_url_utils.py::test_bad_prefix_no_closing_brackets",
+          "tests/test_url_utils.py::test_archives_year_only",
+          "tests/test_url_utils.py::test_archives_with_prefix",
+          "tests/test_url_utils.py::test_archives_empty_prefix",
+          "tests/test_url_utils.py::test_category_with_prefix",
+          "tests/test_url_utils.py::test_author_with_prefix",
+          "tests/test_url_utils.py::test_author_empty_prefix",
+          "tests/test_url_utils.py::test_get_path_regex_post",
+          "tests/test_url_utils.py::test_get_path_regex_archives",
+          "tests/test_url_utils.py::test_get_path_regex_page",
+          "tests/test_url_utils.py::test_get_path_regex_category",
+          "tests/test_url_utils.py::test_get_path_regex_author",
+          "tests/test_url_utils.py::test_get_author_url",
+          "tests/test_url_utils.py::test_get_category_url",
+          "tests/test_url_utils.py::test_get_tag_url",
+          "tests/test_url_utils.py::test_get_page_url",
+          "tests/test_url_utils.py::test_get_page_url_parent",
+          "tests/test_url_utils.py::test_get_post_url",
+          "tests/test_url_utils.py::test_get_archives_url_year",
+          "tests/test_url_utils.py::test_get_archives_url_year_month",
+          "tests/test_url_utils.py::test_get_archives_url_year_month_day",
+          "tests/test_url_utils.py::test_get_rss_url"
+        ],
+        "test_patch": "diff --git a/tests/test_models_category.py b/tests/test_models_category.py\nindex 026ffc6..5b710d4 100644\n--- a/tests/test_models_category.py\n+++ b/tests/test_models_category.py\n@@ -154,24 +154,6 @@ def test_get_category_by_slug_not_exists(settings):\n     assert \"Category not found\" in str(excinfo.value)\n \n \n-@pytest.mark.django_db\n-def test_category_permalink(settings):\n-    \"\"\"Test that the permalink property returns the correct URL.\"\"\"\n-    # Confirm the settings in settings_testing.py\n-    assert settings.DJPRESS_SETTINGS[\"CACHE_CATEGORIES\"] is True\n-    assert settings.DJPRESS_SETTINGS[\"CATEGORY_ENABLED\"] is True\n-    assert settings.DJPRESS_SETTINGS[\"CATEGORY_PREFIX\"] == \"test-url-category\"\n-\n-    category = Category.objects.create(title=\"Test Category\", slug=\"test-category\")\n-\n-    assert category.permalink == \"test-url-category/test-category\"\n-\n-    settings.DJPRESS_SETTINGS[\"CATEGORY_ENABLED\"] = False\n-    settings.DJPRESS_SETTINGS[\"CATEGORY_PREFIX\"] = \"\"\n-\n-    assert category.permalink == \"test-category\"\n-\n-\n @pytest.mark.django_db\n def test_category_posts(test_post1, test_post2, category1, category2):\n     assert list(category1.posts.all()) == [test_post1]\ndiff --git a/tests/test_models_tag.py b/tests/test_models_tag.py\nindex ff65199..62633d8 100644\n--- a/tests/test_models_tag.py\n+++ b/tests/test_models_tag.py\n@@ -169,7 +169,7 @@ def test_get_tag_by_slug_not_exists(settings):\n \n \n @pytest.mark.django_db\n-def test_category_url(settings):\n+def test_tag_url(settings):\n     \"\"\"Test that the url property returns the correct URL.\"\"\"\n     # Confirm the settings in settings_testing.py\n     assert settings.DJPRESS_SETTINGS[\"TAG_ENABLED\"] is True\n@@ -182,7 +182,7 @@ def test_category_url(settings):\n     settings.DJPRESS_SETTINGS[\"TAG_ENABLED\"] = False\n     settings.DJPRESS_SETTINGS[\"TAG_PREFIX\"] = \"\"\n \n-    assert tag.url == \"/test-tag/\"\n+    assert tag.url == \"/\"\n \n \n @pytest.mark.django_db\ndiff --git a/tests/test_url_utils.py b/tests/test_url_utils.py\nindex 518dba7..09b0ea4 100644\n--- a/tests/test_url_utils.py\n+++ b/tests/test_url_utils.py\n@@ -299,30 +299,34 @@ def test_get_author_url(settings, user):\n @pytest.mark.django_db\n def test_get_category_url(settings, category1):\n     assert settings.APPEND_SLASH is True\n-    expected_url = f\"/{category1.permalink}/\"\n+    category_prefix = settings.DJPRESS_SETTINGS[\"CATEGORY_PREFIX\"]\n+    expected_url = f\"/{category_prefix}/{category1.slug}/\"\n \n     url = get_category_url(category1)\n     assert url == expected_url\n \n     settings.APPEND_SLASH = False\n-    expected_url = f\"/{category1.permalink}\"\n+    expected_url = f\"/{category_prefix}/{category1.slug}\"\n \n     url = get_category_url(category1)\n     assert url == expected_url\n \n \n @pytest.mark.django_db\n-def test_get_tag_url(settings, tag1):\n+def test_get_category_url_blank(settings, category1):\n     assert settings.APPEND_SLASH is True\n-    assert settings.DJPRESS_SETTINGS[\"TAG_PREFIX\"] == \"test-url-tag\"\n-    expected_url = f\"/test-url-tag/{tag1.slug}/\"\n-    url = get_tag_url(tag1)\n+    settings.DJPRESS_SETTINGS[\"CATEGORY_PREFIX\"] = \"\"\n+    expected_url = \"/\"\n+\n+    url = get_category_url(category1)\n     assert url == expected_url\n \n+\n+@pytest.mark.django_db\n+def test_get_tag_url(settings, tag1):\n     assert settings.APPEND_SLASH is True\n-    settings.DJPRESS_SETTINGS[\"TAG_PREFIX\"] = \"\"\n-    assert settings.DJPRESS_SETTINGS[\"TAG_PREFIX\"] == \"\"\n-    expected_url = f\"/{tag1.slug}/\"\n+    assert settings.DJPRESS_SETTINGS[\"TAG_PREFIX\"] == \"test-url-tag\"\n+    expected_url = f\"/test-url-tag/{tag1.slug}/\"\n     url = get_tag_url(tag1)\n     assert url == expected_url\n \n@@ -334,6 +338,16 @@ def test_get_tag_url(settings, tag1):\n     assert url == expected_url\n \n \n+@pytest.mark.django_db\n+def test_get_tag_url_blank(settings, tag1):\n+    assert settings.APPEND_SLASH is True\n+    settings.DJPRESS_SETTINGS[\"TAG_PREFIX\"] = \"\"\n+    expected_url = \"/\"\n+\n+    url = get_tag_url(tag1)\n+    assert url == expected_url\n+\n+\n def test_get_archives_url_year(settings):\n     assert settings.DJPRESS_SETTINGS[\"ARCHIVE_PREFIX\"] == \"test-url-archives\"\n     assert settings.APPEND_SLASH is True\n",
+        "gold_patch": "diff --git a/src/djpress/models/category.py b/src/djpress/models/category.py\nindex 56eceba..ce1a91d 100644\n--- a/src/djpress/models/category.py\n+++ b/src/djpress/models/category.py\n@@ -98,14 +98,6 @@ class Category(models.Model):\n             msg = f\"A category with the slug {self.slug} already exists.\"\n             raise ValueError(msg) from exc\n \n-    @property\n-    def permalink(self: \"Category\") -> str:\n-        \"\"\"Return the category's permalink.\"\"\"\n-        if djpress_settings.CATEGORY_ENABLED and djpress_settings.CATEGORY_PREFIX:\n-            return f\"{djpress_settings.CATEGORY_PREFIX}/{self.slug}\"\n-\n-        return f\"{self.slug}\"\n-\n     @property\n     def url(self) -> str:\n         \"\"\"Return the category's URL.\"\"\"\ndiff --git a/src/djpress/url_utils.py b/src/djpress/url_utils.py\nindex 940e44e..0e1176a 100644\n--- a/src/djpress/url_utils.py\n+++ b/src/djpress/url_utils.py\n@@ -215,8 +215,14 @@ def get_author_url(user: User) -> str:\n \n \n def get_category_url(category: \"Category\") -> str:\n-    \"\"\"Return the URL for the category.\"\"\"\n-    url = f\"/{category.permalink}\"\n+    \"\"\"Return the URL for the category.\n+\n+    If either djpress_settings.CATEGORY_ENABLED or djpress_settings.CATEGORY_PREFIX is not set, return an empty string.\n+    \"\"\"\n+    if djpress_settings.CATEGORY_ENABLED and djpress_settings.CATEGORY_PREFIX != \"\":\n+        url = f\"/{djpress_settings.CATEGORY_PREFIX}/{category.slug}\"\n+    else:\n+        url = \"\"\n \n     if django_settings.APPEND_SLASH:\n         return f\"{url}/\"\n@@ -226,10 +232,10 @@ def get_category_url(category: \"Category\") -> str:\n \n def get_tag_url(tag: \"Tag\") -> str:\n     \"\"\"Return the URL for a single tag.\"\"\"\n-    if djpress_settings.TAG_ENABLED and djpress_settings.TAG_PREFIX:\n+    if djpress_settings.TAG_ENABLED and djpress_settings.TAG_PREFIX != \"\":\n         url = f\"/{djpress_settings.TAG_PREFIX}/{tag.slug}\"\n     else:\n-        url = f\"/{tag.slug}\"\n+        url = \"\"\n \n     if django_settings.APPEND_SLASH:\n         return f\"{url}/\"\n",
+        "protected_paths": [
+          "tests/"
+        ],
+        "public_benchmark": "SWE-rebench-v1"
+      },
+      "baseline_untracked": {}
+    }
+  ]
+}

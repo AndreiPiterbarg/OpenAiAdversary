@@ -1,0 +1,65 @@
+commit 7ed1e5417e06c3d83e0495a67508b3868de53823
+Author:     Jeff Widman <jeff@jeffwidman.com>
+AuthorDate: Tue Apr 23 17:01:40 2024 -0600
+Commit:     Raphaël Barrois <raphael.barrois@spacinov.com>
+CommitDate: Thu Apr 25 10:58:45 2024 +0200
+
+    Don't duplicate CI checks on PRs
+    
+    By default the `pull_request` trigger will run on every push to the PR
+    branch.
+    
+    So we are wasting CI minutes and electricity by running our CI checks
+    twice on every push to a PR branch.
+    
+    Instead, this makes checks run 1x per PR, and then also run on every
+    merge to `master`, to ensure that `master` stays green. This latter
+    check is normally useless, but occasionally if there's drift of some
+    kind between when CI runs on a PR and when it's merged, then this can
+    help identify the issue.
+    
+    A more common pattern is simply to only run on PR's, but given we
+    haven't previously been enforcing "only merge via PR"
+    (https://github.com/FactoryBoy/factory_boy/issues/1073) I thought might
+    be best to keep checking `master` as well until that's changed.
+    
+    The one thing we stop doing with this change is checking on push to
+    branches that aren't PR branches... ie, if a maintainer is working on
+    testing something. But they may not even care about running CI on this
+    branch, and if they do, it's easy to run the tests locally, or open a
+    draft PR...So I don't see the point of preserving that behavior.
+
+diff --git a/.github/workflows/check.yml b/.github/workflows/check.yml
+index 6493ac7..9d83706 100644
+--- a/.github/workflows/check.yml
++++ b/.github/workflows/check.yml
+@@ -1,8 +1,10 @@
+ name: Check
+ 
+ on:
+-  - push
+-  - pull_request
++  push:
++    branches:
++      - "master"
++  pull_request:
+ 
+ concurrency:
+   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+diff --git a/.github/workflows/test.yml b/.github/workflows/test.yml
+index dc279ad..9d73453 100644
+--- a/.github/workflows/test.yml
++++ b/.github/workflows/test.yml
+@@ -1,8 +1,10 @@
+ name: Test
+ 
+ on:
+-  - push
+-  - pull_request
++  push:
++    branches:
++      - "master"
++  pull_request:
+ 
+ concurrency:
+   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
