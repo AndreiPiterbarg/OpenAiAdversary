@@ -136,6 +136,36 @@ def test_completion_is_saved_before_forwarding(fake, monkeypatch):
     assert len(calls) == 1
 
 
+@pytest.mark.parametrize("exited", [True, False])
+def test_cleanup_permission_error_only_ignored_after_owned_child_exit(fake, monkeypatch, exited):
+    out, calls = fake
+    original = bridge.subprocess.Popen
+    processes = []
+
+    def capture(*args, **kwargs):
+        process = original(*args, **kwargs)
+        processes.append(process)
+        return process
+
+    def denied(pid, signum):
+        assert pid == processes[0].pid
+        if exited:
+            processes[0].wait(timeout=5)
+        raise PermissionError("simulated process-group race")
+
+    monkeypatch.setattr(bridge.subprocess, "Popen", capture)
+    monkeypatch.setattr(bridge.os, "killpg", denied)
+    argv = [sys.executable, "-c", 'import time; print("{}", flush=True); time.sleep(0.2)']
+    try:
+        with pytest.raises(bridge.BridgeError if exited else PermissionError):
+            bridge.run_bridge(argv, out)
+    finally:
+        for process in processes:
+            process.wait(timeout=5)
+    assert not calls
+    assert json.loads((out / "failure.json").read_text())["model_calls"] == 0
+
+
 def test_explicit_astra_twenty_call_four_episode_bounds(fake):
     out, calls = fake
     events = [event(episode=f'cell-{cell}', call=call, max_tokens=1024)

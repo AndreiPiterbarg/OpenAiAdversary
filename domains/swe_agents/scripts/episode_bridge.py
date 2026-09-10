@@ -278,6 +278,11 @@ def run_bridge(
                     os.killpg(process.pid, signal.SIGKILL)
                 except ProcessLookupError:
                     pass
+                except PermissionError:
+                    # macOS can report EPERM when the child exits between poll and killpg.
+                    # Suppress it only after confirming that our owned child has exited.
+                    if process.poll() is None:
+                        raise
                 process.wait()
             for stream in (process.stdin, process.stdout):
                 stream.close()
