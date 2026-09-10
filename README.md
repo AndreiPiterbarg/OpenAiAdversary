@@ -10,19 +10,18 @@ Repository: [AndreiPiterbarg/OpenAiAdversary](https://github.com/AndreiPiterbarg
 - [`prototype/prompts/`](prototype/prompts/README.md): task instructions for implementation, evaluation and review.
 - [`prototype/run/`](prototype/run/README.md): verification receipt manifests and bounds for unresolved outcomes.
 
-## Python utilities
+## Python implementation
 
-[`adversary/core/`](adversary/core/) provides validated configuration models, cache-safe
-model copying, deterministic JSON serialization and content identifiers. Frozen models
-prevent field reassignment; they do not recursively freeze mutable field values. Copy
-updates follow Pydantic's trusted-update semantics and are not revalidated automatically.
+- [`adversary/`](adversary/): execution, proposal contracts, evidence and statistical checks.
+- [`domains/swe_agents/`](domains/swe_agents/README.md): task binding, replay and admission.
+- [`tests/`](tests/): implementation and adversarial regression checks.
 
-Install and test with Python 3.13:
+Python requirements and development dependencies are declared in [`pyproject.toml`](pyproject.toml).
+Run the checks from the repository root in an environment with those dependencies installed:
 
 ```sh
-python -m pip install -e '.[dev]'
-python -m pytest
-ruff check adversary tests
+python -m pytest -q tests prototype/run/tests
+ruff check adversary domains tests
 ```
 
 ## Frontend setup

@@ -1,0 +1,27 @@
+# Real held-out sources. Two independent sources per confirmed mode. Contamination caveats are
+# recorded here because labs ask for them; payloads and per-item manifests live in data/corpora/.
+sources:
+  - name: github_issues_pinned
+    provenance: Real issues with their merged PRs at pinned commits, harvested by us so provenance is known
+    license: per-repository; only permissive-licence repositories are admitted
+    contamination_notes: Filtered against public benchmark instance ids and the target's stated training cutoff
+  - name: gitchameleon
+    provenance: GitChameleon version-conditioned tasks
+    license: see upstream
+    contamination_notes: Public; likely in training data of recent models. Second-source only
+  - name: swe_bench_pro
+    provenance: SWE-bench Pro
+    license: see upstream
+    contamination_notes: Public; the target's reported score on it is a headline number. Second-source only
+  - name: swe_smith
+    provenance: SWE-smith synthetic-from-real tasks
+    license: see upstream
+    contamination_notes: Public
+  - name: terminal_bench
+    provenance: Terminal-Bench
+    license: see upstream
+    contamination_notes: Public
+  - name: commit0
+    provenance: Commit0
+    license: see upstream
+    contamination_notes: Public
