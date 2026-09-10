@@ -20,7 +20,7 @@
 .findingIndex { position: absolute; top: calc(100% + 7px); left: 0; width: 335px; padding: 6px; border: 1px solid #464646; border-radius: 5px; background: #222222; box-shadow: 0 10px 30px #0008; opacity: 0; visibility: hidden; transform: translateY(-4px); transition: opacity 160ms, transform 200ms var(--motion-ease-standard), visibility 160ms; }
 .findingIndex[data-open="true"] { opacity: 1; visibility: visible; transform: none; }
 .findingIndex > p { padding: 8px 10px 11px; font-size: 12px; color: #a7a7a7; }
-.findingIndex ul { list-style: none; margin: 0; padding: 0; }
+.findingIndex ul { list-style: none; margin: 0; padding: 0; max-height: 340px; overflow-y: auto; }
 .findingIndex li + li { margin-top: 3px; }
 .findingIndex li button { display: flex; align-items: center; gap: 11px; width: 100%; padding: 12px 10px; border-radius: 3px; text-align: left; transition: background 160ms; }
 .findingIndex li button:hover { background: #343434; }
@@ -112,7 +112,7 @@
 .checks dd[data-tone="passed"] { color: #a9c9b5; }
 .checks dd[data-tone="rejected"] { color: #e3b0a2; }
 .mechanism p { margin-top: 12px; color: #a2a2a2; font-size: 13px; line-height: 23px; }
-.related ul { list-style: none; padding: 0; margin: 9px 0 0; }
+.related ul { list-style: none; padding: 0; margin: 9px 0 0; max-height: 250px; overflow-y: auto; }
 .related li + li { margin-top: 2px; }
 .related button { display: flex; align-items: flex-start; gap: 7px; width: 100%; padding: 10px 0; color: #b3b3b3; text-align: left; font-size: 13px; line-height: 22px; transition: color 160ms; }
 .related button:hover { color: #dedede; }
@@ -124,6 +124,9 @@
 .overviewHeader p { display: flex; align-items: center; gap: 7px; margin-top: 7px; color: #a3a3a3; font-size: 12px; line-height: 20px; }
 .overviewHeader p > svg { color: #8c8c8c; }
 .overviewHeader > span { color: #919191; font-size: 12px; line-height: 20px; }
+.headerActions { display: flex; align-items: center; gap: 16px; color: #919191; font-size: 12px; line-height: 20px; }
+.reportButton { display: inline-flex; align-items: center; gap: 7px; padding: 7px 10px; border: 1px solid #444; border-radius: 4px; color: #d4d4d4; background: #262626; white-space: nowrap; transition: background 160ms, border-color 160ms; }
+.reportButton:hover { background: #333; border-color: #666; }
 .overview { padding-bottom: 8px; }
 .distributions { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; position: relative; }
 .distributions::after { content: ""; position: absolute; top: 0; bottom: 0; left: 50%; width: 1px; background: #323232; }
@@ -172,6 +175,14 @@
 .modeNavigation h3 { color: #d3d3d3; font-size: 14px; line-height: 22px; font-weight: 400; outline: none; }
 .modeNavigation h3 > span { display: block; }
 .selectionAnnouncement { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.evidenceContent { max-height: 520px; overflow-y: auto; }
+.eventId { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.evidenceScope { color: #929292; font-size: 12px; line-height: 21px; max-width: 760px; margin-top: 18px; }
+.downloadEvidence { display: inline-flex; align-items: center; gap: 7px; color: #b6b6b6; font-size: 12px; line-height: 20px; margin-top: 14px; }
+.downloadEvidence:hover { color: #eeeeee; }
+.traceStep + .traceStep { border-top: 1px solid #393939; }
+.traceStep summary { cursor: pointer; padding: 12px; font-size: 12px; color: #c6c6c6; }
+.traceStep summary span { color: #818181; margin: 0 12px 0 5px; font-family: var(--font-geist-mono), monospace; }
 @keyframes output-enter { from { opacity: .3; } to { opacity: 1; } }
 @media (max-width: 1100px) { .detailGrid { grid-template-columns: minmax(0, 1fr) 185px; } .eventBar { align-items: flex-start; flex-direction: column; gap: 5px; } .eventTags { gap: 4px; } .conditions > div { grid-template-columns: minmax(0, 1fr); gap: 3px; } }
 @media (max-width: 800px) { .detailGrid { grid-template-columns: minmax(0, 1fr); } .mainColumn { border-right: 0; } .context { border-top: 1px solid #393939; } .channelTag { display: none; } .findingIndex { width: min(335px, calc(100vw - 70px)); } .issueToolbar { gap: 10px; } .outputLabel { display: none; } }

@@ -33,10 +33,10 @@ function ThinkingIndicator() {
 }
 
 const ACTIONS: Record<string, { active: string; complete: string; status: string }> = {
-  mine: { active: "Searching repository history", complete: "Searched repository history", status: "Searching repository history…" },
+  mine: { active: "Inspecting the repair task", complete: "Inspected the repair task", status: "Inspecting source and tests…" },
   generate: { active: "Writing attack", complete: "Wrote attack", status: "Writing attack…" },
   compare: { active: "Testing coding agent", complete: "Tested coding agent", status: "Testing with and without the attack…" },
-  confirm: { active: "Checking follow-up results", complete: "Checked follow-up results", status: "Checking follow-up results…" },
+  confirm: { active: "Verifying the evidence", complete: "Verified the evidence", status: "Checking exposure and clean controls…" },
   takeaway: { active: "Recording finding", complete: "Recorded finding", status: "Summarizing finding…" },
 };
 
@@ -179,9 +179,9 @@ export function StoryReplay() {
       </div>
       <section className={styles.intro} aria-labelledby="intro-heading">
         <h2 id="intro-heading">How this run works</h2>
-        <p>The adversary is trained by testing attacks and learning from both successes and failures. Its goal is to describe a specific model’s failures: what goes wrong and the conditions that trigger it.</p>
-        <p>The adversary searches repository history for clues, then writes small attacks that change what a coding agent sees: repository content, tool responses, or task instructions.</p>
-        <p>The coding agent attempts the same task with and without each attack. The original tests reveal whether the change caused a failure. Expand any activity to inspect the code and evidence while new cases arrive.</p>
+        <p>The adversary tests ideas and uses what works—and what doesn’t—to refine its attacks. Its goal is a clear description of where a model fails, the conditions that trigger it, and the evidence behind it.</p>
+        <p>Here, Astra repairs real repository bugs. The adversary adds misleading guidance to a tool response, trying to steer Astra toward a fix that looks right but leaves the underlying problem unresolved.</p>
+        <p>We compare the repair with and without the attack, then check both patches against fresh regression and behavior tests. A failure is recorded when the clean run passes and the attacked run fails. Expand any activity to inspect the guidance, code, and checks.</p>
         {!launched && <button type="button" className={styles.launchButton} onClick={() => setLaunched(true)}>
           <Play size={13} fill="currentColor" aria-hidden="true" />Launch
         </button>}
@@ -231,7 +231,7 @@ export function StoryReplay() {
               <div className={styles.collapse} data-open={expanded} aria-hidden={!expanded} inert={!expanded}>
                 <div className={styles.clip}>
                   <div id={`session-${item.id}`} role="region" aria-labelledby={`case-${item.id}`} className={styles.steps}>
-                    <p className={styles.caseMeta}>{item.repository}<span>·</span>{item.channel}</p>
+                    <p className={styles.caseMeta}>{item.repository}<span>·</span>{item.record.attackLabel}<span>·</span>{item.record.condition} · run {item.record.repetition}</p>
                     {availableSteps.map((step, index) => {
                       const active = current && !position.finished && index === position.index;
                       const complete = finished || (current && index < position.index);
@@ -254,7 +254,7 @@ export function StoryReplay() {
                               onClick={() => dispatch({ type: "open", index })}>
                               <ActivitySymbol kind={step.id} />
                               <span className={styles.stepTitle}>{complete ? action.complete : action.active}</span>
-                              <span className={styles.stepMeta}>{model?.name ?? (step.id === "mine" ? item.repository : "")}</span>
+                              <span className={styles.stepMeta}>{step.role === "adversary" ? item.record.adversary : model?.name ?? (step.id === "mine" ? item.repository : "")}</span>
                               <Disclosure open={open} />
                               {active && <span className={styles.activeDot} aria-hidden="true" />}
                               <span className="sr-only">{active ? ", running" : ", complete"}</span>

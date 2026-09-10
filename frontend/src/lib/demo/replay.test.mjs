@@ -176,16 +176,17 @@ test("static content gets a reading beat without a long thinking animation", () 
   }
 });
 
-test("each distinct case supplies its own channel, evidence, and five stages", () => {
-  assert.equal(RUN.identity.source, "proxy");
+test("each recorded execution has a stable identity, evidence, and five stages", () => {
+  assert.equal(RUN.identity.source, "recorded");
   assert.equal(new Set(RUN.cases.map((item) => item.id)).size, RUN.cases.length);
-  assert.equal(new Set(RUN.cases.map((item) => item.channel)).size, RUN.cases.length);
   for (const item of RUN.cases) {
     assert.deepEqual(item.steps.map((step) => step.id), ["mine", "generate", "compare", "confirm", "takeaway"]);
     for (const step of item.steps) assert.ok(RUN.roles.some((role) => role.id === step.role));
     const confirmation = item.steps.find((step) => step.id === "confirm");
     const checks = confirmation.blocks.find((block) => block.kind === "checks");
-    assert.ok(checks.rows.every((row) => row.status === "unavailable"));
+    assert.ok(checks.rows.every((row) => row.status === "passed"));
+    assert.ok(item.record.evidenceUrl.endsWith(`${item.id}.json`));
+    assert.equal(item.control.outcome, "passed");
   }
 });
 

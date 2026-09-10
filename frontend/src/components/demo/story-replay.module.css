@@ -65,6 +65,7 @@
 .codeWell { min-width: 0; padding: 11px 14px 13px; background: #171717; border-left: 1px solid #343434; border-radius: 0 3px 3px 0; }
 .codeWell > .caption { margin-bottom: 8px; }
 .content pre { max-width: 100%; margin: 0; overflow-x: auto; color: #c8c8ce; font: 13px/22px var(--font-geist-mono), monospace; tab-size: 4; }
+.codeWell pre { white-space: pre-wrap; overflow-wrap: anywhere; }
 .content code { font-family: inherit; }
 .checks { border-top: 1px solid #292929; }
 .checkRow { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 11px 0; border-bottom: 1px solid #292929; }

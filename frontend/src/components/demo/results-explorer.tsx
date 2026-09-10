@@ -61,18 +61,21 @@ function Evidence({ title, meta, icon, children, open, onToggle, id }: {
 }
 
 function FindingEvidence({ finding }: { finding: Finding }) {
-  const comparison = finding.steps.flatMap<StoryBlock>((step) => step.blocks).find((block) => block.kind === "comparison");
-  const arms = comparison?.arms ?? [];
+  const arms = [{ label: "Without attack", ...finding.control }, { label: "With attack", ...finding.perturbed }];
   const [selected, setSelected] = useState(() => Math.max(0, arms.findIndex((arm) => arm.label === "With attack")));
   const [outputOpen, setOutputOpen] = useState(true);
   const [repositoryOpen, setRepositoryOpen] = useState(false);
   const [attackOpen, setAttackOpen] = useState(false);
+  const [guidanceOpen, setGuidanceOpen] = useState(false);
+  const [traceOpen, setTraceOpen] = useState(false);
+  const [trace, setTrace] = useState<{ attack: { tools: RecordedTool[] }; clean: { tools: RecordedTool[] } } | null>(null);
+  const [traceError, setTraceError] = useState(false);
   const tabs = useRef<(HTMLButtonElement | null)[]>([]);
   const id = useId();
 
   return <div className={styles.eventPanel}>
     <div className={styles.eventBar}>
-      <span className={styles.eventId}>{finding.id}</span>
+      <span className={styles.eventId} title={finding.sourceId}>{finding.record.arm} · {finding.record.condition} · run {finding.record.repetition}</span>
       <nav aria-label="Jump to evidence"><span>Jump to:</span>
         <a href="#agent-output" onClick={() => setOutputOpen(true)}>Output</a>
         <a href="#repository-evidence" onClick={() => setRepositoryOpen(true)}>Repository</a>
@@ -113,18 +116,39 @@ function FindingEvidence({ finding }: { finding: Finding }) {
         </div>
         <div className={styles.frames}>
           <div id={`${id}-output`} role="tabpanel" aria-labelledby={`${id}-tab-${selected}`} tabIndex={0}>
-            <Evidence title="Observed response" meta={arms[selected]?.text ?? "Unavailable"} icon={<Code2 size={13} aria-hidden="true" />}
+            <Evidence title="Patch and test results" meta={arms[selected]?.text ?? "Unavailable"} icon={<Code2 size={13} aria-hidden="true" />}
               id="observed-response" open={outputOpen} onToggle={() => setOutputOpen(!outputOpen)}>
-              <div key={selected} className={styles.outputEnter}><Output text={arms[selected]?.code} /></div>
+              <div key={selected} className={styles.outputEnter}><Output text={arms[selected]?.output} /></div>
             </Evidence>
           </div>
           <Evidence title="Repository context" meta={finding.repository} icon={<FileText size={13} aria-hidden="true" />}
             id="repository-evidence" open={repositoryOpen} onToggle={() => setRepositoryOpen(!repositoryOpen)}>
             <Output text={finding.seed} highlight={false} />
           </Evidence>
-          <Evidence title="Attack code" meta={modelFor("adversary")} icon={<Code2 size={13} aria-hidden="true" />}
+          <Evidence title="Injected guidance" meta="Exact text shown to Astra" icon={<FileText size={13} aria-hidden="true" />}
+            id="injected-guidance" open={guidanceOpen} onToggle={() => setGuidanceOpen(!guidanceOpen)}>
+            <Output text={finding.injectedText} highlight={false} />
+          </Evidence>
+          <Evidence title="Attack code" meta={finding.record.adversary} icon={<Code2 size={13} aria-hidden="true" />}
             id="attack-evidence" open={attackOpen} onToggle={() => setAttackOpen(!attackOpen)}>
             <Output text={finding.program} />
+          </Evidence>
+          <Evidence title="Agent trace" meta={`${selected === 0 ? finding.record.cleanToolCalls : finding.record.attackToolCalls} tool calls · commands and responses`} icon={<List size={13} aria-hidden="true" />}
+            id="agent-trace" open={traceOpen} onToggle={async () => {
+              setTraceOpen(!traceOpen);
+              if (trace || traceOpen) return;
+              setTraceError(false);
+              try {
+                const response = await fetch(finding.record.evidenceUrl);
+                if (!response.ok) throw new Error("Evidence unavailable");
+                setTrace(await response.json());
+              } catch { setTraceError(true); }
+            }}>
+            {trace ? (selected === 0 ? trace.clean : trace.attack).tools.map((step, index) => <details className={styles.traceStep} key={`${step.step}-${index}`}>
+              <summary><span>{String(step.step).padStart(2, "0")}</span>{step.call.name === "submit" ? "Submitted repair" : "Shell command"}</summary>
+              <Output text={step.call.arguments.command ?? step.call.arguments.summary ?? JSON.stringify(step.call.arguments, null, 2)} />
+              {step.result && <Output text={step.result} highlight={false} />}
+            </details>) : <p className={styles.unavailable}>{traceError ? "Could not load the trace. Close and reopen to retry." : "Loading recorded trace…"}</p>}
           </Evidence>
         </div>
       </> : <p className={styles.unavailable}>Paired results unavailable.</p>}
@@ -134,9 +158,12 @@ function FindingEvidence({ finding }: { finding: Finding }) {
       <dl className={styles.outcomes}>{arms.map((arm) => <div key={arm.label}>
         <dt>{arm.label}</dt><dd><Verdict outcome={arm.outcome} /><span>{arm.text}</span></dd>
       </div>)}</dl>
+      <a className={styles.downloadEvidence} href={finding.record.evidenceUrl} download>Download full run evidence<ArrowRight size={12} aria-hidden="true" /></a>
     </section>
   </div>;
 }
+
+type RecordedTool = { step: number; call: { name: string; arguments: { command?: string; summary?: string } }; result?: string };
 
 function EvaluationContext({ finding, examples, onSelect }: { finding: Finding; examples: Finding[]; onSelect: (index: number) => void }) {
   const confirmation = finding.steps.flatMap<StoryBlock>((step) => step.blocks).find((block) => block.kind === "checks");
@@ -144,12 +171,14 @@ function EvaluationContext({ finding, examples, onSelect }: { finding: Finding; 
     <section><h3>Evaluation</h3>
       <dl className={styles.metadata}>
         <div><dt>Coding model</dt><dd>{modelFor("scoring")}</dd></div>
-        <div><dt>Adversary</dt><dd>{modelFor("adversary")}</dd></div>
+        <div><dt>Adversary</dt><dd>{finding.record.adversary}</dd></div>
         <div><dt>Attack channel</dt><dd>{finding.channel}</dd></div>
+        <div><dt>Execution</dt><dd>{finding.record.condition} · repetition {finding.record.repetition}</dd></div>
+        <div><dt>Checks</dt><dd>{finding.record.passedChecks} passed · {finding.record.failedChecks} failed</dd></div>
       </dl>
     </section>
-    <section><h3>Follow-up</h3>
-      <dl className={styles.metadata}><div><dt>Target model</dt><dd>{modelFor("target")}</dd></div></dl>
+    <section><h3>Evidence checks</h3>
+      <dl className={styles.metadata}><div><dt>Evaluation</dt><dd>{finding.record.evidenceLevel}</dd></div></dl>
       <dl className={styles.checks}>{confirmation?.rows.map((row) => <div key={row.label}>
         <dt>{row.label}</dt><dd data-tone={row.status}>
           {row.status === "unavailable" ? <Minus size={10} aria-hidden="true" /> : row.status === "passed" ? <Check size={10} aria-hidden="true" /> : <CircleAlert size={10} aria-hidden="true" />}
@@ -161,7 +190,7 @@ function EvaluationContext({ finding, examples, onSelect }: { finding: Finding; 
     <section className={styles.mechanism}><h3>{finding.perturbed.outcome === "failed" ? "Failure mechanism" : "Observed mechanism"}</h3><p>{finding.mechanism}</p></section>
     {examples.length > 1 && <section className={styles.related}><h3>Other examples</h3>
       <ul>{examples.map((item, index) => item.id !== finding.id && <li key={item.id}>
-        <button type="button" onClick={() => onSelect(index)}>{item.perturbed.outcome === "failed" ? <CircleAlert size={12} aria-hidden="true" /> : <Check size={12} aria-hidden="true" />}<span>{item.title}</span><ChevronRight size={12} aria-hidden="true" /></button>
+        <button type="button" onClick={() => onSelect(index)}>{item.perturbed.outcome === "failed" ? <CircleAlert size={12} aria-hidden="true" /> : <Check size={12} aria-hidden="true" />}<span>{item.title}<span className={styles.findingChannel}>{item.record.attackLabel} · {item.record.condition} · run {item.record.repetition}</span></span><ChevronRight size={12} aria-hidden="true" /></button>
       </li>)}</ul>
     </section>}
   </aside>;
@@ -221,7 +250,7 @@ function FindingDetail({ mode }: { mode: ResultMode }) {
             <ul aria-label="Examples in this mode">{mode.examples.map((item, index) => <li key={item.id}>
               <button type="button" aria-current={selected === index ? "true" : undefined} onClick={() => selectFinding(index)}>
                 <span className={styles.findingNumber}>{String(index + 1).padStart(2, "0")}</span>
-                <span><span className={styles.findingTitle}>{item.title}</span><span className={styles.findingChannel}>{item.channel}</span></span>
+                <span><span className={styles.findingTitle}>{item.title}</span><span className={styles.findingChannel}>{item.record.attackLabel} · {item.record.condition} · run {item.record.repetition}</span></span>
                 {selected === index && <Check size={13} aria-hidden="true" />}
               </button>
             </li>)}</ul>
@@ -270,7 +299,10 @@ export function ResultsExplorer() {
     </div>
     <header className={styles.overviewHeader}>
       <div><h2>Behavior under attack</h2><p><Cpu size={13} aria-hidden="true" />{modelFor("scoring")}</p></div>
-      <span>Available examples</span>
+      <div className={styles.headerActions}>
+        <span>{RUN.summary.caseCount} paired runs · {RUN.summary.distinctTasks} tasks</span>
+        <Link href="/demo/results/report" className={styles.reportButton}><FileText size={13} aria-hidden="true" />Final report<ArrowRight size={13} aria-hidden="true" /></Link>
+      </div>
     </header>
     <LayoutGroup>
       <AnimatePresence mode="popLayout" initial={false}>
@@ -286,6 +318,8 @@ export function ResultsExplorer() {
             if (element) buttonRefs.current.set(key, element);
             else buttonRefs.current.delete(key);
           }} />
+          <p className={styles.evidenceScope}>Every displayed run has a passing clean control. The {RUN.summary.failureCount} failures cover {RUN.summary.distinctFailureTasks} underlying task; counts include repetitions. Results use host diagnostic checks.</p>
+          <a className={styles.downloadEvidence} href="/data/astra/episode-inventory.json" download>Full collection inventory · {RUN.summary.registeredEpisodes} registered runs<ArrowRight size={12} aria-hidden="true" /></a>
         </motion.div> : <motion.div key={mode.key} initial={{ opacity: 0, x: reducedMotion ? 0 : mode.outcome === "failed" ? -14 : 14 }}
           animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: reducedMotion ? 0 : mode.outcome === "failed" ? -8 : 8 }} transition={transition}
           onAnimationComplete={(definition) => {
