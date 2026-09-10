@@ -13,9 +13,3 @@ fine-tuning, model-list and loading-preview screens.
 
 Treat all displayed metrics as example data. A completed animation does not establish that an
 evaluation or training run finished. Model and dataset labels are presentation examples.
-
-## Integration requirements
-
-Live results need explicit run identity, measured progress and recorded outcomes. Distinguish
-passes, failures, unexecuted attempts and unavailable evidence. A model-release action requires
-verified results, rather than the completion of a UI workflow.
