@@ -1,0 +1,3163 @@
+{
+  "kind": "throughput_observed_report_v1",
+  "arms": [
+    {
+      "label": "K4",
+      "root": "/private/tmp/openai-adversary-prun-evidence/throughput-20260910/k4",
+      "k": 4,
+      "counts": {
+        "planned": 48,
+        "attempted": 48,
+        "terminal_attempts": 48,
+        "controller_completed": 30,
+        "tested": 25,
+        "passed": 12,
+        "failed": 13,
+        "rejected": 5,
+        "unknown": 18,
+        "not_attempted": 0,
+        "missing_terminal_record": 0,
+        "budget_exhausted": 7,
+        "unresolved_total": 23,
+        "without_diagnostic_verdict": 23
+      },
+      "elapsed_seconds": 1488.4485369808972,
+      "terminal_attempts_per_hour": 116.09403731922089,
+      "completed_episodes_per_hour": 72.55877332451306,
+      "diagnostic_verdicts_per_hour": 60.465644437094205,
+      "timings": {
+        "elapsed_seconds": {
+          "n": 48,
+          "sum": 25444.014605924487,
+          "mean": 530.0836376234269,
+          "p50": 478.9499103501439,
+          "p95": 869.3581467568874
+        },
+        "first_model_request_seconds": {
+          "n": 45,
+          "sum": 5015.108631372452,
+          "mean": 111.44685847494337,
+          "p50": 109.8456563949585,
+          "p95": 187.51910662651062
+        },
+        "setup_seconds": {
+          "n": 30,
+          "sum": 2668.257434482919,
+          "mean": 88.94191448276396,
+          "p50": 78.85806853603572,
+          "p95": 184.38213702384382
+        },
+        "interaction_seconds": {
+          "n": 30,
+          "sum": 7618.132482747547,
+          "mean": 253.93774942491825,
+          "p50": 203.58258629986085,
+          "p95": 600.0028778968845
+        },
+        "verification_seconds": {
+          "n": 48,
+          "sum": 5910.527517919429,
+          "mean": 123.13598995665477,
+          "p50": 113.94881078507751,
+          "p95": 204.27137014642358
+        },
+        "gold_control_seconds": {
+          "n": 48,
+          "sum": 1854.564559601713,
+          "mean": 38.63676165836902,
+          "p50": 0.0,
+          "p95": 195.84653119184077
+        }
+      },
+      "calls": {
+        "model_requests": 2809,
+        "model_completions": 2807,
+        "measured_input_tokens": 31065328,
+        "measured_output_tokens": 615184,
+        "completions_missing_usage": 0,
+        "recorded_tokenizer_trials": 11182,
+        "episodes_with_unknown_usage": 2,
+        "model_request_wall_seconds": 8218.31086547859,
+        "tokenizer_http_seconds": null,
+        "context_projection_receipt_seconds": 277.0
+      },
+      "episodes": [
+        {
+          "key": "factoryboy__factory_boy-1067",
+          "corpus": "discovery_149",
+          "category": "failed",
+          "stop_reason": "submitted",
+          "budget_exhausted": false,
+          "failure_stage": null,
+          "reason": null,
+          "controller_model_calls": 44,
+          "timings": {
+            "elapsed_seconds": 310.3930400889367,
+            "first_model_request_seconds": 27.021902561187744,
+            "setup_seconds": 15.201361895073205,
+            "interaction_seconds": 111.02965845400468,
+            "verification_seconds": 136.85661874804646,
+            "gold_control_seconds": 29.210960878059268
+          },
+          "calls": {
+            "model_requests": 44,
+            "model_completions": 44,
+            "measured_input_tokens": 443988,
+            "measured_output_tokens": 6093,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 44,
+              "sum": 75.33727749437094,
+              "mean": 1.712210852144794,
+              "p50": 0.6808162089437246,
+              "p95": 5.716911239549518
+            },
+            "recorded_tokenizer_trials": 123,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 44,
+              "sum": 3.0,
+              "mean": 0.06818181818181818,
+              "p50": 0.0,
+              "p95": 1.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "django__asgiref-523",
+          "corpus": "confirm_A",
+          "category": "failed",
+          "stop_reason": "model_stopped",
+          "budget_exhausted": false,
+          "failure_stage": null,
+          "reason": null,
+          "controller_model_calls": 48,
+          "timings": {
+            "elapsed_seconds": 313.8590749204159,
+            "first_model_request_seconds": 26.004318714141846,
+            "setup_seconds": 13.94126481283456,
+            "interaction_seconds": 95.1334041710943,
+            "verification_seconds": 145.64835022296757,
+            "gold_control_seconds": 41.18730912357569
+          },
+          "calls": {
+            "model_requests": 48,
+            "model_completions": 48,
+            "measured_input_tokens": 461189,
+            "measured_output_tokens": 7725,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 48,
+              "sum": 86.95105933584273,
+              "mean": 1.8114804028300568,
+              "p50": 0.6544729806482792,
+              "p95": 8.321690762415528
+            },
+            "recorded_tokenizer_trials": 76,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 48,
+              "sum": 0.0,
+              "mean": 0.0,
+              "p50": 0.0,
+              "p95": 0.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "mpmath__mpmath-966",
+          "corpus": "confirm_A",
+          "category": "failed",
+          "stop_reason": "step_budget",
+          "budget_exhausted": true,
+          "failure_stage": null,
+          "reason": null,
+          "controller_model_calls": 100,
+          "timings": {
+            "elapsed_seconds": 630.9607226513326,
+            "first_model_request_seconds": 29.984450340270996,
+            "setup_seconds": 19.231956703821197,
+            "interaction_seconds": 352.43023191578686,
+            "verification_seconds": 121.82579529914074,
+            "gold_control_seconds": 105.68653150182217
+          },
+          "calls": {
+            "model_requests": 100,
+            "model_completions": 100,
+            "measured_input_tokens": 1276827,
+            "measured_output_tokens": 16794,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 100,
+              "sum": 256.1781484875828,
+              "mean": 2.5617814848758282,
+              "p50": 1.9262278843671083,
+              "p95": 6.939341455698013
+            },
+            "recorded_tokenizer_trials": 593,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 100,
+              "sum": 20.0,
+              "mean": 0.2,
+              "p50": 0.0,
+              "p95": 1.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "nolar__kopf-1031",
+          "corpus": "confirm_A",
+          "category": "failed",
+          "stop_reason": "submitted",
+          "budget_exhausted": false,
+          "failure_stage": null,
+          "reason": null,
+          "controller_model_calls": 53,
+          "timings": {
+            "elapsed_seconds": 536.0121809989214,
+            "first_model_request_seconds": 28.964495182037354,
+            "setup_seconds": 17.46249763481319,
+            "interaction_seconds": 151.75953172240406,
+            "verification_seconds": 142.1389173567295,
+            "gold_control_seconds": 191.95044043846428
+          },
+          "calls": {
+            "model_requests": 53,
+            "model_completions": 53,
+            "measured_input_tokens": 637925,
+            "measured_output_tokens": 9253,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 53,
+              "sum": 114.64295574463904,
+              "mean": 2.1630746366913027,
+              "p50": 1.0462591759860516,
+              "p95": 8.144862536340952
+            },
+            "recorded_tokenizer_trials": 217,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 53,
+              "sum": 1.0,
+              "mean": 0.018867924528301886,
+              "p50": 0.0,
+              "p95": 0.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "omni-us__jsonargparse-717",
+          "corpus": "confirm_A",
+          "category": "failed",
+          "stop_reason": "step_budget",
+          "budget_exhausted": true,
+          "failure_stage": null,
+          "reason": null,
+          "controller_model_calls": 100,
+          "timings": {
+            "elapsed_seconds": 493.68807902000844,
+            "first_model_request_seconds": 32.949145555496216,
+            "setup_seconds": 21.743452969007194,
+            "interaction_seconds": 318.39755190722644,
+            "verification_seconds": 94.89740279782563,
+            "gold_control_seconds": 36.98268932895735
+          },
+          "calls": {
+            "model_requests": 100,
+            "model_completions": 100,
+            "measured_input_tokens": 1295106,
+            "measured_output_tokens": 22003,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 100,
+              "sum": 291.0329991336912,
+              "mean": 2.910329991336912,
+              "p50": 1.7688323073089123,
+              "p95": 8.178630815818906
+            },
+            "recorded_tokenizer_trials": 541,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 100,
+              "sum": 17.0,
+              "mean": 0.17,
+              "p50": 0.0,
+              "p95": 1.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "owkin__pydeseq2-356",
+          "corpus": "confirm_A",
+          "category": "unknown",
+          "stop_reason": "error",
+          "budget_exhausted": false,
+          "failure_stage": "interaction_and_diagnostic_replay",
+          "reason": "runtime broker timed out",
+          "controller_model_calls": 100,
+          "timings": {
+            "elapsed_seconds": 838.0129343736917,
+            "first_model_request_seconds": 81.93621492385864,
+            "verification_seconds": 204.5531754028052,
+            "gold_control_seconds": 0.0
+          },
+          "calls": {
+            "model_requests": 100,
+            "model_completions": 100,
+            "measured_input_tokens": 1215514,
+            "measured_output_tokens": 29756,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 100,
+              "sum": 370.2198529317975,
+              "mean": 3.702198529317975,
+              "p50": 1.6413977071642876,
+              "p95": 11.419200094416738
+            },
+            "recorded_tokenizer_trials": 464,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 100,
+              "sum": 13.0,
+              "mean": 0.13,
+              "p50": 0.0,
+              "p95": 1.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "palantir__python-language-server-885",
+          "corpus": "confirm_A",
+          "category": "passed",
+          "stop_reason": "submitted",
+          "budget_exhausted": false,
+          "failure_stage": null,
+          "reason": null,
+          "controller_model_calls": 37,
+          "timings": {
+            "elapsed_seconds": 259.82617945224047,
+            "first_model_request_seconds": 51.91741108894348,
+            "setup_seconds": 39.85993732907809,
+            "interaction_seconds": 73.68837479501963,
+            "verification_seconds": 131.12157420418225,
+            "gold_control_seconds": 0.0
+          },
+          "calls": {
+            "model_requests": 37,
+            "model_completions": 37,
+            "measured_input_tokens": 327717,
+            "measured_output_tokens": 4502,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 37,
+              "sum": 53.652866404503584,
+              "mean": 1.4500774703919888,
+              "p50": 0.8672516327351332,
+              "p95": 5.135493155568838
+            },
+            "recorded_tokenizer_trials": 67,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 37,
+              "sum": 1.0,
+              "mean": 0.02702702702702703,
+              "p50": 0.0,
+              "p95": 0.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "pallets__click-2935",
+          "corpus": "confirm_A",
+          "category": "passed",
+          "stop_reason": "submitted",
+          "budget_exhausted": false,
+          "failure_stage": null,
+          "reason": null,
+          "controller_model_calls": 40,
+          "timings": {
+            "elapsed_seconds": 295.3671861626208,
+            "first_model_request_seconds": 38.89357256889343,
+            "setup_seconds": 28.253028054721653,
+            "interaction_seconds": 122.81196812260896,
+            "verification_seconds": 125.99792450945824,
+            "gold_control_seconds": 0.0
+          },
+          "calls": {
+            "model_requests": 40,
+            "model_completions": 40,
+            "measured_input_tokens": 348322,
+            "measured_output_tokens": 9826,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 40,
+              "sum": 111.01584876142442,
+              "mean": 2.7753962190356107,
+              "p50": 1.0838903076946735,
+              "p95": 10.68757920153439
+            },
+            "recorded_tokenizer_trials": 103,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 40,
+              "sum": 1.0,
+              "mean": 0.025,
+              "p50": 0.0,
+              "p95": 0.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "pallets__werkzeug-2997",
+          "corpus": "confirm_A",
+          "category": "passed",
+          "stop_reason": "submitted",
+          "budget_exhausted": false,
+          "failure_stage": null,
+          "reason": null,
+          "controller_model_calls": 49,
+          "timings": {
+            "elapsed_seconds": 341.51900245063007,
+            "first_model_request_seconds": 78.86449670791626,
+            "setup_seconds": 63.31769639090635,
+            "interaction_seconds": 203.58258629986085,
+            "verification_seconds": 52.987665261141956,
+            "gold_control_seconds": 0.0
+          },
+          "calls": {
+            "model_requests": 49,
+            "model_completions": 49,
+            "measured_input_tokens": 602030,
+            "measured_output_tokens": 14342,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 49,
+              "sum": 184.65440346859396,
+              "mean": 3.7684572136447745,
+              "p50": 1.5915086064487696,
+              "p95": 13.100856836885214
+            },
+            "recorded_tokenizer_trials": 199,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 49,
+              "sum": 8.0,
+              "mean": 0.16326530612244897,
+              "p50": 0.0,
+              "p95": 1.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "pimutils__todoman-541",
+          "corpus": "confirm_A",
+          "category": "passed",
+          "stop_reason": "submitted",
+          "budget_exhausted": false,
+          "failure_stage": null,
+          "reason": null,
+          "controller_model_calls": 51,
+          "timings": {
+            "elapsed_seconds": 355.5259508546442,
+            "first_model_request_seconds": 109.8456563949585,
+            "setup_seconds": 97.73467734176666,
+            "interaction_seconds": 140.03395898174495,
+            "verification_seconds": 84.03205117862672,
+            "gold_control_seconds": 0.0
+          },
+          "calls": {
+            "model_requests": 51,
+            "model_completions": 51,
+            "measured_input_tokens": 546999,
+            "measured_output_tokens": 6775,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 51,
+              "sum": 90.56377118825912,
+              "mean": 1.7757602193776298,
+              "p50": 1.0912764575332403,
+              "p95": 6.691499402746558
+            },
+            "recorded_tokenizer_trials": 211,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 51,
+              "sum": 3.0,
+              "mean": 0.058823529411764705,
+              "p50": 0.0,
+              "p95": 1.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "prometheus__client_python-1012",
+          "corpus": "confirm_A",
+          "category": "failed",
+          "stop_reason": "step_budget",
+          "budget_exhausted": true,
+          "failure_stage": null,
+          "reason": null,
+          "controller_model_calls": 100,
+          "timings": {
+            "elapsed_seconds": 484.1774767935276,
+            "first_model_request_seconds": 84.82618308067322,
+            "setup_seconds": 74.38054390600882,
+            "interaction_seconds": 262.7564181059133,
+            "verification_seconds": 82.7612131240312,
+            "gold_control_seconds": 43.558672573883086
+          },
+          "calls": {
+            "model_requests": 100,
+            "model_completions": 100,
+            "measured_input_tokens": 1142474,
+            "measured_output_tokens": 13454,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 100,
+              "sum": 216.51554425619543,
+              "mean": 2.165155442561954,
+              "p50": 1.4249994400888681,
+              "p95": 6.46446343883872
+            },
+            "recorded_tokenizer_trials": 479,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 100,
+              "sum": 13.0,
+              "mean": 0.13,
+              "p50": 0.0,
+              "p95": 1.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "psd-tools__psd-tools-452",
+          "corpus": "confirm_A",
+          "category": "passed",
+          "stop_reason": "submitted",
+          "budget_exhausted": false,
+          "failure_stage": null,
+          "reason": null,
+          "controller_model_calls": 42,
+          "timings": {
+            "elapsed_seconds": 351.119863063097,
+            "first_model_request_seconds": 61.80654335021973,
+            "setup_seconds": 51.60627843718976,
+            "interaction_seconds": 134.9102652585134,
+            "verification_seconds": 133.0365900574252,
+            "gold_control_seconds": 0.0
+          },
+          "calls": {
+            "model_requests": 42,
+            "model_completions": 42,
+            "measured_input_tokens": 394759,
+            "measured_output_tokens": 8197,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 42,
+              "sum": 104.17432615533471,
+              "mean": 2.480341098936541,
+              "p50": 1.1464685406535864,
+              "p95": 11.395048404112458
+            },
+            "recorded_tokenizer_trials": 105,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 42,
+              "sum": 3.0,
+              "mean": 0.07142857142857142,
+              "p50": 0.0,
+              "p95": 1.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "pvlib__pvanalytics-214",
+          "corpus": "confirm_A",
+          "category": "failed",
+          "stop_reason": "model_stopped",
+          "budget_exhausted": false,
+          "failure_stage": null,
+          "reason": null,
+          "controller_model_calls": 39,
+          "timings": {
+            "elapsed_seconds": 464.934682155028,
+            "first_model_request_seconds": 131.78269982337952,
+            "setup_seconds": 120.50457762298174,
+            "interaction_seconds": 129.63564716093242,
+            "verification_seconds": 55.52482466609217,
+            "gold_control_seconds": 126.39654915384017
+          },
+          "calls": {
+            "model_requests": 39,
+            "model_completions": 39,
+            "measured_input_tokens": 389802,
+            "measured_output_tokens": 8694,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 39,
+              "sum": 116.01740284264088,
+              "mean": 2.9748052010933557,
+              "p50": 1.3231781888753176,
+              "p95": 12.344483382999897
+            },
+            "recorded_tokenizer_trials": 88,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 39,
+              "sum": 2.0,
+              "mean": 0.05128205128205128,
+              "p50": 0.0,
+              "p95": 1.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "pydicom__pynetdicom-998",
+          "corpus": "confirm_A",
+          "category": "unknown",
+          "stop_reason": "error",
+          "budget_exhausted": false,
+          "failure_stage": "guarded_gold_control",
+          "reason": "guarded gold control did not pass the frozen tests",
+          "controller_model_calls": 60,
+          "timings": {
+            "elapsed_seconds": 474.8987985942513,
+            "first_model_request_seconds": 97.76270174980164,
+            "verification_seconds": 72.25299545004964,
+            "gold_control_seconds": 130.09165564831346
+          },
+          "calls": {
+            "model_requests": 60,
+            "model_completions": 60,
+            "measured_input_tokens": 630932,
+            "measured_output_tokens": 9654,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 60,
+              "sum": 135.15535925328732,
+              "mean": 2.252589320888122,
+              "p50": 0.8809119239449501,
+              "p95": 8.417059291154146
+            },
+            "recorded_tokenizer_trials": 203,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 60,
+              "sum": 4.0,
+              "mean": 0.06666666666666667,
+              "p50": 0.0,
+              "p95": 1.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "pyfar__pyfar-776",
+          "corpus": "confirm_A",
+          "category": "failed",
+          "stop_reason": "submitted",
+          "budget_exhausted": false,
+          "failure_stage": null,
+          "reason": null,
+          "controller_model_calls": 78,
+          "timings": {
+            "elapsed_seconds": 676.9074832294136,
+            "first_model_request_seconds": 125.74292182922363,
+            "setup_seconds": 114.96782845910639,
+            "interaction_seconds": 344.3260736321099,
+            "verification_seconds": 81.78794641094282,
+            "gold_control_seconds": 103.58414490986615
+          },
+          "calls": {
+            "model_requests": 78,
+            "model_completions": 78,
+            "measured_input_tokens": 968140,
+            "measured_output_tokens": 15367,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 78,
+              "sum": 215.26447578147054,
+              "mean": 2.7598009715573144,
+              "p50": 1.3577749226242304,
+              "p95": 10.317505860701203
+            },
+            "recorded_tokenizer_trials": 386,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 78,
+              "sum": 10.0,
+              "mean": 0.1282051282051282,
+              "p50": 0.0,
+              "p95": 1.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "pygfx__pygfx-1044",
+          "corpus": "confirm_A",
+          "category": "unknown",
+          "stop_reason": "error",
+          "budget_exhausted": false,
+          "failure_stage": "guarded_gold_control",
+          "reason": "runtime broker timed out",
+          "controller_model_calls": 53,
+          "timings": {
+            "elapsed_seconds": 760.0737896002829,
+            "first_model_request_seconds": 125.72529482841492,
+            "verification_seconds": 116.93883652053773,
+            "gold_control_seconds": 201.79529660381377
+          },
+          "calls": {
+            "model_requests": 53,
+            "model_completions": 53,
+            "measured_input_tokens": 570216,
+            "measured_output_tokens": 22225,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 53,
+              "sum": 263.05665842816234,
+              "mean": 4.963333177889855,
+              "p50": 1.126487996429205,
+              "p95": 12.718369020149112
+            },
+            "recorded_tokenizer_trials": 203,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 53,
+              "sum": 7.0,
+              "mean": 0.1320754716981132,
+              "p50": 0.0,
+              "p95": 1.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "pypa__pip-13303",
+          "corpus": "confirm_A",
+          "category": "rejected",
+          "stop_reason": "submitted",
+          "budget_exhausted": false,
+          "failure_stage": null,
+          "reason": null,
+          "controller_model_calls": 45,
+          "timings": {
+            "elapsed_seconds": 299.5212554335594,
+            "first_model_request_seconds": 106.70622277259827,
+            "setup_seconds": 96.2827497262042,
+            "interaction_seconds": 142.77534287795424,
+            "verification_seconds": 40.9887205590494,
+            "gold_control_seconds": 0.0
+          },
+          "calls": {
+            "model_requests": 45,
+            "model_completions": 45,
+            "measured_input_tokens": 434003,
+            "measured_output_tokens": 9367,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 45,
+              "sum": 128.97103827819228,
+              "mean": 2.8660230728487175,
+              "p50": 1.3092464823275805,
+              "p95": 11.768235364928842
+            },
+            "recorded_tokenizer_trials": 131,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 45,
+              "sum": 3.0,
+              "mean": 0.06666666666666667,
+              "p50": 0.0,
+              "p95": 1.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "pypa__setuptools_scm-681",
+          "corpus": "confirm_A",
+          "category": "unknown",
+          "stop_reason": "error",
+          "budget_exhausted": false,
+          "failure_stage": "interaction_and_diagnostic_replay",
+          "reason": "required test skipped, errored or marked as expected failure",
+          "controller_model_calls": 50,
+          "timings": {
+            "elapsed_seconds": 461.4868627525866,
+            "first_model_request_seconds": 121.68463468551636,
+            "verification_seconds": 136.47472497448325,
+            "gold_control_seconds": 0.0
+          },
+          "calls": {
+            "model_requests": 50,
+            "model_completions": 50,
+            "measured_input_tokens": 480828,
+            "measured_output_tokens": 12921,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 50,
+              "sum": 164.4844134580344,
+              "mean": 3.289688269160688,
+              "p50": 1.5006305035203695,
+              "p95": 9.622742908075452
+            },
+            "recorded_tokenizer_trials": 161,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 50,
+              "sum": 5.0,
+              "mean": 0.1,
+              "p50": 0.0,
+              "p95": 1.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "pypa__virtualenv-2907",
+          "corpus": "confirm_A",
+          "category": "unknown",
+          "stop_reason": "error",
+          "budget_exhausted": false,
+          "failure_stage": "interaction_and_diagnostic_replay",
+          "reason": "required test skipped, errored or marked as expected failure",
+          "controller_model_calls": 52,
+          "timings": {
+            "elapsed_seconds": 662.9123968034983,
+            "first_model_request_seconds": 151.65963745117188,
+            "verification_seconds": 155.34558182791807,
+            "gold_control_seconds": 0.0
+          },
+          "calls": {
+            "model_requests": 52,
+            "model_completions": 52,
+            "measured_input_tokens": 567368,
+            "measured_output_tokens": 7412,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 52,
+              "sum": 121.59448729641736,
+              "mean": 2.338355524931103,
+              "p50": 1.532032674178481,
+              "p95": 6.551661301404238
+            },
+            "recorded_tokenizer_trials": 211,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 52,
+              "sum": 3.0,
+              "mean": 0.057692307692307696,
+              "p50": 0.0,
+              "p95": 1.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "python-attrs__attrs-1417",
+          "corpus": "confirm_A",
+          "category": "unknown",
+          "stop_reason": "error",
+          "budget_exhausted": false,
+          "failure_stage": "guarded_gold_control",
+          "reason": "runtime broker timed out",
+          "controller_model_calls": 100,
+          "timings": {
+            "elapsed_seconds": 794.3070116508752,
+            "first_model_request_seconds": 132.64052200317383,
+            "verification_seconds": 128.0062754591927,
+            "gold_control_seconds": 195.84653119184077
+          },
+          "calls": {
+            "model_requests": 100,
+            "model_completions": 100,
+            "measured_input_tokens": 1217589,
+            "measured_output_tokens": 21323,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 100,
+              "sum": 282.46974971331656,
+              "mean": 2.8246974971331658,
+              "p50": 1.7174167651683092,
+              "p95": 8.080986300483346
+            },
+            "recorded_tokenizer_trials": 526,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 100,
+              "sum": 13.0,
+              "mean": 0.13,
+              "p50": 0.0,
+              "p95": 1.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "scikit-activeml__scikit-activeml-504",
+          "corpus": "confirm_A",
+          "category": "unknown",
+          "stop_reason": "error",
+          "budget_exhausted": false,
+          "failure_stage": "guarded_gold_control",
+          "reason": "candidate changes protected input: pyproject.toml",
+          "controller_model_calls": 69,
+          "timings": {
+            "elapsed_seconds": 715.3404141571373,
+            "first_model_request_seconds": 179.61766576766968,
+            "verification_seconds": 152.8133639479056,
+            "gold_control_seconds": 46.009963324991986
+          },
+          "calls": {
+            "model_requests": 69,
+            "model_completions": 69,
+            "measured_input_tokens": 813506,
+            "measured_output_tokens": 15078,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 69,
+              "sum": 218.90645971708,
+              "mean": 3.172557387204058,
+              "p50": 1.4825608786195517,
+              "p95": 12.865921104326844
+            },
+            "recorded_tokenizer_trials": 311,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 69,
+              "sum": 3.0,
+              "mean": 0.043478260869565216,
+              "p50": 0.0,
+              "p95": 0.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "scrapy__scrapy-6897",
+          "corpus": "confirm_A",
+          "category": "unknown",
+          "stop_reason": "error",
+          "budget_exhausted": false,
+          "failure_stage": "guarded_gold_control",
+          "reason": "runtime broker timed out",
+          "controller_model_calls": 45,
+          "timings": {
+            "elapsed_seconds": 683.8476933017373,
+            "first_model_request_seconds": 144.6001331806183,
+            "verification_seconds": 191.78005062416196,
+            "gold_control_seconds": 202.8072944143787
+          },
+          "calls": {
+            "model_requests": 45,
+            "model_completions": 45,
+            "measured_input_tokens": 350599,
+            "measured_output_tokens": 5928,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 45,
+              "sum": 91.1392379347235,
+              "mean": 2.025316398549411,
+              "p50": 1.272438945248723,
+              "p95": 5.27541071549058
+            },
+            "recorded_tokenizer_trials": 59,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 45,
+              "sum": 1.0,
+              "mean": 0.022222222222222223,
+              "p50": 0.0,
+              "p95": 0.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "skrub-data__skrub-1445",
+          "corpus": "confirm_A",
+          "category": "failed",
+          "stop_reason": "submitted",
+          "budget_exhausted": false,
+          "failure_stage": null,
+          "reason": null,
+          "controller_model_calls": 72,
+          "timings": {
+            "elapsed_seconds": 904.1680553033948,
+            "first_model_request_seconds": 196.57680869102478,
+            "setup_seconds": 185.24517697794363,
+            "interaction_seconds": 523.9485568390228,
+            "verification_seconds": 123.97634614584967,
+            "gold_control_seconds": 41.430139417992905
+          },
+          "calls": {
+            "model_requests": 72,
+            "model_completions": 72,
+            "measured_input_tokens": 841064,
+            "measured_output_tokens": 12189,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 72,
+              "sum": 189.4145005363971,
+              "mean": 2.630756951894404,
+              "p50": 1.099201250821352,
+              "p95": 11.796450508758426
+            },
+            "recorded_tokenizer_trials": 307,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 72,
+              "sum": 10.0,
+              "mean": 0.1388888888888889,
+              "p50": 0.0,
+              "p95": 1.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "sktime__sktime-8358",
+          "corpus": "confirm_A",
+          "category": "rejected",
+          "stop_reason": "submitted",
+          "budget_exhausted": false,
+          "failure_stage": null,
+          "reason": null,
+          "controller_model_calls": 39,
+          "timings": {
+            "elapsed_seconds": 595.5001678951085,
+            "first_model_request_seconds": 174.55845427513123,
+            "setup_seconds": 163.1503868829459,
+            "interaction_seconds": 204.99930507689714,
+            "verification_seconds": 194.3891002368182,
+            "gold_control_seconds": 0.0
+          },
+          "calls": {
+            "model_requests": 39,
+            "model_completions": 39,
+            "measured_input_tokens": 318330,
+            "measured_output_tokens": 5584,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 39,
+              "sum": 77.19284033030272,
+              "mean": 1.9793035982128901,
+              "p50": 0.9084183368831873,
+              "p95": 8.333768827840686
+            },
+            "recorded_tokenizer_trials": 52,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 39,
+              "sum": 1.0,
+              "mean": 0.02564102564102564,
+              "p50": 0.0,
+              "p95": 0.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "skypyproject__skypy-573",
+          "corpus": "confirm_A",
+          "category": "failed",
+          "stop_reason": "time_budget",
+          "budget_exhausted": true,
+          "failure_stage": null,
+          "reason": null,
+          "controller_model_calls": 84,
+          "timings": {
+            "elapsed_seconds": 869.3581467568874,
+            "first_model_request_seconds": 139.53854155540466,
+            "setup_seconds": 127.39253906719387,
+            "interaction_seconds": 600.0063993800431,
+            "verification_seconds": 77.67918389383703,
+            "gold_control_seconds": 31.210095924092457
+          },
+          "calls": {
+            "model_requests": 84,
+            "model_completions": 83,
+            "measured_input_tokens": 1007231,
+            "measured_output_tokens": 44546,
+            "completions_missing_usage": 0,
+            "usage_unknown": true,
+            "requests_without_accounted_completion": 1,
+            "model_request_wall_seconds": {
+              "n": 83,
+              "sum": 563.3612321168184,
+              "mean": 6.787484724299017,
+              "p50": 6.756584474816918,
+              "p95": 12.715458387508988
+            },
+            "recorded_tokenizer_trials": 469,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 84,
+              "sum": 12.0,
+              "mean": 0.14285714285714285,
+              "p50": 0.0,
+              "p95": 1.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "terrapower__armi-2175",
+          "corpus": "confirm_A",
+          "category": "unknown",
+          "stop_reason": "error",
+          "budget_exhausted": false,
+          "failure_stage": "interaction_and_diagnostic_replay",
+          "reason": "invalid test command exit: 4",
+          "controller_model_calls": 57,
+          "timings": {
+            "elapsed_seconds": 557.9531732928008,
+            "first_model_request_seconds": 187.51910662651062,
+            "verification_seconds": 149.01987743657082,
+            "gold_control_seconds": 0.0
+          },
+          "calls": {
+            "model_requests": 57,
+            "model_completions": 57,
+            "measured_input_tokens": 581561,
+            "measured_output_tokens": 14867,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 57,
+              "sum": 183.85391861200333,
+              "mean": 3.225507344070234,
+              "p50": 0.7774151433259249,
+              "p95": 11.213308036327362
+            },
+            "recorded_tokenizer_trials": 207,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 57,
+              "sum": 7.0,
+              "mean": 0.12280701754385964,
+              "p50": 0.0,
+              "p95": 1.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "theacodes__nox-567",
+          "corpus": "confirm_A",
+          "category": "passed",
+          "stop_reason": "submitted",
+          "budget_exhausted": false,
+          "failure_stage": null,
+          "reason": null,
+          "controller_model_calls": 70,
+          "timings": {
+            "elapsed_seconds": 434.51055479981005,
+            "first_model_request_seconds": 160.50073289871216,
+            "setup_seconds": 149.20914320996962,
+            "interaction_seconds": 212.94703530706465,
+            "verification_seconds": 47.043461405904964,
+            "gold_control_seconds": 0.0
+          },
+          "calls": {
+            "model_requests": 70,
+            "model_completions": 70,
+            "measured_input_tokens": 789757,
+            "measured_output_tokens": 9043,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 70,
+              "sum": 159.05400678142905,
+              "mean": 2.2722000968775578,
+              "p50": 1.261237271130085,
+              "p95": 8.341467954218388
+            },
+            "recorded_tokenizer_trials": 252,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 70,
+              "sum": 7.0,
+              "mean": 0.1,
+              "p50": 0.0,
+              "p95": 1.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "tornadoweb__tornado-3521",
+          "corpus": "confirm_A",
+          "category": "unknown",
+          "stop_reason": "error",
+          "budget_exhausted": false,
+          "failure_stage": "interaction_and_diagnostic_replay",
+          "reason": "frozen test command timed out",
+          "controller_model_calls": 51,
+          "timings": {
+            "elapsed_seconds": 1406.651675697416,
+            "first_model_request_seconds": 161.47773241996765,
+            "verification_seconds": 1007.279915352352,
+            "gold_control_seconds": 0.0
+          },
+          "calls": {
+            "model_requests": 51,
+            "model_completions": 51,
+            "measured_input_tokens": 523950,
+            "measured_output_tokens": 15297,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 51,
+              "sum": 204.91983449086547,
+              "mean": 4.018035970409127,
+              "p50": 1.8704684395343065,
+              "p95": 13.3513616155833
+            },
+            "recorded_tokenizer_trials": 166,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 51,
+              "sum": 4.0,
+              "mean": 0.0784313725490196,
+              "p50": 0.0,
+              "p95": 1.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "tox-dev__pipdeptree-488",
+          "corpus": "confirm_A",
+          "category": "failed",
+          "stop_reason": "step_budget",
+          "budget_exhausted": true,
+          "failure_stage": null,
+          "reason": null,
+          "controller_model_calls": 100,
+          "timings": {
+            "elapsed_seconds": 847.6303973682225,
+            "first_model_request_seconds": 154.45482730865479,
+            "setup_seconds": 143.2778971910011,
+            "interaction_seconds": 543.1596770372707,
+            "verification_seconds": 107.44595451280475,
+            "gold_control_seconds": 21.31980722513981
+          },
+          "calls": {
+            "model_requests": 100,
+            "model_completions": 100,
+            "measured_input_tokens": 1312986,
+            "measured_output_tokens": 35910,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 100,
+              "sum": 479.5889216065407,
+              "mean": 4.795889216065407,
+              "p50": 2.2127694115042686,
+              "p95": 13.511193228885531
+            },
+            "recorded_tokenizer_trials": 628,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 100,
+              "sum": 12.0,
+              "mean": 0.12,
+              "p50": 0.0,
+              "p95": 1.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "trailofbits__pip-audit-359",
+          "corpus": "confirm_A",
+          "category": "unknown",
+          "stop_reason": "error",
+          "budget_exhausted": false,
+          "failure_stage": "guarded_gold_control",
+          "reason": "guarded gold control did not pass the frozen tests",
+          "controller_model_calls": 46,
+          "timings": {
+            "elapsed_seconds": 614.85317225568,
+            "first_model_request_seconds": 156.4374485015869,
+            "verification_seconds": 84.2029842985794,
+            "gold_control_seconds": 162.19557075574994
+          },
+          "calls": {
+            "model_requests": 46,
+            "model_completions": 46,
+            "measured_input_tokens": 425841,
+            "measured_output_tokens": 9319,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 46,
+              "sum": 125.21916142292321,
+              "mean": 2.7221556831070264,
+              "p50": 1.339171564206481,
+              "p95": 8.921244882047176
+            },
+            "recorded_tokenizer_trials": 113,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 46,
+              "sum": 2.0,
+              "mean": 0.043478260869565216,
+              "p50": 0.0,
+              "p95": 0.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "useblocks__sphinx-needs-1428",
+          "corpus": "confirm_A",
+          "category": "unknown",
+          "stop_reason": "error",
+          "budget_exhausted": false,
+          "failure_stage": "interaction_and_diagnostic_replay",
+          "reason": "required test skipped, errored or marked as expected failure",
+          "controller_model_calls": 76,
+          "timings": {
+            "elapsed_seconds": 629.1595880612731,
+            "first_model_request_seconds": 172.41540098190308,
+            "verification_seconds": 169.14979868708178,
+            "gold_control_seconds": 0.0
+          },
+          "calls": {
+            "model_requests": 76,
+            "model_completions": 76,
+            "measured_input_tokens": 932028,
+            "measured_output_tokens": 13612,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 76,
+              "sum": 209.3394551575184,
+              "mean": 2.7544665152305052,
+              "p50": 1.5024489481002092,
+              "p95": 10.17359035462141
+            },
+            "recorded_tokenizer_trials": 368,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 76,
+              "sum": 8.0,
+              "mean": 0.10526315789473684,
+              "p50": 0.0,
+              "p95": 1.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "wtforms__wtforms-823",
+          "corpus": "confirm_A",
+          "category": "passed",
+          "stop_reason": "submitted",
+          "budget_exhausted": false,
+          "failure_stage": null,
+          "reason": null,
+          "controller_model_calls": 44,
+          "timings": {
+            "elapsed_seconds": 416.9385944753885,
+            "first_model_request_seconds": 151.39571070671082,
+            "setup_seconds": 140.4724551960826,
+            "interaction_seconds": 109.54618311766535,
+            "verification_seconds": 134.07631186023355,
+            "gold_control_seconds": 0.0
+          },
+          "calls": {
+            "model_requests": 44,
+            "model_completions": 44,
+            "measured_input_tokens": 374920,
+            "measured_output_tokens": 7087,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 44,
+              "sum": 94.90595860220492,
+              "mean": 2.156953604595566,
+              "p50": 0.849846737459302,
+              "p95": 10.873365592211485
+            },
+            "recorded_tokenizer_trials": 57,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 44,
+              "sum": 2.0,
+              "mean": 0.045454545454545456,
+              "p50": 0.0,
+              "p95": 0.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "xgcm__xgcm-615",
+          "corpus": "confirm_A",
+          "category": "rejected",
+          "stop_reason": "submitted",
+          "budget_exhausted": false,
+          "failure_stage": null,
+          "reason": null,
+          "controller_model_calls": 95,
+          "timings": {
+            "elapsed_seconds": 613.9975300375372,
+            "first_model_request_seconds": 32.013766050338745,
+            "setup_seconds": 20.62305451510474,
+            "interaction_seconds": 540.8084304551594,
+            "verification_seconds": 29.01274516596459,
+            "gold_control_seconds": 0.0
+          },
+          "calls": {
+            "model_requests": 95,
+            "model_completions": 95,
+            "measured_input_tokens": 1178632,
+            "measured_output_tokens": 23088,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 95,
+              "sum": 323.78700646571815,
+              "mean": 3.408284278586507,
+              "p50": 1.5964560806751251,
+              "p95": 13.36533829011023
+            },
+            "recorded_tokenizer_trials": 444,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 95,
+              "sum": 11.0,
+              "mean": 0.11578947368421053,
+              "p50": 0.0,
+              "p95": 1.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "ReviewNB__treon-25",
+          "corpus": "confirm_B",
+          "category": "unknown",
+          "stop_reason": "error",
+          "budget_exhausted": false,
+          "failure_stage": "guarded_gold_control",
+          "reason": "guarded gold control did not pass the frozen tests",
+          "controller_model_calls": 45,
+          "timings": {
+            "elapsed_seconds": 478.9499103501439,
+            "first_model_request_seconds": 61.55823564529419,
+            "verification_seconds": 179.85743182594888,
+            "gold_control_seconds": 58.673856078181416
+          },
+          "calls": {
+            "model_requests": 45,
+            "model_completions": 45,
+            "measured_input_tokens": 427301,
+            "measured_output_tokens": 8433,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 45,
+              "sum": 113.7966572381556,
+              "mean": 2.5288146052923466,
+              "p50": 1.4382687658071518,
+              "p95": 11.382056524977088
+            },
+            "recorded_tokenizer_trials": 119,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 45,
+              "sum": 3.0,
+              "mean": 0.06666666666666667,
+              "p50": 0.0,
+              "p95": 1.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "amplify-education__python-hcl2-73",
+          "corpus": "confirm_B",
+          "category": "unknown",
+          "stop_reason": "error",
+          "budget_exhausted": false,
+          "failure_stage": "interaction_and_diagnostic_replay",
+          "reason": "runtime broker timed out",
+          "controller_model_calls": 50,
+          "timings": {
+            "elapsed_seconds": 511.52763004787266,
+            "first_model_request_seconds": 130.45493412017822,
+            "verification_seconds": 204.27137014642358,
+            "gold_control_seconds": 0.0
+          },
+          "calls": {
+            "model_requests": 50,
+            "model_completions": 50,
+            "measured_input_tokens": 507385,
+            "measured_output_tokens": 10123,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 50,
+              "sum": 119.4449885096401,
+              "mean": 2.388899770192802,
+              "p50": 1.2736760936677456,
+              "p95": 10.374688437208533
+            },
+            "recorded_tokenizer_trials": 154,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 50,
+              "sum": 2.0,
+              "mean": 0.04,
+              "p50": 0.0,
+              "p95": 0.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "benmoran56__esper-81",
+          "corpus": "confirm_B",
+          "category": "passed",
+          "stop_reason": "submitted",
+          "budget_exhausted": false,
+          "failure_stage": null,
+          "reason": null,
+          "controller_model_calls": 56,
+          "timings": {
+            "elapsed_seconds": 547.0772802904248,
+            "first_model_request_seconds": 193.45869326591492,
+            "setup_seconds": 184.38213702384382,
+            "interaction_seconds": 179.37639013770968,
+            "verification_seconds": 152.473387978971,
+            "gold_control_seconds": 0.0
+          },
+          "calls": {
+            "model_requests": 56,
+            "model_completions": 56,
+            "measured_input_tokens": 659006,
+            "measured_output_tokens": 10535,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 56,
+              "sum": 136.53044070489705,
+              "mean": 2.4380435840160186,
+              "p50": 1.2166047058999538,
+              "p95": 8.82119444385171
+            },
+            "recorded_tokenizer_trials": 252,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 56,
+              "sum": 8.0,
+              "mean": 0.14285714285714285,
+              "p50": 0.0,
+              "p95": 1.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "boolangery__py-lua-parser-32",
+          "corpus": "confirm_B",
+          "category": "rejected",
+          "stop_reason": "submitted",
+          "budget_exhausted": false,
+          "failure_stage": null,
+          "reason": null,
+          "controller_model_calls": 71,
+          "timings": {
+            "elapsed_seconds": 397.57810503803194,
+            "first_model_request_seconds": 86.09976696968079,
+            "setup_seconds": 74.41881598206237,
+            "interaction_seconds": 256.3381064857822,
+            "verification_seconds": 33.31008119904436,
+            "gold_control_seconds": 0.0
+          },
+          "calls": {
+            "model_requests": 71,
+            "model_completions": 71,
+            "measured_input_tokens": 781466,
+            "measured_output_tokens": 12037,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 71,
+              "sum": 197.2241094633937,
+              "mean": 2.7778043586393477,
+              "p50": 1.7127264235168695,
+              "p95": 8.832914426922798
+            },
+            "recorded_tokenizer_trials": 270,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 71,
+              "sum": 9.0,
+              "mean": 0.1267605633802817,
+              "p50": 0.0,
+              "p95": 1.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "boxed__mutmut-363",
+          "corpus": "confirm_B",
+          "category": "failed",
+          "stop_reason": "step_budget",
+          "budget_exhausted": true,
+          "failure_stage": null,
+          "reason": null,
+          "controller_model_calls": 100,
+          "timings": {
+            "elapsed_seconds": 470.5861309375614,
+            "first_model_request_seconds": 86.26734972000122,
+            "setup_seconds": 74.41967504518107,
+            "interaction_seconds": 255.37347137997858,
+            "verification_seconds": 47.842131990008056,
+            "gold_control_seconds": 59.39203179185279
+          },
+          "calls": {
+            "model_requests": 100,
+            "model_completions": 100,
+            "measured_input_tokens": 1155655,
+            "measured_output_tokens": 12187,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 100,
+              "sum": 203.61779400892556,
+              "mean": 2.0361779400892557,
+              "p50": 1.2577891871333122,
+              "p95": 4.729629812762141
+            },
+            "recorded_tokenizer_trials": 448,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 100,
+              "sum": 13.0,
+              "mean": 0.13,
+              "p50": 0.0,
+              "p95": 1.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "christiansandberg__canopen-506",
+          "corpus": "confirm_B",
+          "category": "passed",
+          "stop_reason": "submitted",
+          "budget_exhausted": false,
+          "failure_stage": null,
+          "reason": null,
+          "controller_model_calls": 35,
+          "timings": {
+            "elapsed_seconds": 539.6789615247399,
+            "first_model_request_seconds": 97.20170950889587,
+            "setup_seconds": 85.2302613845095,
+            "interaction_seconds": 316.7496598819271,
+            "verification_seconds": 113.94881078507751,
+            "gold_control_seconds": 0.0
+          },
+          "calls": {
+            "model_requests": 35,
+            "model_completions": 35,
+            "measured_input_tokens": 314099,
+            "measured_output_tokens": 8860,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 35,
+              "sum": 104.24443108402193,
+              "mean": 2.9784123166863408,
+              "p50": 1.29095945879817,
+              "p95": 9.024425886571407
+            },
+            "recorded_tokenizer_trials": 77,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 35,
+              "sum": 0.0,
+              "mean": 0.0,
+              "p50": 0.0,
+              "p95": 0.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "fetzerch__kasserver-6",
+          "corpus": "confirm_B",
+          "category": "unknown",
+          "stop_reason": "error",
+          "budget_exhausted": false,
+          "failure_stage": "interaction_and_diagnostic_replay",
+          "reason": "runtime broker timed out",
+          "controller_model_calls": 67,
+          "timings": {
+            "elapsed_seconds": 476.2903276979923,
+            "first_model_request_seconds": 94.31595182418823,
+            "verification_seconds": 202.57398207765073,
+            "gold_control_seconds": 0.0
+          },
+          "calls": {
+            "model_requests": 67,
+            "model_completions": 67,
+            "measured_input_tokens": 774312,
+            "measured_output_tokens": 8630,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 67,
+              "sum": 115.4606020655483,
+              "mean": 1.723292568142512,
+              "p50": 0.8401711788028479,
+              "p95": 5.913964135572314
+            },
+            "recorded_tokenizer_trials": 310,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 67,
+              "sum": 4.0,
+              "mean": 0.05970149253731343,
+              "p50": 0.0,
+              "p95": 1.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "ipython__ipython-14695",
+          "corpus": "confirm_B",
+          "category": "rejected",
+          "stop_reason": "submitted",
+          "budget_exhausted": false,
+          "failure_stage": null,
+          "reason": null,
+          "controller_model_calls": 59,
+          "timings": {
+            "elapsed_seconds": 388.53887783177197,
+            "first_model_request_seconds": 95.78398489952087,
+            "setup_seconds": 81.91506226896308,
+            "interaction_seconds": 199.17893060995266,
+            "verification_seconds": 72.12698354013264,
+            "gold_control_seconds": 0.0
+          },
+          "calls": {
+            "model_requests": 59,
+            "model_completions": 59,
+            "measured_input_tokens": 521577,
+            "measured_output_tokens": 8115,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 59,
+              "sum": 114.85566545277834,
+              "mean": 1.946706194114887,
+              "p50": 1.1630765683948994,
+              "p95": 8.444289127364755
+            },
+            "recorded_tokenizer_trials": 121,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 59,
+              "sum": 3.0,
+              "mean": 0.05084745762711865,
+              "p50": 0.0,
+              "p95": 1.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "oasis-open__cti-taxii-client-55",
+          "corpus": "confirm_B",
+          "category": "passed",
+          "stop_reason": "submitted",
+          "budget_exhausted": false,
+          "failure_stage": null,
+          "reason": null,
+          "controller_model_calls": 50,
+          "timings": {
+            "elapsed_seconds": 306.9304644167423,
+            "first_model_request_seconds": 89.07826447486877,
+            "setup_seconds": 78.85806853603572,
+            "interaction_seconds": 154.01636199979112,
+            "verification_seconds": 41.847222465090454,
+            "gold_control_seconds": 0.0
+          },
+          "calls": {
+            "model_requests": 50,
+            "model_completions": 50,
+            "measured_input_tokens": 442622,
+            "measured_output_tokens": 7758,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 50,
+              "sum": 108.62401879020035,
+              "mean": 2.172480375804007,
+              "p50": 0.8738684635609388,
+              "p95": 6.775884013622999
+            },
+            "recorded_tokenizer_trials": 121,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 50,
+              "sum": 4.0,
+              "mean": 0.08,
+              "p50": 0.0,
+              "p95": 1.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "pysal__momepy-661",
+          "corpus": "confirm_B",
+          "category": "unknown",
+          "stop_reason": "error",
+          "budget_exhausted": false,
+          "failure_stage": "build",
+          "reason": "runtime broker timed out",
+          "controller_model_calls": 0,
+          "timings": {
+            "elapsed_seconds": 220.2991977483034,
+            "verification_seconds": 0.0,
+            "gold_control_seconds": 0.0
+          },
+          "calls": {
+            "model_requests": 0,
+            "model_completions": 0,
+            "measured_input_tokens": 0,
+            "measured_output_tokens": 0,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 0,
+              "sum": 0,
+              "mean": null,
+              "p50": null,
+              "p95": null
+            },
+            "recorded_tokenizer_trials": 0,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 0,
+              "sum": 0,
+              "mean": null,
+              "p50": null,
+              "p95": null
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "scieloorg__xylose-158",
+          "corpus": "confirm_B",
+          "category": "failed",
+          "stop_reason": "time_budget",
+          "budget_exhausted": true,
+          "failure_stage": null,
+          "reason": null,
+          "controller_model_calls": 73,
+          "timings": {
+            "elapsed_seconds": 739.4603468440473,
+            "first_model_request_seconds": 83.37623310089111,
+            "setup_seconds": 71.58417447493412,
+            "interaction_seconds": 600.0028778968845,
+            "verification_seconds": 23.709367546020076,
+            "gold_control_seconds": 25.235019316896796
+          },
+          "calls": {
+            "model_requests": 73,
+            "model_completions": 72,
+            "measured_input_tokens": 863438,
+            "measured_output_tokens": 50182,
+            "completions_missing_usage": 0,
+            "usage_unknown": true,
+            "requests_without_accounted_completion": 1,
+            "model_request_wall_seconds": {
+              "n": 72,
+              "sum": 555.7589033525437,
+              "mean": 7.7188736576742185,
+              "p50": 10.449427796527743,
+              "p95": 12.510676691308618
+            },
+            "recorded_tokenizer_trials": 369,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 73,
+              "sum": 15.0,
+              "mean": 0.2054794520547945,
+              "p50": 0.0,
+              "p95": 1.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "srsudar__eg-88",
+          "corpus": "confirm_B",
+          "category": "passed",
+          "stop_reason": "submitted",
+          "budget_exhausted": false,
+          "failure_stage": null,
+          "reason": null,
+          "controller_model_calls": 46,
+          "timings": {
+            "elapsed_seconds": 389.98026484437287,
+            "first_model_request_seconds": 168.35521578788757,
+            "setup_seconds": 155.32135388348252,
+            "interaction_seconds": 111.93708357121795,
+            "verification_seconds": 88.0619253963232,
+            "gold_control_seconds": 0.0
+          },
+          "calls": {
+            "model_requests": 46,
+            "model_completions": 46,
+            "measured_input_tokens": 504703,
+            "measured_output_tokens": 5865,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 46,
+              "sum": 72.59079596959054,
+              "mean": 1.5780607819476205,
+              "p50": 0.956422409042716,
+              "p95": 4.876086886972189
+            },
+            "recorded_tokenizer_trials": 178,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 46,
+              "sum": 3.0,
+              "mean": 0.06521739130434782,
+              "p50": 0.0,
+              "p95": 1.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "stuartmaxwell__djpress-117",
+          "corpus": "confirm_B",
+          "category": "passed",
+          "stop_reason": "submitted",
+          "budget_exhausted": false,
+          "failure_stage": null,
+          "reason": null,
+          "controller_model_calls": 68,
+          "timings": {
+            "elapsed_seconds": 449.08776393160224,
+            "first_model_request_seconds": 171.33293747901917,
+            "setup_seconds": 158.2693815601524,
+            "interaction_seconds": 226.4730001660064,
+            "verification_seconds": 39.45854537002742,
+            "gold_control_seconds": 0.0
+          },
+          "calls": {
+            "model_requests": 68,
+            "model_completions": 68,
+            "measured_input_tokens": 711631,
+            "measured_output_tokens": 5228,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 68,
+              "sum": 73.52728665061295,
+              "mean": 1.0812836272148962,
+              "p50": 0.6844965610653162,
+              "p95": 2.833467088639736
+            },
+            "recorded_tokenizer_trials": 243,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 68,
+              "sum": 3.0,
+              "mean": 0.04411764705882353,
+              "p50": 0.0,
+              "p95": 0.0
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "aeon-toolkit__aeon-2822",
+          "corpus": "discovery_149",
+          "category": "unknown",
+          "stop_reason": "error",
+          "budget_exhausted": false,
+          "failure_stage": "build",
+          "reason": "runtime broker timed out",
+          "controller_model_calls": 0,
+          "timings": {
+            "elapsed_seconds": 216.18162097409368,
+            "verification_seconds": 0.0,
+            "gold_control_seconds": 0.0
+          },
+          "calls": {
+            "model_requests": 0,
+            "model_completions": 0,
+            "measured_input_tokens": 0,
+            "measured_output_tokens": 0,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 0,
+              "sum": 0,
+              "mean": null,
+              "p50": null,
+              "p95": null
+            },
+            "recorded_tokenizer_trials": 0,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 0,
+              "sum": 0,
+              "mean": null,
+              "p50": null,
+              "p95": null
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        },
+        {
+          "key": "aeye-lab__pymovements-1154",
+          "corpus": "discovery_149",
+          "category": "unknown",
+          "stop_reason": "error",
+          "budget_exhausted": false,
+          "failure_stage": "build",
+          "reason": "runtime broker timed out",
+          "controller_model_calls": 0,
+          "timings": {
+            "elapsed_seconds": 216.43458899483085,
+            "verification_seconds": 0.0,
+            "gold_control_seconds": 0.0
+          },
+          "calls": {
+            "model_requests": 0,
+            "model_completions": 0,
+            "measured_input_tokens": 0,
+            "measured_output_tokens": 0,
+            "completions_missing_usage": 0,
+            "usage_unknown": false,
+            "requests_without_accounted_completion": 0,
+            "model_request_wall_seconds": {
+              "n": 0,
+              "sum": 0,
+              "mean": null,
+              "p50": null,
+              "p95": null
+            },
+            "recorded_tokenizer_trials": 0,
+            "tokenizer_http_seconds": null,
+            "context_projection_receipt_seconds": {
+              "n": 0,
+              "sum": 0,
+              "mean": null,
+              "p50": null,
+              "p95": null
+            },
+            "timing_scope": "model HTTP wall time from completion usage; optional projection interval includes bookkeeping",
+            "tokenizer_trial_count_scope": "successful saved contexts only; failed projection trials may be unrecorded"
+          }
+        }
+      ],
+      "pin_bindings": {
+        "factoryboy__factory_boy-1067": "85206e81047d153c0754041268eefa7cabe7b11d440f15bb47b896a6cd69c291",
+        "django__asgiref-523": "f6ff25349b8129aa4b09f2699e730733035137061928cf63b44bee87c1da19be",
+        "mpmath__mpmath-966": "7370966abb43eebc1b18a1c86ef97bd718d04eca6987de1031214fbfa93e0690",
+        "nolar__kopf-1031": "81eba9c58a3c238b130cf74aed22c18c79919b82d0d3e34eab6f73a24c732d4f",
+        "omni-us__jsonargparse-717": "3e4d78563c16256d3dad909d7d823f440133f5e0a4f8a8b61bcbf06409877d5f",
+        "owkin__pydeseq2-356": "0bf61932b3186539d3d36627f39fa769f0e7c77ccbf5d38254ed24af167a85f9",
+        "palantir__python-language-server-885": "55a35e7096dea421bb36e848199c47392cdc0c99f350d57bec3608c12a0ecf5f",
+        "pallets__click-2935": "fcc0d3de712cdf659612762b1b1ef2d2256071270c47d9c91e2423d1c34fcd57",
+        "pallets__werkzeug-2997": "1bb36d7c138dc185411886d00eb319a0883079d61c789506d51983cbf49d8204",
+        "pimutils__todoman-541": "761896542db53bc6e23493ed13f47f090dcccc003c8f7fcfbeb36c445f4e887c",
+        "prometheus__client_python-1012": "3bc3fa224f7dc16c608f1edc0fec2728af84f6776d9d79150c35502cf7a985d3",
+        "psd-tools__psd-tools-452": "1ffa1f3a5e745f71837ecb7a1cea44bf44ef273b651c39be7775f32ae95116d2",
+        "pvlib__pvanalytics-214": "4dabb1d33eb4c3e5d9223e1e3c98003835a762a2a22d7686195b588f908d198c",
+        "pydicom__pynetdicom-998": "70dfeda2960b32821d9ea335d0dd064b8a6d9012d73b210b8518dd27322a9af0",
+        "pyfar__pyfar-776": "3d09ee68241489121db2e08f335fa86dd53bdef56509792093dae9d385b60141",
+        "pygfx__pygfx-1044": "ac5fa0a9f10d99bd0cb274c0508d9ffad8a6f2460c31e3eedbd20b76cb27b4d8",
+        "pypa__pip-13303": "9b1e94131cdec0cb6ff92d53fa41a3cb297f03d45b97f2aab2621e5ef7d393c4",
+        "pypa__setuptools_scm-681": "3b6ed91167f7f2d1ffe87b690028407557991e684874238f90457e25c5f8a976",
+        "pypa__virtualenv-2907": "f29e69a3e157a612c09264a0594c6afabc5c0d4c948efca363dc1eb824b90439",
+        "python-attrs__attrs-1417": "6f38ec86403a5532429074858b5a31375c883242dbc94596514310942635fe5d",
+        "scikit-activeml__scikit-activeml-504": "0fe1694ac0f599002242899a36e4e3110c2e7887138871efcb0da2356e15b878",
+        "scrapy__scrapy-6897": "fa908113bd2be1fa91fa504350ff84662ff5725d1fe2fab0de7f8adcf6668d0d",
+        "skrub-data__skrub-1445": "c674f768c49921ad1ad034bbaffbb2268cec9349e406a909121c5b541d3c1606",
+        "sktime__sktime-8358": "c7f34a4f4e2d5adcf36b8c781767e21c2a853ae2e5ced88d9e3359c250ec5ca0",
+        "skypyproject__skypy-573": "76b27bf856d8c1ae494e1b5d20036c240adc86b67a39395f9e84edfc921483da",
+        "terrapower__armi-2175": "445723ff70224d4de7bcb3cf890006822559cf5d6ec0ddb5db7e04e8b465c32f",
+        "theacodes__nox-567": "dfc59c63ec5a8b37b58b88445e9ffe37bf86c45541f237fbabe78021ea2bd607",
+        "tornadoweb__tornado-3521": "5d2cbd1553946f36cdf9396c8002d3d1233ff3b1772fcbeea957661f0baf6767",
+        "tox-dev__pipdeptree-488": "ad9f414aecc2d02fc3066ab0873e1e6f048581aec4d8e1a2f9cca70a772f5d36",
+        "trailofbits__pip-audit-359": "09c74c440d30ae4bbc2e5ebc8ca3d4179279378f1177c5892694980745a92d40",
+        "useblocks__sphinx-needs-1428": "376a7b3b947c49078221f22ad35f7cccbba3c4fcf8f9efc0832ec4fd2b293b36",
+        "wtforms__wtforms-823": "d6fd6bb43072a0d98e1c6b0d34b0f72cc2200a2839573a64b6f524e9ad3721e9",
+        "xgcm__xgcm-615": "b11ca1ebee56c7d93f58c28d9b038e6889b7a3d9c48be4b9a3c8803e1ea6fa56",
+        "ReviewNB__treon-25": "9158af8c24caa3882db72af11517ff241ab807cbea57df04487216c7b048b824",
+        "amplify-education__python-hcl2-73": "e2509f7f6d04b98b63caa2ff40cb0b8e19da697b2162708377533521658c1cda",
+        "benmoran56__esper-81": "3e8102c21ee2c5d91ca9c4f4a977b024400d2e8038873d52498fcecb74de2388",
+        "boolangery__py-lua-parser-32": "50c62fc3cde30ba3061ab9aadc7999cfd7d319bc180dad172bdd759aa3fa6086",
+        "boxed__mutmut-363": "61ff5345ea048d4c05d67c8f7ee7100cf3c97461906670a9e50cbf9e41292a67",
+        "christiansandberg__canopen-506": "4e4290c370887e13a9469ec581c633edf062e76fe37a0e64f75540292341141e",
+        "fetzerch__kasserver-6": "bc32e3e50ee43e8fde7e6dc43e1f49116940341b2d15a674c0c80f109c0bb493",
+        "ipython__ipython-14695": "a23bdac81ae6a571b5e20461417810ce0d203d73c819c6245c1359a8a1dbf6e0",
+        "oasis-open__cti-taxii-client-55": "9ce694039c5e6c115aff02d78e51adacbfdcfe8061d0da286bf2ca22bbb812c3",
+        "pysal__momepy-661": "2a34a050908c39d76612092b6370205ab7ba0796bc786d1dbdce5e2d718a5738",
+        "scieloorg__xylose-158": "e046922f1ab23b52cc79faac96ff8e17c89e36b7af6f3c2cb3d8767a19738035",
+        "srsudar__eg-88": "ffd0a40bd3ab074c96eeecd3c26aad58d214dcfbaad63c393d2f2a2a0db859c5",
+        "stuartmaxwell__djpress-117": "b61e6fc4f9787bdbca6f5db058ee0f88a1ea5ad9a46e1ba1d10760c6e8e6174e",
+        "aeon-toolkit__aeon-2822": "1244ace5af8c14726e2ea1c2a3f0cb9f1f43d9503dca27f5d4a5d42badef5e7b",
+        "aeye-lab__pymovements-1154": "f29ed0ed329d047b1cb6dbeca87de948d4ac683eca249059f4ef1322fc272399"
+      },
+      "source_manifest_sha256": "aaea3f6018b6ed3b23795736a13cd573fbe143e8cdb2a1d79d01799d4f1fb100",
+      "budget": {
+        "max_steps": 100,
+        "max_seconds": 600.0,
+        "max_output_tokens": 1024
+      },
+      "server_settings": {
+        "host": "worker-5",
+        "at_utc": "2026-09-10T17:49:22.848155+00:00",
+        "servers": {
+          "0": {
+            "state": "ready",
+            "gpu_uuid": "GPU-342b9337-a406-198c-2f96-97dc2daff70e",
+            "port": 18100,
+            "pid": 1110805,
+            "argv": [
+              "/home/guests/andrei/va/.venv-vllm-prun/bin/python",
+              "/home/guests/andrei/va/.venv-vllm/bin/vllm",
+              "serve",
+              "/home/guests/andrei/.cache/huggingface/hub/models--mistralai--Devstral-Small-2-24B-Instruct-2512/snapshots/55c5b41e98c2dbd21b0c8afffc540dcfc9eb5128",
+              "--host",
+              "127.0.0.1",
+              "--port",
+              "18100",
+              "--served-model-name",
+              "devstral-base-rate",
+              "--max-model-len",
+              "16384",
+              "--gpu-memory-utilization",
+              "0.85",
+              "--max-num-seqs",
+              "16",
+              "--tool-call-parser",
+              "mistral",
+              "--enable-auto-tool-choice",
+              "--tokenizer-mode",
+              "mistral",
+              "--config-format",
+              "mistral",
+              "--load-format",
+              "mistral",
+              "--language-model-only"
+            ],
+            "time": "2026-09-10T17:44:10.182813+00:00",
+            "models": {
+              "object": "list",
+              "data": [
+                {
+                  "id": "devstral-base-rate",
+                  "object": "model",
+                  "created": 1789062527,
+                  "owned_by": "vllm",
+                  "root": "/home/guests/andrei/.cache/huggingface/hub/models--mistralai--Devstral-Small-2-24B-Instruct-2512/snapshots/55c5b41e98c2dbd21b0c8afffc540dcfc9eb5128",
+                  "parent": null,
+                  "max_model_len": 16384,
+                  "permission": [
+                    {
+                      "id": "modelperm-a2fc8f9be9e080b9",
+                      "object": "model_permission",
+                      "created": 1789062527,
+                      "allow_create_engine": false,
+                      "allow_sampling": true,
+                      "allow_logprobs": true,
+                      "allow_search_indices": false,
+                      "allow_view": true,
+                      "allow_fine_tuning": false,
+                      "organization": "*",
+                      "group": null,
+                      "is_blocking": false
+                    }
+                  ]
+                }
+              ]
+            },
+            "checked": "2026-09-10T17:48:47.931689+00:00",
+            "process_receipt": {
+              "pid": 1110805,
+              "starttime": 241480895,
+              "pgid": 1110805,
+              "uid": 1031,
+              "effective_environment": {
+                "CUDA_VISIBLE_DEVICES": "GPU-342b9337-a406-198c-2f96-97dc2daff70e",
+                "VLLM_USE_FLASHINFER_SAMPLER": "0",
+                "HF_HUB_OFFLINE": "1",
+                "TRANSFORMERS_OFFLINE": "1",
+                "OMP_NUM_THREADS": "4"
+              },
+              "effective_argv": [
+                "/home/guests/andrei/va/.venv-vllm-prun/bin/python",
+                "/home/guests/andrei/va/.venv-vllm/bin/vllm",
+                "serve",
+                "/home/guests/andrei/.cache/huggingface/hub/models--mistralai--Devstral-Small-2-24B-Instruct-2512/snapshots/55c5b41e98c2dbd21b0c8afffc540dcfc9eb5128",
+                "--host",
+                "127.0.0.1",
+                "--port",
+                "18100",
+                "--served-model-name",
+                "devstral-base-rate",
+                "--max-model-len",
+                "16384",
+                "--gpu-memory-utilization",
+                "0.85",
+                "--max-num-seqs",
+                "16",
+                "--tool-call-parser",
+                "mistral",
+                "--enable-auto-tool-choice",
+                "--tokenizer-mode",
+                "mistral",
+                "--config-format",
+                "mistral",
+                "--load-format",
+                "mistral",
+                "--language-model-only"
+              ],
+              "checked": "2026-09-10T17:49:22.847334+00:00"
+            }
+          },
+          "1": {
+            "state": "ready",
+            "gpu_uuid": "GPU-eb2725a6-749a-3e55-bc24-8fcc30303796",
+            "port": 18101,
+            "pid": 1116597,
+            "argv": [
+              "/home/guests/andrei/va/.venv-vllm-prun/bin/python",
+              "/home/guests/andrei/va/.venv-vllm/bin/vllm",
+              "serve",
+              "/home/guests/andrei/.cache/huggingface/hub/models--mistralai--Devstral-Small-2-24B-Instruct-2512/snapshots/55c5b41e98c2dbd21b0c8afffc540dcfc9eb5128",
+              "--host",
+              "127.0.0.1",
+              "--port",
+              "18101",
+              "--served-model-name",
+              "devstral-base-rate",
+              "--max-model-len",
+              "16384",
+              "--gpu-memory-utilization",
+              "0.85",
+              "--max-num-seqs",
+              "16",
+              "--tool-call-parser",
+              "mistral",
+              "--enable-auto-tool-choice",
+              "--tokenizer-mode",
+              "mistral",
+              "--config-format",
+              "mistral",
+              "--load-format",
+              "mistral",
+              "--language-model-only"
+            ],
+            "time": "2026-09-10T17:46:40.566024+00:00",
+            "models": {
+              "object": "list",
+              "data": [
+                {
+                  "id": "devstral-base-rate",
+                  "object": "model",
+                  "created": 1789062527,
+                  "owned_by": "vllm",
+                  "root": "/home/guests/andrei/.cache/huggingface/hub/models--mistralai--Devstral-Small-2-24B-Instruct-2512/snapshots/55c5b41e98c2dbd21b0c8afffc540dcfc9eb5128",
+                  "parent": null,
+                  "max_model_len": 16384,
+                  "permission": [
+                    {
+                      "id": "modelperm-a9fca2d2ffeaf250",
+                      "object": "model_permission",
+                      "created": 1789062527,
+                      "allow_create_engine": false,
+                      "allow_sampling": true,
+                      "allow_logprobs": true,
+                      "allow_search_indices": false,
+                      "allow_view": true,
+                      "allow_fine_tuning": false,
+                      "organization": "*",
+                      "group": null,
+                      "is_blocking": false
+                    }
+                  ]
+                }
+              ]
+            },
+            "checked": "2026-09-10T17:48:47.934406+00:00",
+            "process_receipt": {
+              "pid": 1116597,
+              "starttime": 241495933,
+              "pgid": 1116597,
+              "uid": 1031,
+              "effective_environment": {
+                "CUDA_VISIBLE_DEVICES": "GPU-eb2725a6-749a-3e55-bc24-8fcc30303796",
+                "VLLM_USE_FLASHINFER_SAMPLER": "0",
+                "HF_HUB_OFFLINE": "1",
+                "TRANSFORMERS_OFFLINE": "1",
+                "OMP_NUM_THREADS": "4"
+              },
+              "effective_argv": [
+                "/home/guests/andrei/va/.venv-vllm-prun/bin/python",
+                "/home/guests/andrei/va/.venv-vllm/bin/vllm",
+                "serve",
+                "/home/guests/andrei/.cache/huggingface/hub/models--mistralai--Devstral-Small-2-24B-Instruct-2512/snapshots/55c5b41e98c2dbd21b0c8afffc540dcfc9eb5128",
+                "--host",
+                "127.0.0.1",
+                "--port",
+                "18101",
+                "--served-model-name",
+                "devstral-base-rate",
+                "--max-model-len",
+                "16384",
+                "--gpu-memory-utilization",
+                "0.85",
+                "--max-num-seqs",
+                "16",
+                "--tool-call-parser",
+                "mistral",
+                "--enable-auto-tool-choice",
+                "--tokenizer-mode",
+                "mistral",
+                "--config-format",
+                "mistral",
+                "--load-format",
+                "mistral",
+                "--language-model-only"
+              ],
+              "checked": "2026-09-10T17:49:22.847481+00:00"
+            }
+          },
+          "2": {
+            "state": "ready",
+            "gpu_uuid": "GPU-8cbf1cf1-0963-99a9-d189-88a0e594378b",
+            "port": 18102,
+            "pid": 1116736,
+            "argv": [
+              "/home/guests/andrei/va/.venv-vllm-prun/bin/python",
+              "/home/guests/andrei/va/.venv-vllm/bin/vllm",
+              "serve",
+              "/home/guests/andrei/.cache/huggingface/hub/models--mistralai--Devstral-Small-2-24B-Instruct-2512/snapshots/55c5b41e98c2dbd21b0c8afffc540dcfc9eb5128",
+              "--host",
+              "127.0.0.1",
+              "--port",
+              "18102",
+              "--served-model-name",
+              "devstral-base-rate",
+              "--max-model-len",
+              "16384",
+              "--gpu-memory-utilization",
+              "0.85",
+              "--max-num-seqs",
+              "16",
+              "--tool-call-parser",
+              "mistral",
+              "--enable-auto-tool-choice",
+              "--tokenizer-mode",
+              "mistral",
+              "--config-format",
+              "mistral",
+              "--load-format",
+              "mistral",
+              "--language-model-only"
+            ],
+            "time": "2026-09-10T17:46:45.884657+00:00",
+            "models": {
+              "object": "list",
+              "data": [
+                {
+                  "id": "devstral-base-rate",
+                  "object": "model",
+                  "created": 1789062527,
+                  "owned_by": "vllm",
+                  "root": "/home/guests/andrei/.cache/huggingface/hub/models--mistralai--Devstral-Small-2-24B-Instruct-2512/snapshots/55c5b41e98c2dbd21b0c8afffc540dcfc9eb5128",
+                  "parent": null,
+                  "max_model_len": 16384,
+                  "permission": [
+                    {
+                      "id": "modelperm-b3746443113cc64a",
+                      "object": "model_permission",
+                      "created": 1789062527,
+                      "allow_create_engine": false,
+                      "allow_sampling": true,
+                      "allow_logprobs": true,
+                      "allow_search_indices": false,
+                      "allow_view": true,
+                      "allow_fine_tuning": false,
+                      "organization": "*",
+                      "group": null,
+                      "is_blocking": false
+                    }
+                  ]
+                }
+              ]
+            },
+            "checked": "2026-09-10T17:48:47.937220+00:00",
+            "process_receipt": {
+              "pid": 1116736,
+              "starttime": 241496465,
+              "pgid": 1116736,
+              "uid": 1031,
+              "effective_environment": {
+                "CUDA_VISIBLE_DEVICES": "GPU-8cbf1cf1-0963-99a9-d189-88a0e594378b",
+                "VLLM_USE_FLASHINFER_SAMPLER": "0",
+                "HF_HUB_OFFLINE": "1",
+                "TRANSFORMERS_OFFLINE": "1",
+                "OMP_NUM_THREADS": "4"
+              },
+              "effective_argv": [
+                "/home/guests/andrei/va/.venv-vllm-prun/bin/python",
+                "/home/guests/andrei/va/.venv-vllm/bin/vllm",
+                "serve",
+                "/home/guests/andrei/.cache/huggingface/hub/models--mistralai--Devstral-Small-2-24B-Instruct-2512/snapshots/55c5b41e98c2dbd21b0c8afffc540dcfc9eb5128",
+                "--host",
+                "127.0.0.1",
+                "--port",
+                "18102",
+                "--served-model-name",
+                "devstral-base-rate",
+                "--max-model-len",
+                "16384",
+                "--gpu-memory-utilization",
+                "0.85",
+                "--max-num-seqs",
+                "16",
+                "--tool-call-parser",
+                "mistral",
+                "--enable-auto-tool-choice",
+                "--tokenizer-mode",
+                "mistral",
+                "--config-format",
+                "mistral",
+                "--load-format",
+                "mistral",
+                "--language-model-only"
+              ],
+              "checked": "2026-09-10T17:49:22.847603+00:00"
+            }
+          },
+          "3": {
+            "state": "ready",
+            "gpu_uuid": "GPU-68f2a3dc-8129-6223-e836-f503ce6e4e89",
+            "port": 18103,
+            "pid": 1116911,
+            "argv": [
+              "/home/guests/andrei/va/.venv-vllm-prun/bin/python",
+              "/home/guests/andrei/va/.venv-vllm/bin/vllm",
+              "serve",
+              "/home/guests/andrei/.cache/huggingface/hub/models--mistralai--Devstral-Small-2-24B-Instruct-2512/snapshots/55c5b41e98c2dbd21b0c8afffc540dcfc9eb5128",
+              "--host",
+              "127.0.0.1",
+              "--port",
+              "18103",
+              "--served-model-name",
+              "devstral-base-rate",
+              "--max-model-len",
+              "16384",
+              "--gpu-memory-utilization",
+              "0.85",
+              "--max-num-seqs",
+              "16",
+              "--tool-call-parser",
+              "mistral",
+              "--enable-auto-tool-choice",
+              "--tokenizer-mode",
+              "mistral",
+              "--config-format",
+              "mistral",
+              "--load-format",
+              "mistral",
+              "--language-model-only"
+            ],
+            "time": "2026-09-10T17:46:51.214328+00:00",
+            "models": {
+              "object": "list",
+              "data": [
+                {
+                  "id": "devstral-base-rate",
+                  "object": "model",
+                  "created": 1789062527,
+                  "owned_by": "vllm",
+                  "root": "/home/guests/andrei/.cache/huggingface/hub/models--mistralai--Devstral-Small-2-24B-Instruct-2512/snapshots/55c5b41e98c2dbd21b0c8afffc540dcfc9eb5128",
+                  "parent": null,
+                  "max_model_len": 16384,
+                  "permission": [
+                    {
+                      "id": "modelperm-97142fc36b300730",
+                      "object": "model_permission",
+                      "created": 1789062527,
+                      "allow_create_engine": false,
+                      "allow_sampling": true,
+                      "allow_logprobs": true,
+                      "allow_search_indices": false,
+                      "allow_view": true,
+                      "allow_fine_tuning": false,
+                      "organization": "*",
+                      "group": null,
+                      "is_blocking": false
+                    }
+                  ]
+                }
+              ]
+            },
+            "checked": "2026-09-10T17:48:47.939890+00:00",
+            "process_receipt": {
+              "pid": 1116911,
+              "starttime": 241496998,
+              "pgid": 1116911,
+              "uid": 1031,
+              "effective_environment": {
+                "CUDA_VISIBLE_DEVICES": "GPU-68f2a3dc-8129-6223-e836-f503ce6e4e89",
+                "VLLM_USE_FLASHINFER_SAMPLER": "0",
+                "HF_HUB_OFFLINE": "1",
+                "TRANSFORMERS_OFFLINE": "1",
+                "OMP_NUM_THREADS": "4"
+              },
+              "effective_argv": [
+                "/home/guests/andrei/va/.venv-vllm-prun/bin/python",
+                "/home/guests/andrei/va/.venv-vllm/bin/vllm",
+                "serve",
+                "/home/guests/andrei/.cache/huggingface/hub/models--mistralai--Devstral-Small-2-24B-Instruct-2512/snapshots/55c5b41e98c2dbd21b0c8afffc540dcfc9eb5128",
+                "--host",
+                "127.0.0.1",
+                "--port",
+                "18103",
+                "--served-model-name",
+                "devstral-base-rate",
+                "--max-model-len",
+                "16384",
+                "--gpu-memory-utilization",
+                "0.85",
+                "--max-num-seqs",
+                "16",
+                "--tool-call-parser",
+                "mistral",
+                "--enable-auto-tool-choice",
+                "--tokenizer-mode",
+                "mistral",
+                "--config-format",
+                "mistral",
+                "--load-format",
+                "mistral",
+                "--language-model-only"
+              ],
+              "checked": "2026-09-10T17:49:22.847714+00:00"
+            }
+          },
+          "4": {
+            "state": "ready",
+            "gpu_uuid": "GPU-ff188531-f455-9b34-a9c9-cfd09479c7ed",
+            "port": 18104,
+            "pid": 1117040,
+            "argv": [
+              "/home/guests/andrei/va/.venv-vllm-prun/bin/python",
+              "/home/guests/andrei/va/.venv-vllm/bin/vllm",
+              "serve",
+              "/home/guests/andrei/.cache/huggingface/hub/models--mistralai--Devstral-Small-2-24B-Instruct-2512/snapshots/55c5b41e98c2dbd21b0c8afffc540dcfc9eb5128",
+              "--host",
+              "127.0.0.1",
+              "--port",
+              "18104",
+              "--served-model-name",
+              "devstral-base-rate",
+              "--max-model-len",
+              "16384",
+              "--gpu-memory-utilization",
+              "0.85",
+              "--max-num-seqs",
+              "16",
+              "--tool-call-parser",
+              "mistral",
+              "--enable-auto-tool-choice",
+              "--tokenizer-mode",
+              "mistral",
+              "--config-format",
+              "mistral",
+              "--load-format",
+              "mistral",
+              "--language-model-only"
+            ],
+            "time": "2026-09-10T17:46:56.536322+00:00",
+            "models": {
+              "object": "list",
+              "data": [
+                {
+                  "id": "devstral-base-rate",
+                  "object": "model",
+                  "created": 1789062527,
+                  "owned_by": "vllm",
+                  "root": "/home/guests/andrei/.cache/huggingface/hub/models--mistralai--Devstral-Small-2-24B-Instruct-2512/snapshots/55c5b41e98c2dbd21b0c8afffc540dcfc9eb5128",
+                  "parent": null,
+                  "max_model_len": 16384,
+                  "permission": [
+                    {
+                      "id": "modelperm-85d8a6742b8697c6",
+                      "object": "model_permission",
+                      "created": 1789062527,
+                      "allow_create_engine": false,
+                      "allow_sampling": true,
+                      "allow_logprobs": true,
+                      "allow_search_indices": false,
+                      "allow_view": true,
+                      "allow_fine_tuning": false,
+                      "organization": "*",
+                      "group": null,
+                      "is_blocking": false
+                    }
+                  ]
+                }
+              ]
+            },
+            "checked": "2026-09-10T17:48:47.943032+00:00",
+            "process_receipt": {
+              "pid": 1117040,
+              "starttime": 241497530,
+              "pgid": 1117040,
+              "uid": 1031,
+              "effective_environment": {
+                "CUDA_VISIBLE_DEVICES": "GPU-ff188531-f455-9b34-a9c9-cfd09479c7ed",
+                "VLLM_USE_FLASHINFER_SAMPLER": "0",
+                "HF_HUB_OFFLINE": "1",
+                "TRANSFORMERS_OFFLINE": "1",
+                "OMP_NUM_THREADS": "4"
+              },
+              "effective_argv": [
+                "/home/guests/andrei/va/.venv-vllm-prun/bin/python",
+                "/home/guests/andrei/va/.venv-vllm/bin/vllm",
+                "serve",
+                "/home/guests/andrei/.cache/huggingface/hub/models--mistralai--Devstral-Small-2-24B-Instruct-2512/snapshots/55c5b41e98c2dbd21b0c8afffc540dcfc9eb5128",
+                "--host",
+                "127.0.0.1",
+                "--port",
+                "18104",
+                "--served-model-name",
+                "devstral-base-rate",
+                "--max-model-len",
+                "16384",
+                "--gpu-memory-utilization",
+                "0.85",
+                "--max-num-seqs",
+                "16",
+                "--tool-call-parser",
+                "mistral",
+                "--enable-auto-tool-choice",
+                "--tokenizer-mode",
+                "mistral",
+                "--config-format",
+                "mistral",
+                "--load-format",
+                "mistral",
+                "--language-model-only"
+              ],
+              "checked": "2026-09-10T17:49:22.847820+00:00"
+            }
+          },
+          "5": {
+            "state": "ready",
+            "gpu_uuid": "GPU-6e0500e0-8fc4-dbf0-7430-8225b6ed8361",
+            "port": 18105,
+            "pid": 1117150,
+            "argv": [
+              "/home/guests/andrei/va/.venv-vllm-prun/bin/python",
+              "/home/guests/andrei/va/.venv-vllm/bin/vllm",
+              "serve",
+              "/home/guests/andrei/.cache/huggingface/hub/models--mistralai--Devstral-Small-2-24B-Instruct-2512/snapshots/55c5b41e98c2dbd21b0c8afffc540dcfc9eb5128",
+              "--host",
+              "127.0.0.1",
+              "--port",
+              "18105",
+              "--served-model-name",
+              "devstral-base-rate",
+              "--max-model-len",
+              "16384",
+              "--gpu-memory-utilization",
+              "0.85",
+              "--max-num-seqs",
+              "16",
+              "--tool-call-parser",
+              "mistral",
+              "--enable-auto-tool-choice",
+              "--tokenizer-mode",
+              "mistral",
+              "--config-format",
+              "mistral",
+              "--load-format",
+              "mistral",
+              "--language-model-only"
+            ],
+            "time": "2026-09-10T17:47:01.881173+00:00",
+            "models": {
+              "object": "list",
+              "data": [
+                {
+                  "id": "devstral-base-rate",
+                  "object": "model",
+                  "created": 1789062527,
+                  "owned_by": "vllm",
+                  "root": "/home/guests/andrei/.cache/huggingface/hub/models--mistralai--Devstral-Small-2-24B-Instruct-2512/snapshots/55c5b41e98c2dbd21b0c8afffc540dcfc9eb5128",
+                  "parent": null,
+                  "max_model_len": 16384,
+                  "permission": [
+                    {
+                      "id": "modelperm-a7d97da8d1ab701f",
+                      "object": "model_permission",
+                      "created": 1789062527,
+                      "allow_create_engine": false,
+                      "allow_sampling": true,
+                      "allow_logprobs": true,
+                      "allow_search_indices": false,
+                      "allow_view": true,
+                      "allow_fine_tuning": false,
+                      "organization": "*",
+                      "group": null,
+                      "is_blocking": false
+                    }
+                  ]
+                }
+              ]
+            },
+            "checked": "2026-09-10T17:48:47.945767+00:00",
+            "process_receipt": {
+              "pid": 1117150,
+              "starttime": 241498064,
+              "pgid": 1117150,
+              "uid": 1031,
+              "effective_environment": {
+                "CUDA_VISIBLE_DEVICES": "GPU-6e0500e0-8fc4-dbf0-7430-8225b6ed8361",
+                "VLLM_USE_FLASHINFER_SAMPLER": "0",
+                "HF_HUB_OFFLINE": "1",
+                "TRANSFORMERS_OFFLINE": "1",
+                "OMP_NUM_THREADS": "4"
+              },
+              "effective_argv": [
+                "/home/guests/andrei/va/.venv-vllm-prun/bin/python",
+                "/home/guests/andrei/va/.venv-vllm/bin/vllm",
+                "serve",
+                "/home/guests/andrei/.cache/huggingface/hub/models--mistralai--Devstral-Small-2-24B-Instruct-2512/snapshots/55c5b41e98c2dbd21b0c8afffc540dcfc9eb5128",
+                "--host",
+                "127.0.0.1",
+                "--port",
+                "18105",
+                "--served-model-name",
+                "devstral-base-rate",
+                "--max-model-len",
+                "16384",
+                "--gpu-memory-utilization",
+                "0.85",
+                "--max-num-seqs",
+                "16",
+                "--tool-call-parser",
+                "mistral",
+                "--enable-auto-tool-choice",
+                "--tokenizer-mode",
+                "mistral",
+                "--config-format",
+                "mistral",
+                "--load-format",
+                "mistral",
+                "--language-model-only"
+              ],
+              "checked": "2026-09-10T17:49:22.847924+00:00"
+            }
+          },
+          "6": {
+            "state": "ready",
+            "gpu_uuid": "GPU-2a13153a-2daa-2e4f-2bad-16c2f2d7ba01",
+            "port": 18106,
+            "pid": 1117313,
+            "argv": [
+              "/home/guests/andrei/va/.venv-vllm-prun/bin/python",
+              "/home/guests/andrei/va/.venv-vllm/bin/vllm",
+              "serve",
+              "/home/guests/andrei/.cache/huggingface/hub/models--mistralai--Devstral-Small-2-24B-Instruct-2512/snapshots/55c5b41e98c2dbd21b0c8afffc540dcfc9eb5128",
+              "--host",
+              "127.0.0.1",
+              "--port",
+              "18106",
+              "--served-model-name",
+              "devstral-base-rate",
+              "--max-model-len",
+              "16384",
+              "--gpu-memory-utilization",
+              "0.85",
+              "--max-num-seqs",
+              "16",
+              "--tool-call-parser",
+              "mistral",
+              "--enable-auto-tool-choice",
+              "--tokenizer-mode",
+              "mistral",
+              "--config-format",
+              "mistral",
+              "--load-format",
+              "mistral",
+              "--language-model-only"
+            ],
+            "time": "2026-09-10T17:47:07.204400+00:00",
+            "models": {
+              "object": "list",
+              "data": [
+                {
+                  "id": "devstral-base-rate",
+                  "object": "model",
+                  "created": 1789062527,
+                  "owned_by": "vllm",
+                  "root": "/home/guests/andrei/.cache/huggingface/hub/models--mistralai--Devstral-Small-2-24B-Instruct-2512/snapshots/55c5b41e98c2dbd21b0c8afffc540dcfc9eb5128",
+                  "parent": null,
+                  "max_model_len": 16384,
+                  "permission": [
+                    {
+                      "id": "modelperm-b93ca8d95c9142f8",
+                      "object": "model_permission",
+                      "created": 1789062527,
+                      "allow_create_engine": false,
+                      "allow_sampling": true,
+                      "allow_logprobs": true,
+                      "allow_search_indices": false,
+                      "allow_view": true,
+                      "allow_fine_tuning": false,
+                      "organization": "*",
+                      "group": null,
+                      "is_blocking": false
+                    }
+                  ]
+                }
+              ]
+            },
+            "checked": "2026-09-10T17:48:47.949018+00:00",
+            "process_receipt": {
+              "pid": 1117313,
+              "starttime": 241498597,
+              "pgid": 1117313,
+              "uid": 1031,
+              "effective_environment": {
+                "CUDA_VISIBLE_DEVICES": "GPU-2a13153a-2daa-2e4f-2bad-16c2f2d7ba01",
+                "VLLM_USE_FLASHINFER_SAMPLER": "0",
+                "HF_HUB_OFFLINE": "1",
+                "TRANSFORMERS_OFFLINE": "1",
+                "OMP_NUM_THREADS": "4"
+              },
+              "effective_argv": [
+                "/home/guests/andrei/va/.venv-vllm-prun/bin/python",
+                "/home/guests/andrei/va/.venv-vllm/bin/vllm",
+                "serve",
+                "/home/guests/andrei/.cache/huggingface/hub/models--mistralai--Devstral-Small-2-24B-Instruct-2512/snapshots/55c5b41e98c2dbd21b0c8afffc540dcfc9eb5128",
+                "--host",
+                "127.0.0.1",
+                "--port",
+                "18106",
+                "--served-model-name",
+                "devstral-base-rate",
+                "--max-model-len",
+                "16384",
+                "--gpu-memory-utilization",
+                "0.85",
+                "--max-num-seqs",
+                "16",
+                "--tool-call-parser",
+                "mistral",
+                "--enable-auto-tool-choice",
+                "--tokenizer-mode",
+                "mistral",
+                "--config-format",
+                "mistral",
+                "--load-format",
+                "mistral",
+                "--language-model-only"
+              ],
+              "checked": "2026-09-10T17:49:22.848049+00:00"
+            }
+          },
+          "7": {
+            "state": "ready",
+            "gpu_uuid": "GPU-58b1179a-5493-ecb9-1c62-1a277cb2053a",
+            "port": 18107,
+            "pid": 1117491,
+            "argv": [
+              "/home/guests/andrei/va/.venv-vllm-prun/bin/python",
+              "/home/guests/andrei/va/.venv-vllm/bin/vllm",
+              "serve",
+              "/home/guests/andrei/.cache/huggingface/hub/models--mistralai--Devstral-Small-2-24B-Instruct-2512/snapshots/55c5b41e98c2dbd21b0c8afffc540dcfc9eb5128",
+              "--host",
+              "127.0.0.1",
+              "--port",
+              "18107",
+              "--served-model-name",
+              "devstral-base-rate",
+              "--max-model-len",
+              "16384",
+              "--gpu-memory-utilization",
+              "0.85",
+              "--max-num-seqs",
+              "16",
+              "--tool-call-parser",
+              "mistral",
+              "--enable-auto-tool-choice",
+              "--tokenizer-mode",
+              "mistral",
+              "--config-format",
+              "mistral",
+              "--load-format",
+              "mistral",
+              "--language-model-only"
+            ],
+            "time": "2026-09-10T17:47:12.561846+00:00",
+            "models": {
+              "object": "list",
+              "data": [
+                {
+                  "id": "devstral-base-rate",
+                  "object": "model",
+                  "created": 1789062527,
+                  "owned_by": "vllm",
+                  "root": "/home/guests/andrei/.cache/huggingface/hub/models--mistralai--Devstral-Small-2-24B-Instruct-2512/snapshots/55c5b41e98c2dbd21b0c8afffc540dcfc9eb5128",
+                  "parent": null,
+                  "max_model_len": 16384,
+                  "permission": [
+                    {
+                      "id": "modelperm-ab1b510f2ed643a3",
+                      "object": "model_permission",
+                      "created": 1789062527,
+                      "allow_create_engine": false,
+                      "allow_sampling": true,
+                      "allow_logprobs": true,
+                      "allow_search_indices": false,
+                      "allow_view": true,
+                      "allow_fine_tuning": false,
+                      "organization": "*",
+                      "group": null,
+                      "is_blocking": false
+                    }
+                  ]
+                }
+              ]
+            },
+            "checked": "2026-09-10T17:48:47.958926+00:00",
+            "process_receipt": {
+              "pid": 1117491,
+              "starttime": 241499132,
+              "pgid": 1117491,
+              "uid": 1031,
+              "effective_environment": {
+                "CUDA_VISIBLE_DEVICES": "GPU-58b1179a-5493-ecb9-1c62-1a277cb2053a",
+                "VLLM_USE_FLASHINFER_SAMPLER": "0",
+                "HF_HUB_OFFLINE": "1",
+                "TRANSFORMERS_OFFLINE": "1",
+                "OMP_NUM_THREADS": "4"
+              },
+              "effective_argv": [
+                "/home/guests/andrei/va/.venv-vllm-prun/bin/python",
+                "/home/guests/andrei/va/.venv-vllm/bin/vllm",
+                "serve",
+                "/home/guests/andrei/.cache/huggingface/hub/models--mistralai--Devstral-Small-2-24B-Instruct-2512/snapshots/55c5b41e98c2dbd21b0c8afffc540dcfc9eb5128",
+                "--host",
+                "127.0.0.1",
+                "--port",
+                "18107",
+                "--served-model-name",
+                "devstral-base-rate",
+                "--max-model-len",
+                "16384",
+                "--gpu-memory-utilization",
+                "0.85",
+                "--max-num-seqs",
+                "16",
+                "--tool-call-parser",
+                "mistral",
+                "--enable-auto-tool-choice",
+                "--tokenizer-mode",
+                "mistral",
+                "--config-format",
+                "mistral",
+                "--load-format",
+                "mistral",
+                "--language-model-only"
+              ],
+              "checked": "2026-09-10T17:49:22.848150+00:00"
+            }
+          }
+        },
+        "runtime": {
+          "vllm": "0.29.0",
+          "torch": "2.13.0",
+          "transformers": "5.10.4",
+          "mistral_common": "1.11.7"
+        },
+        "actual_launch_script_sha256": "3558ebd900ce29f09b93a876a06c726912d3f5d170a814fa5b568f8a5180888c",
+        "gpu_inventory": "0, GPU-342b9337-a406-198c-2f96-97dc2daff70e, 67527, 0\n1, GPU-eb2725a6-749a-3e55-bc24-8fcc30303796, 67897, 0\n2, GPU-8cbf1cf1-0963-99a9-d189-88a0e594378b, 67897, 0\n3, GPU-68f2a3dc-8129-6223-e836-f503ce6e4e89, 67897, 0\n4, GPU-ff188531-f455-9b34-a9c9-cfd09479c7ed, 67897, 0\n5, GPU-6e0500e0-8fc4-dbf0-7430-8225b6ed8361, 67897, 0\n6, GPU-2a13153a-2daa-2e4f-2bad-16c2f2d7ba01, 67897, 0\n7, GPU-58b1179a-5493-ecb9-1c62-1a277cb2053a, 67897, 0\n",
+        "model_revision": "55c5b41e98c2dbd21b0c8afffc540dcfc9eb5128",
+        "sampling_kernel": "VLLM_USE_FLASHINFER_SAMPLER=0",
+        "enforce_eager": false,
+        "max_num_seqs": 16,
+        "max_model_len": 16384,
+        "gpu_memory_utilization": 0.85,
+        "deployment_pin_sha256": "5c260da3e074bf5bd90c85fcd42bfcaebee83324e37bdf7b8c3e5e3288aca82b",
+        "comparison_note": "disjoint Slurm step allocation, 6CPU17GiB peak per episode; K3/K6 interrupted never pooled; serving cache warm"
+      },
+      "cleanup_verified": true,
+      "interrupted": false,
+      "registration_sha256": "eda4ff5360bc7061f654538847d7fb93cde5a59d2bf90c12e3d0c9ff9cd4120a",
+      "summary_sha256": "b038cafbdbebfca3959f36a652d789bd858293eb891c8bb3f7c1f17c5b5ced1f",
+      "protected_status": "unknown",
+      "clean_solve_eligible": false
+    }
+  ],
+  "comparison": {
+    "available": false,
+    "reason": "exactly two arms required for paired description"
+  },
+  "native_receipt_mtimes_attested": true,
+  "report_source_sha256": "cf927838d3419067b1a33a871e1fd4c3fcf2bf2f2612d0d933579e865e660c17"
+}

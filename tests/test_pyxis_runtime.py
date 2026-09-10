@@ -48,13 +48,17 @@ def test_binary_and_unicode_output_is_bounded_protocol_text(session):
     assert session.read_file("unicode file") == "π雪"
 
 
-def test_timeout_aborts_session_and_reaps_broker(session):
-    with pytest.raises(RuntimeUnavailable, match="timed out"):
-        session.exec("sleep 30", 0.05)
-    assert session.closed
-    assert session.process.poll() is not None
-    with pytest.raises(RuntimeError, match="closed"):
-        session.exec("true", 1)
+def test_timeout_preserves_output_kills_children_and_keeps_broker(session):
+    code, out, err = session.exec(
+        "printf partial-output; printf partial-error >&2; "
+        "(sleep 0.6; printf survived > child-survived) & sleep 30", 0.15
+    )
+    assert code == 124
+    assert out == "partial-output"
+    assert "partial-error" in err and "task command timed out" in err
+    assert not session.closed
+    assert session.process.poll() is None
+    assert session.exec("sleep 0.7; test ! -e child-survived; printf next", 3) == (0, "next", "")
 
 
 def test_output_flood_aborts_session(session):
@@ -75,7 +79,18 @@ def test_stop_exits_cleanly_and_is_idempotent(session):
     session.stop()
 
 
-def test_snapshot_tracks_edits_after_agent_commit(session):
+def test_snapshot_tracks_edits_after_agent_commit(session, monkeypatch):
+    # macOS has readonly python3 but its only bare-python alias may be the local
+    # repository venv, which the broker intentionally excludes from trusted PATH.
+    if sys.platform == "darwin" and session.exec("command -v python", 5)[0]:
+        original = session._checked
+
+        def checked(command, timeout):
+            if command.startswith("python -c "):
+                command = "/usr/bin/python3 -c " + command[len("python -c ") :]
+            return original(command, timeout)
+
+        monkeypatch.setattr(session, "_checked", checked)
     # Real filesystem hashes still detect changes after the index is rewritten.
     session.exec(
         "git init -q; git config user.email test@example.invalid; git config user.name Test", 5

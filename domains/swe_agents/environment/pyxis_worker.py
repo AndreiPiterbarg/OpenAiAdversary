@@ -14,8 +14,41 @@ import socket
 import subprocess
 import sys
 import time
+from pathlib import Path
 
 LIMIT = 4_000_000
+
+
+def trusted_command_environment(environment: dict[str, str]) -> dict[str, str]:
+    """Preserve image/conda tool order, excluding candidate-writable startup paths."""
+    roots = tuple(Path(root) for root in ("/usr", "/opt", "/bin", "/sbin", "/lib", "/lib64"))
+
+    def readonly(path: Path) -> bool:
+        return path.is_absolute() and any(path == root or root in path.parents for root in roots)
+
+    paths = []
+    for entry in environment.get("PATH", "/usr/local/bin:/usr/bin:/bin").split(os.pathsep):
+        if not entry:
+            continue
+        path = Path(entry)
+        if readonly(path) and readonly(path.resolve()) and path.is_dir():
+            paths.append(entry)
+    if not paths:
+        raise RuntimeError("image PATH has no readonly command directories")
+    blocked = {"BASH_ENV", "ENV", "SHELLOPTS", "BASHOPTS", "CDPATH", "GLOBIGNORE", "IFS"}
+    result = {
+        name: value
+        for name, value in environment.items()
+        if name not in blocked and not name.startswith(("PYTHON", "LD_", "DYLD_", "BASH_FUNC_"))
+    }
+    result["PATH"] = os.pathsep.join(paths)
+    result["PYTHONNOUSERSITE"] = "1"
+    return result
+
+
+# The broker starts in trusted pristine image state. Candidate commands cannot
+# alter this captured environment or reintroduce startup hooks between requests.
+_COMMAND_ENVIRONMENT = trusted_command_environment(dict(os.environ))
 
 
 def execute(command: str, timeout: float) -> dict[str, int | str]:
@@ -25,6 +58,7 @@ def execute(command: str, timeout: float) -> dict[str, int | str]:
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
         start_new_session=True,
+        env=_COMMAND_ENVIRONMENT,
     )
     output = {"stdout": bytearray(), "stderr": bytearray()}
     deadline = time.monotonic() + timeout
@@ -47,6 +81,15 @@ def execute(command: str, timeout: float) -> dict[str, int | str]:
             process.wait(timeout=max(0.001, deadline - time.monotonic()))
         return {
             "exit": process.returncode,
+            **{name: value.decode(errors="replace") for name, value in output.items()},
+        }
+    except (TimeoutError, subprocess.TimeoutExpired):
+        # The finally block kills/reaps this command group before replying. A
+        # tool deadline is recoverable; transport and output-limit failures are not.
+        marker = b"\n[task command timed out; process group terminated]\n"
+        output["stderr"] = output["stderr"][: LIMIT - len(marker)] + marker
+        return {
+            "exit": 124,
             **{name: value.decode(errors="replace") for name, value in output.items()},
         }
     finally:

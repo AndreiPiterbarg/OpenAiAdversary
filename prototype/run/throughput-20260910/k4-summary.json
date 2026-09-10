@@ -1,0 +1,40 @@
+{
+  "planned": 48,
+  "attempted": 48,
+  "episode_completed": 30,
+  "diagnostic_measured": 25,
+  "diagnostic_passed": 12,
+  "diagnostic_failed": 13,
+  "admission_rejected": 5,
+  "unknown": 18,
+  "not_attempted": 0,
+  "budget_exhausted": 7,
+  "unresolved_total": 23,
+  "elapsed_seconds_including_stagger_and_cleanup": 1488.4485369808972,
+  "completed_episodes_per_hour": 72.55877332451304,
+  "diagnostic_verdicts_per_hour": 60.465644437094205,
+  "model_wall_seconds": 8218.31086547859,
+  "measured_output_tokens": 615184,
+  "aggregate_model_ms_per_output_token": 13.359110226336494,
+  "episode_wall_seconds": {
+    "n": 48,
+    "mean": 530.0836376234269,
+    "p50": 478.9499103501439,
+    "p95": 869.3581467568874
+  },
+  "first_model_request_seconds": {
+    "n": 45,
+    "mean": 111.44685847494337,
+    "p50": 109.8456563949585,
+    "p95": 187.51910662651062
+  },
+  "protected_status": "unknown",
+  "clean_solve_eligible": false,
+  "verification_mode": "diagnostic",
+  "arm_id": "compiled-k4-disjoint",
+  "k": 4,
+  "started_epoch": 1789063845.9673371,
+  "ended_epoch": 1789065334.4160602,
+  "interrupted": false,
+  "cleanup_verified": true
+}

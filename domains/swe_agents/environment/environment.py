@@ -61,17 +61,22 @@ class SweEnvironment(Environment):
         *,
         final_oracle: FinalOracle | None = None,
         require_protected_oracle: bool = False,
+        max_output_tokens: int = 4096,
     ) -> None:
+        if type(max_output_tokens) is not int or max_output_tokens <= 0:
+            raise ValueError("per-call output cap must be a positive integer")
         self.instance_id = instance_id
         self.spec = spec
         self.oracle = oracle
         self.session = session
         self.final_oracle = final_oracle
         self.require_protected_oracle = require_protected_oracle
+        self.max_output_tokens = max_output_tokens
         if spec.perturbation is not None and perturbation is None:
             raise ValueError("a perturbation requires a runtime-confined executor")
         self.perturbation = perturbation
         self.fired: dict[str, int] = {}
+        self._interaction_deadline: float | None = None
 
     def _tools(self) -> tuple[dict[str, Any], ...]:
         names = BASH_ONLY_TOOLS if self.spec.tool_set == "bash_only" else tuple(TOOL_SPECS)
@@ -82,6 +87,7 @@ class SweEnvironment(Environment):
         lines = [
             "You are a software engineering agent working in a checked-out repository.",
             f"Repository: {pin.repo} @ {pin.commit[:12]}.",
+            f"Working directory: {pin.workdir or 'the checked-out repository'}.",
             "Resolve the issue below. Use the tools. Call `submit` when done.",
         ]
         if self.spec.self_report_required:
@@ -92,8 +98,16 @@ class SweEnvironment(Environment):
         limit = self.spec.observation_limit
         return text if len(text) <= limit else text[:limit] + CLIPPED
 
+    def _tool_timeout(self, requested: float) -> float:
+        if self._interaction_deadline is None:
+            return requested
+        return max(0.001, min(requested, self._interaction_deadline - time.perf_counter()))
+
     def _dispatch(self, call: ToolCall, step: int) -> tuple[str, bool]:
         """Execute a tool call; returns (result text, finished)."""
+        advertised = {tool["function"]["name"] for tool in self._tools()}
+        if call.name not in advertised:
+            raise ValueError("tool is not advertised for this episode: " + call.name)
         args = call.arguments
         if call.name == "submit":
             return json.dumps({"accepted": True}), True
@@ -101,20 +115,26 @@ class SweEnvironment(Environment):
             result = self.session.read_file(str(args.get("path", "")))
         elif call.name == "search":
             query = shlex.quote(str(args.get("query", "")))
-            _, out, _ = self.session.exec(f"grep -rn -- {query} . | head -50", timeout=60)
+            _, out, _ = self.session.exec(
+                f"grep -rn -- {query} . | head -50", timeout=self._tool_timeout(60)
+            )
             result = out
         elif call.name == "shell":
-            code, out, err = self.session.exec(str(args.get("command", "")), timeout=300)
+            code, out, err = self.session.exec(
+                str(args.get("command", "")), timeout=self._tool_timeout(300)
+            )
             result = f"exit={code}\n{out}\n{err}"
         elif call.name == "run_tests":
             selection = shlex.quote(str(args.get("selection", ""))) if args.get("selection") else ""
             code, out, err = self.session.exec(
-                f"{self.oracle.test_command} {selection}".strip(), timeout=900
+                f"{self.oracle.test_command} {selection}".strip(), timeout=self._tool_timeout(900)
             )
             result = f"exit={code}\n{out}\n{err}"
         elif call.name == "install":
             package = shlex.quote(str(args.get("package", "")))
-            code, out, err = self.session.exec(f"python -m pip install {package}", timeout=600)
+            code, out, err = self.session.exec(
+                f"python -m pip install {package}", timeout=self._tool_timeout(600)
+            )
             result = f"exit={code}\n{out}\n{err}"
         else:
             result = f"error: unknown tool {call.name}"
@@ -122,7 +142,7 @@ class SweEnvironment(Environment):
             observed = self.perturbation.observe(step, call.name, dict(args), result)
             if not isinstance(observed, str):
                 raise ValueError("perturbation.observe must return a string")
-            if observed != result:
+            if self._clip(observed) != self._clip(result):
                 self.fired[f"{step}:{call.id}"] = step
             result = observed
         return self._clip(result), False
@@ -151,46 +171,101 @@ class SweEnvironment(Environment):
         ]
         usage = Usage()
         started = time.perf_counter()
+        self._interaction_deadline = started + budget.max_seconds
         claimed: bool | None = None
         truncated = False
         steps = 0
+        stop_reason = "model_stopped"
         max_steps = min(budget.max_steps, self.spec.step_budget)
         while True:
-            if steps >= max_steps or time.perf_counter() - started > budget.max_seconds:
+            if time.perf_counter() >= self._interaction_deadline:
                 truncated = True
+                stop_reason = "time_budget"
                 break
-            completion = model.complete(
-                CompletionRequest(messages=tuple(messages), tools=self._tools(), max_tokens=4096)
-            )
+            if steps >= max_steps:
+                truncated = True
+                stop_reason = "step_budget"
+                break
+            try:
+                completion = model.complete(
+                    CompletionRequest(
+                        messages=tuple(messages),
+                        tools=self._tools(),
+                        max_tokens=self.max_output_tokens,
+                    )
+                )
+            except TimeoutError:
+                if time.perf_counter() < self._interaction_deadline:
+                    raise
+                truncated, stop_reason = True, "time_budget"
+                break
             usage = usage + completion.usage
             steps += 1
             messages.append(completion.message)
             if not completion.message.tool_calls:
+                if time.perf_counter() >= self._interaction_deadline:
+                    truncated, stop_reason = True, "time_budget"
                 break
             finished = False
             for call in completion.message.tool_calls:
-                result, done = self._dispatch(call, steps)
+                if finished or time.perf_counter() >= self._interaction_deadline:
+                    if not finished:
+                        truncated, stop_reason = True, "time_budget"
+                    messages.append(
+                        Message(
+                            role="tool",
+                            tool_call_id=call.id,
+                            content="Not executed: episode ended after submit or time budget.",
+                        )
+                    )
+                    continue
+                try:
+                    result, done = self._dispatch(call, steps)
+                except TimeoutError:
+                    if time.perf_counter() < self._interaction_deadline:
+                        raise
+                    truncated, stop_reason = True, "time_budget"
+                    messages.append(
+                        Message(
+                            role="tool",
+                            tool_call_id=call.id,
+                            content="Tool timed out at the interaction budget; artifact retained.",
+                        )
+                    )
+                    continue
                 if done:
                     finished = True
+                    stop_reason = "submitted"
                     claimed = (
                         bool(call.arguments.get("verified", False))
                         if self.spec.self_report_required
                         else True
                     )
                 messages.append(Message(role="tool", content=result, tool_call_id=call.id))
-            if finished:
+            if finished or truncated:
                 break
         realised = self.perturbation is None or not self.perturbation.active or bool(self.fired)
+        interaction_seconds = time.perf_counter() - started
+        self._interaction_deadline = None
+        final_state = self._final_state()
+        final_state["interaction_outcome"] = {
+            "stop_reason": stop_reason,
+            "budget_exhausted": truncated,
+            "interaction_seconds": interaction_seconds,
+            "max_steps": max_steps,
+            "max_seconds": budget.max_seconds,
+        }
         return Trajectory(
             instance_id=self.instance_id,
             model_id=model.info.id,
             messages=tuple(messages),
-            final_state=self._final_state(),
+            final_state=final_state,
             claimed_success=claimed,
             realised=realised,
             usage=usage.model_copy(update={"wall_seconds": time.perf_counter() - started}),
             steps=steps,
             truncated=truncated,
+            stop_reason=stop_reason,
         )
 
     def _final_state(self) -> dict[str, Any]:

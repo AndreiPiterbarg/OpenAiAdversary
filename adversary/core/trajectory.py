@@ -1,6 +1,6 @@
 """What a target did in an environment, and the budget it did it under."""
 
-from typing import Any
+from typing import Any, Literal
 
 from pydantic import Field
 
@@ -41,4 +41,5 @@ class Trajectory(FrozenModel):
     usage: Usage = Field(default_factory=Usage)
     steps: int = Field(default=0, ge=0, description="Model calls made")
     truncated: bool = Field(default=False, description="Whether the budget stopped the episode")
+    stop_reason: Literal["submitted", "model_stopped", "step_budget", "time_budget"] | None = None
     error: str | None = Field(default=None, description="Infrastructure error, if the run broke")
