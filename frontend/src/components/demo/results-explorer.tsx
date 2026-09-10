@@ -318,7 +318,6 @@ export function ResultsExplorer() {
             if (element) buttonRefs.current.set(key, element);
             else buttonRefs.current.delete(key);
           }} />
-          <p className={styles.evidenceScope}>Every displayed run has a passing clean control. Counts include repeated executions. Results use host diagnostic checks.</p>
           <a className={styles.downloadEvidence} href="/data/astra/episode-inventory.json" download>Full collection inventory · {RUN.summary.registeredEpisodes} registered runs<ArrowRight size={12} aria-hidden="true" /></a>
         </motion.div> : <motion.div key={mode.key} initial={{ opacity: 0, x: reducedMotion ? 0 : mode.outcome === "failed" ? -14 : 14 }}
           animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: reducedMotion ? 0 : mode.outcome === "failed" ? -8 : 8 }} transition={transition}

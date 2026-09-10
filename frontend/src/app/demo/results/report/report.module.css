@@ -11,7 +11,6 @@
 .section h3 { display: flex; align-items: center; gap: 9px; color: #dedede; font-size: 15px; line-height: 23px; font-weight: 500; }
 .section p { margin-top: 12px; font-size: 14px; line-height: 25px; }
 .footer { border-top: 1px solid #343434; padding-top: 19px; }
-.footer p { color: #959595; font-size: 12px; line-height: 21px; }
 .footer a { display: inline-flex; align-items: center; gap: 7px; margin-top: 22px; color: #c9c9c9; font-size: 13px; line-height: 22px; transition: color 160ms; }
 .footer a:hover { color: #fff; }
 .report a:focus-visible { outline: 2px solid #aaa; outline-offset: 3px; }

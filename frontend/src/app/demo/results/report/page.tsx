@@ -42,7 +42,6 @@ export default function FinalReportPage() {
         <p>These paired examples can guide training toward successful repairs and away from the observed failure patterns. The same behavior checks can then test whether the next model improves under adversarial guidance.</p>
       </section>
       <footer className={styles.footer}>
-        <p>Every pair has a passing clean control. Counts include repeated executions and reflect the recorded diagnostic checks. Explore the evidence for the exact guidance, repairs, and test outcomes.</p>
         <Link href="/demo/results"><ArrowLeft size={13} aria-hidden="true" />Explore the evidence</Link>
       </footer>
     </article>
