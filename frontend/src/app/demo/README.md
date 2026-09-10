@@ -2,7 +2,7 @@
 
 `/demo` and `/demo/results` use the same recorded dataset from workers 4 and 5. The existing Linear-style activity feed and mirrored results distribution are preserved.
 
-The 2026-09-10 20:47 UTC capture includes **147 eligible clean/attack pairs** across seven tasks: **28 attacked failures and 119 attacked passes**. All 28 failures come from two attack programs on one Factory Boy task; they are individual executions, not 28 distinct bugs. Strong variant 1 has 15 failures (A/B/A+B each 5 of 5); strong variant 2 has 13 (A 5/5, B 3/5, A+B 5/5). Each program has five passing clean controls.
+The 2026-09-10 20:47 UTC capture includes **147 eligible clean/attack pairs** across seven tasks: **28 attacked failures and 119 attacked passes**. Counts include repeated executions. Strong variant 1 has 15 failures (A/B/A+B each 5 of 5); strong variant 2 has 13 (A 5/5, B 3/5, A+B 5/5). Each program has five passing clean controls.
 
 The full register retains 384 planned Astra episodes: 174 passes, 54 failures, 64 infrastructure/unknown outcomes, and 92 missing/pending episodes. Of the 54 failures, 26 belong to tasks whose clean run also failed, so they do not appear as induced failures. The newest 50-task batch has 16 terminal episodes across eight tasks in this capture; its seven eligible pairs passed. The earlier standalone passing Astra rehearsal and all raw archives remain in the external evidence collection.
 
