@@ -15,7 +15,7 @@ citations behind the architecture failed re-checking; six more failed on a secon
 
 ## 1. Standing context
 
-*This block is byte-identical across every prompt in `prototype/prompts/`. Everything in it was
+*This block is byte-identical across every prompt in `prompts/`. Everything in it was
 verified against the working tree or the cluster.*
 
 **The project.** An adversary that discovers realistic failure modes of software-engineering agents
@@ -33,8 +33,8 @@ at construction). **Qwen3-8B** is the trained adversary, mutator and fixset reco
 on — it is Mistral-family because `A5:440` rule 1 forbids pairing a Qwen proposer with a Qwen target.
 A third open family is the transfer filter.
 
-**Repository.** `/Users/andre/Desktop/vision_adversary`, branch `remove-declared-space`. Python
-3.13.15, pydantic v2 (`FrozenModel`/`StrictModel`), `StrEnum` for closed vocabularies, ruff at line
+**Repository.** [OpenAiAdversary](https://github.com/AndreiPiterbarg/OpenAiAdversary).
+Work from the checkout root. Python 3.13.15, pydantic v2 (`FrozenModel`/`StrictModel`), `StrEnum` for closed vocabularies, ruff at line
 length 100 with `E,F,I,UP,B,ANN`. **No new dependencies.** Use the root `.venv`
 (`.venv/bin/python`), never the system interpreter. Baseline verified this session: **211 passed, 5
 skipped in 1.93 s, ruff clean**; `adversary/` 8,312 lines, `domains/` 1,187, `tests/` 2,251.

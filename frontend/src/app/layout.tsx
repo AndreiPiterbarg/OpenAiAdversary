@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mistral Adversarial",
+  title: "OpenAiAdversary",
   description: "Hackathon frontend powered by Next.js + shadcn/ui"
 };
 

@@ -11,7 +11,7 @@ export default function Home() {
         <header className="motion-page-enter grid grid-cols-[auto_1fr_auto] items-center gap-6">
           <Link
             href="/"
-            aria-label="Mistral Home"
+            aria-label="OpenAiAdversary Home"
             className="motion-interactive flex w-[110px] justify-start"
           >
             <span className="flex h-10 w-10 items-center justify-start">
@@ -73,7 +73,7 @@ export default function Home() {
           </div>
           <Image
             src={productScreenshot}
-            alt="Mistral adversarial dashboard screenshot"
+            alt="OpenAiAdversary dashboard screenshot"
             priority
             className="motion-image motion-page-enter motion-delay-3 h-auto w-full"
           />

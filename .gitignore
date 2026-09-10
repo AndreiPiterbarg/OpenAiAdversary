@@ -1,0 +1,31 @@
+# Local credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Dependencies and build output
+node_modules/
+.next/
+out/
+dist/
+build/
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.tsbuildinfo
+
+# Test and tool caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+coverage/
+.coverage
+
+# Local editor and operating-system files
+.DS_Store
+.idea/
+.vscode/
+*.log

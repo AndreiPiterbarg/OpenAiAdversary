@@ -1,4 +1,4 @@
-# Mistral Adversarial Frontend
+# OpenAiAdversary Frontend
 
 Next.js App Router starter prepared for hackathon work with shadcn/ui conventions.
 
