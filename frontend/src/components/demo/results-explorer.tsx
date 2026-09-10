@@ -3,12 +3,17 @@
 import { useEffect, useId, useRef, useState, type ReactNode } from "react";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Check, ChevronDown, ChevronRight, CircleAlert, Code2, Cpu, FileText, GitBranch, List, Minus } from "lucide-react";
+import { AnimatePresence, LayoutGroup, motion, useReducedMotion } from "motion/react";
 
 import { RUN, type StoryBlock } from "@/lib/demo/run-data";
+import { groupResultModes, type ResultMode } from "@/lib/demo/results";
+import { ResultsOverview } from "./results-overview";
 import monitorStyles from "./story-replay.module.css";
 import styles from "./results-explorer.module.css";
 
 type Finding = (typeof RUN.cases)[number];
+const resultGroups = groupResultModes(RUN.cases);
+const transitionEase = [0.22, 1, 0.36, 1] as const;
 
 function modelFor(roleId: string) {
   const role = RUN.roles.find((role) => role.id === roleId);
@@ -58,7 +63,7 @@ function Evidence({ title, meta, icon, children, open, onToggle, id }: {
 function FindingEvidence({ finding }: { finding: Finding }) {
   const comparison = finding.steps.flatMap<StoryBlock>((step) => step.blocks).find((block) => block.kind === "comparison");
   const arms = comparison?.arms ?? [];
-  const [selected, setSelected] = useState(() => Math.max(0, arms.findIndex((arm) => arm.outcome === "failed")));
+  const [selected, setSelected] = useState(() => Math.max(0, arms.findIndex((arm) => arm.label === "With attack")));
   const [outputOpen, setOutputOpen] = useState(true);
   const [repositoryOpen, setRepositoryOpen] = useState(false);
   const [attackOpen, setAttackOpen] = useState(false);
@@ -79,7 +84,7 @@ function FindingEvidence({ finding }: { finding: Finding }) {
       <span><GitBranch size={12} aria-hidden="true" />{finding.repository}</span>
       <span>{finding.channel}</span>
     </div>
-    <section className={styles.conditions} aria-label="Failure context">
+    <section className={styles.conditions} aria-label="Task and attack context">
       <div><h3>Task</h3><p>{finding.context}</p></div>
       <div><h3>Attack condition</h3><p>{finding.hypothesis}<span className={styles.boundary}>{finding.boundary}</span></p></div>
     </section>
@@ -133,7 +138,7 @@ function FindingEvidence({ finding }: { finding: Finding }) {
   </div>;
 }
 
-function EvaluationContext({ finding, onSelect }: { finding: Finding; onSelect: (index: number) => void }) {
+function EvaluationContext({ finding, examples, onSelect }: { finding: Finding; examples: Finding[]; onSelect: (index: number) => void }) {
   const confirmation = finding.steps.flatMap<StoryBlock>((step) => step.blocks).find((block) => block.kind === "checks");
   return <aside className={styles.context} aria-label="Evaluation context">
     <section><h3>Evaluation</h3>
@@ -153,24 +158,29 @@ function EvaluationContext({ finding, onSelect }: { finding: Finding; onSelect: 
       </div>)}</dl>
       {!confirmation && <p className={styles.sectionNote}>No result yet.</p>}
     </section>
-    <section className={styles.mechanism}><h3>Failure mechanism</h3><p>{finding.mechanism}</p></section>
-    <section className={styles.related}><h3>Other findings</h3>
-      <ul>{RUN.cases.map((item, index) => item.id !== finding.id && <li key={item.id}>
-        <button type="button" onClick={() => onSelect(index)}><CircleAlert size={12} aria-hidden="true" /><span>{item.title}</span><ChevronRight size={12} aria-hidden="true" /></button>
+    <section className={styles.mechanism}><h3>{finding.perturbed.outcome === "failed" ? "Failure mechanism" : "Observed mechanism"}</h3><p>{finding.mechanism}</p></section>
+    {examples.length > 1 && <section className={styles.related}><h3>Other examples</h3>
+      <ul>{examples.map((item, index) => item.id !== finding.id && <li key={item.id}>
+        <button type="button" onClick={() => onSelect(index)}>{item.perturbed.outcome === "failed" ? <CircleAlert size={12} aria-hidden="true" /> : <Check size={12} aria-hidden="true" />}<span>{item.title}</span><ChevronRight size={12} aria-hidden="true" /></button>
       </li>)}</ul>
-    </section>
+    </section>}
   </aside>;
 }
 
-export function ResultsExplorer() {
+function FindingDetail({ mode }: { mode: ResultMode }) {
   const [selected, setSelected] = useState(0);
+  const [direction, setDirection] = useState(1);
   const [indexOpen, setIndexOpen] = useState(false);
+  const reducedMotion = useReducedMotion();
   const selector = useRef<HTMLDivElement>(null);
   const trigger = useRef<HTMLButtonElement>(null);
   const title = useRef<HTMLHeadingElement>(null);
-  const finding = RUN.cases[selected];
+  const finding = mode.examples[selected];
+  const failed = mode.outcome === "failed";
+  const OutcomeIcon = failed ? CircleAlert : Check;
 
   function selectFinding(index: number) {
+    setDirection(index >= selected ? 1 : -1);
     setSelected(index);
     setIndexOpen(false);
     title.current?.focus({ preventScroll: true });
@@ -194,14 +204,9 @@ export function ResultsExplorer() {
     };
   }, [indexOpen]);
 
-  return <div className={`${styles.results} motion-page-enter`}>
-    <div className={monitorStyles.breadcrumb}>
-      <Link href="/demo">Live monitor</Link><ChevronRight size={16} aria-hidden="true" /><h1>Results</h1>
-    </div>
-    <article className={styles.issue} aria-labelledby="finding-title">
+  return <article className={styles.issue} aria-labelledby="finding-title" data-outcome={mode.outcome}>
       <header className={styles.issueHeader}>
-        <div className={styles.issueBreadcrumb}><span>Findings</span><ChevronRight size={11} aria-hidden="true" /><code>{finding.id}</code></div>
-        <div className={styles.titleRow}><CircleAlert size={18} aria-hidden="true" /><h2 id="finding-title" ref={title} tabIndex={-1}>{finding.title}</h2></div>
+        <div className={styles.titleRow}><OutcomeIcon size={18} aria-hidden="true" /><h2 id="finding-title" ref={title} tabIndex={-1}>{finding.title}</h2></div>
         <p className={styles.finding}>{finding.finding}</p>
       </header>
       <div className={styles.issueToolbar}>
@@ -209,11 +214,11 @@ export function ResultsExplorer() {
           if (!event.currentTarget.contains(event.relatedTarget)) setIndexOpen(false);
         }}>
           <button type="button" className={styles.indexTrigger} ref={trigger} aria-expanded={indexOpen} aria-controls="finding-index" onClick={() => setIndexOpen(!indexOpen)}>
-            <List size={13} aria-hidden="true" /><span>All findings</span><span className={styles.count}>{RUN.cases.length}</span><ChevronDown size={12} aria-hidden="true" />
+            <List size={13} aria-hidden="true" /><span>Examples</span><span className={styles.count}>{mode.examples.length}</span><ChevronDown size={12} aria-hidden="true" />
           </button>
           <div id="finding-index" className={styles.findingIndex} data-open={indexOpen} inert={!indexOpen} aria-hidden={!indexOpen}>
-            <p>Select a finding</p>
-            <ul aria-label="All findings">{RUN.cases.map((item, index) => <li key={item.id}>
+            <p>{mode.label}</p>
+            <ul aria-label="Examples in this mode">{mode.examples.map((item, index) => <li key={item.id}>
               <button type="button" aria-current={selected === index ? "true" : undefined} onClick={() => selectFinding(index)}>
                 <span className={styles.findingNumber}>{String(index + 1).padStart(2, "0")}</span>
                 <span><span className={styles.findingTitle}>{item.title}</span><span className={styles.findingChannel}>{item.channel}</span></span>
@@ -225,19 +230,79 @@ export function ResultsExplorer() {
         <div className={styles.testedModel}><Cpu size={13} aria-hidden="true" /><span>{modelFor("scoring")}</span></div>
         <span className={styles.channelTag}>{finding.channel}</span>
       </div>
-      <div className={styles.detailGrid}>
+      <motion.div className={styles.detailGrid} key={finding.id} initial={{ opacity: 0, x: reducedMotion ? 0 : direction * 12 }}
+        animate={{ opacity: 1, x: 0 }} transition={{ duration: reducedMotion ? 0 : 0.24, ease: transitionEase }}>
         <div className={styles.mainColumn}>
-          <div className={styles.detailHeading}><h3>Failure details</h3>
+          <div className={styles.detailHeading}><h3>{failed ? "Failure details" : "Success details"}</h3>
             <div className={styles.findingNavigation}>
-              <span>{String(selected + 1).padStart(2, "0")} <span>of {String(RUN.cases.length).padStart(2, "0")}</span></span>
-              <button type="button" aria-label="Previous finding" disabled={selected === 0} onClick={() => selectFinding(selected - 1)}><ArrowLeft size={13} aria-hidden="true" /></button>
-              <button type="button" aria-label="Next finding" disabled={selected === RUN.cases.length - 1} onClick={() => selectFinding(selected + 1)}><ArrowRight size={13} aria-hidden="true" /></button>
+              <span>{String(selected + 1).padStart(2, "0")} <span>of {String(mode.examples.length).padStart(2, "0")}</span></span>
+              <button type="button" aria-label="Previous example" disabled={selected === 0} onClick={() => selectFinding(selected - 1)}><ArrowLeft size={13} aria-hidden="true" /></button>
+              <button type="button" aria-label="Next example" disabled={selected === mode.examples.length - 1} onClick={() => selectFinding(selected + 1)}><ArrowRight size={13} aria-hidden="true" /></button>
             </div>
           </div>
           <FindingEvidence key={finding.id} finding={finding} />
         </div>
-        <EvaluationContext finding={finding} onSelect={selectFinding} />
-      </div>
-    </article>
+        <EvaluationContext finding={finding} examples={mode.examples} onSelect={selectFinding} />
+      </motion.div>
+    </article>;
+}
+
+export function ResultsExplorer() {
+  const [mode, setMode] = useState<ResultMode | null>(null);
+  const [expanded, setExpanded] = useState(false);
+  const reducedMotion = useReducedMotion();
+  const buttonRefs = useRef(new Map<string, HTMLButtonElement>());
+  const lastSelection = useRef<string | null>(null);
+  const overviewScroll = useRef(0);
+  const restoringOverview = useRef(false);
+  const selectedHeading = useRef<HTMLHeadingElement>(null);
+  const transition = { duration: reducedMotion ? 0 : 0.3, ease: transitionEase };
+
+  function selectMode(next: ResultMode) {
+    overviewScroll.current = window.scrollY;
+    lastSelection.current = next.key;
+    setMode(next);
+  }
+
+  return <div className={`${styles.results} motion-page-enter`}>
+    <div className={monitorStyles.breadcrumb}>
+      <Link href="/demo">Live monitor</Link><ChevronRight size={16} aria-hidden="true" /><h1>Results</h1>
+    </div>
+    <header className={styles.overviewHeader}>
+      <div><h2>Behavior under attack</h2><p><Cpu size={13} aria-hidden="true" />{modelFor("scoring")}</p></div>
+      <span>Available examples</span>
+    </header>
+    <LayoutGroup>
+      <AnimatePresence mode="popLayout" initial={false}>
+        {!mode ? <motion.div key="overview" initial={{ opacity: 0, y: reducedMotion ? 0 : -8 }} animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: reducedMotion ? 0 : -6 }} transition={{ ...transition, duration: reducedMotion ? 0 : 0.18 }}
+          onAnimationComplete={(definition) => {
+            if (!restoringOverview.current || typeof definition !== "object" || !("opacity" in definition) || definition.opacity !== 1) return;
+            restoringOverview.current = false;
+            window.scrollTo({ top: overviewScroll.current, behavior: "auto" });
+            if (lastSelection.current) buttonRefs.current.get(lastSelection.current)?.focus({ preventScroll: true });
+          }}>
+          <ResultsOverview groups={resultGroups} expanded={expanded} onExpandedChange={setExpanded} onSelect={selectMode} registerButton={(key, element) => {
+            if (element) buttonRefs.current.set(key, element);
+            else buttonRefs.current.delete(key);
+          }} />
+        </motion.div> : <motion.div key={mode.key} initial={{ opacity: 0, x: reducedMotion ? 0 : mode.outcome === "failed" ? -14 : 14 }}
+          animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: reducedMotion ? 0 : mode.outcome === "failed" ? -8 : 8 }} transition={transition}
+          onAnimationComplete={(definition) => {
+            if (typeof definition === "object" && "opacity" in definition && definition.opacity === 1) selectedHeading.current?.focus({ preventScroll: true });
+          }}>
+          <div className={styles.modeNavigation} data-outcome={mode.outcome}>
+            <button type="button" className={styles.backToModes} onClick={() => { restoringOverview.current = true; setMode(null); }}>
+              <ArrowLeft size={13} aria-hidden="true" />All modes
+            </button>
+            <ChevronRight size={12} className={styles.modeSeparator} aria-hidden="true" />
+            <span className={styles.selectedOutcome}>{mode.outcome === "failed" ? <CircleAlert size={13} aria-hidden="true" /> : <Check size={13} aria-hidden="true" />}{mode.outcome === "failed" ? "Failure" : "Success"}</span>
+            <h3 ref={selectedHeading} tabIndex={-1}><motion.span layout="position" layoutId={reducedMotion ? undefined : `mode-label-${mode.key}`} transition={transition}>{mode.label}</motion.span></h3>
+          </div>
+          <FindingDetail mode={mode} />
+        </motion.div>}
+      </AnimatePresence>
+    </LayoutGroup>
+    <p className={styles.selectionAnnouncement} role="status">{mode ? `${mode.label}: ${mode.examples.length} ${mode.examples.length === 1 ? "example" : "examples"}` : "Choose a failure or success mode."}</p>
   </div>;
 }

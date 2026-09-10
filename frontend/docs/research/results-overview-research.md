@@ -1,15 +1,15 @@
 # Results overview: ranked outcome categories
 
-Research and interactive design previews, 2026-09-10. The existing results implementation remains unchanged in this step.
+Research, interactive design previews, and selected implementation, 2026-09-10.
 
 ## User decisions
 
 - The overview should show distributions of failure modes and success modes.
 - Success means completing the task despite an attack. Passing control runs are excluded.
 - Ranked category bars are the selected direction.
-- Failure and success must have distinct visual treatments, beyond identical bars on a shared plot.
+- Failure and success occupy separate mirrored lists, distinguished by color, labels, and icons. The latest instruction keeps both bar designs identical and solid; stripes are removed in the product.
 - Selecting a mode reveals its example slides, using the established Sentry-style evidence detail.
-- The user requested different options before selecting the next implementation.
+- After reviewing the three options, the user selected mirrored bars and requested integration with the current Results page styling.
 
 ## Inspected references
 
@@ -42,3 +42,13 @@ The product overview should initially hide the detail explorer. On selection, re
 ## Verification
 
 All three fragments parse as JavaScript and were tested in the browser at 736px and 360px. Category selection, failure evidence, success-unavailable states, the outcome switch, Context/Evidence navigation, and return-to-overview controls worked. Narrow layouts had no horizontal overflow. No console errors were reported. Temporary standalone wrappers and the verification server were removed afterward. No application routes, fixture outcomes, or playback behavior changed.
+
+## Selected implementation
+
+The mirrored layout is integrated at `/demo/results`, with the current product’s compact typography and unboxed dark surface. The earlier preview fragments remain design-history artifacts. The product uses the same solid bar shape on both sides, with warm failure fills and muted green success fills. The left and right lists have independent category rankings and share a count scale; opposite rows do not imply paired categories.
+
+The fixture now supplies a typed primary mode and explicit outcomes for both paired arms. `groupResultModes` counts only the attacked arm, ranks modes, and retains their matching examples. The three available failure modes each contain one example. There are no successful attacked-run examples, so the right side states that clearly rather than substituting controls or prospective categories. Counts describe available evidence only.
+
+Selecting a category animates its label into the detail context and opens the existing Sentry evidence view, with mode-specific example navigation. The selected outcome determines entrance direction. Returning restores the category button’s focus and the overview’s scroll position. Motion uses the existing dependency, short eased transitions, and reduced-motion support. Model labels, source evidence, unavailable follow-up checks, and monitor playback remain unchanged.
+
+The user’s follow-up adds a compact footer: show the top three categories per outcome initially, expand to all with Show more, and collapse with Show less. The expanded state survives detail inspection. When no additional categories exist, the footer states that all modes are shown and disables expansion. A component render check with five test-only modes per outcome verified the initial six rows, expansion to ten, both footer states, identical solid fills, and the shared count scale; no additional examples were added to the product.

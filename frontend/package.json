@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "test:demo": "node --experimental-strip-types --test src/lib/demo/replay.test.mjs"
+    "test:demo": "node --experimental-strip-types --test src/lib/demo/replay.test.mjs src/lib/demo/results.test.mjs"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",
