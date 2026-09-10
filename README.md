@@ -8,6 +8,7 @@ Repository: [AndreiPiterbarg/OpenAiAdversary](https://github.com/AndreiPiterbarg
 
 - [`prototype/frontend/`](prototype/frontend/README.md): prototype dashboard and project setup screens.
 - [`prototype/prompts/`](prototype/prompts/README.md): task instructions for implementation, evaluation and review.
+- [`prototype/run/`](prototype/run/README.md): verification receipt manifests and bounds for unresolved outcomes.
 
 ## Frontend setup
 
