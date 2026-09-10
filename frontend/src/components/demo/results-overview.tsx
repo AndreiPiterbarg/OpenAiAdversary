@@ -62,10 +62,11 @@ export function ResultsOverview({ groups, expanded, onExpandedChange, onSelect, 
       })}
     </div>
     <div className={styles.overviewFooter}>
-      <span>{hiddenModes && !expanded ? `${totalModes - hiddenModes} of ${totalModes} modes` : `All ${totalModes} modes shown`}</span>
+      <span id="result-mode-count" className={styles.selectionAnnouncement}>{hiddenModes && !expanded ? `${totalModes - hiddenModes} of ${totalModes} modes` : `All ${totalModes} modes shown`}</span>
       <button type="button" className={styles.expandModes} aria-expanded={expanded} aria-controls="result-mode-lists"
+        aria-label={expanded ? "Show fewer modes" : "Show more modes"} aria-describedby="result-mode-count"
         disabled={!hiddenModes} onClick={() => onExpandedChange(!expanded)}>
-        {expanded ? "Show less" : "Show more"}<ChevronDown size={13} data-open={expanded} aria-hidden="true" />
+        <ChevronDown size={17} data-open={expanded} aria-hidden="true" />
       </button>
     </div>
   </section>;
