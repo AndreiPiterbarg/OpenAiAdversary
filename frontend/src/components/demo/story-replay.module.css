@@ -1,0 +1,90 @@
+.replay { --activity-surface: #111; min-width: 0; padding-bottom: 48px; }
+.breadcrumb { display: flex; align-items: center; gap: 16px; min-height: 32px; margin-bottom: 28px; color: #aaa; }
+.breadcrumb a, .breadcrumb h1 { font-size: 24px; line-height: 32px; font-weight: 300; }
+.breadcrumb h1 { color: #eee; }
+.breadcrumb a:hover { color: #eee; }
+.intro { max-width: 700px; margin: 0 0 28px; color: #9a9a9f; font-size: 15px; line-height: 24px; }
+.intro h2 { margin-bottom: 12px; color: #ddd; font-size: 17px; line-height: 26px; font-weight: 500; }
+.intro p + p { margin-top: 12px; }
+.launchButton { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 36px; margin-top: 24px; padding: 0 16px; border: 1px solid #d4d4d4; border-radius: 6px; color: #171717; background: #e3e3e3; font-size: 13px; font-weight: 500; transition: background 160ms; }
+.launchButton:hover { background: #fafafa; }
+.resultsButton { position: fixed; right: 28px; bottom: 24px; z-index: 10; display: inline-flex; align-items: center; gap: 12px; min-height: 38px; padding: 0 16px; border: 1px solid #3a3a3a; border-radius: 6px; background: #222; color: #eee; font-size: 13px; font-weight: 500; transition: background 160ms, border-color 160ms; }
+.resultsButton:hover { background: #2c2c2c; border-color: #555; }
+.toolbar { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; justify-content: space-between; min-height: 54px; margin-bottom: 28px; border-bottom: 1px solid #252525; background: #111; }
+.feedHeading { display: flex; align-items: center; gap: 14px; }
+.feedHeading h2 { font-size: 13px; line-height: 20px; font-weight: 500; color: #ccc; }
+.caseCounter { display: inline-flex; gap: 5px; color: #aaa; font: 12px/20px var(--font-geist-mono), monospace; font-variant-numeric: tabular-nums; }
+.caseCounter > span { color: #777; }
+.controls { display: flex; align-items: center; gap: 18px; }
+.followButton { display: inline-flex; align-items: center; gap: 6px; height: 30px; padding: 0 9px; border: 1px solid #303030; border-radius: 5px; color: #ccc; background: #1a1a1a; font-size: 12px; transition: color 160ms, background 160ms; }
+.followButton:hover { background: #222; color: #eee; }
+.liveStatus { display: inline-flex; align-items: center; gap: 7px; min-width: 42px; color: #aaa; font-size: 12px; }
+.replay button:focus-visible, .replay a:focus-visible, .resultsButton:focus-visible { outline: 2px solid #aaa; outline-offset: 4px; }
+
+/* Linear's narration / action / disclosure hierarchy, without stage cards or rails. */
+.feed { margin: 0; padding: 0; list-style: none; }
+.entry { padding: 0 0 28px; animation: activity-arrive 260ms ease-out both; }
+.entry + .entry { padding-top: 26px; border-top: 1px solid #252525; }
+.sessionHeader { display: flex; align-items: center; gap: 10px; width: 100%; min-height: 28px; text-align: left; }
+.agentName { color: #ddd; font-size: 14px; font-weight: 500; }
+.caseTitle { margin-left: 3px; color: #919195; font-size: 14px; font-weight: 400; transition: color 160ms; }
+.sessionHeader:hover .caseTitle { color: #ccc; }
+.entryNumber { margin-left: auto; padding-left: 12px; color: #717175; font: 11px/18px var(--font-geist-mono), monospace; white-space: nowrap; }
+.sessionStatus { display: inline-flex; align-items: center; gap: 6px; margin-left: 12px; color: #888; font-size: 11px; white-space: nowrap; }
+.sessionStatus .thinkingIndicator { width: 14px; height: 14px; }
+.steps { padding: 0 16px 0 27px; }
+.caseMeta { display: flex; align-items: center; gap: 9px; margin: 8px 0 27px; color: #747478; font-size: 12px; line-height: 20px; }
+.caseMeta > span { color: #555; }
+.step { min-width: 0; scroll-margin-top: 80px; animation: activity-arrive 260ms ease-out both; }
+.step + .step { margin-top: 26px; }
+.narration { max-width: 755px; margin: 0 0 12px; color: #8f8f94; font-size: 15px; line-height: 24px; }
+.stepHeader { display: flex; align-items: center; gap: 10px; max-width: 100%; min-height: 27px; padding: 0; text-align: left; border-radius: 2px; }
+.actionSymbol { flex-shrink: 0; color: #a7a7ad; }
+.stepTitle { flex-shrink: 0; color: #c0c0c5; font-size: 14px; line-height: 23px; font-weight: 400; transition: color 160ms; }
+.stepHeader:hover .stepTitle, .step[data-active="true"] .stepTitle { color: #eee; }
+.stepMeta { overflow: hidden; color: #747479; white-space: nowrap; text-overflow: ellipsis; font-size: 14px; line-height: 23px; }
+.disclosure { flex-shrink: 0; margin-left: 1px; color: #78787c; transition: transform 220ms var(--motion-ease-standard); }
+.disclosure[data-open="true"] { transform: rotate(180deg); }
+.activeDot { display: inline-block; width: 5px; height: 5px; flex-shrink: 0; border-radius: 50%; background: #e3636a; }
+.collapse { display: grid; grid-template-rows: 0fr; opacity: 0; transition: grid-template-rows 320ms var(--motion-ease-standard), opacity 180ms ease-out; }
+.collapse[data-open="true"] { grid-template-rows: 1fr; opacity: 1; }
+.clip { min-height: 0; overflow: hidden; }
+.content { display: flex; flex-direction: column; gap: 14px; padding: 13px 0 2px 26px; }
+.paragraph { max-width: 730px; font-size: 14px; line-height: 23px; color: #8f8f94; }
+.thinkingRow { display: flex; align-items: center; gap: 12px; margin-top: 28px; color: #ccc; font-size: 14px; line-height: 24px; }
+.thinkingRow, .workingIcon { transition: opacity 160ms ease-out; }
+.thinkingRow[data-working="false"], .workingIcon[data-working="false"] { opacity: 0; }
+.thinkingIndicator { display: block; flex-shrink: 0; color: #b4b4ba; }
+.thinkingIndicator circle { opacity: .3; animation: thinking-wave 1.8s ease-in-out infinite; }
+.result { opacity: 0; transition: opacity 180ms ease-out; }
+.result[data-visible="true"] { opacity: 1; }
+.untyped { visibility: hidden; user-select: none; }
+.typingCaret { position: relative; display: inline-block; width: 0; }
+.typingCaret::after { content: ""; position: absolute; left: 0; bottom: -.15em; width: 2px; height: 1.1em; background: #bbb; animation: caret-blink .8s step-end infinite; }
+.caption { color: #79797f; font-size: 11px; line-height: 19px; }
+.codeWell { min-width: 0; padding: 11px 14px 13px; background: #171717; border-left: 1px solid #343434; border-radius: 0 3px 3px 0; }
+.codeWell > .caption { margin-bottom: 8px; }
+.content pre { max-width: 100%; margin: 0; overflow-x: auto; color: #c8c8ce; font: 13px/22px var(--font-geist-mono), monospace; tab-size: 4; }
+.content code { font-family: inherit; }
+.checks { border-top: 1px solid #292929; }
+.checkRow { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 11px 0; border-bottom: 1px solid #292929; }
+.checkRow p { font-size: 13px; line-height: 21px; color: #bcbcc2; }
+.checkRow .checkDetail { color: #85858b; font-size: 12px; }
+.verdict { flex-shrink: 0; color: #929299; font-size: 11px; line-height: 18px; }
+.verdict[data-tone="passed"] { color: #8abe9e; }
+.verdict[data-tone="failed"], .verdict[data-tone="rejected"] { color: #d99d79; }
+.comparison { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; }
+.arm { min-width: 0; }
+.armHeader { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding-bottom: 8px; border-bottom: 1px solid #292929; color: #aaa; font-size: 12px; }
+.arm pre { padding: 12px 0; min-height: 116px; white-space: pre-wrap; overflow-wrap: anywhere; font-size: 12px; line-height: 21px; }
+.arm > p { padding-top: 8px; border-top: 1px solid #292929; font-size: 12px; line-height: 20px; color: #96969c; }
+.finding > p { max-width: 730px; font-size: 15px; line-height: 25px; font-weight: 400; color: #ddd; }
+.finding .caption { margin-top: 8px; color: #999; font-size: 12px; }
+@keyframes caret-blink { 50% { opacity: 0; } }
+@keyframes thinking-wave { 0%, 100% { opacity: .2; } 45% { opacity: 1; } }
+@keyframes activity-arrive { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) {
+  .collapse, .result, .disclosure, .caseTitle, .stepTitle, .followButton, .launchButton, .resultsButton, .thinkingRow, .workingIcon { transition: none; }
+  .entry, .step, .thinkingIndicator circle { animation: none; }
+  .typingCaret { display: none; }
+}

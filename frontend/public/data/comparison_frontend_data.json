@@ -1,0 +1,255 @@
+{
+  "comparison": true,
+  "original": {
+    "stats": {
+      "accuracy_clean": 68.0,
+      "latency_clean": 419.0,
+      "accuracy_edited": 49.6,
+      "latency_edited": 670.0
+    },
+    "attack_ranking": [
+      {
+        "label": "Whitespace injection",
+        "value": "75%"
+      },
+      {
+        "label": "Scanner banding",
+        "value": "57%"
+      },
+      {
+        "label": "Sharpening halos",
+        "value": "40%"
+      },
+      {
+        "label": "Perspective warp",
+        "value": "36%"
+      },
+      {
+        "label": "Glare",
+        "value": "33%"
+      },
+      {
+        "label": "Damaged",
+        "value": "33%"
+      },
+      {
+        "label": "Hand shadow",
+        "value": "31%"
+      },
+      {
+        "label": "Column bleed",
+        "value": "27%"
+      },
+      {
+        "label": "Finger in scan",
+        "value": "27%"
+      },
+      {
+        "label": "Defocus blur",
+        "value": "25%"
+      },
+      {
+        "label": "Motion blur",
+        "value": "22%"
+      },
+      {
+        "label": "Watermark text",
+        "value": "22%"
+      },
+      {
+        "label": "Lens distortion",
+        "value": "22%"
+      },
+      {
+        "label": "Chroma subsample",
+        "value": "20%"
+      },
+      {
+        "label": "Folds",
+        "value": "20%"
+      },
+      {
+        "label": "Uneven illumination",
+        "value": "17%"
+      },
+      {
+        "label": "Noise",
+        "value": "14%"
+      },
+      {
+        "label": "Margin notes",
+        "value": "11%"
+      },
+      {
+        "label": "Highlighter",
+        "value": "11%"
+      },
+      {
+        "label": "Shadow casting",
+        "value": "10%"
+      },
+      {
+        "label": "Partial capture",
+        "value": "9%"
+      },
+      {
+        "label": "Sticky note",
+        "value": "8%"
+      },
+      {
+        "label": "Pen scribbles",
+        "value": "0%"
+      },
+      {
+        "label": "Stains",
+        "value": "0%"
+      },
+      {
+        "label": "Skew rotation",
+        "value": "0%"
+      },
+      {
+        "label": "Moire",
+        "value": "0%"
+      },
+      {
+        "label": "Bit depth",
+        "value": "0%"
+      },
+      {
+        "label": "Downscale",
+        "value": "0%"
+      },
+      {
+        "label": "Jpeg artifacts",
+        "value": "0%"
+      }
+    ]
+  },
+  "finetuned": {
+    "stats": {
+      "accuracy_clean": 68.0,
+      "latency_clean": 435.0,
+      "accuracy_edited": 61.2,
+      "latency_edited": 693.0
+    },
+    "attack_ranking": [
+      {
+        "label": "Whitespace injection",
+        "value": "38%"
+      },
+      {
+        "label": "Scanner banding",
+        "value": "29%"
+      },
+      {
+        "label": "Sharpening halos",
+        "value": "20%"
+      },
+      {
+        "label": "Perspective warp",
+        "value": "18%"
+      },
+      {
+        "label": "Glare",
+        "value": "17%"
+      },
+      {
+        "label": "Damaged",
+        "value": "14%"
+      },
+      {
+        "label": "Hand shadow",
+        "value": "13%"
+      },
+      {
+        "label": "Column bleed",
+        "value": "11%"
+      },
+      {
+        "label": "Finger in scan",
+        "value": "11%"
+      },
+      {
+        "label": "Defocus blur",
+        "value": "10%"
+      },
+      {
+        "label": "Motion blur",
+        "value": "9%"
+      },
+      {
+        "label": "Watermark text",
+        "value": "8%"
+      },
+      {
+        "label": "Lens distortion",
+        "value": "8%"
+      },
+      {
+        "label": "Chroma subsample",
+        "value": "7%"
+      },
+      {
+        "label": "Folds",
+        "value": "7%"
+      },
+      {
+        "label": "Uneven illumination",
+        "value": "6%"
+      },
+      {
+        "label": "Noise",
+        "value": "5%"
+      },
+      {
+        "label": "Margin notes",
+        "value": "4%"
+      },
+      {
+        "label": "Highlighter",
+        "value": "4%"
+      },
+      {
+        "label": "Shadow casting",
+        "value": "3%"
+      },
+      {
+        "label": "Partial capture",
+        "value": "3%"
+      },
+      {
+        "label": "Sticky note",
+        "value": "2%"
+      },
+      {
+        "label": "Pen scribbles",
+        "value": "0%"
+      },
+      {
+        "label": "Stains",
+        "value": "0%"
+      },
+      {
+        "label": "Skew rotation",
+        "value": "0%"
+      },
+      {
+        "label": "Moire",
+        "value": "0%"
+      },
+      {
+        "label": "Bit depth",
+        "value": "0%"
+      },
+      {
+        "label": "Downscale",
+        "value": "0%"
+      },
+      {
+        "label": "Jpeg artifacts",
+        "value": "0%"
+      }
+    ]
+  }
+}
