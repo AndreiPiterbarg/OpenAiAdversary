@@ -65,3 +65,16 @@ control. The earlier K6 used overlapping CPU assignments; the serial lifecycle i
 a different implementation. Historical K4's controller CPU metadata said one while
 its actual request was two; its six-CPU peak accounting was correct. New registrations
 record two controller CPUs consistently.
+
+## Final control execution status
+
+The final ten-minute control did not execute. Its guest-dev requests were canceled
+while queued. Interactive SSH to worker-4 succeeded, but the current container
+route did not qualify: namespace preflight was denied, standard image extraction
+timed out after 180 seconds, and Docker socket access was denied. No model episodes
+ran through that route. See [execution status](final-control-status.json).
+
+All experiment allocations and the eight idle worker-5 model servers are stopped.
+The serial handoff has local test and review evidence; its live rehearsal and
+throughput remain unmeasured. A supported pinned task-runtime path is required
+before this control can produce valid diagnostic results.

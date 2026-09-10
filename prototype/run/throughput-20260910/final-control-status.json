@@ -1,0 +1,46 @@
+{
+  "final_control_executed": false,
+  "model_episodes": 0,
+  "paid_api_calls": 0,
+  "worker4_proxyjump_connected": true,
+  "worker4_namespace_preflight": {
+    "exit": 1,
+    "stderr": "enroot-nsenter: failed to create user namespace: Operation not permitted"
+  },
+  "direct_runtime": {
+    "image": "/home/guests/andrei/va/images/swerebenchv2_factoryboy-factory-boy_1067-7ed1e54.sqsh",
+    "steps": [
+      {
+        "stage": "create",
+        "exit": null,
+        "seconds": 180.02850079536438,
+        "reason": "timeout"
+      },
+      {
+        "stage": "docker_access",
+        "exit": 0,
+        "seconds": 0.11879030149430037,
+        "stdout": "null\n",
+        "stderr": "permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get \"http://%2Fvar%2Frun%2Fdocker.sock/v1.47/info\": dial unix /var/run/docker.sock: connect: permission denied\n"
+      }
+    ]
+  },
+  "docker_access_available": false,
+  "slurm_control_jobs_canceled": [
+    "313810",
+    "313811"
+  ],
+  "model_servers_stopped": 8,
+  "worker5_gpu_memory_mb_after_shutdown": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "serial_handoff_live_rehearsal": "not_run",
+  "serial_handoff_validation": "local tests and independent review passed"
+}
